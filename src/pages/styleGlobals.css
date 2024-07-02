@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Formula';
+  src: url('/fonts/FormulaCondensed-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style:normal;
+  font-display: swap;
+}
+
+.azul {
+  color: #014979;
+}
+.background-azul {
+  background: #014979;
+}
+.azul3 {
+  color: #1870A0;
+}
+.azul6 {
+  color: #D6EDFF;
+}
+.azulclaro {
+  color: #80CFFF;
+}
+
+.blanco {
+  color: #F6F4F3;
+}
+.naranja4 {
+  color: #FFA85C;
+}
+.naranja3 {
+  color: #E06900;
+}

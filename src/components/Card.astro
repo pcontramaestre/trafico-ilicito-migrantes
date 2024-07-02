@@ -3,18 +3,19 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
+	fuente?: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, fuente="font-sans" } = Astro.props;
 ---
 
 <li class="link-card">
 	<a href={href}>
-		<h2>
+		<h2 class="azul">
 			{title}
 			<span>&rarr;</span>
 		</h2>
-		<p>
+		<p class={fuente} >
 			{body}
 		</p>
 	</a>

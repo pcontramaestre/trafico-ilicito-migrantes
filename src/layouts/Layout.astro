@@ -3,7 +3,10 @@ interface Props {
 	title: string;
 }
 
+
 const { title } = Astro.props;
+import "aos/dist/aos.css"; // AOS styles
+
 ---
 
 <!doctype html>
@@ -15,9 +18,20 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" is:inline></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" is:inline></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" is:inline></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js" is:inline></script>
+		
 	</head>
 	<body>
 		<slot />
+		<script>
+			import { aosInit } from "../js/aos";
+	
+			// runs on initial page load
+			aosInit();
+		</script>
 	</body>
 </html>
 <style is:global>
@@ -33,19 +47,6 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+		font-family: 'Inter Variable', sans-serif;
 	}
 </style>

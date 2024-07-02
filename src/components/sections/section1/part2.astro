@@ -1,0 +1,245 @@
+---
+import { Image } from "astro:assets";
+import grafico from "../section1/assets/grafico.webp";
+
+---
+
+<section id="seccion1-2">
+  <div class="titulo-animado background-azul h-auto text-center ">
+    <!-- Seccion de texto animado -->
+    <div class="texto-animado flex flex-col font-['Formula'] text-[80px] uppercase leading-none azul-3 p-24 ">
+      <span>El Tráfico Ilícito de Migrantes (TIM) es un</span>
+      <spand>elito contra los estados que pone en riesgo </spand>
+      <span>a las personas migrantes en tránsito</spand>
+    </div>
+
+    <!-- Seccion con dos cuadros informativos -->
+    <div class="con-cuadros relative">
+      <div class="cuadro1 cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute left-[10%] top-[10%]">
+        <div class="borde borde-sup-izq absolute"></div>
+        <div class="borde borde-sup-der absolute"></div>
+        <div class="borde borde-inf-izq absolute"></div>
+        <div class="borde borde-inf-der absolute"></div>
+        <div class="titulo azul"><b>¿Quiénes facilitan la migración irregular en el Tráfico Ilícito de Migrantes (TIM)?</b></div>
+        <div class="texto">
+          Las actividades relacionadas con el TIM son 
+          facilitadas por personas o redes “que cometen o 
+          tienen la intención de cometer el <b>delito de tráfico de migrantes”.</b>
+        </div>
+        <div class="creador">(OIM, 2019)</div>
+      </div>
+      
+      <div class="cuadro2 cuadro flex flex-col text-[22px] font-sans justify-center p-12 gap-4 absolute right-[10%] bottom-[5%]">
+        <div class="borde borde-sup-izq absolute"></div>
+        <div class="borde borde-sup-der absolute"></div>
+        <div class="borde borde-inf-izq absolute"></div>
+        <div class="borde borde-inf-der absolute"></div>
+        <div class="titulo azul"><b>¿Quién es una persona OBJETO de Tráfico Ilícito de Migrantes (TIM)?</b></div>
+        <div class="texto">
+          Es toda aquella persona migrante que sea o haya sido 
+          <b>objeto del delito de TIM,</b> 
+          independientemente de que el infractor haya sido o no 
+          identificado, aprehendido, enjuiciado o condenado.
+        </div>
+        <div class="creador">(OIM, 2019)</div>
+      </div>
+    </div>
+
+    <!-- Seccion con grafico -->
+    <div class="seccion-grafico flex flex-wrap items-center justify-center gap-12 text-[1.75rem] pb-24">
+      <div class="izquierda grafico">
+        <Image src={grafico} alt="grafico"/>
+      </div>
+      <div class="derecha texto max-w-[30%] blanco p-8 text-left">
+        <p>
+          Según el Boletín de datos sobre migración en tránsito por las Américas de la OIM, la cifra de personas migrantes que ingresaron a la selva del Darién en enero del 2024
+        </p>
+        <p>
+          <strong class="naranja4 text-[2.5rem]">aumentó un <span class="text-[3rem]">48%</span></strong>
+        </p>
+        <p>respecto al mismo mes del 2023.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<script is:inline>  
+  // Inicializar ScrollMagic cuando el documento esté listo
+  document.addEventListener("DOMContentLoaded", () => {
+    // Crear un controlador de ScrollMagic
+    const controller = new ScrollMagic.Controller({
+      globalSceneOptions: {
+        triggerHook: "onLeave",
+        duration: "200%", // Duración para evitar errores visuales
+      },
+    });
+
+
+    // Animacion de texto
+    new ScrollMagic.Scene({
+      triggerElement: ".titulo-animado ",
+      triggerHook: 0.7,
+      duration: "80%",
+      offset: 0,
+    })
+    .setTween(
+        TweenMax.staggerFromTo(
+          [".texto-animado"],
+          1,
+          {
+            x: "-100%",
+            opacity: 0,
+          },
+          {
+            brightness: 100,
+            x: "2%",
+            opacity: 1,
+          },
+        )
+      )
+    .setPin(".titulo-animado")
+    .addTo(controller);
+
+
+// Animacion de los cuadros
+    new ScrollMagic.Scene({
+      triggerElement: ".con-cuadros",
+      triggerHook: 0.7,
+      duration: "80%",
+      offset: 0,
+    })
+    .setTween(
+        TweenMax.staggerFromTo(
+          [".cuadro"],
+          1,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+          },
+        )
+      )
+    .setPin(".con-cuadros")
+    .addTo(controller);
+
+    //Animacion de la seccion de grafico
+    //seccion-grafico
+    new ScrollMagic.Scene({
+      triggerElement: ".seccion-grafico",
+      triggerHook: 0.7,
+      duration: "50",
+      offset: 0,
+    })
+    .setTween(
+        TweenMax.staggerFromTo(
+          [".izquierda.grafico"],
+          1,
+          {
+            opacity: 0,
+            x: "-25%",
+          },
+          {
+            opacity: 1,
+            x: "0%",
+          },
+        ).concat(
+          TweenMax.staggerFromTo(
+            [".derecha.texto"],
+            1,
+            {
+              opacity: 0,
+              x: "125%",
+            },
+            {
+              opacity: 1,
+              x: "0%",
+            },
+          )
+        )
+      )
+    .setPin(".seccion-grafico")
+    .addTo(controller);
+
+  });
+</script>
+
+<style>
+  #seccion1-2 {
+    background: var(--Azul, #014979);
+  }
+  .texto-animado {
+    color: #1870A0;
+    letter-spacing: 1.6px;
+  }
+
+  @media (max-width:1340px) {
+    .texto-animado {
+      font-size: 70px !important;
+    }
+  }
+
+  .con-cuadros {
+    background: url(/src/components/sections/section1/assets/KFS_Tijuana002.webp) #d3d3d300 0px -100.659px / 100% 118.533% no-repeat;
+    min-height: 100vh;
+  }
+
+  .con-cuadros .cuadro {
+    background: url(/src/components/sections/section1/assets/fondo-cuadros.webp) #c0e4e7 no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: left;
+    mix-blend-mode: hard-light;
+  }
+
+  .cuadro.cuadro1 {
+    width: 455px;
+    height: 467px;
+  }
+
+  .cuadro.cuadro2 {
+    width: 550px;
+    height: 418px;
+  }
+  
+  .borde-sup-izq {
+    top: 15px;
+    left: 15px;
+    border-top: 2px solid #6F6F6F;
+    width: 70px;
+    border-left: 2px solid #6F6F6F;
+    height: 70px;
+  }
+  .borde-sup-der {
+    top: 15px;
+    right: 15px;
+    border-top: 2px solid #6F6F6F;
+    width: 70px;
+    border-right: 2px solid #6F6F6F;
+    height: 70px;
+  }
+  .borde-inf-izq {
+    bottom: 15px;
+    left: 15px;
+    border-left: 2px solid #6F6F6F;
+    width: 70px;
+    border-bottom: 2px solid #6F6F6F;
+    height: 70px;
+  }
+  .borde-inf-der {
+    bottom: 15px;
+    right: 15px;
+    border-right: 2px solid #6F6F6F;
+    width: 70px;
+    border-bottom: 2px solid #6F6F6F;
+    height: 70px;
+  }
+
+</style>

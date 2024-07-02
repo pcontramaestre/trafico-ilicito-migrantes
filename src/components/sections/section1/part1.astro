@@ -1,0 +1,182 @@
+---
+import { Image } from "astro:assets";
+import logoOim from "../section1/assets/logo-oim.svg";
+import logoCorett from "../section1/assets/logo-corett.svg";
+import fondoParte1 from "./assets/Fondo.png";
+import arbol from "./assets/arbol.png";
+import rectanguloGris from "./assets/rectangle-gris.png";
+import mouse from "./assets/mouse.gif";
+import mujer from "./assets/mujer.png";
+import adolescente from "./assets/adolescente.png";
+import hombre from "./assets/hombre.png";
+import luz from "./assets/luz1.png";
+---
+
+<section id="seccion1-1">
+
+  <div class="w-screen h-screen parte1 flex flex-col justify-center">
+    <div
+    class="contenedor absolute inline-grid gap-12 grid-cols-2 grid-rows-1 pt-16 pl-24 z-10 top-0"
+  >
+    <Image src={logoCorett} alt="Corett" />
+    <Image src={logoOim} alt="OIM" />
+  </div>
+    <div class="titulo-seccion pl-24 z-10">
+      <div class="text-[62px] font-bold font-['Inika'] azul6 z-10">
+        Voces y datos del
+      </div>
+      <div
+        class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none flex flex-col mt-6"
+      >
+        <span>Tráfico Ilícito</span><span>de Migrantes</span>
+      </div>
+    </div>
+    <div class="img-migrantes">
+      <Image src={mujer} alt="Mujer" class="img-mujer" />
+      <Image src={adolescente} alt="Adolescente" class="img-adolescente" />
+      <Image src={hombre} alt="hombre" class="img-hombre" />
+      <Image src={luz} alt="luz" class="img-luz"/>
+    </div>
+
+    <Image
+      src={fondoParte1}
+      alt="Fondo"
+      class="w-screen h-auto absolute top-0 left-0"
+    />
+    <Image
+      src={arbol}
+      alt="Fondo"
+      class="w-screen h-auto absolute top-0 left-0"
+    />
+    <Image
+      src={mouse}
+      alt="Fondo"
+      class="z-10 absolute left-0 right-0 bottom-4 w-[52px] h-auto m-auto"
+    />
+  </div>
+  <div class="w-screen h-auto relative -z-10 parte2">
+    <div class="w-[811px] text-center absolute font-['Inter'] text-4xl font-bold z-50 pl-24 flotante-texto">
+      <span class="blanco text-[36px]">El Tráfico Ilícito de Migrantes (TIM) se entiende como la </span>
+      <span class="uppercase azulclaro">facilitación de la entrada irregular de una persona en un Estado</span>
+      <span class="blanco text-[36px]"> del cual dicha persona no es nacional ni residente permanente con el fin de obtener, directa o indirectamente, un </span>
+      <span class="uppercase azulclaro">beneficio financiero u otro beneficio de orden material</span>
+      <span class="blanco text-[36px]">(OIM, 2019).</span></div>
+    <Image src={rectanguloGris} alt="Fondo" class="w-screen h-auto background-gray" />
+  </div>
+</section>
+
+<script is:inline>
+  
+  // Inicializar ScrollMagic cuando el documento esté listo
+  document.addEventListener("DOMContentLoaded", () => {
+    // Crear un controlador de ScrollMagic
+    const controller = new ScrollMagic.Controller({
+      globalSceneOptions: {
+        triggerHook: "onLeave",
+        duration: "200%", // Duración para evitar errores visuales
+      },
+    });
+
+    const imgLuz = document.querySelectorAll(".img-luz");
+
+    // Pinear el div con la clase "parte1"
+    new ScrollMagic.Scene({
+      triggerElement: ".parte1",
+      triggerHook: "onLeave",
+      duration: "200",
+      tweenChanges: true,
+    })
+      .setTween(
+        TweenMax.staggerFromTo(
+          [".img-mujer", ".img-adolescente", ".img-hombre"],
+          1,
+          {
+            brightness: 70,
+            x: "-3%",
+            opacity: 0.5,
+          },
+          {
+            brightness: 100,
+            x: "3%",
+            opacity: 1,
+          },
+        ).concat(TweenMax.staggerFromTo(
+        [".img-luz"],
+        1, {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+        }
+
+        ))
+      )
+      .setPin(".parte1")
+      .addTo(controller);
+
+
+    // EFECTO PARA TEXTO FLOTANTE DE LA PARTE 2
+    new ScrollMagic.Scene({
+							triggerElement: ".parte2",
+							triggerHook: 0.7, // show, when scrolled 10% into view
+							duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+							offset: 50 // move trigger to center of element
+						})
+						.setClassToggle(".flotante-texto", "visible") // add class to reveal
+						.addTo(controller);
+  });
+
+
+
+</script>
+
+<style>
+  .img-mujer {
+    position: absolute;
+    z-index: 10;
+    right: 27%;
+    max-width: 460px;
+    top: 7%;
+    /* filter: brightness(70%); */
+  }
+  .img-adolescente {
+    position: absolute;
+    z-index: 10;
+    right: 2%;
+    max-width: 575px;
+    top: 19%;
+    /* filter: brightness(70%); */
+  }
+  .img-hombre {
+    position: absolute;
+    z-index: 10;
+    right: 0%;
+    max-width: 409px;
+    top: 46%;
+    /* filter: brightness(70%); */
+  }
+  .img-luz {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    max-width: 409px;
+    top: 17%;
+    opacity: 0;
+  }
+  .background-gray {
+    filter: drop-shadow(4px 4px 6px black);
+    background: #00000047;
+  }
+  .flotante-texto {
+    bottom: 25%;
+    left: 10rem;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease-in-out;
+  }
+  .flotante-texto.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+</style>
