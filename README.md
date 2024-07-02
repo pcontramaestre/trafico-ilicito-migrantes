@@ -1,3 +1,18 @@
+# Proyecto Voces y datos del TRÁFICO ILÍCITO DE MIGRANTES 
+
+## 👥 ¿QUÉ ES CORETT?
+```text
+La Coalición Regional contra la Trata de Personas y el Tráfico Ilícito de Migrantes (CORETT), es una iniciativa que nace en el año 2011 y está constituida por 9 países: Belice, Costa Rica, El Salvador, Guatemala, Honduras, México, Nicaragua, Panamá y la República Dominicana.
+
+CORETT se originó gracias al reconocimiento de sus países miembros de que los delitos de la trata de personas y el tráfico ilícito de migrantes son problemas multidimensionales de seguridad ciudadana y social. CORETT realiza esfuerzos hacia la prevención, detección, derivación, persecución de ambos delitos y la atención integral a las víctimas de trata de personas y a las personas objeto de tráfico ilícito de migrantes. 
+
+CORETT y sus países miembros están comprometidos a trabajar en forma articulada y transnacional, para fortalecer los esfuerzos conjuntos para combatir la trata de personas y el tráfico ilícito de migrantes.
+```
+[![Open CORETT](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://www.coalicioncorett.com/)
+
+
+
+
 # Astro Starter Kit: Basics
 
 ```sh
