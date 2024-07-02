@@ -8,7 +8,7 @@ CORETT se originó gracias al reconocimiento de sus países miembros de que los 
 
 CORETT y sus países miembros están comprometidos a trabajar en forma articulada y transnacional, para fortalecer los esfuerzos conjuntos para combatir la trata de personas y el tráfico ilícito de migrantes.
 ```
-[![Open CORETT](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://www.coalicioncorett.com/)
+[![Open CORETT]()](https://www.coalicioncorett.com/)
 
 
 
