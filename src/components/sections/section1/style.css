@@ -1,0 +1,129 @@
+/* SECCION 1 - PARTE 1 */
+.img-mujer {
+  position: absolute;
+  z-index: 10;
+  right: 27%;
+  max-width: 460px;
+  top: 7%;
+  /* filter: brightness(70%); */
+}
+.img-adolescente {
+  position: absolute;
+  z-index: 10;
+  right: 2%;
+  max-width: 575px;
+  top: 19%;
+  /* filter: brightness(70%); */
+}
+.img-hombre {
+  position: absolute;
+  z-index: 10;
+  right: 0%;
+  max-width: 409px;
+  top: 46%;
+  /* filter: brightness(70%); */
+}
+.img-luz {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  max-width: 409px;
+  top: 17%;
+  opacity: 0;
+}
+.background-gray {
+  filter: drop-shadow(4px 4px 6px black);
+  background: #00000047;
+}
+.flotante-texto {
+  bottom: 25%;
+  left: 10rem;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s ease-in-out;
+}
+.flotante-texto.visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+/* SECCION 1 - PARTE 2 Y 3 */
+#seccion1-2 {
+  background: var(--Azul, #014979);
+}
+.texto-animado {
+  color: #1870A0;
+  letter-spacing: 1.6px;
+}
+
+@media (max-width:1340px) {
+  .texto-animado {
+    font-size: 70px !important;
+  }
+}
+
+.con-cuadros {
+  background: url(/src/components/sections/section1/assets/KFS_Tijuana002.webp) #d3d3d300 0px -100.659px / 100% 118.533% no-repeat;
+  min-height: 100vh;
+}
+
+.con-cuadros .cuadro {
+  background: url(/src/components/sections/section1/assets/fondo-cuadros.webp) #c0e4e7 no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+  mix-blend-mode: hard-light;
+}
+
+.cuadro.cuadro1 {
+  width: 455px;
+  height: 467px;
+}
+
+.cuadro.cuadro2 {
+  width: 550px;
+  height: 418px;
+}
+
+.borde-sup-izq {
+  top: 15px;
+  left: 15px;
+  border-top: 2px solid #6F6F6F;
+  width: 70px;
+  border-left: 2px solid #6F6F6F;
+  height: 70px;
+}
+.borde-sup-der {
+  top: 15px;
+  right: 15px;
+  border-top: 2px solid #6F6F6F;
+  width: 70px;
+  border-right: 2px solid #6F6F6F;
+  height: 70px;
+}
+.borde-inf-izq {
+  bottom: 15px;
+  left: 15px;
+  border-left: 2px solid #6F6F6F;
+  width: 70px;
+  border-bottom: 2px solid #6F6F6F;
+  height: 70px;
+}
+.borde-inf-der {
+  bottom: 15px;
+  right: 15px;
+  border-right: 2px solid #6F6F6F;
+  width: 70px;
+  border-bottom: 2px solid #6F6F6F;
+  height: 70px;
+}
+
+/* PARTE 3 DE LA SECCION 1 */
+.seccion-pasos {
+  background: url(/src/components/sections/section1/assets/texturaPart3a.webp) #D9D9D9 no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+  /* mix-blend-mode: hard-light; */
+}
