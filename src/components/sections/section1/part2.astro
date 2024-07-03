@@ -4,8 +4,12 @@ import grafico from "../section1/assets/grafico.webp";
 import video from "../section1/assets/video.webp";
 import numero1 from "../section1/assets/n1.svg";
 import numero2 from "../section1/assets/n2.svg";
+import numero3 from "../section1/assets/n3.svg";
 import lancha from "../section1/assets/lancha.webp";
 import camion from "../section1/assets/camion.webp";
+import footer from "../section1/assets/footer-seccion1.webp";
+import oimFooter from "../section1/assets/oim-footer.svg";
+
 ---
 
 <section id="seccion1-2">
@@ -67,13 +71,14 @@ import camion from "../section1/assets/camion.webp";
   </div>
 </section>
 
+<!-- Seccion GRIS final -->
 <section id="seccion1-3" class="background-gris3" >
   <div class="seccion-video flex flex-col" >
     <h1 class="text-center font-bold font-['Formula'] text-[3rem] azul max-w-5xl m-auto pt-16 pb-16">¿Qué MOTIVA a las personas migrantes a utilizar el Tráfico Ilícito de Migrantes en su tránsito por la región?</h1>
     <Image src={video} alt="grafico" class="cursor-pointer m-auto pb-16"/>
   </div>
   <!-- PASOS -->
-  <div class="seccion-pasos pt-24 pb-8">
+  <div class="seccion-pasos pt-24">
     <!-- PASO 1 -->
     <div class="paso1">
       <div class="cuadro-con-numero max-w-[900px] m-auto relative background-blanco p-8 azul text-xl">
@@ -94,7 +99,7 @@ import camion from "../section1/assets/camion.webp";
     </div>
 
     <!-- PASO 2 -->
-    <div class="paso2 mt-8 flex flex-row max-w-[1080px] m-auto gap-28 pt-16 pb-16">
+    <div class="paso2 mt-8 flex flex-row max-w-[1200px] m-auto gap-28 pt-16 pb-16">
       <div class="paso-izquierda text-[2.5rem] font-['inika'] azul text-center font-bold leading-[1.25]">
         <p>¿Por qué las personas migrantes que usan el Tráfico 
           Ilícito de Migrantes (TIM) para facilitar su tránsito por la región, 
@@ -114,11 +119,42 @@ import camion from "../section1/assets/camion.webp";
     </div>
 
     <!-- PASO 3 -->
-    <div class="paso3 max-w-[1200px] m-auto">
-
+    <div class="paso3 max-w-[1200px] m-auto flex flex-row gap-8 relative">
+      <Image src={camion} alt="camion" class="absolute -top-6"/>
+      <div class="cuadro-con-numero relative background-blanco p-8 azul text-xl max-w-[840px] ml-auto">
+        <Image src={numero3} alt="numero" class="absolute -left-12 -top-8 " />
+        <p>
+          El mismo Protocolo categoriza a las personas migrantes como quienes 
+          <b>han sido objeto de la conducta.</b> El enfoque del Protocolo es <b>asentar 
+          el crimen del tráfico ilícito de migrantes principalmente como uno 
+          contra el Estado</b> y fortalecer la cooperación entre estos para prevenirlo y 
+          combatirlo, así como <b>proteger los derechos de las personas migrantes.</b>
+        </p>
+      </div>
     </div>
 
     <!-- PASO 4 -->
-    <div class="paso4"></div>
+    <div class="paso4 max-w-[1200px] m-auto flex flex-row gap-8 relative pt-16">
+      <div class="cuadro-con-numero relative background-blanco p-8 azul text-xl max-w-[1080px] ml-auto">
+        <Image src={numero3} alt="numero" class="absolute -left-12 -top-8 " />
+        <p>
+          Esto no excluye que la <b>persona objeto de tráfico, pueda llegar a ser “víctima” 
+          de otros delitos</b> cometidos o facilitados por personal traficante, de hecho, 
+          está bien documentado que las mismas redes criminales que facilitan el tráfico 
+          ilícito de migrantes cometen abusos, explotan o violentan a las personas migrantes, 
+          llegando a configurarse delitos contra estos y por supuesto, <b>aprovechándose de las 
+          vulnerabilidades que presentan al migrar de forma irregular.</b>
+        </p>
+      </div>
+    </div>
+    <div class="text-right font-light italic text-[0.9rem] max-w-[1200px] m-auto pt-6 azul">Extractos de entrevista a experto de OIM en temas de Protección, Tim Howe.</div>
+
+    <div class="footer-seccion1 relative">
+      <Image src={footer} alt="Footer sección 1" class="w-[100%] pt-8"/>
+      <Image src={oimFooter} alt="OIM" class="absolute bottom-20 left-0 right-0 cursor-pointer mr-auto ml-auto" />
+      <div class="flotante-oim absolute text-right w-[100%] top-[60%]">
+        <div class="max-w-[1200px] text-right azul m-auto text-xl">© OIM 2024</div>
+      </div>
+    </div>
   </div>
 </section>
