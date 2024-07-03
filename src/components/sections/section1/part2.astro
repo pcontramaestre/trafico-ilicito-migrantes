@@ -5,6 +5,7 @@ import video from "../section1/assets/video.webp";
 import numero1 from "../section1/assets/n1.svg";
 import numero2 from "../section1/assets/n2.svg";
 import numero3 from "../section1/assets/n3.svg";
+import numero4 from "../section1/assets/n4.svg";
 import lancha from "../section1/assets/lancha.webp";
 import camion from "../section1/assets/camion.webp";
 import footer from "../section1/assets/footer-seccion1.webp";
@@ -52,7 +53,7 @@ import oimFooter from "../section1/assets/oim-footer.svg";
         <div class="creador">(OIM, 2019)</div>
       </div>
     </div>
-
+    <div class="animate-grafico"></div>
     <!-- Seccion con grafico -->
     <div class="seccion-grafico flex flex-wrap items-center justify-center gap-12 text-[1.75rem] pb-24">
       <div class="izquierda grafico">
@@ -70,12 +71,12 @@ import oimFooter from "../section1/assets/oim-footer.svg";
     </div>
   </div>
 </section>
-
+<div class="animate-video"></div>
 <!-- Seccion GRIS final -->
 <section id="seccion1-3" class="background-gris3" >
   <div class="seccion-video flex flex-col" >
-    <h1 class="text-center font-bold font-['Formula'] text-[3rem] azul max-w-5xl m-auto pt-16 pb-16">¿Qué MOTIVA a las personas migrantes a utilizar el Tráfico Ilícito de Migrantes en su tránsito por la región?</h1>
-    <Image src={video} alt="grafico" class="cursor-pointer m-auto pb-16"/>
+    <h1 class="titulo-video text-center font-bold font-['Formula'] text-[3rem] azul max-w-5xl m-auto pt-16 pb-16 invisible-zoom">¿Qué MOTIVA a las personas migrantes a utilizar el Tráfico Ilícito de Migrantes en su tránsito por la región?</h1>
+    <Image src={video} alt="grafico" class="cursor-pointer m-auto pb-16 img-video invisible-zoom"/>
   </div>
   <!-- PASOS -->
   <div class="seccion-pasos pt-24">
@@ -136,7 +137,7 @@ import oimFooter from "../section1/assets/oim-footer.svg";
     <!-- PASO 4 -->
     <div class="paso4 max-w-[1200px] m-auto flex flex-row gap-8 relative pt-16">
       <div class="cuadro-con-numero relative background-blanco p-8 azul text-xl max-w-[1080px] ml-auto">
-        <Image src={numero3} alt="numero" class="absolute -left-12 -top-8 " />
+        <Image src={numero4} alt="numero" class="absolute -left-12 -top-8 " />
         <p>
           Esto no excluye que la <b>persona objeto de tráfico, pueda llegar a ser “víctima” 
           de otros delitos</b> cometidos o facilitados por personal traficante, de hecho, 
