@@ -4,9 +4,11 @@
   const controller = new ScrollMagic.Controller({
     globalSceneOptions: {
       triggerHook: "onLeave",
-      duration: "200%", // Duración para evitar errores visuales
+      duration: "100%", // Duración para evitar errores visuales
     },
   });
+
+  const controllerB = new ScrollMagic.Controller();
 
   // Animacion de texto
   new ScrollMagic.Scene({
@@ -14,6 +16,7 @@
     triggerHook: 0.7,
     duration: "80%",
     offset: 0,
+    tweenChanges: true,
   })
   .setTween(
       TweenMax.staggerFromTo(
@@ -93,5 +96,101 @@
     )
   .setPin(".seccion-grafico")
   .addTo(controller);
+
+  // Seccion de video 
+  new ScrollMagic.Scene({
+    triggerElement: ".animate-video",
+    triggerHook: "onCenter",
+    duration: "200%",
+  })
+  .setClassToggle(".titulo-video, .img-video", "visible-zoom")
+  //.setPin('.seccion-video')
+  .addIndicators()  
+  .addTo(controllerB);
+
+    // Seccion de PASOS 
+
+    //PASO 1
+    new ScrollMagic.Scene({
+      triggerElement: ".paso1",
+      triggerHook: "onEnter",
+      duration: "100%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".paso1 > .cuadro-con-numero"],
+        0.1,
+        {
+          opacity: 0.5,
+          x: "-25%",
+        },
+        {
+          opacity: 1,
+          x: "0%",
+        },
+      )
+    )
+    .addIndicators()  
+    .addTo(controllerB);
+
+
+    //PASO 2
+    new ScrollMagic.Scene({
+      triggerElement: ".paso1",
+      triggerHook: "onCenter",
+      duration: "100%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".paso2 > div"],
+        0.1,
+        {
+          opacity: 0.5,
+          y: "-35%",
+        },
+        {
+          opacity: 1,
+          y: "0%",
+        },
+      )
+    )
+    .addIndicators()  
+    .addTo(controllerB);
+
+    //PASO 3 y 4
+    new ScrollMagic.Scene({
+      triggerElement: ".paso3",
+      triggerHook: "onEnter",
+      duration: "100%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".paso3 > div"],
+        0.1,
+        {
+          opacity: 0.5,
+          x: "35%",
+        },
+        {
+          opacity: 1,
+          x: "0%",
+        },
+      ).concat(
+        TweenMax.staggerFromTo(
+          [".paso4 > div"],
+          0.1,
+          {
+            opacity: 0.5,
+            x: "-35%",
+          },
+          {
+            opacity: 1,
+            x: "0%",
+          },
+        )
+      )
+    )
+    .addIndicators()  
+    .addTo(controllerB);    
 
 });

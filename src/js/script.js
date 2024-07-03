@@ -94,4 +94,14 @@
   .setPin(".seccion-grafico")
   .addTo(controller);
 
+  // Seccion de video
+  new ScrollMagic.Scene({
+    triggerElement: ".seccion-video",
+    triggerHook: 1,
+    duration: "100%",
+    offset: 0,
+  })
+  .setPin(".seccion-video")
+  .addTo(controller);
+
 });
