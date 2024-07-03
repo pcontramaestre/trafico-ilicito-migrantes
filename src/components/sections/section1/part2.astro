@@ -1,7 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import grafico from "../section1/assets/grafico.webp";
-
+import video from "../section1/assets/video.webp";
+import numero1 from "../section1/assets/n1.svg";
+import numero2 from "../section1/assets/n2.svg";
+import lancha from "../section1/assets/lancha.webp";
+import camion from "../section1/assets/camion.webp";
 ---
 
 <section id="seccion1-2">
@@ -61,185 +65,60 @@ import grafico from "../section1/assets/grafico.webp";
       </div>
     </div>
   </div>
-
 </section>
 
+<section id="seccion1-3" class="background-gris3" >
+  <div class="seccion-video flex flex-col" >
+    <h1 class="text-center font-bold font-['Formula'] text-[3rem] azul max-w-5xl m-auto pt-16 pb-16">¿Qué MOTIVA a las personas migrantes a utilizar el Tráfico Ilícito de Migrantes en su tránsito por la región?</h1>
+    <Image src={video} alt="grafico" class="cursor-pointer m-auto pb-16"/>
+  </div>
+  <!-- PASOS -->
+  <div class="seccion-pasos pt-24 pb-8">
+    <!-- PASO 1 -->
+    <div class="paso1">
+      <div class="cuadro-con-numero max-w-[900px] m-auto relative background-blanco p-8 azul text-xl">
+        <Image src={numero1} alt="numero" class="absolute -left-12 -top-8 " />
+        <p class="pb-3">
+          Según el <b>Protocolo contra el Tráfico Ilícito de Migrantes por Tierra, 
+          Mar y Aire</b>, artículo 3.a, la definición internacional de tráfico ilícito 
+          de migrantes es la facilitación de la entrada ilegal de una persona a un 
+          país del cual no sea nacional o residente permanente para obtener,
+          directa o indirectamente, un beneficio financiero u otro de orden material.
+        </p>
+        <p>
+          En suma, <b>lo que se reprocha es la facilitación intencional de la entrada
+           ilegal a cambio de un beneficio, y el reproche se hace a quien trafica.</b>
+        </p>
+        <Image src={lancha} alt="numero" class="absolute -right-[11rem] -bottom-[15rem] " />
+      </div>
+    </div>
 
+    <!-- PASO 2 -->
+    <div class="paso2 mt-8 flex flex-row max-w-[1080px] m-auto gap-28 pt-16 pb-16">
+      <div class="paso-izquierda text-[2.5rem] font-['inika'] azul text-center font-bold leading-[1.25]">
+        <p>¿Por qué las personas migrantes que usan el Tráfico 
+          Ilícito de Migrantes (TIM) para facilitar su tránsito por la región, 
+          son <span class="naranja3 text-[3rem]">OBJETO</span> y no VÍCTIMAS?</p>
+      </div>
+      <div class="paso-derecha flex items-end justify-end">
+        <div class="cuadro-con-numero relative background-blanco p-8 azul text-xl">
+          <Image src={numero2} alt="numero" class="absolute -left-12 -top-8 " />
+          <p>
+            El artículo 5 del mismo Protocolo, aclara que las personas migrantes <b>no 
+            estarán sujetas a enjuiciamiento penal</b>, por haber sido objeto de alguna 
+            de las conductas que enuncia el artículo 6, entre ellas el tráfico ilícito de migrantes. 
+            El artículo 2, también hace esa aclaración terminológica.
+          </p>
+        </div>
+      </div>
+    </div>
 
+    <!-- PASO 3 -->
+    <div class="paso3 max-w-[1200px] m-auto">
 
+    </div>
 
-
-
-<script is:inline>  
-  // Inicializar ScrollMagic cuando el documento esté listo
-  document.addEventListener("DOMContentLoaded", () => {
-    // Crear un controlador de ScrollMagic
-    const controller = new ScrollMagic.Controller({
-      globalSceneOptions: {
-        triggerHook: "onLeave",
-        duration: "200%", // Duración para evitar errores visuales
-      },
-    });
-
-
-    // Animacion de texto
-    new ScrollMagic.Scene({
-      triggerElement: ".titulo-animado ",
-      triggerHook: 0.7,
-      duration: "80%",
-      offset: 0,
-    })
-    .setTween(
-        TweenMax.staggerFromTo(
-          [".texto-animado"],
-          1,
-          {
-            x: "-100%",
-            opacity: 0,
-          },
-          {
-            brightness: 100,
-            x: "2%",
-            opacity: 1,
-          },
-        )
-      )
-    .setPin(".titulo-animado")
-    .addTo(controller);
-
-
-// Animacion de los cuadros
-    new ScrollMagic.Scene({
-      triggerElement: ".con-cuadros",
-      triggerHook: 0.7,
-      duration: "80%",
-      offset: 0,
-    })
-    .setTween(
-        TweenMax.staggerFromTo(
-          [".cuadro"],
-          1,
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-          },
-        )
-      )
-    .setPin(".con-cuadros")
-    .addTo(controller);
-
-    //Animacion de la seccion de grafico
-    //seccion-grafico
-    new ScrollMagic.Scene({
-      triggerElement: ".seccion-grafico",
-      triggerHook: 0.7,
-      duration: "50",
-      offset: 0,
-    })
-    .setTween(
-        TweenMax.staggerFromTo(
-          [".izquierda.grafico"],
-          1,
-          {
-            opacity: 0,
-            x: "-25%",
-          },
-          {
-            opacity: 1,
-            x: "0%",
-          },
-        ).concat(
-          TweenMax.staggerFromTo(
-            [".derecha.texto"],
-            1,
-            {
-              opacity: 0,
-              x: "125%",
-            },
-            {
-              opacity: 1,
-              x: "0%",
-            },
-          )
-        )
-      )
-    .setPin(".seccion-grafico")
-    .addTo(controller);
-
-  });
-</script>
-
-<style>
-  #seccion1-2 {
-    background: var(--Azul, #014979);
-  }
-  .texto-animado {
-    color: #1870A0;
-    letter-spacing: 1.6px;
-  }
-
-  @media (max-width:1340px) {
-    .texto-animado {
-      font-size: 70px !important;
-    }
-  }
-
-  .con-cuadros {
-    background: url(/src/components/sections/section1/assets/KFS_Tijuana002.webp) #d3d3d300 0px -100.659px / 100% 118.533% no-repeat;
-    min-height: 100vh;
-  }
-
-  .con-cuadros .cuadro {
-    background: url(/src/components/sections/section1/assets/fondo-cuadros.webp) #c0e4e7 no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: left;
-    mix-blend-mode: hard-light;
-  }
-
-  .cuadro.cuadro1 {
-    width: 455px;
-    height: 467px;
-  }
-
-  .cuadro.cuadro2 {
-    width: 550px;
-    height: 418px;
-  }
-  
-  .borde-sup-izq {
-    top: 15px;
-    left: 15px;
-    border-top: 2px solid #6F6F6F;
-    width: 70px;
-    border-left: 2px solid #6F6F6F;
-    height: 70px;
-  }
-  .borde-sup-der {
-    top: 15px;
-    right: 15px;
-    border-top: 2px solid #6F6F6F;
-    width: 70px;
-    border-right: 2px solid #6F6F6F;
-    height: 70px;
-  }
-  .borde-inf-izq {
-    bottom: 15px;
-    left: 15px;
-    border-left: 2px solid #6F6F6F;
-    width: 70px;
-    border-bottom: 2px solid #6F6F6F;
-    height: 70px;
-  }
-  .borde-inf-der {
-    bottom: 15px;
-    right: 15px;
-    border-right: 2px solid #6F6F6F;
-    width: 70px;
-    border-bottom: 2px solid #6F6F6F;
-    height: 70px;
-  }
-
-</style>
+    <!-- PASO 4 -->
+    <div class="paso4"></div>
+  </div>
+</section>
