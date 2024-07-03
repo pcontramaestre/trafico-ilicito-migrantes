@@ -47,6 +47,17 @@
   transform: none;
 }
 
+.visible-zoom {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.invisible-zoom {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: scale(0.4);
+}
+
 
 /* SECCION 1 - PARTE 2 Y 3 */
 #seccion1-2 {
