@@ -18,7 +18,7 @@ import luz from "./assets/luz1.png";
     <div
     class="contenedor absolute inline-grid gap-12 grid-cols-2 grid-rows-1 pt-16 pl-24 z-10 top-0"
   >
-    <Image src={logoCorett} alt="Corett" />
+    <Image src={logoCorett} alt="Corett"  />
     <Image src={logoOim} alt="OIM" />
   </div>
     <div class="titulo-seccion pl-24 z-10">
@@ -52,6 +52,7 @@ import luz from "./assets/luz1.png";
       src={mouse}
       alt="Fondo"
       class="z-10 absolute left-0 right-0 bottom-4 w-[52px] h-auto m-auto"
+      loading="lazy"
     />
   </div>
   <div class="w-screen h-auto relative -z-10 parte2">
@@ -125,58 +126,4 @@ import luz from "./assets/luz1.png";
 						.setClassToggle(".flotante-texto", "visible") // add class to reveal
 						.addTo(controller);
   });
-
-
-
 </script>
-
-<style>
-  .img-mujer {
-    position: absolute;
-    z-index: 10;
-    right: 27%;
-    max-width: 460px;
-    top: 7%;
-    /* filter: brightness(70%); */
-  }
-  .img-adolescente {
-    position: absolute;
-    z-index: 10;
-    right: 2%;
-    max-width: 575px;
-    top: 19%;
-    /* filter: brightness(70%); */
-  }
-  .img-hombre {
-    position: absolute;
-    z-index: 10;
-    right: 0%;
-    max-width: 409px;
-    top: 46%;
-    /* filter: brightness(70%); */
-  }
-  .img-luz {
-    position: absolute;
-    z-index: 10;
-    right: 0;
-    max-width: 409px;
-    top: 17%;
-    opacity: 0;
-  }
-  .background-gray {
-    filter: drop-shadow(4px 4px 6px black);
-    background: #00000047;
-  }
-  .flotante-texto {
-    bottom: 25%;
-    left: 10rem;
-    opacity: 0;
-    transform: scale(0.9);
-    transition: all 1s ease-in-out;
-  }
-  .flotante-texto.visible {
-    opacity: 1;
-    transform: none;
-  }
-
-</style>
