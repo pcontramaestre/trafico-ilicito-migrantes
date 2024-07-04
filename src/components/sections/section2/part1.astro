@@ -11,6 +11,7 @@ import card2Img from '../section2/assets/card2-redes.webp';
 import card3Img from '../section2/assets/card3-individuos.webp';
 import card4Img from '../section2/assets/card4-operaciones.webp';
 import AudioPlayer from '@components/AudioPlayer.astro'
+import Slider from "./Slider.astro";
 ---
 
 <section id="seccion2-1">
@@ -136,9 +137,43 @@ import AudioPlayer from '@components/AudioPlayer.astro'
     </div>
 
     <!-- PARTE OSCURA -->
-    
+    <div class="parte-oscura relative seccion-slider">
+      <Slider />
+    </div>
 
-     <!-- PARTE CLARA -->
+    <!-- PARTE CLARA -->
+    <div class="parte-clara relative pt-[4rem] pb-[4rem]">
+      <div class="overlay z-0"></div>
+      <div class="doble-coloumna grid grid-cols-2 max-w-[1120px] ml-auto mr-auto z-10 relative font-light">
+        <div class="col-izquierda p-8 border-r-[3px] border-b-[3px] border-[#45AFC0] border-dashed pr-[3.25rem] pb-[4rem]">
+          <p class="text-[28px] leading-[140%]">
+            Las <span class="naranja font-bold">mujeres</span> suelen pagar más que los hombres por el uso del TIM
+          </p>
+          <p class="font-['Formula'] text-[96px] font-bold tracking-[1.92px] naranja">
+            (19% <span class="text-[80px] tracking-[1.6px]">más</span>),
+          </p>
+          <p class="text-[28px] leading-[140%] -mt-[24px]">
+            debido a que tienden a viajar con niñas, niños y adolescentes. Además, 
+            a lo largo de su trayecto tienen mayor riesgo de ser víctimas de violencia de género.
+          </p>
+        </div>
+        <div class="col-derecha p-8 border-b-[3px] border-[#45AFC0] border-dashed pl-[6.5rem]">
+          <p class="text-[28px] leading-[140%]">Con respecto a</p>
+          <p class="text-[48px] naranja font-['Formula'] tracking-[0.96px] font-bold leading-[1.2] pt-2 max-w-[350px]">niñas, niños y adolescentes (NNA),</p>
+          <p class="text-[28px] leading-[140%]">
+            se reporta que en ciertos cruces pagan
+            tarifas menores o se les permite el viaje gratuito.
+          </p>
+        </div>
+      </div>
+      <div class="texto-migrantes max-w-[1120px] text-center font-light text-[28px] relative z-10 mr-auto ml-auto pt-[3rem]">
+        <p class="font-light  leading-[1.2]">
+          A las personas <b class="naranja font-['Formula'] text-[36px] font-bold tracking-[0.72px]">migrantes extrarregionales</b> provenientes de la República Bolivariana de
+          Venezuela, y a <b class="naranja font-['Formula'] text-[36px] font-bold tracking-[0.72px]">migrantes extracontinentales</b> de África y Asia, se les cobra tarifas más 
+          elevadas y en dólares de los Estados Unidos de América (OIM, 2022).
+        </p>
+      </div>
+    </div>
   </div>
 
 
