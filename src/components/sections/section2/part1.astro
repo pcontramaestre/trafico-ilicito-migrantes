@@ -1,0 +1,145 @@
+---
+import { Image } from "astro:assets";
+import fondoPrincipal from '../section2/assets/fondo1.webp';
+import mano1 from '../section2/assets/mano1.webp';
+import mano2 from '../section2/assets/mano2.webp';
+import redgif from '../section2/assets/red.gif';
+import cambiar from '../section2/assets/cambiar.svg';
+import interaccion from '../section2/assets/interaccion.svg';
+import card1Img from '../section2/assets/card1-jerarquias.webp';
+import card2Img from '../section2/assets/card2-redes.webp';
+import card3Img from '../section2/assets/card3-individuos.webp';
+import card4Img from '../section2/assets/card4-operaciones.webp';
+import AudioPlayer from '@components/AudioPlayer.astro'
+---
+
+<section id="seccion2-1">
+  <!-- BANNER PRINCIPAL -->
+  <div class="w-screen h-screen parte1 flex flex-col justify-end banner-principal relative">
+    <div class="degradado-banner absolute w-screen h-screen"></div>
+    <div class="titulo-seccion z-10 w-screen text-center pb-36">
+      <div class="text-[62px] font-bold font-['Inika'] azul6 z-10 mb-4">
+        Modos de operación de las redes de
+      </div>
+      <div class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none">
+        Tráfico Ilícito de Migrantes
+      </div>
+    </div>
+    <Image src={mano1} alt="" class=" absolute left-[15%] top-0 z-10"/>
+    <Image src={mano2} alt="" class=" absolute right-0 top-1/4 z-10"/>
+    <Image src={redgif} alt="" class=" absolute top-0 left-0 w-[100%] z-[1]"/>
+  </div>
+
+  <!-- ESTRUCTURAS DE OPERACION -->
+  <div class="fondo-marron bg-[#333] relative min-h-screen pt-32 pb-32">
+    <p class="blanco text-4xl max-w-[1000px] ml-auto mr-auto text-center bg-[#333] z-10 relative">
+      <b class="naranja4 font-bold">LAS ESTRUCTURAS DE OPERACIÓN DE TRÁFICO ILÍCITO DE MIGRANTES (TIM) 
+      VARÍAN DEPENDIENDO DE FACTORES</b> como la geografía del terreno, la cantidad de 
+      flujos migratorios, la capacidad económica y la
+      nacionalidad de las personas migrantes, la presencia de otros grupos delictivos, 
+      la eficacia en los controles fronterizos, la aplicación de las leyes de migración 
+      y la capacidad organizativa de las redes de TIM.
+    </p>
+
+    <p class="naranja3 uppercase font-['Formula'] tracking-[0.04em] leading-[1.2] text-[4.5rem] text-center max-w-[1000px] font-bold pt-36 pb-36 ml-auto mr-auto bg-[#333] z-10 relative">
+      Estructuras de operación del TRÁFICO ILÍCITO DE MIGRANTES en la región
+    </p>
+
+    <div class="mensaje-interaccion flex text-center gap-4 flex-row items-center justify-center pb-16 blanco italic text-[1.2rem]">
+      <Image src={interaccion} alt=""/> <span>Pase el cursor sobre cada tarjeta:</span>
+    </div>
+    <!-- CARDS -->
+    <div class="cards-estructuras grid grid-cols-4 gap-4 max-w-[1000px]  ml-auto mr-auto bg-[#333] z-10 relative pb-24">
+      <div class="card-image">
+        <Image src={card1Img} alt="" class=" cursor-pointer"/>
+        <div class="texto-estructura opacity-0 cursor-pointer">
+          <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
+          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Jerarquías</div>
+          <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">Poseen una
+            organización transnacional
+            compleja.
+            Se
+            utilizan usualmente
+            para viajes bien organizados, a
+            menudo desde
+            Asia, África y
+            Suramérica.
+          </div>
+        </div>
+      </div>
+      <div class="card-image">
+        <Image src={card2Img} alt="" class=" cursor-pointer"/>
+        <div class="texto-estructura opacity-0 cursor-pointer">
+          <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
+          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Redes</div>
+          <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">
+            Personas
+            participantes operan con
+            autonomía y en
+            colaboraciones similares a las “comerciales”.
+            Poseen
+            vínculos con organizaciones criminales (salvoconductos).
+          </div>
+        </div>
+      </div>
+      <div class="card-image">
+        <Image src={card3Img} alt="" class=" cursor-pointer"/>
+        <div class="texto-estructura opacity-0 cursor-pointer">
+          <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
+          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Individuos</div>
+          <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">
+            Se encuentran frecuentemente en comunidades fronterizas. Actúan
+            por subsistencia y
+            brindan servicios
+            como venta de comida y artículos, transporte,
+            hospedaje y telecomunicaciones.
+          </div>
+        </div>
+      </div>
+      <div class="card-image">
+        <Image src={card4Img} alt="" class=" cursor-pointer"/>
+        <div class="texto-estructura opacity-0 cursor-pointer">
+          <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
+          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Operaciones mixtax</div>
+          <div class="desc-estructura text-[#1F1F1F] text-lg leading-tight">
+            Este es el perfil predominante en la región. Consiste en
+            una mezcla de
+            jerarquías con
+            redes entre países y que a la vez
+            contratan individuos.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center blanco text-xl w-screen">(UNODC, 2018)</div>
+  </div>
+
+  <!-- COSTOS ASOCIADOS -->
+  <div class="costos-asociados relative">
+    <AudioPlayer
+        src="/audios/audio1.mp3" 
+        title="Carácter transnacional de las redes de Tráfico ilícito de Migrantes." 
+        subtitle="Extracto de entrevista a una persona funcionaria de gobierno." 
+      />
+    <!-- PARTE CLARA -->
+    <div class="parte-clara relative pt-[16rem] pb-36">
+      <div class="overlay z-0"></div>
+      <p class="naranja3  uppercase font-['Formula'] tracking-wider leading-[1.2] text-[4.5rem] text-center max-w-[900px] font-bold ml-auto mr-auto z-10 relative">
+        Costos asociados al Tráfico Ilícito de Migrantes (tim)
+      </p>
+      <p class="relative z-10 max-w-[900px] mr-auto ml-auto text-4xl font-medium pt-10 text-center">
+        La OIM ha identificado diferentes tipos de paquetes ofertados por las redes de TIM.
+         Sus precios <b class="naranja2">varían según diversos factores</b> como: país de donde inicia el viaje,
+          tipo de trasporte, nacionalidad de las personas migrantes, entre otros.
+      </p>
+    </div>
+
+    <!-- PARTE OSCURA -->
+
+
+     <!-- PARTE CLARA -->
+  </div>
+
+
+</section>

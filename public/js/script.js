@@ -105,7 +105,6 @@
   })
   .setClassToggle(".titulo-video, .img-video", "visible-zoom")
   //.setPin('.seccion-video')
-  .addIndicators()  
   .addTo(controllerB);
 
     // Seccion de PASOS 
@@ -130,7 +129,6 @@
         },
       )
     )
-    .addIndicators()  
     .addTo(controllerB);
 
 
@@ -154,7 +152,6 @@
         },
       )
     )
-    .addIndicators()  
     .addTo(controllerB);
 
     //PASO 3 y 4
@@ -190,7 +187,6 @@
         )
       )
     )
-    .addIndicators()  
     .addTo(controllerB);    
 
 });

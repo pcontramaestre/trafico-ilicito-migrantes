@@ -6,6 +6,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Formula';
+  src: url('/fonts/FormulaCondensed-Light.woff') format('woff');
+  font-weight:400;
+  font-style:normal;
+  font-display: swap;
+}
+
 .azul {
   color: #014979;
 }
@@ -37,9 +45,15 @@
 .background-blanco {
   background: #F6F4F3;
 }
+.naranja2 {
+  color: #B85600;
+}
 .naranja4 {
   color: #FFA85C;
 }
 .naranja3 {
   color: #E06900;
+}
+.naranja {
+  color: #FF7F11;
 }

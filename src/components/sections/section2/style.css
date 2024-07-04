@@ -1,0 +1,68 @@
+.banner-principal {
+    background: url(/src/components/sections/section2/assets/fondo1.webp) #d3d3d300 0px -100.659px / 100% 118.533% no-repeat;
+    min-height: 100vh;
+}
+
+.degradado-banner {
+  background: linear-gradient(90deg, #0000008f 10%, transparent 90.5%);
+}
+
+.card-image {
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image > img {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+  display: block;
+}
+
+.texto-estructura {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #D9D9D9;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  /* transform: rotateY(180deg); */
+  backface-visibility: hidden;
+  transition: opacity 0.6s;
+}
+
+.card-image:hover img,
+.card-image.clicked img {
+  transform: rotateY(180deg);
+}
+
+.card-image:hover .texto-estructura,
+.card-image.clicked .texto-estructura {
+  opacity: 1;
+}
+
+.costos-asociados {
+  background: url(/src/components/sections/section1/assets/texturaPart3a.webp) #D9D9D9 no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+}
+.overlay {
+  position: absolute; /* posición absoluta */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* overlay blanco con opacidad */
+}
