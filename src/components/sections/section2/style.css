@@ -53,10 +53,22 @@
 }
 
 .costos-asociados {
-  background: url(/src/components/sections/section1/assets/texturaPart3a.webp) #D9D9D9 no-repeat;
-  background-position: center;
-  background-size: cover;
   text-align: left;
+}
+
+.parte-clara {
+  background: url(/src/components/sections/section2/assets/textura-sliders.webp);
+  background-position: center;
+  background-size: contain;
+}
+.parte-oscura {
+  background: url(/src/components/sections/section2/assets/textura-sliders.webp);
+  background-position: center;
+  background-size: contain;
+}
+#slideContainer {
+  background: url(/src/components/sections/section2/assets/textura-sliders.webp);
+  background-size: contain;
 }
 .overlay {
   position: absolute; /* posición absoluta */
@@ -66,3 +78,9 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.6); /* overlay blanco con opacidad */
 }
+
+/* .seccion-slider {
+  background: url(/src/components/sections/section2/assets/lineas-slider.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
+} */
