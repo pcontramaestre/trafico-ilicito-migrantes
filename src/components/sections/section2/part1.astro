@@ -10,10 +10,14 @@ import card1Img from '../section2/assets/card1-jerarquias.webp';
 import card2Img from '../section2/assets/card2-redes.webp';
 import card3Img from '../section2/assets/card3-individuos.webp';
 import card4Img from '../section2/assets/card4-operaciones.webp';
-import AudioPlayer from '@components/AudioPlayer.astro'
-import Slider from "./Slider.astro";
+import tic1 from '../section2/assets/tic1.webp';
+import tic2 from '../section2/assets/tic2.webp';
+import tic3 from '../section2/assets/tic3.webp';
+import AudioPlayer from '@components/AudioPlayer.astro';
+import Accordeon from '@components/Accordion.astro';
+import Slider from './Slider.astro';
+import Cuadro from "@components/Cuados.astro";
 ---
-
 <section id="seccion2-1">
   <!-- BANNER PRINCIPAL -->
   <div class="w-screen h-screen parte1 flex flex-col justify-end banner-principal relative">
@@ -42,9 +46,7 @@ import Slider from "./Slider.astro";
       y la capacidad organizativa de las redes de TIM.
     </p>
 
-    <p class="naranja3 uppercase font-['Formula'] tracking-[0.04em] leading-[1.2] text-[4.5rem] text-center max-w-[1000px] font-bold pt-36 pb-36 ml-auto mr-auto bg-[#333] z-10 relative">
-      Estructuras de operación del TRÁFICO ILÍCITO DE MIGRANTES en la región
-    </p>
+    <p class="naranja3 uppercase font-['Formula'] tracking-[0.04em] leading-[1.2] text-[4.5rem] text-center max-w-[1000px] font-bold pt-36 pb-36 ml-auto mr-auto bg-[#333] z-10 relative">Estructuras de operación del TRÁFICO ILÍCITO DE MIGRANTES en la región</p>
 
     <div class="mensaje-interaccion flex text-center gap-4 flex-row items-center justify-center pb-16 blanco italic text-[1.2rem]">
       <Image src={interaccion} alt=""/> <span>Pase el cursor sobre cada tarjeta:</span>
@@ -56,15 +58,7 @@ import Slider from "./Slider.astro";
         <div class="texto-estructura opacity-0 cursor-pointer">
           <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
           <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Jerarquías</div>
-          <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">Poseen una
-            organización transnacional
-            compleja.
-            Se
-            utilizan usualmente
-            para viajes bien organizados, a
-            menudo desde
-            Asia, África y
-            Suramérica.
+          <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">Poseen una organización transnacional compleja. Se utilizan usualmente para viajes bien organizados, a menudo desde Asia, África y Suramérica.
           </div>
         </div>
       </div>
@@ -73,13 +67,7 @@ import Slider from "./Slider.astro";
         <div class="texto-estructura opacity-0 cursor-pointer">
           <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
           <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Redes</div>
-          <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">
-            Personas
-            participantes operan con
-            autonomía y en
-            colaboraciones similares a las “comerciales”.
-            Poseen
-            vínculos con organizaciones criminales (salvoconductos).
+          <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">Personas participantes operan con autonomía y en colaboraciones similares a las “comerciales”. Poseen vínculos con organizaciones criminales (salvoconductos).
           </div>
         </div>
       </div>
@@ -88,13 +76,7 @@ import Slider from "./Slider.astro";
         <div class="texto-estructura opacity-0 cursor-pointer">
           <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
           <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Individuos</div>
-          <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">
-            Se encuentran frecuentemente en comunidades fronterizas. Actúan
-            por subsistencia y
-            brindan servicios
-            como venta de comida y artículos, transporte,
-            hospedaje y telecomunicaciones.
-          </div>
+          <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight"> Se encuentran frecuentemente en comunidades fronterizas. Actúan por subsistencia y brindan servicios como venta de comida y artículos, transporte, hospedaje y telecomunicaciones.</div>
         </div>
       </div>
       <div class="card-image">
@@ -102,13 +84,7 @@ import Slider from "./Slider.astro";
         <div class="texto-estructura opacity-0 cursor-pointer">
           <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
           <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Operaciones mixtax</div>
-          <div class="desc-estructura text-[#1F1F1F] text-lg leading-tight">
-            Este es el perfil predominante en la región. Consiste en
-            una mezcla de
-            jerarquías con
-            redes entre países y que a la vez
-            contratan individuos.
-          </div>
+          <div class="desc-estructura text-[#1F1F1F] text-lg leading-tight"> Este es el perfil predominante en la región. Consiste en una mezcla de jerarquías con redes entre países y que a la vez contratan individuos.</div>
         </div>
       </div>
     </div>
@@ -177,4 +153,107 @@ import Slider from "./Slider.astro";
   </div>
 
 
+  <div class="cuadro-naranja w-screen h-screen bg-[#B85600] flex items-center min-h-[792px]">
+    <!-- <Cuadro texto="Esto es un texto <b>texto</b>" estilos="bg-[#ffffff]"/> 
+    <Cuadro titulo="Pruebas de texto" texto="Esto es un texto <b>texto</b>" creador="OIM 2019"/> 
+    <Cuadro texto="Esto es un texto <b>texto</b>" />  -->
+    <div class="bg-[url('/src/components/sections/section2/assets/KFS_Tijuana.webp')] min-h-[600px] w-screen bg-cover grid items-center">
+      <div class="grid grid-cols-12 items-center max-w-[1120px] ml-auto mr-auto gap-16">
+        <div class=" col-span-7">
+          <h1 class="font-['Formula'] text-[4.5rem] font-bold tracking-[1.56px] uppercase leading-[1.3] text-[#F6F4F3] color-title-cuadro">Cobros del crimen organizado a las redes de TIM para transitar por territorios controlados</h1>
+        </div>
+        <div class="col-span-5">
+          <Cuadro 
+            titulo='<b class="text-[#000000] ">"Derecho de piso"<br>"Jale"<br>"Derecho de tránsito"</b>' 
+            texto="Estos conceptos hacen referencia a los cobros que grupos criminales hacen a las personas migrantes para poder transitar por territorios controlados por el crimen organizado."
+            estilos="bg-[white] bg-[url('/src/components/sections/section1/assets/fondo-cuadros.webp')] bg-no-repeat bg-cover max-w-[430px]"
+          />
+        </div>
+      </div>      
+    </div>
+  </div>
+
+
+  <div class=" bg-[#333] text-[1.75rem] font-light pt-[13rem] pb-[4.75rem] min-h-[560px] relative">
+    <AudioPlayer
+        src="/audios/audio1.mp3" 
+        title="Las redes de tráfico marcan a las personas migrantes para identificarlas." 
+        subtitle="Extracto de entrevista a una persona funcionaria de la sociedad civil." 
+      />
+      <div class="textos max-w-[1120px] mr-auto ml-auto blanco">
+        <p class="pb-12">
+          La OIM identificó que ciertas redes de Tráfico Ilícito de Migrantes operan en las mismas zonas que las redes de
+          crimen organizado, por lo que <b class="naranja4 font-bold">comparten territorios o rutas.</b>
+        </p>
+        <p>
+          La falta de pago del derecho al tránsito por parte de redes y personas traficantes
+          o de personas migrantes, puede tener graves consecuencias como el
+          <b class="naranja4 font-bold">reclutamiento forzoso, la trata de personas e incluso la muerte.</b>
+        </p>
+      </div>
+
+  </div>
+  
+  <div class="bg-[url('/src/components/sections/section2/assets/textura-sliders.webp')] pt-16 pb-16 section-acordeon">
+    <Accordeon 
+      title="PROMOCIÓN DEL TIM" 
+      details=`
+        <p class=" text-[1.75rem] leading-[140%] font-bold text-center pb-8 mb-8">
+          <b class="text-[#1870A0]">La difusión del Tráfico Ilícito de Migrantes (TIM)</b> 
+          se realiza a través de las siguientes
+          modalidades:
+          <span class="bg-[url('/src/components/sections/section2/assets/Vector.svg')] blanco spanfondo">
+           a
+           </span>
+          de manera presencial;  
+          <span class="bg-[url('/src/components/sections/section2/assets/Vector.svg')] blanco spanfondo">
+          b
+          </span>
+          mediante referencia de familiares y conocidos;   
+          <span class="bg-[url('/src/components/sections/section2/assets/Vector.svg')] blanco spanfondo">
+          c
+          </span>
+          y mediante las tecnologías de información y comunicación, incluyendo redes sociales.
+        </p>
+
+        <div class="flex flex-col max-w-[950px] mr-auto ml-auto text-[20px]">
+          <div class="flex flex-row items-center gap-8 pb-6 relative">
+            <img src="/src/components/sections/section2/assets/tic1.webp" alt="imagen">
+            <p class="pr-[6rem]">
+              En la era de la información, la tecnología ha dado condiciones de virtualidad, inmediatez y comunicación que han sido aprovechadas por las organizaciones o las redes de crimen
+              organizado adaptando sus operaciones a estas facilidades.
+            </p>
+            <img src="/src/components/sections/section2/assets/lineas-derecha.webp" alt="imagen" class="absolute -right-8 top-20">
+          </div>
+
+          <div class="flex flex-row items-center gap-8 pb-6 relative">
+            <img src="/src/components/sections/section2/assets/lineas-izquierda.webp" alt="imagen" class="absolute -left-[3.5rem] top-16">
+            <p class="pl-[3rem]">
+              <b class="font-bold naranja3">ACTUALMENTE, ES A TRAVÉS DE LAS REDES SOCIALES POR DONDE SE DAN A CONOCER
+              LA MAYORÍA DE LOS SERVICIOS DE TIM.</b> Esto se debe a la facilidad para contactar a la
+              “clientela”, sin requerir la presencia física de las personas traficantes y permiten un mayor
+              alcance (OIM, 2023).
+            </p>
+            <img src="/src/components/sections/section2/assets/tic2.webp" alt="imagen">
+          </div>
+
+          <div class="flex flex-row items-center gap-8">
+            <img src="/src/components/sections/section2/assets/tic3.webp" alt="imagen">
+            <p>
+              Facebook y TikTok son las redes sociales más utilizadas para la promoción de servicios de TIM.
+            </p>
+          </div>
+
+        </div>
+      `;
+    />
+  </div>
+
 </section>
+
+<style>
+  .color-title-cuadro {
+    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.35);
+
+  }
+</style>

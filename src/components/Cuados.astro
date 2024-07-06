@@ -1,0 +1,20 @@
+---
+interface Props {
+  titulo?: string;
+  texto: string;
+  creador?: string;
+  estilos?: string;
+}
+const { titulo, texto, creador, estilos } = Astro.props;
+---
+
+<!-- <div class="cuadro2 cuadro flex flex-col text-[22px] font-sans justify-center p-12 gap-4 relative"> -->
+  <div class:list={['cuadro2', 'cuadro', 'flex', 'flex-col', 'text-[22px]', 'font-sans', 'justify-center', 'p-12', 'gap-4', 'relative', estilos]}>
+  <div class="borde borde-sup-izq absolute"></div>
+  <div class="borde borde-sup-der absolute"></div>
+  <div class="borde borde-inf-izq absolute"></div>
+  <div class="borde borde-inf-der absolute"></div>
+  {titulo ? <div class="titulo azul" set:html={titulo}></div> : null}
+  <div class="texto" set:html={texto}></div>
+  {creador ? <div class="creador">{creador}</div> : null}
+</div>

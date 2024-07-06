@@ -209,22 +209,22 @@ import transporte3 from '@components/sections/section2/assets/carro-avion.webp';
     var currentPanel = 0;
     var panelCount = 3; // Number of panels
 
-    function goToPanel(panelIndex) {
-      var xPercent = -25 * panelIndex;
-      TweenMax.to("#slideContainer", 1, { xPercent: xPercent });
-      currentPanel = panelIndex;
-    }
+    // function goToPanel(panelIndex) {
+    //   var xPercent = -25 * panelIndex;
+    //   TweenMax.to("#slideContainer", 1, { xPercent: xPercent });
+    //   currentPanel = panelIndex;
+    // }
 
-    document.getElementById("rightButton").addEventListener("click", function () {
-      if (currentPanel < panelCount - 1) {
-        goToPanel(currentPanel + 1);
-      }
-    });
+    // document.getElementById("rightButton").addEventListener("click", function () {
+    //   if (currentPanel < panelCount - 1) {
+    //     goToPanel(currentPanel + 1);
+    //   }
+    // });
 
-    document.getElementById("leftButton").addEventListener("click", function () {
-      if (currentPanel > 0) {
-        goToPanel(currentPanel - 1);
-      }
-    });
+    // document.getElementById("leftButton").addEventListener("click", function () {
+    //   if (currentPanel > 0) {
+    //     goToPanel(currentPanel - 1);
+    //   }
+    // });
   });
 </script>
