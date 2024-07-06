@@ -116,8 +116,9 @@
 }
 
 .section-acordeon .accordion {
-  transition: baackground 0.6s ease;
+  transition: background 0.6s ease;
   border: unset;
+  padding-bottom: 3rem;
 }
 
 .section-acordeon .accordion.active .accordion__button {
