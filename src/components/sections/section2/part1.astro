@@ -10,13 +10,13 @@ import card1Img from '../section2/assets/card1-jerarquias.webp';
 import card2Img from '../section2/assets/card2-redes.webp';
 import card3Img from '../section2/assets/card3-individuos.webp';
 import card4Img from '../section2/assets/card4-operaciones.webp';
-import serviciosIlicitos from '../section2/assets/servicios-ilicitos.webp';
-import tic2 from '../section2/assets/tic2.webp';
-import tic3 from '../section2/assets/tic3.webp';
+import imgIzquierda from '../section2/assets/img-popup-izq.webp';
+import imgDerecha from '../section2/assets/img-derecha.webp';
 import AudioPlayer from '@components/AudioPlayer.astro';
 import Accordeon from '@components/Accordion.astro';
 import Slider from './Slider.astro';
 import Cuadro from "@components/Cuados.astro";
+import Popup from "@components/Popup.astro";
 ---
 <section id="seccion2-1">
   <!-- BANNER PRINCIPAL -->
@@ -195,6 +195,16 @@ import Cuadro from "@components/Cuados.astro";
   </div>
   
   <div class="bg-[url('/src/components/sections/section2/assets/textura-sliders.webp')] pt-16 pb-16 section-acordeon">
+    <div class="max-w-[1120px] mr-auto ml-auto text-center text-[1.75rem]">
+      <p class="text-center">
+        <h1 class="text-center naranja2 font-['Formula'] text-[3rem] uppercase max-w-[1100px] mr-auto ml-auto font-bold leading-[1.2] pb-8">LOS MODOS DE OPERAR DEL TRÁFICO ILÍCITO DE MIGRANTES (TIM) VARÍAN dependiendo dEL TIPO Y TAMAÑO DE LA OPERACIÓN, Y DEL LUGAR DONDE SE ESTÉ LLEVANDO A CABO.</h1>      
+      </p>
+      <p class="text-center pb-16">
+        Estas actividades van desde cómo se establecen comunicaciones con las personas migrantes, sus costos y características, las formas de pago y los medios de transporte.
+      </p>
+    </div>
+    
+
     <Accordeon 
       title="PROMOCIÓN DEL TIM" 
       details=`
@@ -256,6 +266,94 @@ import Cuadro from "@components/Cuados.astro";
     />
   </div>
 
+
+  <div class=" bg-[#333] text-[1.75rem] font-light pt-[4rem] pb-[4rem] min-h-[560px] relative flex flex-row items-center">
+ 
+      <div class="textos max-w-[1120px] mr-auto ml-auto blanco">
+        <hr class="text-[#FFC999] pb-12">
+        <p>
+          <h1 class="text-[#FFC999] text-[4.5rem] font-bold font-['Formula'] tracking-[1.52px] leading-[1.2] ">VULNERABILIDADES ESTRUCTURALES EN LAS ZONAS FRONTERIZAS Y DE TRÁNSITO</h1>
+        </p>
+        <p>
+          Los escenarios donde operan en mayor cantidad las redes de Tráfico Ilícito de Migrantes son zonas caracterizadas
+          por el <b class="text-[#FFC999] font-bold">bajo desarrollo, limitado acceso a la educación y a oportunidades de empleo.</b> Esto
+          influye para que poblaciones vulnerables como mujeres, personas indígenas, o niñas, niños y adolescentes se
+          vinculen de diferentes maneras con esta actividad.
+        </p>
+      </div>
+  </div>
+
+
+  <div class="w-screen h-screen bg-[#333] relative grid grid-cols-2">
+    <div class="img-izquierda bg-[#0000006b] bg-[url('/src/components/sections/section2/assets/img-izquierda.webp')] bg-cover flex flex-row items-end gap-8 pb-12  hover:bg-blend-color">
+      <div class="max-w-[700px] ml-auto pl-8">
+        <h1 class="blanco font-['Inika'] text-[3rem] pr-[5rem] font-bold leading-[1.2] pb-8">El rol de las mujeres en el Tráfico Ilícito de Migrantes</h1>
+        <Image src={interaccion} alt="Interacción" class="pb-8 mr-auto ml-auto cursor-pointer" id="interaccion-izquierda"/>
+      </div>
+      <div class="popup" id="popup-izquierda">
+        <span class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <path d="M9.15865 51.5786C6.29334 48.8112 4.00787 45.5009 2.4356 41.8408C0.863334 38.1807 0.0357472 34.2441 0.0011327 30.2607C-0.0334818 26.2773 0.725569 22.3269 2.234 18.64C3.74242 14.9531 5.97002 11.6036 8.7868 8.7868C11.6036 5.97002 14.9531 3.74242 18.64 2.234C22.3269 0.725569 26.2773 -0.0334818 30.2607 0.0011327C34.2441 0.0357472 38.1807 0.863334 41.8408 2.4356C45.5009 4.00787 48.8112 6.29334 51.5786 9.15865C57.0434 14.8167 60.0672 22.3948 59.9989 30.2607C59.9305 38.1266 56.7754 45.651 51.2132 51.2132C45.651 56.7754 38.1266 59.9305 30.2607 59.9989C22.3948 60.0672 14.8167 57.0434 9.15865 51.5786ZM34.5686 30.3686L43.0586 21.8786L38.8286 17.6486L30.3686 26.1386L21.8786 17.6486L17.6486 21.8786L26.1386 30.3686L17.6486 38.8586L21.8786 43.0886L30.3686 34.5986L38.8586 43.0886L43.0886 38.8586L34.5986 30.3686H34.5686Z" fill="#F6F4F3"/>
+          </svg>
+        </span>
+        <div class="bg-[url('/src/components/sections/section2/assets/img-izquierda.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
+          <div class="col-span-7 flex items-center max-h-[100vh] bg-[#0000007d]">
+            <Image src={imgIzquierda} alt="" class=" object-contain mr-auto ml-auto max-h-full" />
+          </div>
+          <div class="col-span-5 bg-[#B85600] blanco p-16 pt-16 pb-16 pr-[6rem] flex flex-col justify-center gap-8">
+            <p>
+              <h1 class="blanco font-['Inika'] text-[3rem] font-bold color-title-cuadro leading-[1.2]">
+                El rol de las mujeres en el Tráfico Ilícito de Migrantes
+              </h1>
+            </p>
+            <p class="font-bold text-[1.5rem] leading-[140%]">
+              La mayoría de las mujeres se desempeñan en roles de guías, enganchadoras, monitoras,
+              coordinadoras o proveedoras de servicios (OIM y UNODC, 2024).
+            </p>
+            <p class="text-[1.5rem] leading-[140%] text-[#FFD976] font-medium">
+              Muchas de estas mujeres se encuentran en situación de vulnerabilidad socioeconómica, lo cual potencia su vinculación en actividades del Tráfico Ilícito de Migrantes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="transition-all ease-in-out delay-150 img-derecha bg-[#0000006b] bg-[url('/src/components/sections/section2/assets/img-derecha.webp')] bg-cover flex flex-row items-end gap-8 pb-12 hover:bg-blend-color	">
+      <div class="max-w-[700px] mr-auto pr-8">
+        <h1 class="blanco font-['Inika'] text-[3rem] pl-[5rem] font-bold leading-[1.2] pb-8">Las niñas, niños y adolescentes en el Tráfico Ilícito de Migrantes</h1>
+       <Image src={interaccion} alt="" class="pb-8 mr-auto ml-auto cursor-pointer" id="interaccion-derecha"/>
+      </div>
+      
+      <Popup 
+        contenido=
+        `
+          <div class="bg-[url('/src/components/sections/section2/assets/img-izquierda.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
+            <div class="col-span-9 bg-[#B85600] blanco p-16 pt-16 pb-16 pr-[6rem] flex flex-col justify-center gap-8">
+              <p>
+                <h1 class="blanco font-['Inika'] text-[3rem] font-bold color-title-cuadro leading-[1.2]">
+                  Las niñas, niños y adolescentes en el Tráfico Ilícito de Migrantes
+                </h1>
+              </p>
+              <p class="font-bold text-[1.5rem] leading-[140%]">
+                Las personas menores de edad son cada vez más suceptibles a ser reclutadas por las redes de Tráfico Ilícito de Migrantes, para apoyar en sus operaciones en actividades como ser guías, funcionar de enganche, monitoreo y para facilitar el transporte (OIM y UNODC, 2024).
+              </p>
+              <p class="text-[1.5rem] leading-[140%] text-[#FFD976] font-medium">
+                CADA VEZ MÁS SE PUEDE IDENTIFICAR EL INVOLUCRAMIENTO DE NIÑAS, NIÑOS Y ADOLESCENTES ESPECIALMENTE EN COMUNIDADES CON ESCASAS OPORTUNIDADES DE ESTUDIO O TRABAJO.
+              </p>
+            </div>
+
+            <div class="col-span-3 flex items-center max-h-[100vh] bg-[#0000007d]">
+              <Image src="/src/components/sections/section2/assets/img-derecha.webp" alt="" class=" object-cover mr-auto ml-auto max-h-full h-screen" />
+            </div>
+          </div>
+        `
+        idPopup="popup-derecha"
+        idInteraccion="interaccion-derecha"        
+      />
+
+    </div>
+
+  </div>
+
 </section>
 
 <style>
@@ -263,4 +361,51 @@ import Cuadro from "@components/Cuados.astro";
     text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.35);
 
   }
+  .popup {
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    /* transition: display 0.6s ease; */
+    transition: opacity 0.6s ease, visibility 0s 0.6s; /* Cambia display a visibility y opacity */
+    color: white;
+  }
+
+  .popup.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
 </style>
+
+<script>
+  //Script para abrir el popup, al hacer cli sobre #interaccion-izquierda muestra .popup-derecha popup
+  const interaccionIzquierda = document.getElementById('interaccion-izquierda');
+  const popup = document.getElementById('popup-izquierda');
+  const closeButton = document.querySelector('.close-button');
+
+  // Mostrar el popup al hacer clic en interaccionIzquierda
+  interaccionIzquierda.addEventListener('click', () => {
+    //popup.style.display = 'flex';
+    popup.classList.add('show');
+  });
+
+  // Cerrar el popup al hacer clic en el botón de cerrar
+  closeButton.addEventListener('click', () => {
+    // popup.style.display = 'none';
+    popup.classList.remove('show');
+  });
+</script>
