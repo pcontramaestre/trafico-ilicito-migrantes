@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import './style.css'
+import fondoanimado from '@components/sections/section3/assets/fondoanimado.gif';
+import textura from '@components/sections/section3/assets/textura.webp';
+import bote from '@components/sections/section3/assets/bote.webp';
+import vectorLineas from '@components/sections/section3/assets/vector-lineas.svg';
+import foro from '@components/sections/section3/assets/foro.webp';
+import AudioPlayer from '@components/AudioPlayer.astro';
+
+
+---
+<section id="seccion3">
+  <div class="banner-seccion3 w-screen h-[90vh] relative">
+    <div class="grid grid-cols-12 max-w-[1200px] mr-auto ml-auto relative z-10 pt-20">
+      <div class="col-span-5 relative">
+        <Image src={bote} alt="bote" class=" absolute top-0 -left-12 2xl:min-w-[1100px] lg:min-w-[900px] bote-rotate"/>
+      </div>
+      <div class="col-span-7">
+        <div class="titulo-seccion3 z-10 pb-36 pt-8">
+          <div class="text-[58px] font-bold font-['Inika'] azul6 z-10 mb-4 leading-[1.1] pb-8">
+            Datos disponibles sobre personas objeto de
+          </div>
+          <div class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none">
+            Tráfico Ilícito de Migrantes
+          </div>
+        </div>
+      </div>
+    </div>
+    <Image src={fondoanimado} alt="fondo" class="fondoanimado absolute top-0 left-0 w-screen h-screen object-cover object-top"/>
+  </div>
+  <!-- SECCION 3, PARTE 1 -->
+  <div class="seccion3-parte1 bg-[#C0E6EB] pt-[25rem] pb-[15rem] relative">
+      <h1 class="animacion-up text-[#026972] font-bold font-['Formula'] text-[4.5rem] text-center max-w-[1044px] mx-auto leading-[120%] z-10 relative tracking-[1.48px]">
+        LOS DATOS EXISTENTES SOBRE EL USO DEL TRÁFICO ILÍCITO DE MIGRANTES SON LIMITADOS Y MUESTRAN UN SUBREGISTRO
+      </h1>
+      <h2 class="animacion-up text-center max-w-[1044px] mx-auto z-10 relative text-[2.1rem] font-bold leading-[140%] pt-4" >
+        debido a que muchas personas migrantes no reportan este hecho por miedo a represalias legales o a intimidación por parte de las mismas redes o personas traficantes.
+      </h2>
+      <Image src={textura} alt="" class=" absolute top-0 left-0 z-0 w-full h-full object-cover object-top"/>
+  </div>
+
+  <!-- SECCION 3, PARTE 2 -->
+  <div class="seccion3-parte2 bg-[#FFF0CE] bg-[url(/src/components/sections/section2/assets/textura-sliders.webp)] bg-cover  bg-fixed	pt-[10rem] relative">
+    <AudioPlayer
+        src="/audios/audio1.mp3" 
+        title='“Decidí confesar que era objeto de Tráfico Ilícito de Migrantes”'
+        subtitle="Testimonio de persona migrante." 
+      />
+      <div class="max-w-[1000px] mr-auto ml-auto text-center relative z-10 animacion-up">
+        <h2 class="text-[#2B6B79] font-['Inika'] text-[2.5rem] font-bold leading-[1.3] pb-4">
+          SI BIEN TODAS LAS PERSONAS QUE SON OBJETO DEL TRÁFICO ILÍCITO DE MIGRANTES (TIM) SON MIGRANTES IRREGULARES AL MENOS EN EL MOMENTO DE CRUZAR LA FRONTERA;
+        </h2>
+        <h1 class="font-['Formula'] font-bold text-[#AA751F] leading-[1.1] tracking-[1.08px] text-[3.3rem]">
+          NO TODAS LAS PERSONAS MIGRANTES CON CONDICIÓN MIGRATORIA IRREGULAR SON OBJETO DE TIM.
+        </h1>
+        <h3 class="text-[#2B6B79] text-[1.75rem] leading-[140%]">(UNODC, 2018)</h3>
+      </div>
+      <div class="seccion-cuadros pt-[7.5rem] pb-[4.25rem] relative z-10">
+        <div class="cuadros max-w-[1200px] mr-auto ml-auto grid grid-rows-3 gap-[3rem] z-10 relative">
+          <div class="cuadrob cuadro1 max-w-[741px] w-[90%] ml-auto mr-16">
+            En un estudio realizado por la OIM y UNODC (2024),
+            de 262 personas migrantes en tránsito encuestadas, 36% indicaron haber contratado servicios de TIM. 
+          </div>
+          <div class="cuadrob cuadro2 max-w-[1000px] w-[90%] ml-auto mr-16">
+            Según una encuesta desarrollada entre enero de 2022 y enero de 2023 por el Mixed Migration Center (MMC), de una muestra de 1.869 personas
+            migrantes en las Américas, 44% dijo haber utilizado al TIM para facilitar su tránsito por la región.
+          </div>
+          <div class="cuadrob cuadro3 max-w-[950px] w-[90%] ml-auto">
+            Datos secundarios de las Encuestas sobre Migración en las Fronteras Norte y Sur de México (EMIF Norte y EMIF Sur) de 2023 reflejan un AUMENTO EN EL USO DEL TIM POR PARTE DE LAS PERSONAS MIGRANTES, lo cual ha sido confirmado por otras investigaciones (UNODC, 2021 y OIM, 2020).
+          </div>
+        </div>
+        <Image src={vectorLineas} alt="" class=" absolute top-0 left-0 z-0 w-full h-full  object-top max-w-[90%] object-contain" />
+      </div>
+      <Image src={foro} alt="" class="w-screen h-auto" />
+  </div>
+</section>
+
+<style>
+  .cuadrob {
+    background: #F6F4F3;
+    padding: 1.5rem;
+    color: var(--Verdes-Verde2, #00373C);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+</style>

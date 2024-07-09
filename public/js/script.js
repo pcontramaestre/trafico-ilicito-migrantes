@@ -600,6 +600,77 @@
     )
     .addTo(controllerB);
 
+    // SECCION 3, BANNER
+    // create tween transform: rotate(-7.338deg) to image class bote-rotate
+    let tween = TweenMax.to(".bote-rotate", 1, {
+      rotation: "-7.338deg",
+      ease: "power3.inOut",
+      repeat: -1,      
+    });
+    tween.yoyo(true);
+
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion3 .banner-seccion3",
+      triggerHook: "onLeave",
+      duration: "100%",
+    })
+    .setTween(tween)
+    .setPin("#seccion3 .banner-seccion3")
+    .addTo(controllerB);
+
+
+    // SECCION 3, PARTE 1
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion3 .seccion3-parte1",
+      triggerHook: 0.8,
+      duration: "110%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion3-parte1 .animacion-up"],
+        2,
+        {
+          opacity: 0.1,
+          y: "45%",
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          y: "0%",
+          scale: 1,
+        },
+      )
+    )
+    // .setPin("#seccion3 .seccion3-parte1")
+    .addTo(controllerB);
+
+    //SECCION 3, PARTE 2
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion3 .seccion3-parte2",
+      triggerHook: 1,
+      duration: "80%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion3-parte2 .animacion-up"],
+        2,
+        {
+          opacity: 0.1,
+          y: "45%",
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          y: "0%",
+          scale: 1,
+        },
+      )
+    )
+    .addTo(controllerB);
+
+
 
 
 });
