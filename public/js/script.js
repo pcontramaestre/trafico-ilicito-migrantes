@@ -189,4 +189,417 @@
     )
     .addTo(controllerB);    
 
+
+
+    /* 
+      ANIMACIONES DE LA SECCION 2
+    */
+
+    // ANIMACION DEL BANNER
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .banner-principal",
+      triggerHook: "onEnter",
+      duration: "150%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".manobanner1"],
+        0.1,
+        {
+          opacity: 0,
+          y: "-45%",
+        },
+        {
+          opacity: 1,
+          y: "0%",
+        },
+      ).concat(
+        TweenMax.staggerFromTo(
+          [".manobanner2"],
+          0.1,
+          {
+            opacity: 0.5,
+            x: "45%",
+          },
+          {
+            opacity: 1,
+            x: "0%",
+          },
+        )
+      ).concat(
+        TweenMax.staggerFromTo(
+          [".banner-principal .titulo-seccion"],
+          0.1,
+          {
+            opacity: 0.1,
+            y: "35%",
+          },
+          {
+            opacity: 1,
+            y: "0%",
+          },
+        )
+      )
+    )
+    .setPin("#seccion2-1 .banner-principal")
+    .addTo(controller);
+
+    // ANIMACION DE LA PARTE 2, SECCION 2, FONDO MARRON
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .estructuras-operacion",
+      triggerHook: 1,
+      duration: "100%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".estructuras-operacion .animacion-up"],
+        1,
+        {
+          opacity: 0.1,
+          y: "45%",
+        },
+        {
+          opacity: 1,
+          y: "0%",
+        },
+      )
+    )
+    .addTo(controllerB);
+
+    // ANIMACION DE LA PARTE 2, SECCION 2, FONDO MARRON
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .costos-asociados",
+      triggerHook: 0.7,
+      duration: "100%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".costos-asociados .animacion-up"],
+        2,
+        {
+          opacity: 0.1,
+          y: "45%",
+        },
+        {
+          opacity: 1,
+          y: "0%",
+        },
+      )
+    )
+    .addTo(controllerB);
+
+    // ANIMACION PARTE 3, SECCION 2, TEXTOS MIGRANTES EXTRAREGIONALES
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .texto-migrantes-extra",
+      triggerHook: 0.7,
+      duration: "100%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".texto-migrantes-extra .animacion-up"],
+        2,
+        {
+          opacity: 0.1,
+          y: "45%",
+        },
+        {
+          opacity: 1,
+          y: "0%",
+        },
+      )
+    )
+    .addTo(controllerB);
+
+    // ANIMACION PARTE 4, SECCION 2, TEXTOS texto-cobros-crimen
+    new ScrollMagic.Scene({
+      triggerElement: ".texto-cobros-crimen",
+      triggerHook: "onLeave",
+      duration: "100%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".texto-cobros-crimen .animacion-left"],
+        2,
+        {
+          opacity: 0.1,
+          x: "-45%",
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          x: "0%",
+          scale: 1,
+        },
+      ).concat(
+        TweenMax.staggerFromTo(
+          [".texto-cobros-crimen .animacion-right"],
+          2,
+          {
+            opacity: 0.1,
+            x: "45%",
+            scale: 0.2,
+            ease: "power3.in",
+          },
+          {
+            opacity: 1,
+            x: "0%",
+            scale: 1,
+            ease: "power3.in",
+          },
+        )
+      )
+    )
+    .setPin(".texto-cobros-crimen")
+    .addTo(controllerB);
+
+    // ANIMACION PARTE 5, SECCION 2
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .seccion2-parte5",
+      triggerHook: 0.7,
+      duration: 400,
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion2-parte5 .animacion-up"],
+        2,
+        {
+          opacity: 0.1,
+          y: "45%",
+          scale: 0.2,
+        },
+        {
+          opacity: 1,
+          y: "0%",
+          scale: 1,
+        },
+      )
+    )
+    .addTo(controllerB);
+
+    //ANIMACION PARTE 6, SECCION 2
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .seccion2-parte6",
+      triggerHook: "onCenter",
+      duration: 400,
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion2-parte6 .animacion-up"],
+        2,
+        {
+          opacity: 0.1,
+          y: "45%",
+          scale: 0.2,
+        },
+        {
+          opacity: 1,
+          y: "0%",
+          scale: 1,
+        },
+      )
+    )
+    .addTo(controllerB);
+
+    //ANIMACION PARTE 7, SECCION 2
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .seccion2-parte7",
+      triggerHook: "onCenter",
+      duration: 400,
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion2-parte7 .animacion-left"],
+        2,
+        {
+          opacity: 0.1,
+          x: "-75%",
+          scale: 0.7,
+        },
+        {
+          opacity: 1,
+          x: "0%",
+          scale: 1,
+        },
+      )
+    )
+    .addTo(controllerB);
+
+    //ANIMACION PARTE 8, SECCION 2
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .seccion2-parte8",
+      triggerHook: "onLeave",
+      duration: "100%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion2-parte8 .animacion-left"],
+        2,
+        {
+          opacity: 0.1,
+          x: "-45%",
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          x: "0%",
+          scale: 1,
+        },
+      ).concat(
+        TweenMax.staggerFromTo(
+          [".seccion2-parte8 .animacion-right"],
+          2,
+          {
+            opacity: 0.1,
+            x: "45%",
+            scale: 0.5,
+            ease: "power3.in",
+          },
+          {
+            opacity: 1,
+            x: "0%",
+            scale: 1,
+            ease: "power3.in",
+          },
+        )
+      )
+    )
+    .setPin(".seccion2-parte8")
+    .addTo(controllerB);
+
+
+    //ANIMACION PARTE 9, SECCION 2
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .seccion2-parte9",
+      triggerHook: "onEnter",
+      duration: "100%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion2-parte9 .animacion-left"],
+        2,
+        {
+          opacity: 0.1,
+          x: "-45%",
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          x: "0%",
+          scale: 1,
+        },
+      ).concat(
+        TweenMax.staggerFromTo(
+          [".seccion2-parte9 .animacion-right"],
+          2,
+          {
+            opacity: 0.1,
+            x: "45%",
+            scale: 0.5,
+            ease: "power3.in",
+          },
+          {
+            opacity: 1,
+            x: "0%",
+            scale: 1,
+            ease: "power3.in",
+          },
+        )
+      )
+    )
+    .addTo(controllerB);
+
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .animacion-cuadro",
+      triggerHook: "onEnter",
+      duration: "80%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".animacion-cuadro"],
+        2,
+        {
+          opacity: 0.1,
+          x: "-45%",
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          x: "0%",
+          scale: 1,
+        },
+      )
+    )
+    .addTo(controllerB);
+
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .animacion-cuadro",
+      triggerHook: "onCenter",
+      duration: "50%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion2-parte9 .animacion-up"],
+        2,
+        {
+          opacity: 0.1,
+          y: "45%",
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          y: "0%",
+          scale: 1,
+        },
+      )
+    )
+    .addTo(controllerB);
+
+    //ANIMACION PARTE 10, SECCION 2
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2-1 .seccion2-parte10",
+      triggerHook: "onEnter",
+      duration: "70%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion2-parte10 .animacion-right"],
+        2,
+        {
+          opacity: 0.1,
+          x: "-45%",
+          scale: 0.7,
+          
+        },
+        {
+          opacity: 1,
+          x: "0%",
+          scale: 1,
+        },
+      ).concat(
+        TweenMax.staggerFromTo(
+          [".seccion2-parte10 .animacion-left"],
+          2,
+          {
+            opacity: 0.1,
+            x: "45%",
+            scale: 0.7,
+            
+          },
+          {
+            opacity: 1,
+            x: "0%",
+            scale: 1,
+          },
+        )
+      )
+    )
+    .addTo(controllerB);
+
+
+
 });
