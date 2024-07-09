@@ -1,0 +1,73 @@
+---
+interface Props {
+  contenido?: string; //Contenido del popup
+  idInfo: string; //ID del popup que se va a abrir
+  estilos?: string; //Estilos del ico
+  idIcon: string; //ID del icono
+  estilosIco?: string; //Estilos del icono
+}
+const { contenido,idInfo,estilos,idIcon,estilosIco } = Astro.props as Props;
+---
+
+
+<div class:list={['icono-info',estilos]} id={idInfo} >
+  <div class:list={['informacion','relative',estilosIco]}>
+    <img src="/images/info.gif" alt="Info" class="icon-info cursor-pointer max-w-[80px]" id={idIcon}>
+    <div class="info-content">
+      <div class="content" set:html={contenido}></div>
+    </div>
+  </div>
+  
+</div>
+
+<style>
+  .info-content {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    border: 4px solid var(--Amarillo, #F6AE2D);
+    background: var(--Amarillos-Amarillo3, #FFEABB);
+    display: flex;
+    max-width: 522px;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .info-content .content {
+    padding: 1.2rem;
+  }
+
+</style>
+
+<script define:vars={{idInfo,idIcon}}>
+  //Al hacer hover sobre "idInfo .icon-info" se miuestra .info-content
+  document.addEventListener('DOMContentLoaded', () => {
+    const infoContent = document.querySelector('.info-content');
+    const iconInfo = document.getElementById(idIcon);
+    iconInfo.addEventListener('click', () => {
+      infoContent.style.visibility = 'visible';
+      infoContent.style.opacity = '1';
+      iconInfo.classList.add('show');
+    });
+    // add event on hover to iconInfo
+    iconInfo.addEventListener('mouseover', () => {
+      infoContent.style.visibility = 'visible';
+      infoContent.style.opacity = '1';
+      iconInfo.classList.add('show');
+    });
+    
+
+    infoContent.addEventListener('mouseout', () => {
+      infoContent.style.visibility = 'hidden';
+      infoContent.style.opacity = '0';
+      iconInfo.classList.remove('show');
+    });
+  });
+
+
+</script>

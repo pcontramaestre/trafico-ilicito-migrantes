@@ -4,7 +4,7 @@ interface Props {
   idPopup: string; //ID del popup que se va a abrir
   idInteraccion: string; //ID del boton o enlace que activa el popup
 }
-const { contenido,idPopup, idInteraccion } = Astro.props as Props;;
+const { contenido,idPopup, idInteraccion } = Astro.props as Props;
 ---
 
 <div class="popup" id={idPopup} data-interaccion={idInteraccion} data-idpopup={idPopup}>
