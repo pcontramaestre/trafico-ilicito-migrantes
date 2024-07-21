@@ -47,7 +47,7 @@ const { contenido,idInfo,estilos,idIcon,estilosIco } = Astro.props as Props;
 <script define:vars={{idInfo,idIcon}}>
   //Al hacer hover sobre "idInfo .icon-info" se miuestra .info-content
   document.addEventListener('DOMContentLoaded', () => {
-    const infoContent = document.querySelector('.info-content');
+    const infoContent = document.querySelector('#'+idInfo+' '+'.info-content');
     const iconInfo = document.getElementById(idIcon);
     iconInfo.addEventListener('click', () => {
       infoContent.style.visibility = 'visible';
