@@ -5,8 +5,11 @@ import fondoanimado from '@components/sections/section3/assets/fondoanimado.gif'
 import textura from '@components/sections/section3/assets/textura.webp';
 import bote from '@components/sections/section3/assets/bote.webp';
 import vectorLineas from '@components/sections/section3/assets/vector-lineas.svg';
+import mapaMigrantes from '@components/sections/section3/assets/mapa-personas-trafico.svg';
 import foro from '@components/sections/section3/assets/foro.webp';
+import enlaceOim from '@components/sections/section3/assets/enlace-oim.svg';
 import AudioPlayer from '@components/AudioPlayer.astro';
+import IcoInfo from "@components/IcoInfo.astro";
 
 
 ---
@@ -58,23 +61,66 @@ import AudioPlayer from '@components/AudioPlayer.astro';
       </div>
       <div class="seccion-cuadros pt-[7.5rem] pb-[4.25rem] relative z-10">
         <div class="cuadros max-w-[1200px] mr-auto ml-auto grid grid-rows-3 gap-[3rem] z-10 relative">
-          <div class="cuadrob cuadro1 max-w-[741px] w-[90%] ml-auto mr-16">
+          <div class="cuadrob cuadro1 max-w-[741px] w-[90%] ml-auto mr-16 animacion-right">
             En un estudio realizado por la OIM y UNODC (2024),
-            de 262 personas migrantes en tránsito encuestadas, 36% indicaron haber contratado servicios de TIM. 
+            de 262 personas migrantes en tránsito encuestadas, <b class="font-['Formula'] text-4xl font-bold text-[#45AFC0]">36%</b> indicaron haber contratado servicios de TIM. 
           </div>
-          <div class="cuadrob cuadro2 max-w-[1000px] w-[90%] ml-auto mr-16">
+          <div class="cuadrob cuadro2 max-w-[1000px] w-[90%] ml-auto mr-16 animacion-left">
             Según una encuesta desarrollada entre enero de 2022 y enero de 2023 por el Mixed Migration Center (MMC), de una muestra de 1.869 personas
-            migrantes en las Américas, 44% dijo haber utilizado al TIM para facilitar su tránsito por la región.
+            migrantes en las Américas, <b class="font-['Formula'] text-4xl font-bold text-[#45AFC0]">44%</b> dijo haber utilizado al TIM para facilitar su tránsito por la región.
           </div>
-          <div class="cuadrob cuadro3 max-w-[950px] w-[90%] ml-auto">
-            Datos secundarios de las Encuestas sobre Migración en las Fronteras Norte y Sur de México (EMIF Norte y EMIF Sur) de 2023 reflejan un AUMENTO EN EL USO DEL TIM POR PARTE DE LAS PERSONAS MIGRANTES, lo cual ha sido confirmado por otras investigaciones (UNODC, 2021 y OIM, 2020).
+          <div class="cuadrob cuadro3 max-w-[950px] w-[90%] ml-auto animacion-right">
+            Datos secundarios de las Encuestas sobre Migración en las Fronteras Norte y Sur de México 
+            (EMIF Norte y EMIF Sur) de 2023 reflejan un 
+            <b class="text-[#45AFC0] font-bold">AUMENTO EN EL USO DEL TIM POR PARTE DE LAS PERSONAS MIGRANTES, 
+            lo cual ha sido confirmado por otras investigaciones</b> (UNODC, 2021 y OIM, 2020).
           </div>
         </div>
         <Image src={vectorLineas} alt="" class=" absolute top-0 left-0 z-0 w-full h-full  object-top max-w-[90%] object-contain" />
       </div>
       <Image src={foro} alt="" class="w-screen h-auto" />
   </div>
+
+  <div class="seccion3-parte3 bg-[#C0E6EB] w-full min-h-screen relative z-10">
+    <div class="titulo-seccion max-w-[1300px] text-center relative z-10 animacion-up pt-28 w-[90%] mx-auto">
+      <h1 class="text-[#AA751F] font-bold font-formula text-[3.25rem] leading-[1.1] tracking-[1.56px] uppercase "> 
+        Personas objeto de Tráfico Ilícito de Migrantes identificadas por país
+      </h1>
+      <p class="text-[#F6AE2D] font-formula md:text-[40px] font-light tracking-[0.8px]">
+        2020 - 2023
+      </p>
+    </div>
+    <div class="mapa-migrantes">
+      <Image src={mapaMigrantes} alt="" class="w-screen h-auto" title="Mapa de personas objeto de Tráfico Ilícito de Migrantes"/>
+      <IcoInfo 
+        idInfo="info-mapa2" estilos="text-center pt-16 pb-16" idIcon="icon-mapa2" estilosIco="flex items-center justify-center"
+        contenido=
+          `
+            La información de cada país se irá incorporando 
+            según la disponibilidad de los datos.
+          `
+      />
+      <div>
+        <hr class="max-w-[1210px] text-[#2B6B79] border-t-[3px] mx-auto">
+      </div>
+      <div class="pt-12 pb-16 max-w-[1210px] mx-auto">
+        <p class="max-w-[1118px] mx-auto leading-[1.4] md:text-[28px]">
+          <b class="text-[#AA751F] md:text-[54px] font-formula font-bold uppercase tracking-[1.08px] leading-[1.2]">LA IDENTIFICACIÓN, EL RECONOCIMIENTO Y EL ANÁLISIS DEL PERFIL DE LAS PERSONAS OBJETO DE TRÁFICO ILÍCITO DE MIGRANTES (TIM),</b>
+          permite plantear medidas de protección integral especialmente para aquellas que se encuentran en situación de vulnerabilidad o son víctimas de delitos conexos al TIM.
+        </p>
+      </div>
+      <div class="text-center pb-14">
+        <a href="#" target="_blank">
+          <Image src={enlaceOim} alt="enlace oim" title="Enlace oim" class="mx-auto"/>
+        </a>  
+      </div>
+    </div>
+  </div>
 </section>
+
+
+
+
 
 <style>
   .cuadrob {
@@ -87,3 +133,49 @@ import AudioPlayer from '@components/AudioPlayer.astro';
     line-height: 140%;
   }
 </style>
+
+
+<script is:inline>
+  const controllerC = new ScrollMagic.Controller();
+
+  new ScrollMagic.Scene({
+      triggerElement: "#seccion3 .seccion3-parte2",
+      triggerHook: 0.1,
+      duration: "80%",
+    })
+    .setTween(
+      TweenMax.staggerFromTo(
+        [".seccion3-parte2 .animacion-left"],
+        2,
+        {
+          opacity: 0.1,
+          x: "-45%",
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          x: "0%",
+          scale: 1,
+        },
+      ).concat(
+        TweenMax.staggerFromTo(
+          [".seccion3-parte2 .animacion-right"],
+          2,
+          {
+            opacity: 0.1,
+            x: "45%",
+            scale: 0.5,
+            ease: "power3.in",
+          },
+          {
+            opacity: 1,
+            x: "0%",
+            scale: 1,
+            ease: "power3.in",
+          },
+        )
+      )
+    )
+    .addTo(controllerC);
+</script>
