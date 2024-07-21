@@ -12,6 +12,7 @@ export default {
 			fontFamily: {
         sans: ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
 				serif: ['inika',...defaultTheme.fontFamily.serif],
+				formula: ['Formula']
       },
 			colors: {
 				'azul': '#014979',
