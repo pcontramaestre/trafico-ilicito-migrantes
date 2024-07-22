@@ -1,3 +1,29 @@
 .bg-position-y-12 {
   background-position-y: 12px;
 }
+
+.acordeon-riesgos .accordion.group {
+  margin-bottom: 2rem;
+  border: 1px solid #F6F4F3;
+}
+
+.acordeon-riesgos .accordion__content{
+  background: #F6F4F3;
+}
+
+.acordeon-riesgos .accordion__button {
+  background: #F6F4F3;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Formula";
+  color: var(--Naranjas-Naranja2, #B85600);
+  padding-bottom: 0;
+  border: 1px solid #F6F4F3;
+  letter-spacing: 0.96px;
+}
+
+.gif-tics {
+  top: 0;
+  max-width: 41%;
+  left: 33%;
+}

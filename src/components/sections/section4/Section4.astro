@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import './style.css'
+import IcoInfo from "@components/IcoInfo.astro";
+import Accordeon from '@components/Accordion.astro';
 import fondoBanner from "@components/sections/section4/assets/Fondo.webp"
 import fondoBanner2 from "@components/sections/section4/assets/fondo2.webp"
 import sol from "@components/sections/section4/assets/sol.webp"
@@ -11,8 +13,13 @@ import zapatos from "@components/sections/section4/assets/zapatos.webp"
 import textura from "@components/sections/section4/assets/textura.webp"
 import textura2 from "@components/sections/section4/assets/textura-part3.webp"
 import bgriesgos from "@components/sections/section4/assets/background-riesgos.webp"
+import bgriesgos2 from "@components/sections/section4/assets/background-riesgos2.webp"
 import fallecimientos from "@components/sections/section4/assets/fallecimientos.gif"
 import secuestro from "@components/sections/section4/assets/secuestro.gif"
+import delitos from "@components/sections/section4/assets/delitos.gif"
+import robos from "@components/sections/section4/assets/robos.gif"
+import trata from "@components/sections/section4/assets/trata.gif"
+import cuadroRiesgos from "@components/sections/section4/assets/cuadro-riesgos.webp"
 ---
 
 <section id="seccion4">
@@ -66,7 +73,7 @@ import secuestro from "@components/sections/section4/assets/secuestro.gif"
   </div>
 
   <!-- SECCION PRINCIPALES RIESGOS - PARTE 3 -->
-  <div class="bg-[#D9D9D945] bg-fixed bg-cover bg-repeat pt-16 pb-16" style={`background-image: url('${textura2.src}')`}>
+  <div class="bg-[#D9D9D945] bg-fixed bg-cover bg-repeat pt-16" style={`background-image: url('${textura2.src}')`}>
     <div class="max-w-[970px] w-[90%] mx-auto text-center pb-16 md:pb-[190px]">
       <h1 class="text-[40px] md:text-[68px] font-bold font-formula leading-[1.2] tracking-[1.26px] text-center text-[#B85600] ">
         PRINCIPALES RIESGOS A LOS QUE SE ENFRENTAN LAS PERSONAS QUE SON OBJETO DE TRÁFICO ILÍCITO DE MIGRANTES
@@ -74,16 +81,16 @@ import secuestro from "@components/sections/section4/assets/secuestro.gif"
     </div>
 
     <!-- Fallecimientos y desapariciones -->
-    <div class="relative mb-32 pt-32 max-w-[1100px] w-[90%] mx-auto cuadro-riesgos bg-no-repeat bg-cover" style={`background-image: url('${bgriesgos.src}')`}>
+    <div class="relative mb-48 pt-32 max-w-[1100px] w-[90%] mx-auto cuadro-riesgos bg-no-repeat bg-cover" style={`background-image: url('${bgriesgos.src}')`}>
       <h1 class="absolute -top-[12px] text-[#1870A0] font-formula font-bold text-2xl md:text-[56px] tracking-[1.12px] uppercase pb-6 md:pb-[69px] flex flex-row items-start gap-4">
         <span class="ml-12 bg-[#45AFC0] w-[30px] h-[30px] inline-block rounded-full"></span>
         Fallecimientos y desapariciones
       </h1>
-      <div class="grid grid-cols-12 gap-4">
-        <div class="col-span-4">
+      <div class="grid md:grid-cols-12 gap-4">
+        <div class="md:col-span-4">
           <Image src={fallecimientos} alt="" class="w-full h-auto max-w-[278px] mx-auto"/>
         </div>
-        <div class="col-span-8">
+        <div class="md:col-span-8">
           <p class="font-sans text-2xl md:text-[28px] font-extrabold leading-[140%] pb-6">
             DURANTE EL AÑO 2022, SE CONTABILIZARON <b class="text-[#B85600]">1.465 MUERTES Y DESAPARICIONES</b> DE PERSONAS MIGRANTES EN LA REGIÓN DE LAS AMÉRICAS.
           </p>
@@ -95,13 +102,13 @@ import secuestro from "@components/sections/section4/assets/secuestro.gif"
     </div>
 
     <!-- Secuestro, extorsión y confinamiento -->
-    <div class="relative mb-32 pt-32 max-w-[1100px] w-[90%] mx-auto cuadro-riesgos bg-no-repeat bg-cover" style={`background-image: url('${bgriesgos.src}')`}>
+    <div class="relative mb-48 pt-32 max-w-[1100px] w-[90%] mx-auto cuadro-riesgos bg-no-repeat bg-cover" style={`background-image: url('${bgriesgos.src}')`}>
       <h1 class="absolute -top-[12px] text-[#1870A0] font-formula font-bold text-2xl md:text-[56px] tracking-[1.12px] uppercase pb-6 md:pb-[69px] flex flex-row items-start gap-4">
         <span class="ml-12 bg-[#45AFC0] w-[30px] h-[30px] inline-block rounded-full"></span>
         Secuestro, extorsión y confinamiento
       </h1>
-      <div class="grid grid-cols-12 gap-4 pl-8">
-        <div class="col-span-9">
+      <div class="grid md:grid-cols-12 gap-4 pl-8">
+        <div class="md:col-span-9">
           <p class="font-sans text-2xl md:text-[28px] font-extrabold leading-[140%] pb-6">
             LAS PERSONAS MIGRANTES PUEDEN LLEGAR A SER <b class="text-[#B85600]">PRIVADAS DE SU LIBERTAD Y EXTORSIONADAS</b>.
           </p>
@@ -111,12 +118,170 @@ import secuestro from "@components/sections/section4/assets/secuestro.gif"
               Las casas de seguridad suelen ser escenarios de violencia sexual dirigida especialmente hacia mujeres migrantes.
           </p>
         </div>
-        <div class="col-span-3">
+        <div class="md:col-span-3">
           <Image src={secuestro} alt="" class="w-full h-auto max-w-[323px] mx-auto"/>
         </div>
       </div>
     </div>
 
+    <!-- Involucramiento en otros delitos -->
+    <div class="relative mb-48 pt-32 max-w-[1100px] w-[90%] mx-auto cuadro-riesgos bg-no-repeat bg-cover" style={`background-image: url('${bgriesgos.src}')`}>
+      <h1 class="absolute -top-[12px] text-[#1870A0] font-formula font-bold text-2xl md:text-[56px] tracking-[1.12px] uppercase pb-6 md:pb-[69px] flex flex-row items-start gap-4">
+        <span class="ml-12 bg-[#45AFC0] w-[30px] h-[30px] inline-block rounded-full"></span>
+        Involucramiento en otros delitos
+      </h1>
+      <div class="grid md:grid-cols-12 gap-4">
+        <div class="md:col-span-4 flex items-center">
+          <Image src={delitos} alt="" class="w-full h-auto max-w-[300px] mx-auto"/>
+        </div>
+        <div class="md:col-span-8">
+          <p class="font-sans text-2xl md:text-[28px] leading-[140%] pb-6">
+            <b class="text-[#B85600] font-extrabold">LA BÚSQUEDA DE CONTROL Y LA DISPUTA TERRITORIAL POR PARTE DE GRUPOS DELICTIVOS</b>
+            <b class="font-extrabold">CONLLEVAN RIESGOS PARA LAS PERSONAS MIGRANTES EN TRÁNSITO,</b> 
+            ya que pueden verse implicadas en actividades delictivas como el tráfico de armas y drogas, o acusaciones por fraude de documentos.
+          </p>
+          <p class="font-sans text-2xl md:text-[28px] font-normal leading-[140%] pb-12"> 
+            Estas situaciones se dan, principalmente, en casos donde las personas <b class="text-[#1870A0]">no cuentan con los recursos para financiar</b> el cruce irregular.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Robos, estafas y fraudes -->
+    <div class="relative mb-48 pt-32 max-w-[1100px] w-[90%] mx-auto cuadro-riesgos bg-no-repeat bg-contain" style={`background-image: url('${bgriesgos.src}')`}>
+      <h1 class="absolute -top-[12px] text-[#1870A0] font-formula font-bold text-2xl md:text-[56px] tracking-[1.12px] uppercase pb-6 md:pb-[69px] flex flex-row items-start gap-4">
+        <span class="ml-12 bg-[#45AFC0] w-[30px] h-[30px] inline-block rounded-full"></span>
+        Robos, estafas y fraudes
+      </h1>
+      <div class="grid md:grid-cols-12 gap-4 pl-8">
+        <div class="md:col-span-9">
+          <p class="font-sans text-2xl md:text-[28px] font-extrabold leading-[140%] pb-6">
+            LAS PERSONAS MIGRANTES PODRÍAN SER <b class="text-[#B85600]">VÍCTIMAS DE ACTOS VIOLENTOS, ROBOS Y ESTAFAS</b> DURANTE EL TRÁNSITO.
+          </p>
+          <p class="font-sans text-2xl md:text-[28px] font-normal leading-[140%] pb-12 mb-8"> 
+            La OIM ha identificado que en ocasiones, personas que se dedican al Tráfico Ilícito de Migrantes prometen llevar a las personas migrantes hasta un país de destino, para luego 
+            <b class="text-[#1870A0]">abandonarlas en otro país o en medio de la ruta.</b>
+          </p>
+        </div>
+        <div class="md:col-span-3">
+          <Image src={robos} alt="" class="w-full h-auto max-w-[323px] mx-auto"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trata de personas, trabajo forzado y explotación sexual -->
+    <div class="relative mb-48 pt-32 max-w-[1100px] w-[90%] mx-auto cuadro-riesgos bg-no-repeat bg-contain" style={`background-image: url('${bgriesgos2.src}')`}>
+      <span class="ml-12 bg-[#45AFC0] w-[30px] h-[30px] inline-block rounded-full absolute -top-[12px]"></span>
+      <h1 class="absolute md:ml-[6rem] -top-[47px] text-[#1870A0] font-formula font-bold text-2xl md:text-[56px] tracking-[1.12px] uppercase pb-6 md:pb-[69px] flex flex-row items-start gap-4 leading-[1.1]">
+        Trata de personas, trabajo forzado y explotación sexual
+      </h1>
+      <div class="grid md:grid-cols-12 gap-4 md:pb-[9rem]">
+        <div class="md:col-span-4 flex items-center">
+          <Image src={trata} alt="" class="w-full h-auto max-w-[300px] mx-auto"/>
+        </div>
+        <div class="md:col-span-8">
+          <p class="font-sans text-2xl md:text-[28px] leading-[140%] pb-6">
+            <b class="font-extrabold">A ESTE RIESGO SE EXPONEN DE FORMA PARTICULAR</b> 
+            <b class="text-[#B85600] font-extrabold">LAS MUJERES MIGRANTES, NIÑAS, NIÑOS Y ADOLESCENTES (NNA) Y PERSONAS MIGRANTES EXTRARREGIONALES.</b>
+            
+          </p>
+          <p class="font-sans text-2xl md:text-[28px] font-normal leading-[140%] pb-12"> 
+            En el caso de las personas migrantes extrarregionales, las personas traficantes suelen aprovecharse de su falta de conocimiento de la región, del idioma, así como de la falta de redes de apoyo, para desorientarlas y aprovecharse de ellas.
+          </p>
+        </div>
+      </div>
+      <IcoInfo 
+        idInfo="info-riesgos" estilos="text-center pt-16 pb-28 cursor-pointer " idIcon="icon-riesgos" estilosIco="flex items-center justify-center"
+        contenido=
+          `
+            Algunas veces en las afueras de albergues o en estaciones de autobuses,
+            <b>PERSONAS QUE SE DEDICAN AL TRÁFICO ILÍCITO DE MIGRANTES SE ACERCAN A LAS PERSONAS MIGRANTES CON OFERTAS DE TRABAJO FALSAS</b>
+            para luego trasladarlas a otras zonas del país o a países vecinos por lo que las y los migrantes se convierten también en <b>VICTIMAS DE TRATA DE PERSONAS</b>.
+          `
+      />
+      <div class="pb-28"></div>
+    </div>
+
+  </div>
+
+  <!-- SECCION OTROS RIESGOS ACORDEON -PARTE 4 -->
+  <div class="bg-[#014979] bg-fixed bg-cover bg-repeat pt-24 md:-mt-[12rem] acordeon-riesgos pb-8" style={`background-image: url('${textura2.src}')`}>
+    <div class="max-w-[960px] w-[90%] mx-auto text-center pb-16 md:pb-[140px]">
+      <h1 class="text-[40px] md:text-[68px] font-bold font-formula leading-[1.2] tracking-[1.26px] text-center text-[#D6EDFF] ">
+         OTROS RIESGOS VINCULADOS AL <br>TRÁFICO ILÍCITO DE MIGRANTES
+      </h1>
+    </div>
+    <Accordeon 
+      title="Medios de transporte" 
+      details=`
+        <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
+          <p class="md:text-[20px] leading-[140%]">
+            <b class=" uppercase ">EL Tráfico Ilícito de Migrantes (TIM) TIENE COMO FIN ÚLTIMO LA GENERACIÓN DE CAPITAL</b>, 
+            por lo cual suele abaratar costos en los medios de transporte, trasladando a las personas migrantes en 
+            <b class="text-[#25A7EF]">CONDICIONES RIESGOSAS</b>
+            como por ejemplo transporte en mal estado, que viaja a altas velocidades, con sobreocupación y con pocas o nulas medidas de seguridad.
+          </p>
+          <div class="relative overflow-hidden">
+            <img src="/sections/section4/assets/acordeon1-fondo.webp" alt="" title="" class="w-full h-auto z-0"/>
+            <img src="/sections/section4/assets/carro.webp" alt="" title="" class="w-full h-auto absolute top-0 z-10 max-w-[1000px] -right-full carro-mover"/>
+          </div>
+        </div>
+        <style>
+         .carro-mover {  
+            animation: slideOut 10s forwards ease-in-out; 
+            /* que la animacion se repita */
+            animation-iteration-count: infinite;  
+          }  
+
+          @keyframes slideOut {  
+            0% {  
+              transform: translateX(0);  
+            }  
+            100% {  
+              transform: translateX(-220%);  
+            }  
+          } 
+        </style>
+      `
+    />
+
+    <Accordeon 
+      title="Clima y geografía" 
+      details=`
+        <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
+          <div class="relative">
+            <img src="/sections/section4/assets/selva-lluviosa.gif" alt="" title="" class="w-full h-auto z-0"/>
+          </div>
+          <p class="md:text-[20px] leading-[140%] pt-4 pb-4">
+            Dependiendo de la estación del año y de la zona geográfica, 
+            <b class="text-[#25A7EF]">las personas migrantes en tránsito se exponen a temperaturas extremas, fuertes lluvias, vientos, inundaciones en ríos, entre otros,</b> dificultando así el acceso a recursos básicos como agua potable, alimentos y servicios.
+          </p>
+        </div>
+      `
+    />
+
+    <Accordeon 
+      title="Tecnologías de la Información y la Comunicación (TICs)" 
+      details=`
+        <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
+          <p class="md:text-[20px] leading-[140%] pt-4 pb-4">
+            El uso de las Tecnologías de la Información y la Comunicación (TICs), incluyendo las redes sociales, en el contexto del Tráfico Ilícito de Migrantes, incrementa la exposición de las personas migrantes a diversos riesgos, tales como:
+          </p>
+          <div class="relative">
+            <img src="/sections/section4/assets/tics-acordeon.webp" alt="" title="" class="w-full h-auto z-0 mb-8"/>
+            <img src="/sections/section4/assets/tics.gif" alt="" title="" class="absolute z-10 gif-tics "/>
+          </div>
+        </div>
+      `
+    />    
+    <div class="pt-32 pb-32">
+      <Image src={cuadroRiesgos} alt="Durante el primer semestre del 2023 se rescataron 500 personas objeto de Tráfico Ilícito de Migrantes, que fueron abandonadas por sus guías en la zona limítrofe entre México y Estados Unidos." title="Durante el primer semestre del 2023 se rescataron 500 personas objeto de Tráfico Ilícito de Migrantes, que fueron abandonadas por sus guías en la zona limítrofe entre México y Estados Unidos." class="w-full h-auto mx-auto max-w-[367px]"/>
+    </div>
+  </div>
+
+
+  <!-- LOS RIESGOS SE EXACERBAN - PARTE 5 -->
+  <div class="bg-[#011E32] min-h-screen w-screen">
 
   </div>
 </section>
@@ -139,84 +304,8 @@ import secuestro from "@components/sections/section4/assets/secuestro.gif"
     height: 100%;
     width: 50%; /* relative to parent -> 50% of 200% = 100% of window width */
     float: left;
+
   }
+
+
 </style>
-
-<script is:inline>
-  // ANIMACION BANNER
-  const controllerD = new ScrollMagic.Controller();
-  const controllerD_2 = new ScrollMagic.Controller();
-
-  let tween = TweenMax.to(".zapatos-rotate, .mapa-rotate", 1, {
-      rotation: "-7.338deg",
-      ease: "power3.inOut",
-      repeat: -1,      
-  }).yoyo(true);
-
-  let tween3 = TweenMax.to(".bola-left", 6, {
-        left: "90%",
-        ease: "power3.inOut",
-        repeat: -1,      
-    }).yoyo(true);
-
-  let tween2 = TweenMax.to(".sol-right",6,{
-    right: "90%",
-    ease: "power3.inOut",
-    repeat: -1,      
-  }).yoyo(true);
-
-
-  new ScrollMagic.Scene({
-      triggerElement: "#seccion4 .banner-seccion4",
-      triggerHook: 0,
-      duration: "350%",
-    })
-    .setTween(tween)
-    .addTo(controllerD);
-
-
-
-    new ScrollMagic.Scene({
-      triggerElement: "#seccion4 .banner-seccion4",
-      triggerHook: 0,
-      duration: "350%",
-    })
-    .setTween(tween2)
-    .addTo(controllerD);
-
-
-    new ScrollMagic.Scene({
-      triggerElement: "#seccion4 .banner-seccion4",
-      triggerHook: 0,
-      duration: "350%",
-    })
-    .setTween(tween3)
-    .addTo(controllerD);
-
-    new ScrollMagic.Scene({
-      triggerElement: "#seccion4 .banner-seccion4",
-      triggerHook: 0,
-      duration: "150%",
-    })
-    // .addIndicators({name: "banner 4"})
-    .setPin("#seccion4 .banner-seccion4")
-    .addTo(controllerD_2);
-
-
-    // ANIMACION SLIDER
-    var controllerSlider4 = new ScrollMagic.Controller();
-    var wipeAnimation = new TimelineMax()
-      // animate to second panel
-      .to(".slider-contenedor", 0.5, { z: -150 }) // move back in 3D space
-      .to(".slider-contenedor", 1, { x: "-50%" }) // move in to first panel
-      .to(".slider-contenedorr", 0.5, { z: 0 }) // move back to origin in 3D space
-      new ScrollMagic.Scene({
-      triggerElement: "#pinslider",
-      triggerHook: 0,
-      duration: "50%"
-    })
-      .setPin("#pinslider")
-      .setTween(wipeAnimation)
-      .addTo(controllerSlider4);
-
-</script>
