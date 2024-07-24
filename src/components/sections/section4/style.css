@@ -1,3 +1,13 @@
+.title-popup {
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75);
+  color: #FFF;
+  font-family: 'Inika';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .bg-position-y-12 {
   background-position-y: 12px;
 }
@@ -26,4 +36,60 @@
   top: 0;
   max-width: 41%;
   left: 33%;
+}
+
+.explorar-imagenes .cuadros-poblaciones {
+  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 25%;
+}
+.explorar-imagenes .cuadros-poblaciones:hover {
+  /* transition: all 0.3s ease-in-out; */
+  width: 560px;
+  flex-shrink: 0; 
+  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.explorar-imagenes .imagen-cuadro {
+  position: relative;
+  width: 100%;
+  height: 512px;
+  cursor: pointer;
+  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.explorar-imagenes .imagen-cuadro h1 {
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75);
+  font-family: 'Inika';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 1.2s ease-in-out;
+  opacity: 0;
+}
+.explorar-imagenes .cuadros-poblaciones:hover  h1 {
+  opacity: 1;
+}
+
+.explorar-imagenes .imagen-cuadro > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0.7;
+}
+
+.explorar-imagenes .cuadros-poblaciones:hover .imagen-cuadro > img {
+  opacity: 1;
+}
+.explorar-imagenes .cuadros-poblaciones .titulo-imagen {
+  display: none;
+  transition: all 1.2s ease-in-out;
+}
+.explorar-imagenes .cuadros-poblaciones:hover .titulo-imagen {
+  display: flex;
 }
