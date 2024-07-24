@@ -1,0 +1,152 @@
+---
+import { Image } from "astro:assets";
+import Popup from "@components/Popup.astro";
+// fondo-popup-mujeres1
+import imgPopupMujeres from "@components/sections/section4/assets/fondo-popup-mujeres1.webp"
+import comillas from "@components/sections/section4/assets/comillas.svg"
+import imgPopupDiscapacidad from "@components/sections/section4/assets/texto-discapacidad.svg"
+import imgPopupLGTIBQ from "@components/sections/section4/assets/texto-lgitb.svg"
+---
+<!-- POPUP MUJERES -->
+<Popup idInteraccion="cuadro-mujeres" idPopup="popup-mujeres"
+contenido= `
+   <div class="bg-[url('/src/components/sections/section4/assets/fondo-popup-mujeres.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
+   <div class="col-span-12 flex flex-col justify-center">
+     <div class="px-12">
+       <h1 class="title-popup pb-9 pt-9">Mujeres</h1>
+       <p class="md:text-[28px] leading-[140%] text-[#F6F4F3] pb-6">
+         Existe <b class="text-[#FFC999]">violencia sexual sistematizada</b> contra las mujeres migrantes. 
+         Esta forma parte del modus operandi del Tráfico Ilícito de Migrantes (TIM) 
+         y se usa como medio de coacción, modo de pago y para generar ganancias.
+       </p>
+     </div>
+     <Image src="/src/components/sections/section4/assets/fondo-popup-mujeres1.webp" alt="" title="Mujeres" alt="Mujeres" class="w-full h-auto"/>
+   </div>
+ </div>
+`/>
+
+<!-- POPUP NINOS, NINAS Y ADOLESCENTES -->
+<Popup idInteraccion="cuadro-ninas" idPopup="popup-mujeres2"
+contenido= `
+    <div class="bg-[url('/src/components/sections/section4/assets/fondo-popup-ninos.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
+      <div class="col-span-12 flex flex-col justify-center">
+        <div class="px-12 flex flex-row items-start pt-9 pb-9 gap-28">
+          <h1 class="title-popup w-fit">Niñas, niños
+            <br>y adolescentes</h1>
+          <p class="md:text-[28px] leading-[140%] text-[#F6F4F3] max-w-[740px]">
+            El crimen organizado suele considerar la vulnerabilidad y 
+            ver como un objetivo a las niñas, niños y adolescentes para el 
+            <b>reclutamiento forzoso, trata de personas, abusos sexuales</b>, entre otros.
+          </p>
+        </div>
+        <Image src="/src/components/sections/section4/assets/fondo-popup-ninos1.webp" alt="" class="max-w-[1200px] mx-auto h-auto pb-8"/>
+        <div class="franja-naranja py-12 w-screen bg-[#B85600]">
+          <div class="grid grid-cols-12 max-w-[1024px] mx-auto ">
+            <div class="col-span-2">
+              <Image src="/src/components/sections/section4/assets/comillas.svg" alt="" class="mx-auto"/>
+            </div>
+            <div class="col-span-10">
+              <p class="text-[#FFF] text-[18px]">
+                <b class=" italic text-[20px] leading-[140%] text-[#FFC999]">
+                  “Las personas menores de cinco años son separadas de sus familias y sedadas para viajar en camiones y en cajas de fruta”. 
+                </b>
+                Respuesta a una encuesta realizada para un estudio de la OIM.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+`/>
+
+<!-- POPUP DISCAPACIDAD -->
+<Popup idInteraccion="cuadro-discapacidad" idPopup="popup-discapacidad"
+contenido= `
+      <div class="bg-[url('/src/components/sections/section4/assets/fondo-popup-discapacidad.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
+        <div class="max-w-[1300px] w-[90%] mx-auto col-span-12 grid grid-cols-12 pb-8">
+          <div class="col-span-12 flex flex-col justify-center">
+            <div class="px-12 flex flex-row items-start pt-9 pb-9 gap-28">
+              <h1 class="title-popup w-fit">Población con <br>discapacidad</h1>
+            </div>
+          </div>
+          <div class="col-span-12 flex flex-col justify-center px-12">
+            <Image src="/src/components/sections/section4/assets/texto-discapacidad.svg" alt="" title="" class="w-full h-auto"/>
+          </div>
+        </div>
+      </div>
+`/>
+
+
+<!-- POPUP LGBTIQ+ -->
+<Popup idInteraccion="cuadro-lgtib" idPopup="popup-lgbtiq"
+contenido= `
+      <div class="bg-[url('/src/components/sections/section4/assets/fondo-popup-lgtib.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
+        <div class="max-w-[1300px] w-[90%] mx-auto col-span-12 grid grid-cols-12 pb-8">
+          <div class="col-span-12 flex flex-col justify-center">
+            <div class="px-12 flex flex-row items-start pt-9 pb-9 gap-28">
+              <h1 class="title-popup w-fit">Poblaciones LGBTIQ +</h1>
+            </div>
+          </div>
+          <div class="col-span-12 flex flex-col justify-center px-12">
+            <Image src="/src/components/sections/section4/assets/texto-lgitb.svg" alt="" title="" class="w-full h-auto"/>
+          </div>
+        </div>
+      </div>
+`/>
+
+<!-- POPUP INDIGENA+ -->
+<Popup idInteraccion="cuadro-indigena" idPopup="popup-indigena"
+contenido= `
+      <div class="bg-[url('/src/components/sections/section4/assets/fondo-popup-indigena.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
+        <div class="max-w-[600px] w-[90%] ml-auto col-span-12 grid grid-cols-12 pb-8">
+          <div class="col-span-12 flex flex-col justify-end">
+            <div class="px-12 flex flex-row items-end pt-9 pb-9 gap-28">
+              <h1 class="title-popup w-fit">Población indígena +</h1>
+            </div>
+          </div>
+          <div class="col-span-12 flex flex-col justify-center px-12">
+            <p class="md:text-[28px] leading-[140%] text-[#F6F4F3] pb-6">
+              Las personas indígenas pueden ser objeto de 
+              <b class="text-[#FFC999] text-[48px] font-formula font-bold tracking-[0.96px] inline-block mt-2">DISCRIMINACIÓN RACIAL</b> 
+              por parte de las redes de Tráfico Ilícito de Migrantes, 
+              además de sufrir abusos debido a hablar <b class="text-[32px] text-[#80CFFF]">idiomas diferentes al español.</b>
+            </p>
+          </div>
+        </div>
+      </div>
+`/>
+
+
+<style>
+  .popup {
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    /* transition: display 0.6s ease; */
+    transition: opacity 0.6s ease, visibility 0s 0.6s; /* Cambia display a visibility y opacity */
+    color: white;
+  }
+
+  .popup.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+  }
+  .cerrar-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .franja-naranja {
+    background: #B85600;
+  }
+</style>
