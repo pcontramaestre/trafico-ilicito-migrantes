@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import './style.css'
 import IcoInfo from "@components/IcoInfo.astro";
 import Accordeon from '@components/Accordion.astro';
+import PopupsSection4 from "./PopupsSection4.astro";
 import fondoBanner from "@components/sections/section4/assets/Fondo.webp"
 import fondoBanner2 from "@components/sections/section4/assets/fondo2.webp"
 import sol from "@components/sections/section4/assets/sol.webp"
@@ -20,6 +21,17 @@ import delitos from "@components/sections/section4/assets/delitos.gif"
 import robos from "@components/sections/section4/assets/robos.gif"
 import trata from "@components/sections/section4/assets/trata.gif"
 import cuadroRiesgos from "@components/sections/section4/assets/cuadro-riesgos.webp"
+import explore from "@components/sections/section4/assets/explore.png"
+
+import mujeres from "@components/sections/section4/assets/mujeres.webp"
+import ninosNinas from "@components/sections/section4/assets/ninos-y-ninas.webp"
+import discapacidad from "@components/sections/section4/assets/poblacion-discapacidad.webp"
+import indigena from "@components/sections/section4/assets/poblacion-indigena.webp"
+import lgtib from "@components/sections/section4/assets/poblacion-lgtib.webp"
+import interaccion from '../section2/assets/interaccion.svg';
+import Popup from "@components/Popup.astro";
+
+
 ---
 
 <section id="seccion4">
@@ -282,9 +294,74 @@ import cuadroRiesgos from "@components/sections/section4/assets/cuadro-riesgos.w
 
   <!-- LOS RIESGOS SE EXACERBAN - PARTE 5 -->
   <div class="bg-[#011E32] min-h-screen w-screen">
+    <div class="max-w-[960px] w-[90%] mx-auto text-center pb-16 md:pb-[90px] pt-16 md:pt-[80px]">
+      <h1 class="text-[40px] md:text-[90px] font-bold font-formula leading-[1.2] tracking-[1.8px] text-center text-[#80CFFF] ">
+         LOS RIESGOS SE EXACERBAN PARA POBLACIONES EN SITUACIONES DE VULNERABILIDAD
+      </h1>
+    </div>
+    <p class="max-w-[1060px] text-center text-[#ffffff] text-[24px] md:text-[36px] leading-[140%] mx-auto">
+      Si bien todas las personas migrantes objeto de Tráfico Ilícito de Migrantes se exponen a múltiples riesgos, 
+      <b class="text-[#80CFFF]">hay poblaciones que suelen verse más expuestas a situaciones de vulnerabilidad</b>
+      de acuerdo con su perfil y, por ende, tienen<br>
+      <b class="text-[#FFA85C] text-[40px]">NECESIDADES DE PROTECCIÓN DIFERENCIADAS.</b>
+    </p>
+    <Image src={explore} alt="Explore las imágenes" title="Explore las imágenes" class="mx-auto mb-16 mt-32"/>
 
+    <div class="explorar-imagenes max-w-[1118px] min-h-[512px] flex flex-row gap-1 overflow-hidden text-[#ffffff] pb-32 mx-auto">
+      <div class="flex-auto cuadros-poblaciones overflow-hidden" id="cuadro-mujeres" data-id-popup="">
+        <div class="imagen-cuadro flex items-end">
+          <Image src={mujeres} alt="" title="" class="w-full h-auto"/>
+          <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
+            <h1>Mujeres</h1>
+            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+          </div>
+        </div>
+      </div>
+      <div class="flex-auto cuadros-poblaciones overflow-hidden" id="cuadro-ninas">
+        <div class="imagen-cuadro flex items-end">
+          <Image src={ninosNinas} alt="" title="" class="w-full h-auto"/>
+          <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
+            <h1>Niñas, niños y adolescentes (NNA)</h1>
+            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+          </div>
+        </div>
+      </div>
+      <div class="flex-auto cuadros-poblaciones" id="cuadro-discapacidad">
+        <div class="imagen-cuadro flex items-end">
+          <Image src={discapacidad} alt="" title="" class="w-full h-auto"/>
+          <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
+            <h1>Población con discapacidad</h1>
+            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+          </div>
+        </div>
+      </div>
+      <div class="flex-auto  cuadros-poblaciones" id="cuadro-lgtib">
+        <div class="imagen-cuadro flex items-end">
+          <Image src={lgtib} alt="" title="" class="w-full h-auto"/>
+          <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
+            <h1>Poblaciones LGBTIQ+</h1>
+            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+          </div>
+        </div>
+      </div>
+      <div class="flex-auto  cuadros-poblaciones" id="cuadro-indigena">
+        <div class="imagen-cuadro flex items-end">
+          <Image src={indigena} alt="" title="" class="w-full h-auto"/>
+          <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
+            <h1>Población indígena</h1>
+            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- POPUPS PARTE 5 -->
+  <PopupsSection4 />
+
+   
 </section>
+
 
 
 <style>
@@ -306,6 +383,4 @@ import cuadroRiesgos from "@components/sections/section4/assets/cuadro-riesgos.w
     float: left;
 
   }
-
-
 </style>
