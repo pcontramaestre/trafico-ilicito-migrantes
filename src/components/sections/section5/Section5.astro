@@ -1,0 +1,245 @@
+---
+import { Image } from "astro:assets";
+import './style.css'
+import IcoInfo from "@components/IcoInfo.astro";
+
+import fondoBanner1 from "@components/sections/section5/assets/fondoBanner1.webp"
+import fondoBanner2 from "@components/sections/section5/assets/fondoBanner2.webp"
+import lluvia1 from "@components/sections/section5/assets/lluvia1.gif"
+import lluvia2 from "@components/sections/section5/assets/lluvia2.gif"
+import sombrilla from "@components/sections/section5/assets/sombrilla.webp"
+import textura from "@components/sections/section4/assets/textura-part3.webp"
+import fondoTijuana from "@components/sections/section5/assets/fondoTijuana.webp"
+import fondoTijuana2 from "@components/sections/section5/assets/fondoTijuana2.webp"
+import fondoTijuana3 from "@components/sections/section5/assets/fondoTijuana3.webp"
+import horizontal from "@components/sections/section5/assets/horizontal.svg"
+//explore.svg
+//mapa.svg
+import explore from "@components/sections/section5/assets/explore.svg"
+import mapa from "@components/sections/section5/assets/mapa.svg"
+import mapa2 from "@components/sections/section5/assets/mapa2.svg"
+import icohover from "@components/sections/section5/assets/icohover.svg"
+import enlaceOim from "@components/sections/section5/assets/CTA.svg";
+
+
+---
+
+<section id="seccion5">
+  <!-- Seccion Banner - Parte 1 -->
+  <div class="relative w-screen h-screen banner-seccion5 bg-[#FFEABB] bg-cover"  style={`background-image: url('${textura.src}')`}>
+    <Image src={fondoBanner1} alt="" class="w-screen h-auto absolute top-0 left-0 fondoBanner1"/>
+    <Image src={fondoBanner2} alt="" class="w-screen h-auto absolute top-0 left-0 opacity-0 fondoBanner2" />
+    <Image src={lluvia1} alt="" class="w-screen h-auto absolute top-0 left-0 lluvia1" />
+    <Image src={lluvia2} alt="" class="w-screen h-auto absolute top-0 left-0 opacity-0 lluvia2" />
+    <Image src={sombrilla} alt="" class="w-[70vw] absolute top-0 left-0 sombrilla" />
+    <div class="section5-title absolute w-screen  top-[35%] right-[4%]">
+      <div class="titulo-seccion3 z-10 pb-36 pt-8  max-w-[600px] ml-auto ">
+        <div class="text-[58px] font-bold font-['Inika'] azul6 z-10 mb-4 leading-[1.1] pb-8">
+          Protección y atención <br>a personas objeto de
+        </div>
+        <div class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none">
+          Tráfico Ilícito <br>de Migrantes
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Seccion Banner/Texto - Parte 2 -->
+  <div class="w-screen bg-[#FFEABB] bg-cover md:pt-[8rem] xl:pt-[16rem] 2xl:pt-[30rem] pb-16" style={`background-image: url('${textura.src}')`}>
+    <p class="max-w-[948px] w-[90%] mx-auto lg:text-[36px] text-center font-bold leading-[160%] ">
+      Los Países Miembros de la Coalición Regional contra la Trata de Personas y el Tráfico Ilícito de Migrantes (CORETT), articulan acciones orientadas a
+    </p>
+    <p class="font-formula lg:text-[72px] font-bold tracking-[1.44px] text-center max-w-[1000px] mx-auto text-[#026972] leading-[1.2] pt-4">
+      CONTAR CON PROCESOS PARA LA DETECCIÓN TEMPRANA, IDENTIFICACIÓN, DERIVACIÓN Y ATENCIÓN INMEDIATA DE PERSONAS OBJETO DE TRÁFICO ILÍCITO DE MIGRANTES,
+    </p>
+    <p class="max-w-[948px] w-[90%] mx-auto lg:text-[36px] text-center font-bold leading-[160%]">
+      incluyendo canales oportunos de denuncia.
+    </p>
+  </div>
+  <!-- Seccion Cuadro de texto imagen izquierda - Parte 3 -->
+  <div class="w-screen h-screen bg-[#026972] flex items-center">
+    <div class="max-w-[1200px] w-[90%] mx-auto grid grid-cols-12 relative">
+      <div class="col-span-9 relative">
+        <Image src={fondoTijuana} alt="" class="w-full h-auto"/>
+        <div>
+          <div class="cuadro1 cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute -right-[20%] bottom-[5%]">
+            <div class="borde borde-sup-izq absolute"></div>
+            <div class="borde borde-sup-der absolute"></div>
+            <div class="borde borde-inf-izq absolute"></div>
+            <div class="borde borde-inf-der absolute"></div>
+            <div class="titulo text-[#026972]"><b>¿Qué se entiende por asistencia directa?</b></div>
+            <div class="texto ">
+              Es aquella que implica un contacto cercano o directo con la persona migrante para atender sus necesidades más prioritarias o próximas. La mayoría de los países de la región ofrecen algún servicio de asistencia directa a la población migrante en condición irregular o de tránsito.
+            </div>
+            <div class="creador">(OIM y UNODC 2024)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SECCION TEXTO ACCIONES DE ASISTENCIA Y PROTECCION - Parte 4 -->
+  <div class="md:pt-10 lg:pt-20 md:pb-10 lg:pb-20 bg-[#ffffff]" >
+    <h1 class="text-[#2B6B79] font-formula font-bold max-w-[900px] w-[90%] mx-auto text-center text-5xl lg:text-7xl tracking-[1.56px] pb-9 lg:pb-[3rem]">
+      ACCIONES DE ASISTENCIA Y PROTECCIÓN A LAS PERSONAS OBJETO DE TRÁFICO ILÍCITO DE MIGRANTES
+    </h1>
+    <p class="text-xl lg:text-[28px] leading-[140%] text-center max-w-[1000px] w-[90%] mx-auto">
+      La mayor parte de las acciones llevadas a cabo por los Países Miembros de la CORETT 
+      <b class="text-[#AA751F] font-extrabold">SE DIRIGEN DE MANERA GENERAL A LA POBLACIÓN MIGRANTE EN TRÁNSITO Y SE TRABAJAN DE FORMA INTERSECTORIAL</b>, involucrando principalmente a <b>organismos internacionales y sociedad civil.</b>
+    </p>
+  </div>
+
+  <!-- SECCION ASISTENCIA Y IDENTIFICACION - Parte 5 -->
+  <div class="md:pt-10 lg:pt-20 md:pb-10 lg:pb-20 bg-[#001D20] overflow-auto" style={`background-image: url('${textura.src}')`}>
+    <Image src={horizontal} alt="" class="w-auto h-auto max-w-max"/>
+  </div>
+
+  <!-- SECCION DENUNCAS - Parte 6 -->
+  <div class="md:pt-10 lg:pt-40 md:pb-10 lg:pb-10 bg-[#D6F6FA]" id="denuncias">
+    <h1 class="text-[#19CAE7] font-formula text-[80px] lg:text-[110px] font-bold max-w-[1200px] w-[90%] mx-auto text-center tracking-[2.32px] pb-9 lg:pb-[6rem] leading-[1.2]">
+      ¿QUIÉN PUEDE APOYAR EN CASOS DE TRÁFICO ILÍCITO DE MIGRANTES?
+    </h1>
+    <h1 class="font-formula text-[40px] lg:text-[78px] font-bold tracking-[1.56px] text-[#AA751F] text-center pb-8">
+      DENUNCIAS
+    </h1>
+    <p class="text-center max-w-[910px] w-[90%] text-[20px] md:text-[28px] font-bold leading-[140%] mx-auto">
+      Conozca los <b class="text-[#AA751F]">canales de denuncia</b> y las <b class="text-[#AA751F]">entidades responsables</b> de atender casos 
+      relacionados con personas objeto de Tráfico Ilícito de Migrantes en cada uno de los Países Miembros de la CORETT:
+    </p>
+    <Image src={explore} alt="" class="mx-auto mt-12 mb-12" />
+    <Image src={mapa} alt="" class="mx-auto mb-12 w-full h-auto"  />
+    <IcoInfo 
+        idInfo="info-mapadenuncias" estilos="text-center pt-16 pb-28 cursor-pointer " idIcon="icon-mapadenuncias" estilosIco="flex items-center justify-center"
+        contenido=
+          `
+            La mayoría de los números de contacto son para denunciar Trata de Personas, pero también pueden usarse para denunciar Tráfico Ilícito de Migrantes (TIM).
+          `
+      />
+  </div>
+
+  <!-- SECCION VENTANILLAS INFORMATIVAS - Parte 7 -->
+  <div class="bg-[#AA751F] w-screen h-screen flex items-center flex-col justify-center relative">
+    <h1 class="text-[#F6F4F3] text-[50px] w-[90%] lg:text-[54px] xl:text-[74px] 2xl:text-[84px] text-center mx-auto font-formula font-bold">VENTANILLAS INFORMATIVAS SOBRE MIGRACIÓN</h1>
+    <Image src={fondoTijuana2} alt="" class="w-screen h-auto object-cover"/>
+    <div class="cuadro1-ventanillas cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute right-[35%] lg:bottom-[16%] 2xl:bottom-[10%]">
+      <div class="borde borde-sup-izq absolute"></div>
+      <div class="borde borde-sup-der absolute"></div> 
+      <div class="borde borde-inf-izq absolute"></div>
+      <div class="borde borde-inf-der absolute"></div>
+      <div class="texto ">
+        Las ventanillas son centros de <b>información, asesoría directa y referenciación clara y confiable</b> sobre migración regular, servicios, protección y prevención de migración irregular, promovidas desde la OIM. Son coordinadas por diversos actores claves vinculados a la gestión de la migración tales como gobierno central, gobiernos locales, instituciones u organizaciones locales.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCION MAPA VENTANILLAS INFORMATIVAS - Parte 8 -->
+  <div class="md:pt-10 lg:pt-24 md:pb-10 lg:pb-10 bg-[#D6F6FA]">
+    <h1 class="font-serif text-[40px] lg:text-[48px] font-bold tracking-[1.56px] text-[#AA751F] text-center pb-8">
+      Ventanillas informativas en los países de la CORETT
+    </h1>
+    <Image src={explore} alt="" class="mx-auto mt-12 mb-12" />
+    <Image src={mapa2} alt="" class="mx-auto mb-12 w-full h-auto"  />
+  </div>
+
+  <!-- SECCION - Parte 9 -->
+  <div class="w-screen bg-[#AA751F] pt-[64px] pb-[79px]">
+    <hr class="max-w-[1210px] text-[#F6F4F3] border-t-[3px] mx-auto pb-[64px]">
+    <h1 class="text-[#F6F4F3] font-formula font-bold max-w-[1120px] w-[90%] mx-auto tracking-[1.18px] text-[40px] leading-[120%] xl:text-[59px]">
+      LOS PAÍSES DE LA REGIÓN REALIZAN IMPORTANTES ESFUERZOS ENCAMINADOS A RESPONDER AL RETO DE ATENDER Y PROTEGER A LA POBLACIÓN MIGRANTE EN TRÁNSITO,
+    </h1>
+    <p class="text-[#F6F4F3] max-w-[1120px] w-[90%] mx-auto text-[18px] xl:text-[28px] leading-[140%] font-light">
+      incluyendo a las personas que han sido objeto de Tráfico Ilícito de Migrantes, mediante diversas acciones de asistencia directa, identificación de necesidades y referencia a otros servicios de atención.
+    </p>
+  </div>
+
+  <!-- SECCION - Parte 10 -->
+  <div class="w-screen bg-[#F6F4F3] pt-[90px] pb-[90px] bg-no-repeat bg-cover" style={`background-image: url('${textura.src}')`}>
+    <h1 class="max-w-[1120px] text-5xl xl:text-[116px] mx-auto w-[90%] text-center text-[#026972] font-formula font-bold leading-[1.2] tracking-[2.32px]">
+      RETORNO EN EL CONTEXTO DE TRÁFICO ILÍCITO DE MIGRANTES
+    </h1>
+  </div>
+
+  <!-- SECCION - Parte 11 -->
+  <div class="w-screen bg-[#026972] pt-[90px] pb-[90px] relative h-screen">
+    <Image src={fondoTijuana3} alt="" class="w-fit min-w-[65vw] h-auto object-cover absolute right-0 top-1/2 bottom-1/2 transform -translate-y-1/2"/>
+    <div class="cuadro1-retorno cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute left-[20vw] top-1/2 transform -translate-y-1/2">
+      <div class="borde borde-sup-izq absolute"></div>
+      <div class="borde borde-sup-der absolute"></div> 
+      <div class="borde borde-inf-izq absolute"></div>
+      <div class="borde borde-inf-der absolute"></div>
+      <div class="texto ">
+        Se entiende por retorno el <b>“acto o proceso por el que una persona 
+        vuelve o es llevada de vuelta a su punto de partida.</b> El retorno 
+        puede producirse dentro de los límites territoriales de un país, 
+        como en el caso de los desplazados internos que regresan y los combatientes
+         desmovilizados; <b>o entre un país de destino o de tránsito y un país de origen, 
+         como en el caso de los trabajadores migrantes, los refugiados o los 
+         solicitantes de asilo”</b> (OIM, 2019).
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN - Parte 12 -->
+  <div class="w-screen bg-[#FFFFFF] pt-[79px] pb-[279px] bg-no-repeat bg-cover" style={`background-image: url('${textura.src}')`}>
+    <p class="max-w-[1120px] w-[90%] mx-auto text-[18px] xl:text-[28px] leading-[140%] font-bold pb-[79px] text-center">
+      Existen tres categorías del retorno dependiendo de cómo se propicia:
+    </p>
+    <div class="cuadros-hover relative max-w-[1120px] w-[90%] mx-auto">
+      <!-- Retorno voluntario -->
+      <div class="max-w-[830px] mr-auto">
+        <div class="seccion-hover flex flex-row items-center justify-between pl-[50px] pr-[50px] pb-[0.5rem] pt-4 bg-[#C0E6EB] cursor-pointer relative" style={`background-image: url('${textura.src}')`}>
+          <h1 class="text-[28px] lg:text-[48px] text-[#026972] font-bold font-formula tracking-[0.96px] leading-[120%]">Retorno voluntario</h1>
+          <Image src={icohover} alt="" class="" />
+          <div class="content-hover p-8 absolute left-0 top-[100%] bg-[#C0E6EB] opacity-0 transition-all duration-500 ease z-20" style={`background-image: url('${textura.src}')`}>
+            <p class="text-[28px] leading-[140%]">
+              Es “el regreso independiente o asistido al país de origen, de tránsito o a un tercer país basado en la libre voluntad de la persona que regresa” (OIM, 2019).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Retorno forzoso -->
+      <div class="max-w-[830px] mx-auto">
+        <div class="seccion-hover flex flex-row items-center justify-between pl-[50px] pr-[50px] pb-[0.5rem] pt-4 bg-[#FFEABB] cursor-pointer relative" style={`background-image: url('${textura.src}')`}>
+          <h1 class="text-[28px] lg:text-[48px] text-[#026972] font-bold font-formula tracking-[0.96px] leading-[120%]">Retorno forzoso</h1>
+          <Image src={icohover} alt="" class="" />
+          <div class="content-hover p-8 absolute left-0 top-[100%] bg-[#FFEABB] opacity-0 transition-all duration-500 ease z-20" style={`background-image: url('${textura.src}')`}>
+            <p class="text-[28px] leading-[140%]">
+              Es el “acto de devolver a una persona, contra su voluntad, al país de origen o de tránsito o a un tercer país que acepte recibirla, que generalmente se realiza en virtud de un acto o decisión de carácter administrativo o judicial” (OIM, 2019).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Retorno espontáneo -->
+      <div class="max-w-[830px] ml-auto">
+        <div class="seccion-hover flex flex-row items-center justify-between pl-[50px] pr-[50px] pb-[0.5rem] pt-4 bg-[#D9D9D9] cursor-pointer relative" style={`background-image: url('${textura.src}')`}>
+          <h1 class="text-[28px] lg:text-[48px] text-[#026972] font-bold font-formula tracking-[0.96px] leading-[120%]">Retorno espontáneo</h1>
+          <Image src={icohover} alt="" class="" />
+          <div class="content-hover p-8 absolute left-0 top-[100%] bg-[#D9D9D9] opacity-0 transition-all duration-500 ease z-20" style={`background-image: url('${textura.src}')`}>
+            <p class="text-[28px] leading-[140%]">
+              Es el “regreso voluntario e independiente de un migrante o un grupo de migrantes a su país de origen, por lo general sin el apoyo de ningún Estado ni asistencia internacional o nacional alguna” (OIM,2019).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCION FOOTER - Parte 13 -->
+  <div class="bg-[#00373C] w-screen pt-[64px] pb-[101px]">
+    <hr class="max-w-[1210px] text-[#F6F4F3] border-t-[3px] mx-auto pb-[49px]">
+    <p class="text-[#F6F4F3] max-w-[1120px] w-[90%] mx-auto text-[18px] xl:text-[24px] leading-[140%] font-light">
+      Como parte del eje de atención integral, los países de la CORETT contemplan una <b>acción articulada para el retorno</b> de las personas objeto del Tráfico Ilícito de Migrantes en condiciones de
+    </p>
+    <h1 class="text-[#45AFC0] max-w-[1120px] w-[90%] mx-auto text-[28px] xl:text-[76px] leading-[1.2] font-bold font-formula tracking-[1.52px] pt-4">
+      DIGNIDAD, SEGURIDAD, INTEGRIDAD Y GARANTÍA DE LOS DERECHOS HUMANOS.
+    </h1>
+    <p class="text-[#F6F4F3] max-w-[1120px] w-[90%] mx-auto text-[16px] xl:text-[20px] leading-[140%] font-light pb-[79px]">
+      (CORETT, Plan Estratégico 2019-2027).
+    </p>
+    <div class="text-center w-screen">
+      <a href="https://missingmigrants.iom.int/es" target="_blank">
+        <Image src={enlaceOim} alt="enlace oim" title="Enlace oim" class="mx-auto"/>
+      </a>  
+    </div>
+  </div>
+</section>

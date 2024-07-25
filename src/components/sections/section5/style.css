@@ -1,0 +1,74 @@
+.cuadro {
+  background: url(/src/components/sections/section1/assets/fondo-cuadros.webp) #c0e4e7 no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+}
+
+.cuadro.cuadro1 {
+  width: 484px;
+  height: 512px;
+}
+.cuadro.cuadro1-ventanillas {
+  width: 463px;
+  height: 499px;
+}
+
+.cuadro.cuadro1-retorno {
+  width: 583px; 
+  height: 453px;
+}
+
+.creador {
+  font-size: 16px;
+}
+
+
+.borde-sup-izq {
+  top: 15px;
+  left: 15px;
+  border-top: 2px solid #6F6F6F;
+  width: 70px;
+  border-left: 2px solid #6F6F6F;
+  height: 70px;
+}
+.borde-sup-der {
+  top: 15px;
+  right: 15px;
+  border-top: 2px solid #6F6F6F;
+  width: 70px;
+  border-right: 2px solid #6F6F6F;
+  height: 70px;
+}
+.borde-inf-izq {
+  bottom: 15px;
+  left: 15px;
+  border-left: 2px solid #6F6F6F;
+  width: 70px;
+  border-bottom: 2px solid #6F6F6F;
+  height: 70px;
+}
+.borde-inf-der {
+  bottom: 15px;
+  right: 15px;
+  border-right: 2px solid #6F6F6F;
+  width: 70px;
+  border-bottom: 2px solid #6F6F6F;
+  height: 70px;
+}
+
+
+.seccion-hover {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.seccion-hover .content-hover {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease;
+}
+.seccion-hover:hover .content-hover {
+  opacity: 1;
+  visibility: visible;
+}
