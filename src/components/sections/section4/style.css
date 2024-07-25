@@ -93,3 +93,12 @@
 .explorar-imagenes .cuadros-poblaciones:hover .titulo-imagen {
   display: flex;
 }
+
+#info-voces .info-content {
+  max-width: 900px;
+  top: -50%;
+}
+
+#info-voces .info-content .content {
+  text-align: left;
+}

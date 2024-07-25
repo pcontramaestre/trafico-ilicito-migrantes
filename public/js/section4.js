@@ -103,5 +103,3 @@
       .setTween(wipeAnimation)
       .addTo(controllerSlider4);
 
-    
-
