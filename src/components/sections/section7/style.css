@@ -1,0 +1,46 @@
+.tabs-prevencion .tab.active{
+  --tw-translate-y: -1.25rem /* -20px */;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  z-index: 100;
+}
+
+.tabs-prevencion .tab.active:hover {
+  --tw-translate-y:unset;
+  transform: translate(0);
+  --tw-scale-x: unset;
+  --tw-scale-y: unset;
+  transform: scale(1)
+}
+
+.tab-item {
+  display: none;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.tab-item.active {
+  display: block;
+  opacity: 1;
+}
+
+.video-container {  
+  width: 100%;  
+  max-width: 80%;  
+  margin: 0 auto;  
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);  
+}  
+
+.video-container video {  
+  width: 100%;  
+  height: auto;  
+} 
+
+#popup-video {
+  background-color: rgb(0 0 0 / 85%);
+}
+#popup-video .content-popup {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
