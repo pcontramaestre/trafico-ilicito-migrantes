@@ -10,6 +10,8 @@ import lancha from "../section1/assets/lancha.webp";
 import camion from "../section1/assets/camion.webp";
 import footer from "../section1/assets/footer-seccion1.webp";
 import oimFooter from "../section1/assets/oim-footer.svg";
+import play from "@components/sections/section7/assets/play.svg"
+import Popup from "@components/Popup.astro";
 
 ---
 
@@ -76,7 +78,19 @@ import oimFooter from "../section1/assets/oim-footer.svg";
 <section id="seccion1-3" class="background-gris3" >
   <div class="seccion-video flex flex-col" >
     <h1 class="titulo-video text-center font-bold font-['Formula'] text-[3rem] azul max-w-5xl m-auto pt-16 pb-16 invisible-zoom">¿Qué MOTIVA a las personas migrantes a utilizar el Tráfico Ilícito de Migrantes en su tránsito por la región?</h1>
-    <Image src={video} alt="grafico" class="cursor-pointer m-auto pb-16 img-video invisible-zoom"/>
+    <div class="relative">
+      <Image src={video} alt="grafico" class="m-auto pb-16 img-video invisible-zoom"/>
+      <Image src={play} alt="" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-pointer hover:filter hover:scale-110 hover:opacity-85 hover:transition-all" id="playvideo1"/>
+    </div>
+    <Popup idInteraccion="playvideo1" idPopup="popup-video"
+    contenido= `
+      <div class="video-container">  
+        <video controls>  
+          <source src="/videos/VIDEO_SECCION1.mp4" type="video/mp4">  
+          Tu navegador no es compatible con el elemento de video.  
+        </video>  
+      </div>  
+    `/>
   </div>
   <!-- PASOS -->
   <div class="seccion-pasos pt-24">
