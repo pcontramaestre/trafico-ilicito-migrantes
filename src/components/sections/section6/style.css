@@ -24,4 +24,91 @@
   top: 50%;
   bottom: 50%;
   transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
 }
+#popup-honduras {
+  width: 931px;
+  height: 517px;
+  background: white;    
+  border-radius: 16px;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-dominicana {
+  width: 769px;
+  height: 449px;
+  background: white;    
+  border-radius: 16px;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-panama {
+  width: 1088px;
+  height: 616px;
+  background: white;    
+  border-radius: 16px;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-mexico {
+  width: 769px;
+  height: 449px;
+  background: white;    
+  border-radius: 16px;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-honduras.show
+#popup-salvador.show,
+#popup-costa-rica.show
+#popup-dominicana.show
+{
+  display: flex;
+
+}
+
+.detalle-noticia{
+  transition: all 0.5s ease-in-out;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.footer .noticia:hover .detalle-noticia{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: -10rem;
+}
+
+

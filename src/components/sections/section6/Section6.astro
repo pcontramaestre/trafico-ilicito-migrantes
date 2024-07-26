@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import './style.css'
 import Accordeon from '@components/AccordionBandera.astro';
 import Popup from "@components/Popup.astro";
+import AudioPlayer from "@components/AudioPlayer.astro";
 
 import textura from "@components/sections/section4/assets/textura-part3.webp"
 import fondoBanner1 from "@components/sections/section6/assets/fondoBanner.webp"
@@ -35,11 +36,23 @@ import PopMexico from "@components/sections/section6/assets/Pop-Mexico.svg"
 import paseCursor2 from "@components/sections/section6/assets/pase-cursor2.svg"
 import fondoTIC from "@components/sections/section6/assets/fondoTICs.webp"
 
-
-
 import popupELSALVADOR from "@components/sections/section6/assets/popupELSALVADOR.svg"
 import popupCOSTARICA from "@components/sections/section6/assets/popupCOSTARICA.svg"
+import popupHONDURAS from "@components/sections/section6/assets/popupHONDURAS.svg"
+import popupDOMINICANA from "@components/sections/section6/assets/popupDOMINICANA.svg"
+import popupMEXICO from "@components/sections/section6/assets/popupMEXICO.svg"
+import popupPANAMA from "@components/sections/section6/assets/popupPANAMA.svg"
 
+
+import cursorNoticias from "@components/sections/section6/assets/cursor-noticias.svg"
+import fondoNoticia1 from "@components/sections/section6/assets/fondoNoticia1.webp"
+import fondoNoticia2 from "@components/sections/section6/assets/fondoNoticia2.webp"
+import fondoDetalleNoticia from "@components/sections/section6/assets/fondoDetalleNoticia.webp"
+
+import textoNoticia1 from "@components/sections/section6/assets/textoNoticia1.webp"
+import cursorConsultarNoticia from "@components/sections/section6/assets/cursorConsultarNoticia.svg"
+
+import enlaceOim from "@components/sections/section6/assets/CTA.svg"
 ---
 
 
@@ -472,18 +485,18 @@ import popupCOSTARICA from "@components/sections/section6/assets/popupCOSTARICA.
 
   <!-- SECCION - Parte 6 -->
   <div class=" bg-cover bg-no-repeat w-screen h-screen relative text-[#ffffff]" style={`background-image: url('${fondoTIC.src}')`}>
-    <div class="h-[98px] px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-8 left-[20vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupCostaRica">
+    <div class="h-[98px] px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-16 left-[20vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupCostaRica">
       <div class="text-center text-white text-5xl font-light font-formula tracking-wide">COSTA RICA</div>
     </div>
     <div class="h-[98px] px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[30vh] left-[10vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupHonduras">
       <div class="text-center text-white text-5xl font-light font-formula tracking-wide">HONDURAS</div>
     </div>
-    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[50vh] left-[40vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupDominicana">
+    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[40vh] left-[40vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupDominicana">
       <div class="text-center text-white text-5xl font-light font-formula tracking-wide">REPÚBLICA <br>
         DOMINICANA
       </div>
     </div>
-    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[80vh] left-[40vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupSalvador">
+    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[70vh] left-[40vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupSalvador">
       <div class="text-center text-white text-5xl font-light font-formula tracking-wide">
         EL SALVADOR
       </div>
@@ -509,7 +522,110 @@ import popupCOSTARICA from "@components/sections/section6/assets/popupCOSTARICA.
     contenido= `
       <Image src=${popupCOSTARICA.src} alt="" class="" />
     `/>
-    
+    <!-- POPUP HONDURAS -->
+    <Popup idInteraccion="popupHonduras" idPopup="popup-honduras" cerrarAzul
+    contenido= `
+      <Image src=${popupHONDURAS.src} alt="" class="" />
+    `/>
+    <!-- POPUP DOMINICANA -->
+    <Popup idInteraccion="popupDominicana" idPopup="popup-dominicana" cerrarAzul
+    contenido= `
+      <Image src=${popupDOMINICANA.src} alt="" class="" />
+    `/>
+    <!-- POPUP PANAMA -->
+    <Popup idInteraccion="popupPanama" idPopup="popup-panama" cerrarAzul
+    contenido= `
+      <Image src=${popupPANAMA.src} alt="" class="" />
+    `/>
+    <!-- POPUP MÉXICO -->
+    <Popup idInteraccion="popupMexico" idPopup="popup-mexico" cerrarAzul
+    contenido= `
+      <Image src=${popupMEXICO.src} alt="" class="" />
+    `/>
   </div>
-  
+
+  <!-- SECCCION FOOTER - Parte 7 -->
+  <div class="footer bg-[#D6EDFF] bg-cover bg-no-repeat w-screen min-h-screen relative" style={`background-image: url('${textura.src}')`}>
+    <AudioPlayer
+        src="/audios/audio1.mp3" 
+        title="Beneficios de las TICs para combatir el TIM" 
+        subtitle="  " 
+    />
+
+    <Image src={cursorNoticias} alt="" class="pt-[200px] mx-auto" />
+    <div class="pt-[112px] grid grid-cols-2 max-w-[1200px] w-[90%] mx-auto">
+      <!-- noticia 1 -->
+      <div class="col-span-1 relative noticia">
+        <div class="noticia1 relative min-h-[567px] flex flex-row items-center justify-center cursor-pointer">
+          <Image src={fondoNoticia1} alt="" class="w-full h-auto absolute top-0 left-0" />
+          <div class="texto-noticia ">
+            <p class="max-w-[420px] mx-auto rotate-[-10deg] font-serif text-[28px] font-bold leading-[1.2]">
+              Secretaría de Gobernación de México y OIM presentan Estrategia Nacional de Combate al Tráfico Ilícito de Personas Migrantes con Perspectiva de Género 2023-2025.
+            </p>
+            <p class="max-w-[420px] mx-auto rotate-[-10deg] text-[18px]  leading-[1.2] pt-8 pl-[1.2rem]">
+              OIM
+            </p>
+          </div>
+        </div>
+        <!-- detalle de la noticia -->
+        <div class="px-[44px] pt-[66px] bg-cover bg-no-repeat bg-center text-[#1F1F1F] detalle-noticia hidden opacity-0 transition-all" style={`background-image: url('${fondoDetalleNoticia.src}')`}>
+            <p class="text-[24px] font-serif font-bold pb-[40px]">
+              Secretaría de Gobernación de México y OIM presentan Estrategia Nacional de Combate al Tráfico Ilícito de Personas Migrantes con Perspectiva de Género 2023-2025
+            </p>
+            <p class="text-[18px] pb-[40px]">
+              Con este documento se busca que las instituciones del Gobierno de México orienten de manera articulada sus esfuerzos para prevenir, combatir y atender el tráfico ilícito de personas migrantes desde un enfoque integral.
+            </p>
+            <p class="text-[18px] pb-1">
+              La estrategia propone enfocar esfuerzos en cinco áreas prioritarias:
+            </p>
+            <Image src={textoNoticia1} alt="" class="pb-[25px]" />
+            <p class="text-[18px] pb-[20px] font-semibold">
+              Fuente: Organización Internacional para la Migraciones (OIM–ONU Migración) México
+            </p>
+            <a href="https://mexico.iom.int/es/news/gobernacion-y-oim-presentan-estrategia-nacional-de-combate-al-trafico-ilicito-de-personas-migrantes-con-perspectiva-de-genero-2023-2025" target="_blank">
+              <Image src={cursorConsultarNoticia} alt="" class="pb-[20px]" />
+            </a>
+        </div>
+      </div>
+      <!-- noticia 2 -->
+      <div class="col-span-1 relative noticia">
+        <div class="noticia2 relative min-h-[567px] flex flex-row items-center justify-center cursor-pointer">
+          <Image src={fondoNoticia2} alt="" class="w-full h-auto absolute top-0 left-0" />
+          <div class="texto-noticia ">
+            <p class="max-w-[420px] mx-auto rotate-[6deg] font-serif text-[28px] font-bold leading-[1.2]">
+              La OIM apoya la cooperación regional para la lucha contra la trata de personas y el tráfico ilícito de migrantes en América Latina.
+            </p>
+            <p class="max-w-[420px] mx-auto rotate-[6deg] text-[18px]  leading-[1.2] pt-8 -ml-2">
+              OIM
+            </p>
+          </div>
+        </div>
+        <!-- detalle de la noticia -->
+        <div class="px-[44px] pt-[66px] bg-cover bg-no-repeat bg-center text-[#1F1F1F] detalle-noticia hidden opacity-0 transition-all" style={`background-image: url('${fondoDetalleNoticia.src}')`}>
+          <p class="text-[24px] font-serif font-bold pb-[40px]">
+            La OIM apoya la cooperación regional para la lucha contra la trata de personas y el tráfico ilícito de migrantes en América Latina
+          </p>
+          <p class="text-[18px] pb-[40px]">
+            Delegaciones de 9 países participaron en la II Reunión Regional Plenaria de la Coalición Regional contra la trata de personas y el tráfico ilícito de migrantes (CORETT), los días 15 y 16 de junio de 2023 en la ciudad de México. Este encuentro, liderado por CORETT y organizado en conjunto con la Organización Internacional para las Migraciones (OIM), la Oficina de Naciones Unidas contra la Droga y el Delito (UNODC), Abogados sin Fronteras, El Pozo de Vida y World Vision, tuvo como objetivo principal compartir buenas prácticas y enfrentar los desafíos en la lucha contra la trata de personas y el tráfico ilícito de migrantes.
+          </p>
+          <p class="text-[18px] pb-[40px]">
+            El encuentro reforzó la necesidad de seguir trabajando en conjunto y la importancia de la cooperación regional para enfrentar la trata de personas y el tráfico ilícito de migrantes, haciendo especial énfasis en la protección y el respeto de los derechos de las víctimas.
+          </p>
+          <p class="text-[18px] pb-[20px] font-semibold">
+            Fuente: Organización Internacional para la Migraciones (OIM–ONU Migración) México
+          </p>
+          <a href="https://rosanjose.iom.int/es/news/oim-apoya-cooperacion-regional-para-la-lucha-contra-la-trata-de-personas-y-el-trafico-ilicito-de-migrantes-en-america-latina" target="_blank">
+            <Image src={cursorConsultarNoticia} alt="" class="pb-[20px]" />
+          </a>
+      </div>
+      </div>
+    </div>
+
+    <div class="text-center w-screen cta pt-[220px] pb-[175px]">
+      <a href="https://missingmigrants.iom.int/es" target="_blank">
+        <Image src={enlaceOim} alt="enlace oim" title="Enlace oim" class="mx-auto"/>
+      </a>  
+    </div>
+
+  </div>
 </section>
