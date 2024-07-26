@@ -92,21 +92,19 @@ const { title, details, bandera } = Astro.props as Props;
   } */
 </style>
 
+<!-- EL JAVASCRIPT SE CARGA DE LOS OTROS ACORDEONES, SINO DA UN ERROR -->
+
+<!-- 
 <script>
   function accordionSetup() {
     const accordionMenus = document.querySelectorAll(
-      ".accordion",
+      ".accordeon-banderas",
     ) as NodeListOf<HTMLElement>;
     accordionMenus.forEach((accordionMenu) => {
-      const accordionButton = accordionMenu.querySelector(
-        ".accordion__button",
-      ) as HTMLElement;
-      const accordionChevron = accordionMenu.querySelector(
-        ".accordion__chevron",
-      ) as HTMLElement;
-      const accordionContent = accordionMenu.querySelector(
-        ".accordion__content",
-      ) as HTMLElement;
+      const accordionButton = accordionMenu.querySelector(".accordion__button",) as HTMLElement;
+
+      const accordionChevron = accordionMenu.querySelector(".accordion__chevron",) as HTMLElement;
+      const accordionContent = accordionMenu.querySelector(".accordion__content",) as HTMLElement;
 
       if (accordionButton && accordionContent && accordionChevron) {
         accordionButton.addEventListener("click", (event) => {
@@ -147,4 +145,4 @@ const { title, details, bandera } = Astro.props as Props;
 
   // runs on view transitions navigation
   document.addEventListener("astro:after-swap", accordionSetup);
-</script>
+</script> -->
