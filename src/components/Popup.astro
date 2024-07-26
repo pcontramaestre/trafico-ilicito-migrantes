@@ -75,6 +75,7 @@ const { contenido,idPopup, idInteraccion,cerrarAzul } = Astro.props as Props;
         const popup = button.closest('.popup');
         // popup.style.display = 'none';
         popup.classList.remove('show');
+        handleVideoState();
       });
     });
 
@@ -83,5 +84,17 @@ const { contenido,idPopup, idInteraccion,cerrarAzul } = Astro.props as Props;
       //popup.style.display = 'flex';
       popup.classList.add('show');
     });
+
+    // Función para manejar el estado del video  
+    const handleVideoState = () => {  
+      const videoContainers = popup.querySelectorAll('.video-container');  
+      videoContainers.forEach(videoContainer => {  
+        const video = videoContainer.querySelector('video');  
+        if (video) {  
+          video.pause();  
+          video.currentTime = 0;  
+        }  
+      });  
+    };
   });
 </script>

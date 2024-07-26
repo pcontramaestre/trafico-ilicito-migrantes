@@ -1,0 +1,158 @@
+---
+import { Image } from "astro:assets";
+import './style.css'
+import Accordeon from '@components/AccordionBandera.astro';
+import Popup from "@components/Popup.astro";
+
+import textura from "@components/sections/section4/assets/textura-part3.webp"
+import fondoBanner1 from "@components/sections/section7/assets/fondoBanner.webp"
+import aves from "@components/sections/section7/assets/aves.gif"
+import sol from "@components/sections/section7/assets/sol.svg"
+import hombre from "@components/sections/section7/assets/hombre-3.webp"
+import mapa from "@components/sections/section7/assets/map.webp"
+import cursorTitulos from "@components/sections/section7/assets/cursorTitulos.svg"
+import tabCapacitacion from "@components/sections/section7/assets/tabCapacitacion.webp"
+import tabDeteccion from "@components/sections/section7/assets/tabDeteccion.webp"
+import tabDifusion from "@components/sections/section7/assets/tabDifusion.webp"
+import tabSensibilizacion from "@components/sections/section7/assets/tabSensibilizacion.webp"
+
+import icoCapacitacion from "@components/sections/section7/assets/ico-capacitancion.webp"
+import icoDifusion from "@components/sections/section7/assets/ico-difusion.webp"
+import icoSencibilizacion from "@components/sections/section7/assets/ico-sencibilizacion.webp"
+import icoDeteccion from "@components/sections/section7/assets/ico-deteccion.webp"
+import fondoVideo from "@components/sections/section7/assets/fondoVideo.webp"
+import play from "@components/sections/section7/assets/play.svg"
+
+
+
+---
+<section id="seccion7">
+  <!-- Seccion Banner - Parte 1 -->
+  <div class="relative w-screen h-screen banner-seccion7 bg-[#FFCACA] bg-cover bg-repeat"  style={`background-image: url('${textura.src}')`}>
+    <div class="section6-title absolute w-screen top-[35%] left-[10vw] z-50">
+      <div class="titulo-seccion7 z-10 pb-36 pt-8  max-w-[600px] mr-auto ">
+        <div class="text-[58px] font-bold font-['Inika'] azul6 z-10 mb-4 leading-[1.1] pb-2">
+          Prevención del
+        </div>
+        <div class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none">
+          Tráfico Ilícito <br>de Migrantes
+        </div>
+      </div>
+    </div>
+    <Image src={fondoBanner1} alt="" class="w-screen h-auto absolute top-0 left-0 fondoBanner1"/>
+    <Image src={sol} alt="" class="absolute top-0 left-0 solaparecer" />
+    <Image src={aves} alt="" class="absolute top-0 left-0 aves" />
+    <Image src={hombre} alt="" class="absolute -bottom-40 right-[10vw] hombreaparecer" />
+    <Image src={mapa} alt="" class="absolute -bottom-96 right-[10vw] mapamoverse mapa-rotate" />
+  </div>
+  <!-- Seccion Banner/Texto - Parte 2 -->
+  <div class="bg-[#FFCACA] w-screen bg-cover bg-repeat pt-[25rem] 2xl:pt-[35rem] banner-texto-seccion7"  style={`background-image: url('${textura.src}')`}>
+    <p class="max-w-[1082px] w-[90%] mx-auto lg:text-[2.5rem] text-center font-light leading-[140%] text-[#1F1F1F] animacion-up">
+      <b class="font-bold">La Estrategia Regional de Prevención de la Trata de personas y el Tráfico Ilícito de Migrantes</b> 
+      liderada por la Coalición Regional contra la Trata de Personas y el Tráfico Ilícito de Migrantes
+       <b class="font-bold">(CORETT)</b> está orientada a:
+    </p>
+    <p class="font-formula lg:text-[72px] font-bold tracking-[1.4px] text-center max-w-[1220px] mx-auto text-[#2B6B79] leading-[1.2] pt-[88px] pb-[198px] animacion-up">
+      “FORTALECER Y ARTICULAR ACCIONES ESTRATÉGICAS DE SENSIBILIZACIÓN, CAPACITACIÓN, DIFUSIÓN, DETECCIÓN Y DERIVACIÓN PARA LA PREVENCIÓN DEL TRÁFICO ILÍCITO DE MIGRANTES en los Países Miembros de la CORETT”
+    </p>
+  </div>
+  <!-- SECCION PREVENCION - Parte 3 -->
+  <div class="w-screen min-h-screen bg-[#026972] pb-12" id="seccionprevencion">
+    <Image src={cursorTitulos} alt="Pase el cursos sobre los titulos" class="mx-auto pt-[73px] pb-[70px]" /> 
+    <h1 class="text-center text-[#45afc0] text-[200px] font-bold font-formula uppercase tracking-[5.60px] titulo-prevencion relative z-0">
+      PREVENCIÓN
+    </h1>
+    <div class="tabs-prevencion relative z-10 max-w-[1200px] mx-auto pb-8">
+      <div class="tabs-detalle">
+        <div class="tabs grid grid-cols-4 max-w-[80%] mx-auto">
+          <div class="tab tab1 active col-span-1 -m-8 z-20 cursor-pointer hover:z-50">
+            <Image src={tabCapacitacion} alt="" class="hover:-translate-y-5 hover:scale-110 z-50" />
+          </div>
+          <div class="tab tab2 col-span-1 -m-4 z-10 cursor-pointer hover:z-50">
+            <Image src={tabDifusion} alt="" class="hover:-translate-y-5 hover:scale-110 z-50" />
+          </div>
+          <div class="tab tab3 col-span-1 -m-8 z-0 cursor-pointer hover:z-50">
+            <Image src={tabDeteccion} alt="" class="hover:-translate-y-5 hover:scale-110 z-50" />
+          </div>
+          <div class="tab tab4 col-span-1 -m-8 z-10 cursor-pointer hover:z-50">
+            <Image src={tabSensibilizacion} alt="" class="hover:-translate-y-5 hover:scale-110 z-50" />
+          </div>
+        </div>
+        <div class="tab-content bg-[#ffffff] -mt-8 relative z-[100]">
+          <div class="tab-item active" data-tab="tab1">
+              <div class="flex flex-row">
+                <div>
+                  <Image src={icoCapacitacion} alt="" class="" />
+                </div>
+                <div class="flex flex-col justify-center p-4">
+                  <h1 class="text-[#E76464] font-formula text-[48px] font-light tracking-[0.96px] pb-4">CAPACITACIÓN</h1>
+                  <p class="max-w-[800px] text-[26px] leading-[140%]">
+                    Fortalecer las capacidades de la población sobre la normativa nacional e internacional en Tráfico Ilícito de Migrantes, para implementar procesos de <b>prevención mediante la gestión de conocimientos.</b>
+                  </p>
+                </div>
+              </div>
+          </div>
+          <div class="tab-item" data-tab="tab2">
+            <div class="flex flex-row">
+              <div>
+                <Image src={icoDifusion} alt="" class="" />
+              </div>
+              <div class="flex flex-col justify-center p-4">
+                <h1 class="text-[#AA751F] font-formula text-[48px] font-light tracking-[0.96px] pb-4">DIFUSIÓN</h1>
+                <p class="max-w-[800px] text-[26px] leading-[140%]">
+                  Proporcionar <b>información confiable y oportuna</b> sobre la incidencia 
+                  del Tráfico Ilícito de Migrantes, y, contar con <b>estadísticas estratégicas 
+                  y operativas</b> nacionales y regionales, como una de las principales 
+                  herramientas para la prevención. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-item" data-tab="tab3">
+            <div class="flex flex-row">
+              <div>
+                <Image src={icoDeteccion} alt="" class="" />
+              </div>
+              <div class="flex flex-col justify-center p-4">
+                <h1 class="text-[#AA751F] font-formula text-[48px] font-light tracking-[0.96px] pb-4 uppercase">Detección/derivación</h1>
+                <p class="max-w-[800px] text-[26px] leading-[140%]">
+                  Referencia o derivación a entidades competentes para la <b>identificación y atención inmediata</b> de las personas objeto del Tráfico Ilícito de Migrantes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-item" data-tab="tab4">
+            <div class="flex flex-row">
+              <div>
+                <Image src={icoSencibilizacion} alt="" class="" />
+              </div>
+              <div class="flex flex-col justify-center p-4">
+                <h1 class="text-[#E06900] font-formula text-[48px] font-light tracking-[0.96px] pb-4 uppercase">SENSIBILIZACIÓN</h1>
+                <p class="max-w-[800px] text-[26px] leading-[140%]">
+                  Generar mayor <b>interés y conciencia</b> sobre el Tráfico Ilícito de Migrantes y sobre la necesidad de generar normativa nacional, así como contar con recursos financieros y humanos para la prevención y combate del delito.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-center text-[20px] pt-8 pb-28 text-[#F6F4F3]">(CORETT, 2021)</h1>
+
+  </div>
+  <div class="bg-[#FFCACA] w-screen bg-cover bg-repeat h-screen flex items-center justify-center"  style={`background-image: url('${textura.src}')`}>
+    <div class="relative">
+      <Image src={fondoVideo} alt="" class="mx-auto" />
+      <Image src={play} alt="" class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 cursor-pointer hover:filter hover:scale-110 hover:opacity-85 hover:transition-all" id="playvideo"/>
+    </div>
+    <Popup idInteraccion="playvideo" idPopup="popup-video"
+    contenido= `
+      <div class="video-container">  
+        <video controls>  
+          <source src="/videos/VIDEO_CIERRE.mp4" type="video/mp4">  
+          Tu navegador no es compatible con el elemento de video.  
+        </video>  
+      </div>  
+    `/>
+  </div>
+</section>
