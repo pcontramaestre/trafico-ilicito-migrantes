@@ -1,0 +1,150 @@
+---
+import { Image } from "astro:assets";
+interface Props {
+  title: string;
+  details: string;
+  bandera: string;
+}
+
+const { title, details, bandera } = Astro.props as Props;
+---
+
+<div class="accordion accordeon-banderas group relative rounded-md border border-purple-900 max-w-[1120px] ml-auto mr-auto">
+  <button
+    class="accordion__button flex w-full flex-1 items-center justify-between gap-5 text-left font-medium transition"
+    type="button"
+    id={`${title} accordion menu button`}
+    aria-expanded="false"
+    aria-controls={`${title} accordion menu content`}
+  >
+    <img src={bandera} alt="Bandera" title="Bandera" class="bandera"/>
+
+    <div class="pais font-formula text-[40px] font-bold tracking-[1.56px] xl:text-[78px]">{title}</div>
+
+    <!-- if using astro and the astro-icon package -->
+    <!-- <svg
+      class="accordion__chevron h-7 w-7 shrink-0 transition-transform"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      ><path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m6 9l6 6l6-6"></path></svg
+    > -->
+
+    <svg class="accordion__chevron h-7 w-7 shrink-0 transition-transform"
+      xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+      <circle cx="15" cy="15" r="15" fill="#D6EDFF"/>
+      <path d="M23 12L15 20L7 12" stroke="#09436A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+  </button>
+
+  <div
+    id={`${title} accordion menu content`}
+    aria-labelledby={`${title} accordion menu button`}
+    class="accordion__content hidden max-h-0 overflow-hidden px-3 transition-all duration-300 ease-in-out sm:px-4">
+    <p class="prose mb-4 mt-1 max-w-full transition-[height]">
+      <div set:html={details}></div>
+    </p>
+  </div>
+</div>
+
+<style>
+  .accordion.accordeon-banderas {
+    width: 1120px;
+    padding: 32px 24px;
+    align-items: center;
+    gap: 24px;
+    width: 90%;
+    border: 1px solid #09436A;
+    background: #0D5F8B;
+    margin-bottom: 1.6rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .accordion.accordeon-banderas .pais {
+    width: 100%;
+    color: var(--Blanco, #F6F4F3);
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+  .accordion.accordeon-banderas.active {
+    border: 1px solid var(--Blanco, #F6F4F3);
+    background: var(--Blanco, #F6F4F3);
+  }
+
+  .accordion.accordeon-banderas.active .pais{
+    color: #0D5F8B;
+  }
+
+  /* .accordion.accordeon-banderas .accordion__chevron {
+    background: white;
+    border-radius: 50%;
+    padding-top: 4px;
+  } */
+</style>
+
+<script>
+  function accordionSetup() {
+    const accordionMenus = document.querySelectorAll(
+      ".accordion",
+    ) as NodeListOf<HTMLElement>;
+    accordionMenus.forEach((accordionMenu) => {
+      const accordionButton = accordionMenu.querySelector(
+        ".accordion__button",
+      ) as HTMLElement;
+      const accordionChevron = accordionMenu.querySelector(
+        ".accordion__chevron",
+      ) as HTMLElement;
+      const accordionContent = accordionMenu.querySelector(
+        ".accordion__content",
+      ) as HTMLElement;
+
+      if (accordionButton && accordionContent && accordionChevron) {
+        accordionButton.addEventListener("click", (event) => {
+          if (!accordionMenu.classList.contains("active")) {
+            // if accordion is currently closed, so open it
+            accordionMenu.classList.add("active");
+            accordionButton.setAttribute("aria-expanded", "true");
+
+            // set max-height to the height of the accordion content
+            // this makes it animate properly
+            accordionContent.classList.remove("hidden");
+            accordionContent.style.maxHeight =
+              accordionContent.scrollHeight + "px";
+            accordionChevron.classList.add("rotate-180");
+          } else {
+            // accordion is currently open, so close it
+            accordionMenu.classList.remove("active");
+            accordionButton.setAttribute("aria-expanded", "false");
+
+            // set max-height to the height of the accordion content
+            // this makes it animate properly
+            accordionContent.style.maxHeight = "0px";
+            accordionChevron.classList.remove("rotate-180");
+            // delay to allow close animation
+            setTimeout(() => {
+              accordionContent.classList.add("hidden");
+            }, 300);
+          }
+          event.preventDefault();
+          return false;
+        });
+      }
+    });
+  }
+
+  // runs on initial page load
+  accordionSetup();
+
+  // runs on view transitions navigation
+  document.addEventListener("astro:after-swap", accordionSetup);
+</script>

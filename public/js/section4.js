@@ -94,7 +94,7 @@
       .to(".slider-contenedor", 0.5, { z: -150 }) // move back in 3D space
       .to(".slider-contenedor", 1, { x: "-50%" }) // move in to first panel
       .to(".slider-contenedorr", 0.5, { z: 0 }) // move back to origin in 3D space
-      new ScrollMagic.Scene({
+    new ScrollMagic.Scene({
       triggerElement: "#pinslider",
       triggerHook: 0,
       duration: "50%"

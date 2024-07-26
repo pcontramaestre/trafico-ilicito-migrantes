@@ -1,0 +1,27 @@
+.popupGHS:hover > img.popmostrar  {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+.popupCP:hover > img.popmostrar  {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+.popupMX:hover > img.popmostrar  {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+#popup-salvador,#popup-costa-rica {
+  width: 769px;
+  height: 493px;
+  background: white;    
+  border-radius: 16px;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+}
