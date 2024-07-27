@@ -6,7 +6,7 @@ interface Props {
 
 const { title } = Astro.props;
 import "aos/dist/aos.css"; // AOS styles
-
+import { Tooltips } from 'astro-tooltips';
 ---
 
 <!doctype html>
@@ -26,6 +26,7 @@ import "aos/dist/aos.css"; // AOS styles
 		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" is:inline></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js" is:inline></script>
 		<script src="/js/audioPlayer.js" is:inline defer></script>
+		<Tooltips interactive={false} delay={[15, 14000]} />
 	</head>
 	<body class="overflow-x-hidden">
 		<slot />
