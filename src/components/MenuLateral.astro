@@ -5,6 +5,7 @@ import home from "@public/icons/inicio.svg"
 import ayuda from "@public/icons/ayuda.svg"
 import Popup from "@components/Popup.astro";
 
+//Menu principal
 import fondoMenu from "@components/assets/fondoMenu.webp"
 import menu1 from "@components/assets/menu1.webp"
 import menu2 from "@components/assets/menu2.webp"
@@ -15,17 +16,19 @@ import menu6 from "@components/assets/menu6.webp"
 import menu7 from "@components/assets/menu7.webp"
 import menu8 from "@components/assets/menu8.webp"
 
+//Menu ayuda
+import fondoAyuda from "@components/assets/fondoAyuda.webp"
+import logos from "@components/assets/logos4.webp"
+import mouse from "@components/sections/section1/assets/mouse.gif"
+import info from "@public/images/info.gif"
+import play from "@public/icons/playSolo.svg"
+import link from "@components/assets/link.svg"
+import audioPlay from "@public/icons/audio-play.svg"
+
+
+
 
 ---
-
-<!--     position: fixed;
-    z-index: 10000000;
-    right: 1rem;
-    top: 35%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-     -->
 
 <div class="menu-lateral fixed z-[9998] right-2 top-[35%] flex flex-col gap-4">
   <div class="menu" title="Menú" data-tooltip-placement="left">
@@ -134,7 +137,78 @@ import menu8 from "@components/assets/menu8.webp"
     
     `/>
 
-<div>
+
+
+
+
+<Popup idInteraccion="iayuda" idPopup="popup-lateral2"
+  contenido= `
+    <div 
+  class="w-screen h-screen bg-cover flex items-center flex-col justify-center gap-4 relative" style="background-image: url('${fondoAyuda.src}">
+  <Image src=${logos.src} alt="Logo" class=" absolute top-[3vh] left-[4vw]"/>
+  <h1 class="text-center text-[#80CFFF] font-formula text-[30px] md:text-[70px] font-bold tracking-[1.56px] uppercase leading-[1.1]">
+    ¿CÓMO NAVEGAR ESTE SITIO?
+  </h1>
+  <!-- FILA 1 -->
+  <div class="grid lg:grid-cols-3 grid-cols-1 gap-8 items-center justify-center max-w-[1100px] w-[90%] text-[#D6EDFF]">
+    <div class="col-span-1 text-center h-full text-base lg:text-[20px] leading-[1.2] font-light">
+      <div class="image min-h-[145px] flex">
+        <Image src=${mouse.src} alt="" class="max-w-[55px] mx-auto" />
+      </div>
+      <div class="text">Desplácese hacia abajo</div>
+    </div>
+
+    <div class="col-span-1 text-center h-full text-base lg:text-[20px] leading-[1.2] font-light">
+      <div class="image min-h-[145px] flex">
+        <Image src=${menu.src} alt="" class="max-w-[55px] mx-auto" />
+      </div>
+      <div class="text">Haga clic en el ícono de menú para navegar por las secciones</div>
+    </div>
+
+    <div class="col-span-1 text-center h-full text-base lg:text-[20px] leading-[1.2] font-light">
+      <div class="image min-h-[145px] flex">
+        <Image src=${audioPlay.src} alt="" class="max-w-[55px] mx-auto" />
+      </div>
+      <div class="text">Suba el volumen para una mejor experiencia</div>
+    </div>
+  </div>
+  <!-- FILA 2 -->
+  <div class="grid lg:grid-cols-4 grid-cols-1 gap-8 items-center justify-center max-w-[1280px] w-[90%] text-[#D6EDFF] pt-20">
+    <div class="col-span-1 text-center h-full text-base lg:text-[20px] leading-[1.2] font-light">
+      <div class="image min-h-[145px] flex">
+        <Image src=${play.src} alt="" class="max-w-[55px] mx-auto" />
+      </div>
+      <div class="text">Active y pause los audios haciendo clic en este ícono</div>
+    </div>
+
+    <div class="col-span-1 text-center h-full text-base lg:text-[20px] leading-[1.2] font-light">
+      <div class="image min-h-[145px] flex flex-col justify-center">
+        <Image src=${info.src} alt="" class="max-w-[55px] mx-auto" />
+      </div>
+      <div class="text">Pase el mouse por encima para ver aclaraciones importantes</div>
+    </div>
+
+    <div class="col-span-1 text-center h-full text-base lg:text-[20px] leading-[1.2] font-light">
+      <div class="image min-h-[145px] flex">
+        <Image src=${link.src} alt="" class="max-w-[55px] mx-auto" />
+      </div>
+      <div class="text">Cuando vea este ícono puede interactuar con los diferentes elementos en pantalla</div>
+    </div>
+    <div class="col-span-1 text-center h-full text-base lg:text-[20px] leading-[1.2] font-light">
+      <div class="image min-h-[145px] flex">
+        <Image src=${home.src} alt="" class="max-w-[55px] mx-auto" />
+      </div>
+      <div class="text">Haga clic en este ícono en cualquier momento para regresar al inicio</div>
+    </div>
+  </div>
+</div>
+  `
+  />
+
+
+
+
+
 
   <style>
       .link_menu > img {
