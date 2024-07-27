@@ -12,13 +12,15 @@ import footer from "../section1/assets/footer-seccion1.webp";
 import oimFooter from "../section1/assets/oim-footer.svg";
 import play from "@components/sections/section7/assets/play.svg"
 import Popup from "@components/Popup.astro";
+import pasos from "@components/assets/pasos.gif"
+
 
 ---
 
 <section id="seccion1-2">
   <div class="titulo-animado background-azul h-auto text-center overflow-hidden ">
     <!-- Seccion de texto animado -->
-    <div class="texto-animado flex flex-col font-['Formula'] text-[80px] uppercase leading-none azul-3 p-24 ">
+    <div class="texto-animado flex flex-col font-formula text-[80px] uppercase leading-none azul-3 p-24 font-bold tracking-[1.6px] shadow-text">
       <span>El Tráfico Ilícito de Migrantes (TIM) es un</span>
       <spand>elito contra los estados que pone en riesgo </spand>
       <span>a las personas migrantes en tránsito</spand>
@@ -46,7 +48,7 @@ import Popup from "@components/Popup.astro";
         <div class="borde borde-inf-izq absolute"></div>
         <div class="borde borde-inf-der absolute"></div>
         <div class="titulo azul"><b>¿Quién es una persona OBJETO de Tráfico Ilícito de Migrantes (TIM)?</b></div>
-        <div class="texto">
+        <div class="texto ">
           Es toda aquella persona migrante que sea o haya sido 
           <b>objeto del delito de TIM,</b> 
           independientemente de que el infractor haya sido o no 
@@ -58,15 +60,18 @@ import Popup from "@components/Popup.astro";
     <div class="animate-grafico"></div>
     <!-- Seccion con grafico -->
     <div class="seccion-grafico flex flex-wrap items-center justify-center gap-12 text-[1.75rem] pb-24">
-      <div class="izquierda grafico">
-        <Image src={grafico} alt="grafico"/>
+      <div class="izquierda grafico relative">
+        <Image src={grafico} alt="grafico" class="mt-11"/>
+        <Image src={pasos} alt="grafico" class=" absolute top-0 left-0 z-10" />
       </div>
-      <div class="derecha texto max-w-[30%] blanco p-8 text-left">
+      <div class="derecha texto max-w-[30%] blanco p-8 text-left text-[28px] font-light text-[#F6F4F3]">
         <p>
-          Según el Boletín de datos sobre migración en tránsito por las Américas de la OIM, la cifra de personas migrantes que ingresaron a la selva del Darién en enero del 2024
+          Según el 
+          <span class=" italic">Boletín de datos sobre migración en tránsito por las Américas</span>
+           de la OIM, la cifra de personas migrantes que ingresaron a la selva del Darién en enero del 2024
         </p>
         <p>
-          <strong class="naranja4 text-[2.5rem]">aumentó un <span class="text-[3rem]">48%</span></strong>
+          <strong class="naranja4 text-[2.5rem] font-bold">aumentó un <span class="text-[3rem]">48%</span></strong>
         </p>
         <p>respecto al mismo mes del 2023.</p>
       </div>

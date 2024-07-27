@@ -77,6 +77,7 @@ import luz from "./assets/luz1.png";
     });
 
     const imgLuz = document.querySelectorAll(".img-luz");
+    const controllerSeccion1A = new ScrollMagic.Controller();
 
     // Pinear el div con la clase "parte1"
     new ScrollMagic.Scene({
@@ -91,8 +92,8 @@ import luz from "./assets/luz1.png";
           1,
           {
             brightness: 70,
-            x: "-3%",
-            opacity: 0.5,
+            x: "-20%",
+            opacity: 0.2,
           },
           {
             brightness: 100,
@@ -114,14 +115,42 @@ import luz from "./assets/luz1.png";
       .addTo(controller);
 
 
+    new ScrollMagic.Scene({
+      triggerElement: ".parte1",
+      triggerHook: "onLeave",
+      duration: "120%",
+      tweenChanges: true,
+    })
+      .setTween(
+        TweenMax.staggerFromTo(
+          [".titulo-seccion"],
+          1,
+          {
+            x: "-100%",
+            opacity: 0,
+          },
+          {
+            x: "0%",
+            opacity: 1,
+          },
+        )
+      )
+      .addTo(controllerSeccion1A);
+
+    
+
     // EFECTO PARA TEXTO FLOTANTE DE LA PARTE 2
     new ScrollMagic.Scene({
 							triggerElement: ".parte2",
 							triggerHook: 0.7, // show, when scrolled 10% into view
-							duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
-							offset: 50 // move trigger to center of element
+							duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
+							offset: -300, // move trigger to center of element
+              triggerHook: "onLeave",
 						})
 						.setClassToggle(".flotante-texto", "visible") // add class to reveal
-						.addTo(controller);
+						.addTo(controllerSeccion1A);
+
+
+  
   });
 </script>

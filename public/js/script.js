@@ -9,6 +9,8 @@
   });
 
   const controllerB = new ScrollMagic.Controller();
+  
+  
 
   // Animacion de texto
   new ScrollMagic.Scene({
@@ -59,6 +61,19 @@
   .setPin(".con-cuadros")
   .addTo(controller);
 
+
+  //animacion y pin de la seccion del grafico
+  new ScrollMagic.Scene({
+    triggerElement: ".seccion-grafico",
+    triggerHook: 1,
+    duration: "150%",
+    offset: 0,
+    triggerHook: "onLeave",
+  })
+  .setPin(".seccion-grafico")
+  .addTo(controllerB);
+
+
   //Animacion de la seccion de grafico
   //seccion-grafico
   new ScrollMagic.Scene({
@@ -94,7 +109,6 @@
         )
       )
     )
-  .setPin(".seccion-grafico")
   .addTo(controller);
 
   // Seccion de video 
