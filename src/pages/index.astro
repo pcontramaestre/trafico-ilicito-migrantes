@@ -12,11 +12,13 @@ import Seccion5 from '../components/sections/section5/Section5.astro'
 import Seccion6 from '../components/sections/section6/Section6.astro'
 import Seccion7 from '../components/sections/section7/Section7.astro'
 import Section8 from '@components/sections/section8/Section8.astro';
+import MenuLateral from '@components/MenuLateral.astro';
 
 ---
 
 <Layout title="Voces y datos del Tráfico Ilícito de Migrantes">
 	<main>
+		<MenuLateral />
 		<Seccion1 />
 		<Seccion2 />
 		<Seccion3 />
@@ -45,6 +47,18 @@ import Section8 from '@components/sections/section8/Section8.astro';
 		font-style:normal;
 		font-display: swap;
 	}
+
+	.link_menu > img {
+    filter: brightness(0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  .link_menu:hover > img {
+    filter: brightness(1);
+    transform: scale(1.5);
+  }
+  .link_menu:hover h1 {
+    text-shadow: 1px 1px 1px black;
+  }
 
 	.azul {
 		color: #014979;

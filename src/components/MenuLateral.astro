@@ -1,0 +1,151 @@
+---
+import { Image } from "astro:assets";
+import menu from "@public/icons/menu.svg"
+import home from "@public/icons/inicio.svg"
+import ayuda from "@public/icons/ayuda.svg"
+import Popup from "@components/Popup.astro";
+
+import fondoMenu from "@components/assets/fondoMenu.webp"
+import menu1 from "@components/assets/menu1.webp"
+import menu2 from "@components/assets/menu2.webp"
+import menu3 from "@components/assets/menu3.webp"
+import menu4 from "@components/assets/menu4.webp"
+import menu5 from "@components/assets/menu5.webp"
+import menu6 from "@components/assets/menu6.webp"
+import menu7 from "@components/assets/menu7.webp"
+import menu8 from "@components/assets/menu8.webp"
+
+
+---
+
+<!--     position: fixed;
+    z-index: 10000000;
+    right: 1rem;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+     -->
+
+<div class="menu-lateral fixed z-[9998] right-2 top-[35%] flex flex-col gap-4">
+  <div class="menu" title="Menú" data-tooltip-placement="left">
+    <Image src={menu} alt="Menú" class="cursor-pointer" id="imenu"/>
+  </div>
+  <div class="home" title="Inicio" data-tooltip-placement="left">
+    <a href="/#seccion1-1">
+      <Image src={home} alt="Inicio" class="cursor-pointer" id="ihome"/>
+    </a>
+  </div>
+  <div class="ayuda"  title="Ayuda" data-tooltip-placement="left">
+    <Image src={ayuda} alt="Ayuda" class="cursor-pointer" id="iayuda"/>
+  </div>
+</div>
+
+
+
+<Popup idInteraccion="imenu" idPopup="popup-video"
+    contenido= `
+      
+      <div 
+  class="w-screen h-screen bg-cover flex items-center flex-col justify-center gap-4" style="background-image: url('${fondoMenu.src}">
+
+  <div class="grid lg:grid-cols-3 grid-cols-1 gap-4 items-center justify-center">
+    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+      <a href="/#seccion1-1" class="cursor-pointer link_menu">
+        <Image src=${menu1.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+          VOCES <br>
+          Y DATOS
+        </h1>
+      </a>
+    </div>
+
+    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+      <a href="/#seccion2-1" class="cursor-pointer link_menu">
+        <Image src=${menu2.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0  hover:transition-all"/>
+        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+          modos de operación <br>
+          de las redes
+        </h1>
+      </a>
+    </div>
+
+    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+      <a href="/#seccion3" class="cursor-pointer link_menu">
+        <Image src=${menu3.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+          datos disponibles <br>sobre personas <br>objeto
+        </h1>
+      </a>
+    </div>
+  </div>
+
+  <!-- SEGUNDA LINEA MENU -->
+  <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 items-center justify-center">
+    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+      <a href="/#seccion4" class="cursor-pointer link_menu">
+        <Image src=${menu4.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+          riesgos <br>
+          vinculados
+        </h1>
+      </a>
+    </div>
+
+    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+      <a href="/#seccion5" class="cursor-pointer link_menu">
+        <Image src=${menu5.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0  hover:transition-all"/>
+        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+          PROTECCIÓN Y ATENCIÓN <br>A PERSONAS OBJETO
+        </h1>
+      </a>
+    </div>
+  </div>
+
+  <div class="grid lg:grid-cols-3 grid-cols-1 gap-4 items-center justify-center">
+    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+      <a href="/#seccion6" class="cursor-pointer link_menu">
+        <Image src=${menu6.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+          ADMINISTRAción <br>de la justicia
+        </h1>
+      </a>
+    </div>
+
+    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+      <a href="/#seccion7" class="cursor-pointer link_menu">
+        <Image src=${menu7.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0  hover:transition-all"/>
+        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+          prevención
+        </h1>
+      </a>
+    </div>
+
+    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+      <a href="/#seccion8" class="cursor-pointer link_menu">
+        <Image src=${menu8.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+          créditos y fuentes
+        </h1>
+      </a>
+    </div>
+  </div>
+</div>
+    
+    `/>
+
+<div>
+
+  <style>
+      .link_menu > img {
+    filter: brightness(0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  .link_menu:hover > img {
+    filter: brightness(1);
+    transform: scale(1.5);
+  }
+  .link_menu:hover h1 {
+    text-shadow: 1px 1px 1px black;
+  }
+  </style>

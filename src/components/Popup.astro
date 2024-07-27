@@ -55,6 +55,17 @@ const { contenido,idPopup, idInteraccion,cerrarAzul } = Astro.props as Props;
     cursor: pointer;
     font-size: 20px;
   }
+  .link_menu > img {
+    filter: brightness(0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  .link_menu:hover > img {
+    filter: brightness(1);
+    transform: scale(1.5);
+  }
+  .link_menu:hover h1 {
+    text-shadow: 1px 1px 1px black;
+  }
 </style>
 
 <script is:inline define:vars={{idPopup, idInteraccion }}>
@@ -96,5 +107,15 @@ const { contenido,idPopup, idInteraccion,cerrarAzul } = Astro.props as Props;
         }  
       });  
     };
+
+    //Funcion para cerrar el popup cuando aparece el menu .link_menu y se accede 
+    const linkMenu = popup.querySelectorAll('.link_menu');
+    linkMenu.forEach(menu => {
+      menu.addEventListener('click', () => {
+        popup.classList.remove('show');
+      });
+    });
+
+
   });
 </script>
