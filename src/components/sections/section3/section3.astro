@@ -1,6 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import './style.css'
+import MapaTrafico from '@components/sections/section3/MapaTrafico.astro';
+
+
 import fondoanimado from '@components/sections/section3/assets/fondoanimado.gif';
 import textura from '@components/sections/section3/assets/textura.webp';
 import bote from '@components/sections/section3/assets/bote.webp';
@@ -91,7 +94,10 @@ import IcoInfo from "@components/IcoInfo.astro";
       </p>
     </div>
     <div class="mapa-migrantes">
-      <Image src={mapaMigrantes} alt="" class="w-screen h-auto" title="Mapa de personas objeto de Tráfico Ilícito de Migrantes"/>
+      <div class="relative " id="mapaMigrantesPersonas">
+         <MapaTrafico />
+      </div>
+      <!-- <Image src={mapaMigrantes} alt="" class="w-screen h-auto" /> -->
       <IcoInfo 
         idInfo="info-mapa2" estilos="text-center pt-16 pb-16" idIcon="icon-mapa2" estilosIco="flex items-center justify-center"
         contenido=
@@ -178,4 +184,19 @@ import IcoInfo from "@components/IcoInfo.astro";
       )
     )
     .addTo(controllerC);
+
+
+  //trancar mapa
+  const controllerSection3A = new ScrollMagic.Controller();
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion3 #mapaMigrantesPersonas",
+    triggerHook: 0,
+    duration: "100%",
+    tweenChanges: true,
+  })
+  .setPin("#seccion3 #mapaMigrantesPersonas")
+  .addTo(controllerSection3A);
+
 </script>
+

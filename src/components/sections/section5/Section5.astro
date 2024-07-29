@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import './style.css'
 import IcoInfo from "@components/IcoInfo.astro";
+import MapaDenuncias from "@components/sections/section5/mapaDenuncias.astro";
 
 import fondoBanner1 from "@components/sections/section5/assets/fondoBanner1.webp"
 import fondoBanner2 from "@components/sections/section5/assets/fondoBanner2.webp"
@@ -104,10 +105,13 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
       Conozca los <b class="text-[#AA751F]">canales de denuncia</b> y las <b class="text-[#AA751F]">entidades responsables</b> de atender casos 
       relacionados con personas objeto de Tráfico Ilícito de Migrantes en cada uno de los Países Miembros de la CORETT:
     </p>
-    <Image src={explore} alt="" class="mx-auto mt-12 mb-12" />
-    <Image src={mapa} alt="" class="mx-auto mb-12 w-full h-auto"  />
+    <Image src={explore} alt="" class="mx-auto pt-20 mb-12" />
+    <div class="w-screen relative" id="TrancaMapaDenuncias">
+      <MapaDenuncias />
+    </div>
+    
     <IcoInfo 
-        idInfo="info-mapadenuncias" estilos="text-center pt-16 pb-28 cursor-pointer " idIcon="icon-mapadenuncias" estilosIco="flex items-center justify-center"
+        idInfo="info-mapadenuncias" estilos="text-center pt-12 pb-28 cursor-pointer " idIcon="icon-mapadenuncias" estilosIco="flex items-center justify-center"
         contenido=
           `
             La mayoría de los números de contacto son para denunciar Trata de Personas, pero también pueden usarse para denunciar Tráfico Ilícito de Migrantes (TIM).

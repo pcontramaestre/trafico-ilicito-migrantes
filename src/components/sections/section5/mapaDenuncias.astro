@@ -1,13 +1,23 @@
+---
+   import { Image } from "astro:assets";
+   import './style.css'
+   import belice from "@components/sections/section5/assets/belice.svg"
+   import costarica from "@components/sections/section5/assets/costarica.svg"
+   import dominicana from "@components/sections/section5/assets/dominicana.svg"
+   import guatemala from "@components/sections/section5/assets/guatemala.svg"
+   import honduras from "@components/sections/section5/assets/honduras.svg"
+   import nicaragua from "@components/sections/section5/assets/nicaragua.png"
+   import mexico from "@components/sections/section5/assets/mexico.svg"
+   import panama from "@components/sections/section5/assets/panama.svg"
+   import salvador from "@components/sections/section5/assets/salvador.svg"
+
+---
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="1440"
-   height="810"
    viewBox="0 0 1440 810"
    fill="none"
    version="1.1"
-   id="svg244"
-   sodipodi:docname="mapa-seccion5.svg"
-   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   id="mapaDenuncias"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -1102,7 +1112,7 @@
          stroke-linecap="round"
          stroke-linejoin="round"
          id="panama-sec5"
-         inkscape:label="panama" />
+        />
       <path
          fill-rule="evenodd"
          clip-rule="evenodd"
@@ -1114,7 +1124,7 @@
          stroke-linecap="round"
          stroke-linejoin="round"
          id="costarica-seccion5"
-         inkscape:label="costarica" />
+         />
       <path
          fill-rule="evenodd"
          clip-rule="evenodd"
@@ -1238,3 +1248,92 @@
     </clipPath>
   </defs>
 </svg>
+
+<Image src={belice} alt="" class="absolute bottom-12 left-[10vw] hidden belice" />
+<Image src={costarica} alt="" class="absolute bottom-12 left-[10vw] hidden costarica" />
+<Image src={dominicana} alt="" class="absolute bottom-12 left-[10vw] hidden dominicana" />
+<Image src={guatemala} alt="" class="absolute bottom-12 left-[10vw] hidden guatemala" />
+<Image src={honduras} alt="" class="absolute bottom-12 left-[10vw] hidden honduras" />
+<Image src={mexico} alt="" class="absolute bottom-12 left-[10vw] hidden mexico" />
+<Image src={nicaragua} alt="" class="absolute bottom-12 left-[10vw] hidden nicaragua" />
+<Image src={panama} alt="" class="absolute bottom-12 left-[10vw] hidden panama" />
+<Image src={salvador} alt="" class="absolute bottom-12 left-[10vw] hidden salvador" />
+
+<script>
+  // Seleccionar los elementos que representan a cada país  
+   const mexicoElement = document.getElementById('mexico-sec5');  
+   const guatemalaElement = document.getElementById('guatemala-sec5');  
+   const beliceElement = document.getElementById('belice-sec5');  
+   const dominicanaElement = document.getElementById('dominicana-sec5');  
+   const salvadorElement = document.getElementById('salvador-sec5');  
+   const costaricaElement = document.getElementById('costarica-seccion5');  
+   const panamaElement = document.getElementById('panama-sec5');  
+   const nicaraguaElement = document.getElementById('nicaragua-sec5');  
+
+   // Seleccionar las imágenes correspondientes  
+   const mexicoImage = document.querySelector('.mexico');  
+   const guatemalaImage = document.querySelector('.guatemala');  
+   const beliceImage = document.querySelector('.belice');  
+   const dominicanaImage = document.querySelector('.dominicana');  
+   const salvadorImage = document.querySelector('.salvador');  
+   const costaricaImage = document.querySelector('.costarica');  
+   const panamaImage = document.querySelector('.panama');  
+   const nicaraguaImage = document.querySelector('.nicaragua');  
+
+   // Agregar eventos de mouseover y mouseout a los elementos que representan a los países  
+   mexicoElement.addEventListener('mouseover', () => {  
+   mexicoImage.classList.remove('hidden');  
+   });  
+   mexicoElement.addEventListener('mouseout', () => {  
+   mexicoImage.classList.add('hidden');  
+   });  
+
+   guatemalaElement.addEventListener('mouseover', () => {  
+   guatemalaImage.classList.remove('hidden');  
+   });  
+   guatemalaElement.addEventListener('mouseout', () => {  
+   guatemalaImage.classList.add('hidden');  
+   });  
+
+   beliceElement.addEventListener('mouseover', () => {  
+   beliceImage.classList.remove('hidden');  
+   });  
+   beliceElement.addEventListener('mouseout', () => {  
+   beliceImage.classList.add('hidden');  
+   });  
+
+   dominicanaElement.addEventListener('mouseover', () => {  
+   dominicanaImage.classList.remove('hidden');  
+   });  
+   dominicanaElement.addEventListener('mouseout', () => {  
+   dominicanaImage.classList.add('hidden');  
+   });  
+
+   salvadorElement.addEventListener('mouseover', () => {  
+   salvadorImage.classList.remove('hidden');  
+   });  
+   salvadorElement.addEventListener('mouseout', () => {  
+   salvadorImage.classList.add('hidden');  
+   });  
+
+   costaricaElement.addEventListener('mouseover', () => {  
+   costaricaImage.classList.remove('hidden');  
+   });  
+   costaricaElement.addEventListener('mouseout', () => {  
+   costaricaImage.classList.add('hidden');  
+   });  
+
+   panamaElement.addEventListener('mouseover', () => {  
+   panamaImage.classList.remove('hidden');  
+   });  
+   panamaElement.addEventListener('mouseout', () => {  
+   panamaImage.classList.add('hidden');  
+   });  
+
+   nicaraguaElement.addEventListener('mouseover', () => {  
+   nicaraguaImage.classList.remove('hidden');  
+   });  
+   nicaraguaElement.addEventListener('mouseout', () => {  
+   nicaraguaImage.classList.add('hidden');  
+   });
+</script>

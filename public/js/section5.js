@@ -359,3 +359,12 @@ new ScrollMagic.Scene({
 .setPin("#seccion5 .seccion5-parte11")
 .addTo(controllerSection5C);
 
+
+new ScrollMagic.Scene({
+  triggerElement: "#seccion5 #TrancaMapaDenuncias",
+  triggerHook: 0,
+  duration: "100%",
+  tweenChanges: true,
+})
+.setPin("#seccion5 #TrancaMapaDenuncias")
+.addTo(controllerSection5C);
