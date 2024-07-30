@@ -685,6 +685,14 @@
     .addTo(controllerB);
 
 
+    // seccion2MapaRutas
+    //controllerB
 
-
+    new ScrollMagic.Scene({
+      triggerElement: "#seccion2MapaRutas",
+      triggerHook: 0,
+      duration: "80%",
+    })
+    .setPin("#seccion2MapaRutas")
+    .addTo(controllerB);
 });
