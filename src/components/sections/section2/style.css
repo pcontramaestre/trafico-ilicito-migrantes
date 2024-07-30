@@ -124,3 +124,11 @@
 .section-acordeon .accordion.active .accordion__button {
   background: #F6F4F3;
 }
+
+#popup-rutasAereasExtracontinentales {
+  background: #D6EDFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

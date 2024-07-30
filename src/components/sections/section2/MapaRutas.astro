@@ -1,0 +1,232 @@
+---
+import { Image } from "astro:assets";
+import Popup from "@components/Popup.astro";
+
+import explorar from "@components/sections/section2/assets/mapa/explorar.svg"
+import RutasExtracontinentales from "@components/sections/section2/assets/mapa/rutas-aereas-extracontinentales.svg"
+
+import mapaHubsAereos from "@components/sections/section2/assets/mapa/mapa-hubs-aereos.webp"
+import mapaHubsMaritimos from "@components/sections/section2/assets/mapa/mapa-hubs-maritimos.webp"
+import mapaHubsTerrestres from "@components/sections/section2/assets/mapa/mapa-hubs-terrestres.webp"
+
+import mapaHubs from "@components/sections/section2/assets/mapa/Maparutas.svg"
+
+import mapaRutasAereas from "@components/sections/section2/assets/mapa/mapaRutasAereas.svg"
+import mapaRutasMaritimas from "@components/sections/section2/assets/mapa/mapaRutasMaritimas.svg"
+import mapaRutasTerrestres from "@components/sections/section2/assets/mapa/mapaRutasTerrestres.svg"
+
+
+import extracontinentales from "@components/sections/section2/assets/mapa/extracontinentales.webp"
+
+import aereas from "@components/sections/section2/assets/mapa/aereas.svg"
+import terrestres from "@components/sections/section2/assets/mapa/terrestres.svg"
+import maritimas from "@components/sections/section2/assets/mapa/maritimas.svg"
+
+import avion from "@components/sections/section2/assets/mapa/avion.svg"
+import maritimo from "@components/sections/section2/assets/mapa/maritimo.svg"
+import terrestre from "@components/sections/section2/assets/mapa/terrestre.svg"
+
+import hubsAereos from "@components/sections/section2/assets/mapa/hubs-aereos.svg"
+import hubsTerrestres from "@components/sections/section2/assets/mapa/hubs-terrestres.svg"
+import hubsMaritimos from "@components/sections/section2/assets/mapa/hubs-maritimos.svg"
+
+---
+
+<div class="relative bg-[#D6EDFF] max-w-screen h-screen" id="mapadeRutas">
+  <Image src={mapaHubs} alt="" class="w-screen max-h-screen object-contain mapaHUBS z-0" />
+  <Image src={mapaHubsAereos} alt="" class="w-screen max-h-screen object-contain mapaHubsAereos z-0 hidden" />
+  <Image src={mapaHubsMaritimos} alt="" class="w-screen max-h-screen object-contain mapaHubsMaritimos z-0 hidden" />
+  <Image src={mapaHubsTerrestres} alt="" class="w-screen max-h-screen object-contain mapaHubsTerrestres z-0 hidden" />
+
+  <Image src={mapaRutasAereas} alt="" class="w-screen max-h-screen object-contain mapaRutasAereas z-0 hidden" />
+  <Image src={mapaRutasMaritimas} alt="" class="w-screen max-h-screen object-contain mapaRutasMaritimas z-0 hidden" />
+  <Image src={mapaRutasTerrestres} alt="" class="w-screen max-h-screen object-contain mapaRutasTerrestres z-0 hidden" />
+
+
+  <div class="hubsrutas flex flex-col gap-8 absolute bottom-[8%] w-screen z-10">
+    <Image src={explorar} alt="" class="absolute top-[1%] left-[5vw] object-contain" />
+
+    <Image src={hubsAereos} alt="" class="absolute -top-[80%] left-[1%] object-contain texthubsAereos hidden" />
+    <Image src={hubsTerrestres} alt="" class="absolute -top-[140%] left-[1%] object-contain texthubsTerrestres hidden" />
+    <Image src={hubsMaritimos} alt="" class="absolute -top-[80%] left-[1%] object-contain texthubsMaritimos hidden" />
+  
+    
+    <div class="hubs absolute top-[30%] left-8 bg-[#F6F4F3] min-w-[170px] p-4 min-h-[200px]">
+      <div class="text-center text-[#333] text-[20px] font-bold font-formula pb-4" >HUBS</div>
+      <div class="iconos-hubs flex flex-col gap-4">
+        <!-- Hubs Aereos -->
+        <div class="hub-detalle flex flex-row items-center gap-4 hubAereos cursor-pointer">
+          <div class="icon">
+            <Image src={avion} alt="" class="iconavion"/>
+          </div>
+          <div class="text font-formula text-[18px] font-light hover:font-bold">
+            Aéreos
+          </div>
+        </div>
+        <!-- Hubs Maritimos -->
+        <div class="hub-detalle flex flex-row items-center gap-4 hubMaritinos cursor-pointer">
+          <div class="icon">
+            <Image src={maritimo} alt="" class="iconmaritimo"/>
+          </div>
+          <div class="text font-formula text-[18px] font-light hover:font-bold">
+            Marítimos
+          </div>
+        </div>
+        <!-- Hubs Terrestres -->
+        <div class="hub-detalle flex flex-row items-center gap-4 hubTerrestres cursor-pointer">
+          <div class="icon">
+            <Image src={terrestre} alt="" class="iconterrestre"/>
+          </div>
+          <div class="text font-formula text-[18px] font-light hover:font-bold">
+            Terrestres
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rutas absolute top-[30%] left-[15rem] bg-[#F6F4F3] min-w-[170px] p-4 min-h-[200px]">
+      <div class="text-center text-[#333] text-[20px] font-bold font-formula pb-4" >RUTAS</div>
+      <div class="iconos-rutas flex flex-col gap-4">
+        <!-- Hubs Aereos -->
+        <div class="ruta-detalle flex flex-row items-center gap-4 rutasAereas cursor-pointer">
+          <div class="icon">
+            <Image src={aereas} alt="" class="iconavion"/>
+          </div>
+          <div class="text font-formula text-[18px] font-light hover:font-bold">
+            Aéreas
+          </div>
+        </div>
+        <!-- Hubs Maritimos -->
+        <div class="ruta-detalle flex flex-row items-center gap-4 rutasMaritimas cursor-pointer">
+          <div class="icon">
+            <Image src={maritimas} alt="" class="iconmaritimo"/>
+          </div>
+          <div class="text font-formula text-[18px] font-light hover:font-bold">
+            Marítimas
+          </div>
+        </div>
+        <!-- Hubs Terrestres -->
+        <div class="ruta-detalle flex flex-row items-center gap-4 rutasTerrestres cursor-pointer">
+          <div class="icon">
+            <Image src={terrestres} alt="" class="iconterrestre"/>
+          </div>
+          <div class="text font-formula text-[18px] font-light hover:font-bold">
+            Terrestres
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rutasAereasExtracontinentales">
+      <Image src={RutasExtracontinentales} alt="" class="cursor-pointer object-contain ml-[27rem] mt-[13rem]" id="rutasAereasExtracontinentales"/>
+    </div>
+  </div>
+</div>
+
+<Popup idInteraccion="rutasAereasExtracontinentales" idPopup="popup-rutasAereasExtracontinentales" cerrarAzul
+contenido= `
+  <Image src=${extracontinentales.src} alt="" class="" />
+`/>
+
+<script>
+  const hubAereos = document.querySelector('.hubAereos');
+  const hubMaritimos = document.querySelector('.hubMaritinos');
+  const hubTerrestres = document.querySelector('.hubTerrestres');
+
+  const rutasAereas = document.querySelector('.rutasAereas');
+  const rutasMaritimas = document.querySelector('.rutasMaritimas');
+  const rutasTerrestres = document.querySelector('.rutasTerrestres');
+
+  const texthubsAereos = document.querySelector('.texthubsAereos');
+  const texthubsMaritimos = document.querySelector('.texthubsMaritimos');
+  const texthubsTerrestres = document.querySelector('.texthubsTerrestres');
+
+  const mapaHUBS = document.querySelector('.mapaHUBS');
+  const mapaHubsAereos = document.querySelector('.mapaHubsAereos');
+  const mapaHubsMaritimos = document.querySelector('.mapaHubsMaritimos');
+  const mapaHubsTerrestres = document.querySelector('.mapaHubsTerrestres');
+
+  const mapaRutasAereas = document.querySelector('.mapaRutasAereas');
+  const mapaRutasMaritimas = document.querySelector('.mapaRutasMaritimas');
+  const mapaRutasTerrestres = document.querySelector('.mapaRutasTerrestres');
+
+
+
+
+
+
+  hubAereos.addEventListener('mouseover', () => {  
+    texthubsAereos.classList.remove('hidden');
+    mapaHubsAereos.classList.remove('hidden');
+    mapaHUBS.classList.add('hidden');
+  });  
+  hubAereos.addEventListener('mouseout', () => {  
+    texthubsAereos.classList.add('hidden'); 
+    mapaHubsAereos.classList.add('hidden');
+    mapaHUBS.classList.remove('hidden');
+  });  
+
+  hubMaritimos.addEventListener('mouseover', () => {  
+    texthubsMaritimos.classList.remove('hidden');
+    mapaHubsMaritimos.classList.remove('hidden');
+    mapaHUBS.classList.add('hidden');
+  });  
+  hubMaritimos.addEventListener('mouseout', () => {  
+    texthubsMaritimos.classList.add('hidden'); 
+    mapaHubsMaritimos.classList.add('hidden');
+    mapaHUBS.classList.remove('hidden');
+  });  
+
+  hubTerrestres.addEventListener('mouseover', () => {  
+    texthubsTerrestres.classList.remove('hidden');
+    mapaHubsTerrestres.classList.remove('hidden');
+    mapaHUBS.classList.add('hidden');
+  });  
+  hubTerrestres.addEventListener('mouseout', () => {  
+    texthubsTerrestres.classList.add('hidden'); 
+    mapaHubsTerrestres.classList.add('hidden');
+    mapaHUBS.classList.remove('hidden');
+  });  
+
+
+
+
+  rutasAereas.addEventListener('mouseover', () => {  
+    mapaRutasAereas.classList.remove('hidden');
+    mapaHUBS.classList.add('hidden');
+  });  
+  rutasAereas.addEventListener('mouseout', () => {  
+    mapaRutasAereas.classList.add('hidden');
+    mapaHUBS.classList.remove('hidden');
+  });  
+
+  rutasMaritimas.addEventListener('mouseover', () => {  
+    mapaRutasMaritimas.classList.remove('hidden');
+    mapaHUBS.classList.add('hidden');
+  });  
+  rutasMaritimas.addEventListener('mouseout', () => {  
+    mapaRutasMaritimas.classList.add('hidden');
+    mapaHUBS.classList.remove('hidden');
+  });  
+
+  rutasTerrestres.addEventListener('mouseover', () => {  
+    mapaRutasTerrestres.classList.remove('hidden');
+    mapaHUBS.classList.add('hidden');
+  });  
+  rutasTerrestres.addEventListener('mouseout', () => {  
+    mapaRutasTerrestres.classList.add('hidden');
+    mapaHUBS.classList.remove('hidden');
+  }); 
+
+
+
+</script>
+
+<style>
+  .hub-detalle:hover .text,
+  .ruta-detalle:hover .text
+  {
+    font-weight: 700;
+  }
+
+
+</style>

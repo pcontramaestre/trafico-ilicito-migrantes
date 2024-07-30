@@ -1,5 +1,8 @@
 ---
 import { Image } from "astro:assets";
+import "./style.css";
+import MapadeRutas from "./MapaRutas.astro";
+
 import fondoPrincipal from '../section2/assets/fondo1.webp';
 import mano1 from '../section2/assets/mano1.webp';
 import mano2 from '../section2/assets/mano2.webp';
@@ -391,8 +394,9 @@ import IcoInfo from "@components/IcoInfo.astro";
    </div>
 
    <!-- SECTION MAPA -->
-    <div class="pb-20 bg-[#D6EDFF]">
-      <Image src={MapaRutas} alt="" class="w-screen h-auto pb-16" />
+    <div class="pb-20 bg-[#D6EDFF] overflow-hidden">
+      <MapadeRutas />
+
       <IcoInfo 
         idInfo="info-mapa" estilos="" idIcon="icon-mapa" estilosIco="flex items-center justify-center"
         contenido=
