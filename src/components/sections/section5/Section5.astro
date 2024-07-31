@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import './style.css'
 import IcoInfo from "@components/IcoInfo.astro";
 import MapaDenuncias from "@components/sections/section5/mapaDenuncias.astro";
+import MapaVallas from "@components/sections/section5/mapaVallas.astro";
 
 import fondoBanner1 from "@components/sections/section5/assets/fondoBanner1.webp"
 import fondoBanner2 from "@components/sections/section5/assets/fondoBanner2.webp"
@@ -140,7 +141,10 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
       Ventanillas informativas en los países de la CORETT
     </h1>
     <Image src={explore} alt="" class="mx-auto mt-12 mb-12" />
-    <Image src={mapa2} alt="" class="mx-auto mb-12 w-full h-auto"  />
+    <div class="ventanillas-informativas relative">
+      <MapaVallas />
+    </div>
+    <!-- <Image src={mapa2} alt="" class="mx-auto mb-12 w-full h-auto"  /> -->
   </div>
 
   <!-- SECCION - Parte 9 -->
