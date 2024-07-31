@@ -102,3 +102,8 @@
 #info-voces .info-content .content {
   text-align: left;
 }
+
+#info-riesgos .info-content {
+  border: 4px solid var(--Amarillo, #E06900) !important;
+  background: #FFC999 !important;
+}

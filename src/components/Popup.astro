@@ -66,6 +66,12 @@ const { contenido,idPopup, idInteraccion,cerrarAzul } = Astro.props as Props;
   .link_menu:hover h1 {
     text-shadow: 1px 1px 1px black;
   }
+
+  #popup-lateral2 .cerrar-popup{
+    top: 30px;
+    right: 30px;
+  }
+  
 </style>
 
 <script is:inline define:vars={{idPopup, idInteraccion }}>
@@ -88,7 +94,7 @@ const { contenido,idPopup, idInteraccion,cerrarAzul } = Astro.props as Props;
         popup.classList.remove('show');
         handleVideoState();
       });
-    });
+    });  
 
     // Mostrar el popup al hacer clic en interaccionIzquierda
     interaccionIzquierda.addEventListener('click', () => {

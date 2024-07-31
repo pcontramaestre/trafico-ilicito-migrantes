@@ -67,7 +67,7 @@
   background-size: contain;
 }
 #slideContainer {
-  background: url(/src/components/sections/section2/assets/textura-sliders.webp);
+  background: url(/src/components/sections/section2/assets/textura2-2.webp);
   background-size: contain;
 }
 .overlay {
@@ -131,4 +131,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.info-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  border: 4px solid var(--Amarillo, #F6AE2D);
+  background: var(--Amarillos-Amarillo3, #FFEABB);
+  display: flex;
+  max-width: 522px;
+  justify-content: center;
+  align-items: center;
+
+}
+.info-content .content {
+  padding: 1.2rem;
+}
+
+.cuadro-amarillo .cuadro {
+    background: url(/src/components/sections/section1/assets/fondo-cuadros.webp) #FFEABB no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: left;
 }

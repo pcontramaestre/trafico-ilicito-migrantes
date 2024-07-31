@@ -28,11 +28,11 @@ import IcoInfo from "@components/IcoInfo.astro";
   <!-- BANNER PRINCIPAL -->
   <div class="w-screen h-screen parte1 flex flex-col justify-end banner-principal relative">
     <div class="degradado-banner absolute w-screen h-screen"></div>
-    <div class="titulo-seccion z-10 w-screen text-center pb-36">
-      <div class="text-[62px] font-bold font-['Inika'] azul6 z-10 mb-4">
+    <div class="titulo-seccion z-10 w-screen text-left pb-36 pl-[6rem]">
+      <div class="text-[62px] font-bold font-serif azul6 z-10 mb-4">
         Modos de operación de las redes de
       </div>
-      <div class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none">
+      <div class="z-10 text-[100px] azul6 uppercase font-formula font-bold leading-none">
         Tráfico Ilícito de Migrantes
       </div>
     </div>
@@ -43,8 +43,8 @@ import IcoInfo from "@components/IcoInfo.astro";
 
   <!-- ESTRUCTURAS DE OPERACION -->
   <div class="fondo-marron bg-[#333] relative min-h-screen pt-32 pb-32 estructuras-operacion">
-    <p class="blanco text-4xl max-w-[1000px] ml-auto mr-auto text-center bg-[#333] z-10 relative animacion-up">
-      <b class="naranja4 font-bold">LAS ESTRUCTURAS DE OPERACIÓN DE TRÁFICO ILÍCITO DE MIGRANTES (TIM) 
+    <p class="blanco text-4xl max-w-[1020px] ml-auto mr-auto text-center bg-[#333] z-10 relative animacion-up">
+      <b class="naranja4 font-black">LAS ESTRUCTURAS DE OPERACIÓN DE TRÁFICO ILÍCITO DE MIGRANTES (TIM) 
       VARÍAN DEPENDIENDO DE FACTORES</b> como la geografía del terreno, la cantidad de 
       flujos migratorios, la capacidad económica y la
       nacionalidad de las personas migrantes, la presencia de otros grupos delictivos, 
@@ -52,7 +52,7 @@ import IcoInfo from "@components/IcoInfo.astro";
       y la capacidad organizativa de las redes de TIM.
     </p>
 
-    <p class="naranja3 uppercase font-['Formula'] tracking-[0.04em] leading-[1.2] text-[4.5rem] text-center max-w-[1000px] font-bold pt-36 pb-36 ml-auto mr-auto bg-[#333] z-10 relative animacion-up">
+    <p class="naranja3 uppercase font-formula tracking-[0.04em] leading-[1.2] text-[4.5rem] text-center max-w-[1000px] font-bold pt-48 pb-16 ml-auto mr-auto bg-[#333] z-10 relative animacion-up">
       Estructuras de operación del TRÁFICO ILÍCITO DE MIGRANTES en la región
     </p>
 
@@ -60,7 +60,7 @@ import IcoInfo from "@components/IcoInfo.astro";
       <Image src={interaccion} alt=""/> <span>Pase el cursor sobre cada tarjeta:</span>
     </div>
     <!-- CARDS -->
-    <div class="cards-estructuras grid grid-cols-4 gap-4 max-w-[1000px]  ml-auto mr-auto bg-[#333] z-10 relative pb-24 animacion-up">
+    <div class="cards-estructuras grid grid-cols-4 gap-4 max-w-[1000px]  ml-auto mr-auto bg-[#333] z-10 relative pb-9 animacion-up">
       <div class="card-image">
         <Image src={card1Img} alt="" class=" cursor-pointer"/>
         <div class="texto-estructura opacity-0 cursor-pointer">
@@ -97,7 +97,7 @@ import IcoInfo from "@components/IcoInfo.astro";
       </div>
     </div>
 
-    <div class="text-center blanco text-xl w-screen">(UNODC, 2018)</div>
+    <div class="text-center blanco text-xl w-screen pb-14">(UNODC, 2018)</div>
   </div>
 
   <!-- COSTOS ASOCIADOS -->
@@ -113,9 +113,9 @@ import IcoInfo from "@components/IcoInfo.astro";
       <p class=" animacion-up naranja3  uppercase font-['Formula'] tracking-wider leading-[1.2] text-[4.5rem] text-center max-w-[900px] font-bold ml-auto mr-auto z-10 relative">
         Costos asociados al Tráfico Ilícito de Migrantes (tim)
       </p>
-      <p class="animacion-up relative z-10 max-w-[900px] mr-auto ml-auto text-4xl font-medium pt-10 text-center">
+      <p class="animacion-up relative z-10 max-w-[970px] mr-auto ml-auto text-4xl font-bold pt-10 text-center">
         La OIM ha identificado diferentes tipos de paquetes ofertados por las redes de TIM.
-         Sus precios <b class="naranja2">varían según diversos factores</b> como: país de donde inicia el viaje,
+         Sus precios <b class="text-[#B85600] font-black">varían según diversos factores</b> como: país de donde inicia el viaje,
           tipo de trasporte, nacionalidad de las personas migrantes, entre otros.
       </p>
     </div>
@@ -165,7 +165,7 @@ import IcoInfo from "@components/IcoInfo.astro";
     <!-- <Cuadro texto="Esto es un texto <b>texto</b>" estilos="bg-[#ffffff]"/> 
     <Cuadro titulo="Pruebas de texto" texto="Esto es un texto <b>texto</b>" creador="OIM 2019"/> 
     <Cuadro texto="Esto es un texto <b>texto</b>" />  -->
-    <div class="bg-[url('/src/components/sections/section2/assets/KFS_Tijuana.webp')] min-h-[600px] w-screen bg-cover grid items-center">
+    <div class="bg-[url('/src/components/sections/section2/assets/KFS_Tijuana.webp')] min-h-[600px] w-screen bg-cover grid items-center relative">
       <div class="grid grid-cols-12 items-center max-w-[1120px] ml-auto mr-auto gap-16">
         <div class=" col-span-7 animacion-left">
           <h1 class="font-['Formula'] text-[4.5rem] font-bold tracking-[1.56px] uppercase leading-[1.3] text-[#F6F4F3] color-title-cuadro">Cobros del crimen organizado a las redes de TIM para transitar por territorios controlados</h1>
@@ -177,7 +177,10 @@ import IcoInfo from "@components/IcoInfo.astro";
             estilos="animacion-right bg-[white] bg-[url('/src/components/sections/section1/assets/fondo-cuadros.webp')] bg-no-repeat bg-cover max-w-[430px]"
           />
         </div>
-      </div>      
+      </div> 
+      <div class="fuente-imagen absolute w-screen   bottom-4">
+        <div class="max-w-[1120px] mx-auto text-right text-[20px] tracking-[0.4px] text-[#F6F4F3]">© OIM 2023</div>
+      </div>   
     </div>
   </div>
 
@@ -294,9 +297,9 @@ import IcoInfo from "@components/IcoInfo.astro";
   <!-- SECTIONS POPUPS -->
   <div class="w-screen h-screen bg-[#333] relative grid grid-cols-2 seccion2-parte8">
     <div class="img-izquierda bg-[#0000006b] bg-[url('/src/components/sections/section2/assets/img-izquierda.webp')] bg-cover flex flex-row items-end gap-8 pb-12  hover:bg-blend-color">
-      <div class="max-w-[700px] ml-auto pl-8">
+      <div class="max-w-[700px] ml-auto pl-8 cursor-pointer" id="interaccion-izquierda">
         <h1 class="blanco font-['Inika'] text-[3rem] pr-[5rem] font-bold leading-[1.2] pb-8 animacion-left">El rol de las mujeres en el Tráfico Ilícito de Migrantes</h1>
-        <Image src={interaccion} alt="Interacción" class="pb-8 mr-auto ml-auto cursor-pointer" id="interaccion-izquierda"/>
+        <Image src={interaccion} alt="Interacción" class="pb-8 mr-auto ml-auto cursor-pointer" />
       </div>
       <div class="popup" id="popup-izquierda">
         <span class="close-button">
@@ -319,16 +322,16 @@ import IcoInfo from "@components/IcoInfo.astro";
               coordinadoras o proveedoras de servicios (OIM y UNODC, 2024).
             </p>
             <p class="text-[1.5rem] leading-[140%] text-[#FFD976] font-medium">
-              Muchas de estas mujeres se encuentran en situación de vulnerabilidad socioeconómica, lo cual potencia su vinculación en actividades del Tráfico Ilícito de Migrantes.
+              Muchas de estas mujeres se encuentran en <b class="font-extrabold">SITUACIÓN DE VULNERABILIDAD</b> socioeconómica, lo cual potencia su vinculación en actividades del Tráfico Ilícito de Migrantes.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="transition-all ease-in-out delay-150 img-derecha bg-[#0000006b] bg-[url('/src/components/sections/section2/assets/img-derecha.webp')] bg-cover flex flex-row items-end gap-8 pb-12 hover:bg-blend-color	">
-      <div class="max-w-[700px] mr-auto pr-8">
-        <h1 class="blanco font-['Inika'] text-[3rem] pl-[5rem] font-bold leading-[1.2] pb-8 animacion-right">Las niñas, niños y adolescentes en el Tráfico Ilícito de Migrantes</h1>
-       <Image src={interaccion} alt="" class="pb-8 mr-auto ml-auto cursor-pointer" id="interaccion-derecha"/>
+    <div class="transition-all ease-in-out delay-150 img-derecha bg-[#0000006b] bg-[url('/src/components/sections/section2/assets/img-derecha.webp')] bg-cover flex flex-row items-end gap-8 pb-12 hover:bg-blend-color">
+      <div class="max-w-[700px] mr-auto pr-8 cursor-pointer" id="interaccion-derecha">
+        <h1 class="blanco font-['Inika'] text-[3rem] pl-[5rem] font-bold leading-[1.2] pb-8 animacion-right" >Las niñas, niños y adolescentes en el Tráfico Ilícito de Migrantes</h1>
+       <Image src={interaccion} alt="" class="pb-8 mr-auto ml-auto cursor-pointer"  />
       </div>
       
       <Popup 
@@ -344,9 +347,20 @@ import IcoInfo from "@components/IcoInfo.astro";
               <p class="font-bold text-[1.5rem] leading-[140%]">
                 Las personas menores de edad son cada vez más suceptibles a ser reclutadas por las redes de Tráfico Ilícito de Migrantes, para apoyar en sus operaciones en actividades como ser guías, funcionar de enganche, monitoreo y para facilitar el transporte (OIM y UNODC, 2024).
               </p>
-              <p class="text-[1.5rem] leading-[140%] text-[#FFD976] font-medium">
+              <p class="text-[1.5rem] leading-[140%] text-[#FFD976] font-bold">
                 CADA VEZ MÁS SE PUEDE IDENTIFICAR EL INVOLUCRAMIENTO DE NIÑAS, NIÑOS Y ADOLESCENTES ESPECIALMENTE EN COMUNIDADES CON ESCASAS OPORTUNIDADES DE ESTUDIO O TRABAJO.
               </p>
+              
+              <div class='icono-info' id="idInfoPopup">
+                <div class="informacion relative flex flex-row justify-center">
+                  <img src="/images/info.gif" alt="Info" class="icon-info cursor-pointer max-w-[80px]" id="idIconPopup">
+                  <div class="info-content" id="inforcontenidoPopup">
+                    <div class="content text-[#1F1F1F] text-[18px] text-center">Una de las zonas donde se ha identificado el
+                      reclutamiento de NNA es la frontera norte de México, donde se les denomina “niños de
+                      circuito”.</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="col-span-3 flex items-center max-h-[100vh] bg-[#0000007d]">
@@ -375,7 +389,7 @@ import IcoInfo from "@components/IcoInfo.astro";
         <b class="font-bold naranja3">e incluyen cruces fronterizos oficiales, y no oficiales</b> (UNODC, 2018).
       </p>
     </div>
-    <div class="bg-[url('/src/components/sections/section2/assets/KFS_Tijuana2.webp')] min-h-[600px] w-screen bg-cover grid items-center">
+    <div class="bg-[url('/src/components/sections/section2/assets/KFS_Tijuana2.webp')] min-h-[800px] w-screen bg-cover grid items-center cuadro-amarillo relative">
       <div class="max-w-[1120px] mr-auto ml-auto w-full">
         <Cuadro 
             titulo='<b class="text-[#B85600] ">¿Qué es un hub en el Tráfico Ilícito de Migrantes"?</b>' 
@@ -384,6 +398,10 @@ import IcoInfo from "@components/IcoInfo.astro";
             estilos="bg-[#ffeabc] bg-[url('/src/components/sections/section1/assets/fondo-cuadros.webp')] bg-no-repeat bg-cover max-w-[430px] animacion-cuadro"
       />
       </div>
+      <div class="absolute left-40 bottom-8 text-[#B85600] text-[20px]">
+        © OIM 2023
+      </div>
+
     </div>
 
     <div class="max-w-[1120px] mr-auto ml-auto text-center text-[2rem] font-bold leading-[140$] pt-20 animacion-up">
@@ -440,7 +458,7 @@ import IcoInfo from "@components/IcoInfo.astro";
           </li>
         </ul>
 
-        <Image src={cta} alt="" class="ml-auto mr-auto cursor-pointer pt-[6rem]">
+        <!-- <Image src={cta} alt="" class="ml-auto mr-auto cursor-pointer pt-[6rem]"> -->
       </div>
     </div>
 
@@ -498,4 +516,35 @@ import IcoInfo from "@components/IcoInfo.astro";
     // popup.style.display = 'none';
     popup.classList.remove('show');
   });
+
+
+
+  let idInfo = 'idInfoPopup';
+  let idIcon = 'idIconPopup';
+  //Al hacer hover sobre "idInfo .icon-info" se miuestra .info-content
+  document.addEventListener('DOMContentLoaded', () => {
+    const infoContent = document.getElementById('inforcontenidoPopup');
+    const iconInfo = document.getElementById(idIcon);
+    iconInfo.addEventListener('click', () => {
+      infoContent.style.visibility = 'visible';
+      infoContent.style.opacity = '1';
+      iconInfo.classList.add('show');
+    });
+    // add event on hover to iconInfo
+    iconInfo.addEventListener('mouseover', () => {
+      infoContent.style.visibility = 'visible';
+      infoContent.style.opacity = '1';
+      iconInfo.classList.add('show');
+    });
+    
+
+    infoContent.addEventListener('mouseout', () => {
+      infoContent.style.visibility = 'hidden';
+      infoContent.style.opacity = '0';
+      iconInfo.classList.remove('show');
+    });
+  });
+
+
+
 </script>

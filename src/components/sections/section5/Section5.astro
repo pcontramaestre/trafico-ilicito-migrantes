@@ -11,6 +11,7 @@ import lluvia1 from "@components/sections/section5/assets/lluvia1.gif"
 import lluvia2 from "@components/sections/section5/assets/lluvia2.gif"
 import sombrilla from "@components/sections/section5/assets/sombrilla.webp"
 import textura from "@components/sections/section4/assets/textura-part3.webp"
+import textura5 from "@components/sections/section5/assets/Textura5-1.webp"
 import fondoTijuana from "@components/sections/section5/assets/fondoTijuana.webp"
 import fondoTijuana2 from "@components/sections/section5/assets/fondoTijuana2.webp"
 import fondoTijuana3 from "@components/sections/section5/assets/fondoTijuana3.webp"
@@ -28,7 +29,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
 
 <section id="seccion5">
   <!-- Seccion Banner - Parte 1 -->
-  <div class="relative w-screen h-screen banner-seccion5 bg-[#FFEABB] bg-cover"  style={`background-image: url('${textura.src}')`}>
+  <div class="relative w-screen h-screen banner-seccion5 bg-[#FFEABB] bg-cover"  style={`background-image: url('${textura5.src}')`}>
     <Image src={fondoBanner1} alt="" class="w-screen h-auto absolute top-0 left-0 fondoBanner1"/>
     <Image src={fondoBanner2} alt="" class="w-screen h-auto absolute top-0 left-0 opacity-0 fondoBanner2" />
     <Image src={lluvia1} alt="" class="w-screen h-auto absolute top-0 left-0 lluvia1" />
@@ -46,7 +47,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
     </div>
   </div>
   <!-- Seccion Banner/Texto - Parte 2 -->
-  <div class="w-screen bg-[#FFEABB] bg-cover md:pt-[8rem] xl:pt-[16rem] 2xl:pt-[30rem] pb-16 banner-text-seccion5" style={`background-image: url('${textura.src}')`}>
+  <div class="w-screen bg-[#FFEABB] bg-cover md:pt-[8rem] xl:pt-[16rem] 2xl:pt-[30rem] pb-16 banner-text-seccion5" style={`background-image: url('${textura5.src}')`}>
     <p class="max-w-[948px] w-[90%] mx-auto lg:text-[36px] text-center font-bold leading-[160%] animacion-up">
       Los Países Miembros de la Coalición Regional contra la Trata de Personas y el Tráfico Ilícito de Migrantes (CORETT), articulan acciones orientadas a
     </p>
@@ -99,7 +100,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
     <h1 class="text-izquierda-derecha text-[#19CAE7] font-formula text-[80px] lg:text-[110px] font-bold max-w-[1200px] w-[90%] mx-auto text-center tracking-[2.32px] pb-9 lg:pb-[6rem] leading-[1.2]">
       ¿QUIÉN PUEDE APOYAR EN CASOS DE TRÁFICO ILÍCITO DE MIGRANTES?
     </h1>
-    <h1 class="font-formula text-[40px] lg:text-[78px] font-bold tracking-[1.56px] text-[#AA751F] text-center pb-8 animacion-up">
+    <h1 class="font-formula text-[40px] lg:text-[78px] font-bold tracking-[1.56px] text-[#AA751F] text-center pb-8 animacion-up" id="denuncia">
       DENUNCIAS
     </h1>
     <p class="text-center max-w-[910px] w-[90%] text-[20px] md:text-[28px] font-bold leading-[140%] mx-auto animacion-up">
@@ -244,10 +245,10 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
     <p class="text-[#F6F4F3] max-w-[1120px] w-[90%] mx-auto text-[16px] xl:text-[20px] leading-[140%] font-light pb-[79px]">
       (CORETT, Plan Estratégico 2019-2027).
     </p>
-    <div class="text-center w-screen">
+    <!-- <div class="text-center w-screen">
       <a href="https://missingmigrants.iom.int/es" target="_blank">
         <Image src={enlaceOim} alt="enlace oim" title="Enlace oim" class="mx-auto"/>
       </a>  
-    </div>
+    </div> -->
   </div>
 </section>

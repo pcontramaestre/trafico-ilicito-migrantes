@@ -15,6 +15,12 @@ import mapa from "@components/sections/section4/assets/map.webp"
 import zapatos from "@components/sections/section4/assets/zapatos.webp"
 import textura from "@components/sections/section4/assets/textura.webp"
 import textura2 from "@components/sections/section4/assets/textura-part3.webp"
+
+import textura4_1 from "@components/sections/section4/assets/Textura4-1.webp"
+import textura4_2 from "@components/sections/section4/assets/Textura4-2.webp"
+import textura4_3 from "@components/sections/section4/assets/Textura4-3.webp"
+import textura4_4 from "@components/sections/section4/assets/Textura4-4.webp"
+
 import bgriesgos from "@components/sections/section4/assets/background-riesgos.webp"
 import bgriesgos2 from "@components/sections/section4/assets/background-riesgos2.webp"
 import fallecimientos from "@components/sections/section4/assets/fallecimientos.gif"
@@ -110,7 +116,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
   </div>
 
   <!-- SECCION PRINCIPALES RIESGOS - PARTE 3 -->
-  <div class="bg-[#D9D9D945] bg-fixed bg-cover bg-repeat pt-16" style={`background-image: url('${textura2.src}')`} id="principales-riesgos">
+  <div class="bg-[#D9D9D945] bg-fixed bg-cover bg-repeat pt-16" style={`background-image: url('${textura4_2.src}')`} id="principales-riesgos">
     <div class="max-w-[970px] w-[90%] mx-auto text-center pb-16 md:pb-[190px]">
       <h1 class="text-[40px] md:text-[68px] font-bold font-formula leading-[1.2] tracking-[1.26px] text-center text-[#B85600] titulo-principales-riesgos">
         PRINCIPALES RIESGOS A LOS QUE SE ENFRENTAN LAS PERSONAS QUE SON OBJETO DE TRÁFICO ILÍCITO DE MIGRANTES
@@ -242,7 +248,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
   </div>
 
   <!-- SECCION OTROS RIESGOS ACORDEON -PARTE 4 -->
-  <div class="bg-[#014979] bg-fixed bg-cover bg-repeat pt-24 md:-mt-[12rem] acordeon-riesgos pb-8" style={`background-image: url('${textura2.src}')`} id="otros-riesgos">
+  <div class="bg-[#014979] bg-fixed bg-cover bg-repeat pt-24 md:-mt-[12rem] acordeon-riesgos pb-8" style={`background-image: url('${textura4_3.src}')`} id="otros-riesgos">
     <div class="max-w-[960px] w-[90%] mx-auto text-center pb-16 md:pb-[140px]">
       <h1 class="text-[40px] md:text-[68px] font-bold font-formula leading-[1.2] tracking-[1.26px] text-center text-[#D6EDFF] titulo-otros-riesgos ">
          OTROS RIESGOS VINCULADOS AL <br>TRÁFICO ILÍCITO DE MIGRANTES
@@ -260,15 +266,26 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
             como por ejemplo transporte en mal estado, que viaja a altas velocidades, con sobreocupación y con pocas o nulas medidas de seguridad.
           </p>
           <div class="relative overflow-hidden">
-            <img src="/sections/section4/assets/acordeon1-fondo.webp" alt="" title="" class="w-full h-auto z-0"/>
-            <img src="/sections/section4/assets/carro.webp" alt="" title="" class="w-full h-auto absolute top-0 z-10 max-w-[1000px] -right-full carro-mover"/>
+            <img src="/sections/section4/assets/fondo-carretera2.webp" alt=""  class="w-full h-auto z-0"/>
+            <img src="/sections/section4/assets/acordeon1-texto.svg" alt=""  class="w-full h-auto z-10 absolute top-0 left-0"/>
+            <img src="/sections/section4/assets/carro.webp" alt=""  class="w-full h-auto absolute top-0 z-20 max-w-[1000px] -right-full carro-mover"/>
+            <div class=" absolute bottom-[3.6rem] left-[3.5rem] text-[18px] text-[#F6F4F3] z-30 max-w-[380px]">
+              De acuerdo con los datos del <br>
+              <a href="https://missingmigrants.iom.int/es" target="_blank">
+                <b class="text-[#FFA85C] font-bold underline">Proyecto Migrantes Desaparecidos</b>
+              </a>,
+              <br> 
+              <b class="text-[#80CFFF] font-formula font-bold text-[30px] tracking-[0.6px]">de la totalidad de fallecimientos de personas migrantes en tránsito.</b><br>
+              al menos 16% se relaciona con accidentes de tránsito.<br>
+              (OIM, 2023a)
+            </div>
           </div>
         </div>
         <style>
          .carro-mover {  
             animation: slideOut 10s forwards ease-in-out; 
             /* que la animacion se repita */
-            animation-iteration-count: infinite;  
+            animation-iteration-count: 1;
           }  
 
           @keyframes slideOut {  
@@ -276,7 +293,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
               transform: translateX(0);  
             }  
             100% {  
-              transform: translateX(-220%);  
+              transform: translateX(-130%);  
             }  
           } 
         </style>
@@ -288,11 +305,11 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
       details=`
         <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
           <div class="relative">
-            <img src="/sections/section4/assets/selva-lluviosa.gif" alt="" title="" class="w-full h-auto z-0"/>
+            <img src="/sections/section4/assets/selva-lluviosa.gif" alt=""  class="w-full h-auto z-0"/>
           </div>
           <p class="md:text-[20px] leading-[140%] pt-4 pb-4">
             Dependiendo de la estación del año y de la zona geográfica, 
-            <b class="text-[#25A7EF]">las personas migrantes en tránsito se exponen a temperaturas extremas, fuertes lluvias, vientos, inundaciones en ríos, entre otros,</b> dificultando así el acceso a recursos básicos como agua potable, alimentos y servicios.
+            <b class="text-[#1870A0]">las personas migrantes en tránsito se exponen a temperaturas extremas, fuertes lluvias, vientos, inundaciones en ríos, entre otros,</b> dificultando así el acceso a recursos básicos como agua potable, alimentos y servicios.
           </p>
         </div>
       `
@@ -306,8 +323,8 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
             El uso de las Tecnologías de la Información y la Comunicación (TICs), incluyendo las redes sociales, en el contexto del Tráfico Ilícito de Migrantes, incrementa la exposición de las personas migrantes a diversos riesgos, tales como:
           </p>
           <div class="relative">
-            <img src="/sections/section4/assets/tics-acordeon.webp" alt="" title="" class="w-full h-auto z-0 mb-8"/>
-            <img src="/sections/section4/assets/tics.gif" alt="" title="" class="absolute z-10 gif-tics "/>
+            <img src="/sections/section4/assets/tics-acordeon.webp" alt=""  class="w-full h-auto z-0 mb-8"/>
+            <img src="/sections/section4/assets/tics.gif" alt=""  class="absolute z-10 gif-tics "/>
           </div>
         </div>
       `
@@ -315,7 +332,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
     </div>
      
     <div class="pt-32 pb-32">
-      <Image src={cuadroRiesgos} alt="Durante el primer semestre del 2023 se rescataron 500 personas objeto de Tráfico Ilícito de Migrantes, que fueron abandonadas por sus guías en la zona limítrofe entre México y Estados Unidos." title="Durante el primer semestre del 2023 se rescataron 500 personas objeto de Tráfico Ilícito de Migrantes, que fueron abandonadas por sus guías en la zona limítrofe entre México y Estados Unidos." class="w-full h-auto mx-auto max-w-[367px]"/>
+      <Image src={cuadroRiesgos} alt="Durante el primer semestre del 2023 se rescataron 500 personas objeto de Tráfico Ilícito de Migrantes, que fueron abandonadas por sus guías en la zona limítrofe entre México y Estados Unidos." class="w-full h-auto mx-auto max-w-[467px]"/>
     </div>
   </div>
 
@@ -338,46 +355,46 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
     <div class="explorar-imagenes max-w-[1118px] min-h-[512px] flex flex-row gap-1 overflow-hidden text-[#ffffff] pb-32 mx-auto">
       <div class="flex-auto cuadros-poblaciones overflow-hidden" id="cuadro-mujeres" data-id-popup="">
         <div class="imagen-cuadro flex items-end">
-          <Image src={mujeres} alt="" title="" class="w-full h-auto"/>
+          <Image src={mujeres} alt="" class="w-full h-auto"/>
           <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
             <h1>Mujeres</h1>
-            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+            <Image src={interaccion} alt=""  class="cursor-pointer" />
           </div>
         </div>
       </div>
       <div class="flex-auto cuadros-poblaciones overflow-hidden" id="cuadro-ninas">
         <div class="imagen-cuadro flex items-end">
-          <Image src={ninosNinas} alt="" title="" class="w-full h-auto"/>
+          <Image src={ninosNinas} alt="" class="w-full h-auto"/>
           <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
             <h1>Niñas, niños y adolescentes (NNA)</h1>
-            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+            <Image src={interaccion} alt="" class="cursor-pointer" />
           </div>
         </div>
       </div>
       <div class="flex-auto cuadros-poblaciones" id="cuadro-discapacidad">
         <div class="imagen-cuadro flex items-end">
-          <Image src={discapacidad} alt="" title="" class="w-full h-auto"/>
+          <Image src={discapacidad} alt=""  class="w-full h-auto"/>
           <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
             <h1>Población con discapacidad</h1>
-            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+            <Image src={interaccion} alt=""  class="cursor-pointer" />
           </div>
         </div>
       </div>
       <div class="flex-auto  cuadros-poblaciones" id="cuadro-lgtib">
         <div class="imagen-cuadro flex items-end">
-          <Image src={lgtib} alt="" title="" class="w-full h-auto"/>
+          <Image src={lgtib} alt=""  class="w-full h-auto"/>
           <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
             <h1>Poblaciones LGBTIQ+</h1>
-            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+            <Image src={interaccion} alt=""  class="cursor-pointer" />
           </div>
         </div>
       </div>
       <div class="flex-auto  cuadros-poblaciones" id="cuadro-indigena">
         <div class="imagen-cuadro flex items-end">
-          <Image src={indigena} alt="" title="" class="w-full h-auto"/>
+          <Image src={indigena} alt=""  class="w-full h-auto"/>
           <div class="titulo-imagen relative z-10 flex justify-between flex-row w-full py-10 px-8 items-center">
             <h1>Población indígena</h1>
-            <Image src={interaccion} alt="" title="" class="cursor-pointer" />
+            <Image src={interaccion} alt=""  class="cursor-pointer" />
           </div>
         </div>
       </div>
@@ -389,7 +406,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
 
 
   <!-- RIESGOS VINCULADOS AL TRAFICO ILICITO DE MIGRANTES - PARTE 6 -->
-  <div class="relative w-screen  banner-seccion4 bg-[#D9D9D9] md:pt-[15rem] md:pb-32 bg-no-repeat bg-cover bg-fixed overflow-hidden" style={`background-image: url('${fondoRiesgos.src}')`}>
+  <div class="relative w-screen  banner-seccion4 bg-[#ffffff] md:pt-[15rem] md:pb-32 bg-no-repeat bg-cover bg-fixed overflow-hidden" style={`background-image: url('${fondoRiesgos.src}')`}>
     <div class="max-w-[1100px] w-[90%] mx-auto grid grid-cols-12 gap-20 pb-[12rem]">
       <div class="col-span-4"></div>
       <div class="col-span-8">
@@ -449,7 +466,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
             por lo que se recomienda discreción al escucharlo o compartirlo. Si usted o alguien que conoce necesita apoyo, 
             por favor busque a instituciones u organizaciones especializadas (puede encontrar información de contacto en 
             la sección 
-            <a href="#" class="text-[#000000] font-bold underline">“Quien puede apoyar en casos de Tráfico Ilícito de Migrantes - Denuncias”)</a>.
+            <a href="#denuncia" class="text-[#000000] font-bold underline">“Quien puede apoyar en casos de Tráfico Ilícito de Migrantes - Denuncias”)</a>.
             <br>
             <br>
             Las personas migrantes brindaron su consentimiento informado a la OIM para la
