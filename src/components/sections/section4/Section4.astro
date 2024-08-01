@@ -449,7 +449,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
   <!-- VOCES MIGRANTES - PARTE 7 -->
   <div class="voces-migrantes relative md:pt-[18rem] md:pb-16 bg-[#10110fd6] bg-no-repeat bg-cover" style={`background-image: url('${fondoVocesMigrantes.src}')`}>
     <AudioPlayer
-        src="/audios/audio1.mp3" 
+        src="/audios/Audio5_op2.mp3" 
         title="¿Cuál es la situación de seguridad en las comunidades fronterizas?" 
         subtitle="  " 
     />
@@ -458,175 +458,201 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
       <h1 class="text-[#D6EDFF] md:text-[78px] font-formula tracking-[1.156px] font-bold leading-none">VOCES DE MIGRANTES</h1>
       <p class="md:text-[34px] font-serif font-bold text-[#D6EDFF]">Riesgos y peligros de las personas objeto de Tráfico Ilícito de Migrantes</p>
     </div>
-    <IcoInfo 
-        idInfo="info-voces" estilos="text-center pt-16 pb-28 cursor-pointer " idIcon="icon-voces" estilosIco="flex items-center justify-center"
-        contenido=
-          `
-            A continuación se presentan testimonios sobre tráfico ilícito de migrantes. Este contenido puede resultar sensible, 
-            por lo que se recomienda discreción al escucharlo o compartirlo. Si usted o alguien que conoce necesita apoyo, 
-            por favor busque a instituciones u organizaciones especializadas (puede encontrar información de contacto en 
-            la sección 
-            <a href="#denuncia" class="text-[#000000] font-bold underline">“Quien puede apoyar en casos de Tráfico Ilícito de Migrantes - Denuncias”)</a>.
-            <br>
-            <br>
-            Las personas migrantes brindaron su consentimiento informado a la OIM para la
-            grabación y divulgación de los testimonios. Adicionalmente, se ha realizado
-             un proceso de anonimización, siguiendo los Principios de Protección de Datos de la OIM.
-          `
-      />
-      <div class="overflow-hidden" style={`background-image: url('${podcastLineas.src}')`} id="podcast-voces" >
-        <div class="podcast-voces relative w-screen overflow-hidden" >
-          <div class="info-podcast swiper-wrapper">
-            <!-- PRIMER PODCAST -->
-            <div class="cuadro-podcast w-[400px] swiper-slide">
-              <div class="interna-podcast relative text-center p-2">
-                <div class="interna-imagen relative overflow-hidden">
-                  <Image src={podcast1} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
-                  <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+    <div class="pinVoces">
+      <IcoInfo 
+          idInfo="info-voces" estilos="text-center pt-16 pb-28 cursor-pointer " idIcon="icon-voces" estilosIco="flex items-center justify-center"
+          contenido=
+            `
+              A continuación se presentan testimonios sobre tráfico ilícito de migrantes. Este contenido puede resultar sensible, 
+              por lo que se recomienda discreción al escucharlo o compartirlo. Si usted o alguien que conoce necesita apoyo, 
+              por favor busque a instituciones u organizaciones especializadas (puede encontrar información de contacto en 
+              la sección 
+              <a href="#denuncia" class="text-[#000000] font-bold underline">“Quien puede apoyar en casos de Tráfico Ilícito de Migrantes - Denuncias”)</a>.
+              <br>
+              <br>
+              Las personas migrantes brindaron su consentimiento informado a la OIM para la
+              grabación y divulgación de los testimonios. Adicionalmente, se ha realizado
+              un proceso de anonimización, siguiendo los Principios de Protección de Datos de la OIM.
+            `
+        />
+        <div class="overflow-hidden" style={`background-image: url('${podcastLineas.src}')`} id="podcast-voces" >
+          <div class="podcast-voces relative w-screen overflow-hidden" >
+            <div class="info-podcast swiper-wrapper">
+              <!-- PRIMER PODCAST -->
+              <div class="cuadro-podcast w-[400px] swiper-slide">
+                <div class="interna-podcast relative text-center p-2">
+                  <div class="interna-imagen relative overflow-hidden">
+                    <Image src={podcast1} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
+                    <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  <button class="mx-auto mt-4 mb-9" id="audionro1">
+                    <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
+                  </button>
+                  <audio id="audio1" src="/audios/Audio1_op2.mp3"></audio> 
+
+                  <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
+                    “personas que nos dijeron que iban a ayudarnos pero que muchas veces querían extorsionarnos o secuestrarnos” 
+                  </p>
+                  <!-- <button class="play-btn playing mx-auto"></button> -->
                 </div>
-                <button class="play-btn mx-auto mt-4 mb-9"></button>
-                <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
-                  “personas que nos dijeron que iban a ayudarnos pero que muchas veces querían extorsionarnos o secuestrarnos” 
-                </p>
-                <!-- <button class="play-btn playing mx-auto"></button> -->
               </div>
-            </div>
-            <!-- SEGUNDO PODCAST -->
-            <div class="cuadro-podcast w-[400px] swiper-slide">
-              <div class="interna-podcast relative text-center p-2">
-                <div class="grid pb-10">
-                    <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] pb-8 animacion1">
-                      “delincuencia, personas malas”
-                    </p>
-                  
-                    <p class="text-[#D9D9D9] font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] text-right animacion2">
-                      “frio, lluvia, falta de comida”
-                    </p>
-                  
+              <!-- SEGUNDO PODCAST -->
+              <div class="cuadro-podcast w-[400px] swiper-slide">
+                <div class="interna-podcast relative text-center p-2">
+                  <div class="grid pb-10">
+                      <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] pb-8 animacion1">
+                        “delincuencia, personas malas”
+                      </p>
+                    
+                      <p class="text-[#D9D9D9] font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] text-right animacion2">
+                        “frio, lluvia, falta de comida”
+                      </p>
+                    
+                  </div>
+                  <div class="interna-imagen relative overflow-hidden">
+                    <Image src={podcast2} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
+                    <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  <button class="mx-auto mt-4 mb-9" id="audionro2">
+                    <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
+                  </button>
+                  <audio id="audio2" src="/audios/Audio2_op2.mp3"></audio> 
                 </div>
-                <div class="interna-imagen relative overflow-hidden">
-                  <Image src={podcast2} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
-                  <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
-                </div>
-                <button class="play-btn mx-auto mt-4 mb-9"></button>
               </div>
-            </div>
-            <!-- TERCER PODCAST -->
-            <div class="cuadro-podcast w-[400px] swiper-slide">
-              <div class="interna-podcast relative text-center p-2">
-                <div class="interna-imagen relative overflow-hidden">
-                  <Image src={podcast3} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
-                  <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+              <!-- TERCER PODCAST -->
+              <div class="cuadro-podcast w-[400px] swiper-slide">
+                <div class="interna-podcast relative text-center p-2">
+                  <div class="interna-imagen relative overflow-hidden">
+                    <Image src={podcast3} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
+                    <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  <button class="mx-auto mt-4 mb-9" id="audionro3">
+                    <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
+                  </button>
+                  <audio id="audio3" src="/audios/Audio3_op3.mp3"></audio> 
+                  <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
+                    “personas que fallecen y quedan en la selva”
+                  </p>
+                  <!-- <button class="play-btn playing mx-auto"></button> -->
                 </div>
-                <button class="play-btn mx-auto mt-4 mb-9"></button>
-                <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
-                  “personas que fallecen y quedan en la selva”
-                </p>
-                <!-- <button class="play-btn playing mx-auto"></button> -->
               </div>
-            </div>
-            <!-- CUARTO PODCAST -->
-            <div class="cuadro-podcast w-[400px] swiper-slide">
-              <div class="interna-podcast relative text-center p-2">
-                <div class="grid pb-10">
-                    <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
-                      “hambre, angustia, terror, impotencia”
-                    </p>
-                  
-                    <p class="text-[#D9D9D9] text-left font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
-                      “maltrato, delincuencia”
-                    </p>
-                    <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
-                      “nos quitaron las pertenencias y nos dejaron a la deriva”
-                    </p>
-                    <p class="text-[#D9D9D9] text-left font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
-                      “casi nos matan”
-                    </p>
-                  
+              <!-- CUARTO PODCAST -->
+              <div class="cuadro-podcast w-[400px] swiper-slide">
+                <div class="interna-podcast relative text-center p-2">
+                  <div class="grid pb-10">
+                      <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
+                        “hambre, angustia, terror, impotencia”
+                      </p>
+                    
+                      <p class="text-[#D9D9D9] text-left font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
+                        “maltrato, delincuencia”
+                      </p>
+                      <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
+                        “nos quitaron las pertenencias y nos dejaron a la deriva”
+                      </p>
+                      <p class="text-[#D9D9D9] text-left font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
+                        “casi nos matan”
+                      </p>
+                    
+                  </div>
+                  <div class="interna-imagen relative overflow-hidden">
+                    <Image src={podcast4} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
+                    <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  <button class="mx-auto mt-4 mb-9" id="audionro4">
+                    <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
+                  </button>
+                  <audio id="audio4" src="/audios/Audio4_op2.mp3"></audio> 
                 </div>
-                <div class="interna-imagen relative overflow-hidden">
-                  <Image src={podcast4} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
-                  <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
-                </div>
-                <button class="play-btn mx-auto mt-4 mb-9"></button>
               </div>
-            </div>
-            <!-- QUINTO PODCAST -->
-            <div class="cuadro-podcast w-[400px] swiper-slide">
-              <div class="interna-podcast relative text-center p-2">
-                <div class="interna-imagen relative overflow-hidden">
-                  <Image src={podcast5} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
-                  <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+              <!-- QUINTO PODCAST -->
+              <div class="cuadro-podcast w-[400px] swiper-slide">
+                <div class="interna-podcast relative text-center p-2">
+                  <div class="interna-imagen relative overflow-hidden">
+                    <Image src={podcast5} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
+                    <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  <button class="mx-auto mt-4 mb-9" id="audionro5">
+                    <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
+                  </button>
+                  <audio id="audio5" src="/audios/Audio5_op2.mp3"></audio> 
+                  <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
+                    “selva, muchos ladrones”
+                  </p>
+                  <!-- <button class="play-btn playing mx-auto"></button> -->
                 </div>
-                <button class="play-btn mx-auto mt-4 mb-9"></button>
-                <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
-                  “selva, muchos ladrones”
-                </p>
-                <!-- <button class="play-btn playing mx-auto"></button> -->
               </div>
-            </div>
-            <!-- SEXTO PODCAST -->
-            <div class="cuadro-podcast w-[400px] swiper-slide">
-              <div class="interna-podcast relative text-center p-2">
-                <div class="grid pb-10">
-                    <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
-                      “jugar con la vida, mucho peligro”
-                    </p>
-                  
-                    <p class="text-[#D9D9D9] text-left font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
-                      “violan, atracan”
-                    </p>
-                    <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
-                      “estamos poniendo en riesgo la vida de nuestros hijos”
-                    </p>
+              <!-- SEXTO PODCAST -->
+              <div class="cuadro-podcast w-[400px] swiper-slide">
+                <div class="interna-podcast relative text-center p-2">
+                  <div class="grid pb-10">
+                      <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
+                        “jugar con la vida, mucho peligro”
+                      </p>
+                    
+                      <p class="text-[#D9D9D9] text-left font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
+                        “violan, atracan”
+                      </p>
+                      <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
+                        “estamos poniendo en riesgo la vida de nuestros hijos”
+                      </p>
+                  </div>
+                  <div class="interna-imagen relative overflow-hidden">
+                    <Image src={podcast6} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
+                    <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  <button class="mx-auto mt-4 mb-9" id="audionro6">
+                    <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
+                  </button>
+                  <audio id="audio6" src="/audios/Audio6_op2.mp3"></audio> 
                 </div>
-                <div class="interna-imagen relative overflow-hidden">
-                  <Image src={podcast6} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
-                  <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
-                </div>
-                <button class="play-btn mx-auto mt-4 mb-9"></button>
               </div>
-            </div>
-            <!-- SEPTIMO PODCAST -->
-            <div class="cuadro-podcast w-[400px] swiper-slide">
-              <div class="interna-podcast relative text-center p-2">
-                <div class="interna-imagen relative overflow-hidden">
-                  <Image src={podcast7} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
-                  <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+              <!-- SEPTIMO PODCAST -->
+              <div class="cuadro-podcast w-[400px] swiper-slide">
+                <div class="interna-podcast relative text-center p-2">
+                  <div class="interna-imagen relative overflow-hidden">
+                    <Image src={podcast7} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
+                    <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  <button class="mx-auto mt-4 mb-9" id="audionro7">
+                    <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
+                  </button>
+                  <audio id="audio7" src="/audios/Audio1_op2.mp3"></audio> 
+                  <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
+                    “abuso sexual, secuestro, extorsión, robo, explotación sexual”
+                  </p>
+                  <!-- <button class="play-btn playing mx-auto"></button> -->
                 </div>
-                <button class="play-btn mx-auto mt-4 mb-9"></button>
-                <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
-                  “abuso sexual, secuestro, extorsión, robo, explotación sexual”
-                </p>
-                <!-- <button class="play-btn playing mx-auto"></button> -->
               </div>
-            </div>
-            <!-- OCTAVO PODCAST -->
-            <div class="cuadro-podcast w-[400px] swiper-slide">
-              <div class="interna-podcast relative text-center p-2">
-                <div class="grid pb-10">
-                    <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
-                      “los niños sufren mucho”
-                    </p>
-                  
-                    <p class="text-[#D9D9D9] text-left font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
-                      “hay muchos peligros en la ruta”
-                    </p>
-                    <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
-                      “humillaciones”
-                    </p>
+              <!-- OCTAVO PODCAST -->
+              <div class="cuadro-podcast w-[400px] swiper-slide">
+                <div class="interna-podcast relative text-center p-2">
+                  <div class="grid pb-10">
+                      <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
+                        “los niños sufren mucho”
+                      </p>
+                    
+                      <p class="text-[#D9D9D9] text-left font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion1">
+                        “hay muchos peligros en la ruta”
+                      </p>
+                      <p class="text-[#D9D9D9] text-right font-serif xl:text-[18px] 2xl:text-[20px] font-bold leading-[1.2] pb-6 animacion2">
+                        “humillaciones”
+                      </p>
+                  </div>
+                  <div class="interna-imagen relative overflow-hidden">
+                    <Image src={podcast8} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
+                    <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  <button class="mx-auto mt-4 mb-9" id="audionro8">
+                    <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
+                  </button>
+                  <audio id="audio8" src="/audios/Audio3_op3.mp3"></audio> 
                 </div>
-                <div class="interna-imagen relative overflow-hidden">
-                  <Image src={podcast8} alt="" class="img-podcast max-w-[357px] hover:scale-125 duration-300 transition-transform"/>
-                  <Image src={podcastFondo} alt="" class="absolute z-10 w-full max-w-[100px] top-[50%] left-[50%] h-auto transform -translate-x-1/2 -translate-y-1/2" />
-                </div>
-                <button class="play-btn mx-auto mt-4 mb-9"></button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
         
   </div>
   <!-- FOTTER SECCION 4 - PARTE 8 -->
@@ -664,6 +690,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
     freeMode: true,     
     grabCursor: true,
   });
+
 </script>
 
 

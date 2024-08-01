@@ -2,17 +2,17 @@
 .img-mujer {
   position: absolute;
   z-index: 10;
-  right: 27%;
+  right: 37%;
   max-width: 460px;
-  top: 7%;
+  top: 10%;
   /* filter: brightness(70%); */
 }
 .img-adolescente {
   position: absolute;
   z-index: 10;
-  right: 2%;
+  right: 7%;
   max-width: 575px;
-  top: 19%;
+  top: 21%;
   /* filter: brightness(70%); */
 }
 .img-hombre {
@@ -20,15 +20,15 @@
   z-index: 10;
   right: 0%;
   max-width: 409px;
-  top: 46%;
+  top: 48%;
   /* filter: brightness(70%); */
 }
 .img-luz {
   position: absolute;
   z-index: 10;
-  right: 0;
-  max-width: 409px;
-  top: 17%;
+  right: 0%;
+  max-width: 459px;
+  top: 21%;
   opacity: 0;
 }
 .background-gray {

@@ -3,6 +3,10 @@ import { Image } from "astro:assets";
 import menu from "@public/icons/menu.svg"
 import home from "@public/icons/inicio.svg"
 import ayuda from "@public/icons/ayuda.svg"
+import audioPlay from "@public/icons/audio-play.svg"
+import audioStop from "@public/icons/audio-stop.svg"
+
+
 import Popup from "@components/Popup.astro";
 
 //Menu principal
@@ -23,14 +27,15 @@ import mouse from "@components/sections/section1/assets/mouse.gif"
 import info from "@public/images/info.gif"
 import play from "@public/icons/playSolo.svg"
 import link from "@components/assets/link.svg"
-import audioPlay from "@public/icons/audio-play.svg"
+
+
 
 
 
 
 ---
 
-<div class="menu-lateral fixed z-[9998] right-2 top-[35%] flex flex-col gap-4">
+<div class="menu-lateral fixed z-[9998] right-2 top-[30%] flex flex-col gap-4">
   <div class="menu" title="Menú" data-tooltip-placement="left">
     <Image src={menu} alt="Menú" class="cursor-pointer" id="imenu"/>
   </div>
@@ -42,6 +47,10 @@ import audioPlay from "@public/icons/audio-play.svg"
   <div class="ayuda"  title="Ayuda" data-tooltip-placement="left">
     <Image src={ayuda} alt="Ayuda" class="cursor-pointer" id="iayuda"/>
   </div>
+  <button id="reproducir" class="audio pt-[10rem]">
+    <Image src={audioPlay} alt="Ayuda" class="cursor-pointer max-w-[56px]" id="reproducir"/>
+  </button>
+  <audio id="audio" src="/audios/Audio1_op2.mp3"></audio>  
 </div>
 
 
@@ -223,3 +232,25 @@ import audioPlay from "@public/icons/audio-play.svg"
     text-shadow: 1px 1px 1px black;
   }
   </style>
+
+<script>  
+  document.addEventListener("DOMContentLoaded", () => {  
+      const reproducirBtn = document.getElementById("reproducir");  
+      const audioElement = document.getElementById("audio");  
+
+      let isPlaying = false;  
+
+      reproducirBtn.addEventListener("click", () => {  
+          if (!isPlaying) {  
+              audioElement.play();  
+              reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[56px]" alt="Detener" />';  
+              isPlaying = true;  
+          } else {  
+              audioElement.pause();  
+              audioElement.currentTime = 0;  
+              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[56px]" alt="Reproducir" />';  
+              isPlaying = false;  
+          }  
+      });  
+  });  
+</script>
