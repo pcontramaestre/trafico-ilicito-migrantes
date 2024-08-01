@@ -30,3 +30,153 @@ new ScrollMagic.Scene({
   .setPin("#seccion6 .banner-seccion6")
   .setTween(wipeAnimation)
   .addTo(controllerSection6A);
+
+
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .banner-texto-seccion6",
+    triggerHook: 0,
+    duration: "50%",
+    tweenChanges: true,
+    offset: -400,
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .banner-texto-seccion6 .animacion-up"],
+      2,
+      {
+        opacity: 0,
+        scale: 0.5,
+        y: "-100%",
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        y:"0%",
+      },
+    )
+  )
+  .addTo(controllerSection6B);
+
+
+
+
+  //procuracion-justicia aparecer
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .procuracion-justicia",
+    triggerHook: 0,
+    duration: "50%",
+    tweenChanges: true,
+    offset: -400,
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .procuracion-justicia .aparecer"],
+      2,
+      {
+        opacity: 0,
+        scale: 0.5,
+        // y: "-100%",
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        // y:"0%",
+      },
+    )
+  )
+  .addTo(controllerSection6B);
+
+  //normativa-div animacion-left
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .normativa-div ",
+    triggerHook: 0,
+    duration: "50%",
+    tweenChanges: true,
+    offset: -400,
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .normativa-div .animacion-left"],
+      2,
+      {
+        //opacity: 0,
+        //scale: 0.5,
+        x: "-100%",
+      },
+      {
+        //opacity: 1,
+        //scale: 1,
+        x:"0%",
+      },
+    )
+  )
+  .addTo(controllerSection6B);
+
+  //acciones-multinacionales
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .acciones-multinacionales ",
+    triggerHook: 0,
+    duration: "50%",
+    tweenChanges: true,
+    offset: -600,
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .acciones-multinacionales"],
+      2,
+      {
+        //opacity: 0,
+        //scale: 0.5,
+        x: "-100%",
+      },
+      {
+        //opacity: 1,
+        //scale: 1,
+        x:"0%",
+      },
+    )
+  )
+  .addTo(controllerSection6B);
+
+  //uso-tics animacion-up animacion-left
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .uso-tics ",
+    triggerHook: 0,
+    duration: "50%",
+    tweenChanges: true,
+    offset: -600,
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .uso-tics .animacion-left"],
+      2,
+      {
+        //opacity: 0,
+        //scale: 0.5,
+        x: "-100%",
+      },
+      {
+        //opacity: 1,
+        //scale: 1,
+        x:"0%",
+      },
+    ).concat(
+      TweenMax.staggerFromTo(
+        ["#seccion6 .uso-tics .animacion-up"],
+        2,
+        {
+          opacity: 0,
+          //scale: 0.5,
+          y: "100%",
+        },
+        {
+          opacity: 1,
+          //scale: 1,
+          y:"0%",
+        },
+      )
+    )
+  )
+  .addTo(controllerSection6B);

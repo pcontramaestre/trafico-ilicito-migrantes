@@ -11,6 +11,17 @@ import lluvia1 from "@components/sections/section5/assets/lluvia1.gif"
 import lluvia2 from "@components/sections/section5/assets/lluvia2.gif"
 import sombrilla from "@components/sections/section5/assets/sombrilla.webp"
 import textura from "@components/sections/section4/assets/textura-part3.webp"
+import textura5_2 from "@components/sections/section5/assets/Textura5-2.webp"
+import textura5_3 from "@components/sections/section5/assets/Textura5-3.webp"
+
+import texturaAcordeon1 from "@components/sections/section5/assets/Textura5-acordeon1.webp"
+import texturaAcordeon2 from "@components/sections/section5/assets/Textura5-acordeon2.webp"
+import texturaAcordeon3 from "@components/sections/section5/assets/Textura5-acordeon3.webp"
+
+
+
+
+
 import textura5 from "@components/sections/section5/assets/Textura5-1.webp"
 import fondoTijuana from "@components/sections/section5/assets/fondoTijuana.webp"
 import fondoTijuana2 from "@components/sections/section5/assets/fondoTijuana2.webp"
@@ -91,7 +102,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
   </div>
 
   <!-- SECCION ASISTENCIA Y IDENTIFICACION - Parte 5 -->
-  <div class="md:pt-10 lg:pt-20 md:pb-10 lg:pb-20 bg-[#001D20] overflow-auto seccion5-parte5" style={`background-image: url('${textura.src}')`}>
+  <div class="md:pt-10 lg:pt-20 md:pb-10 lg:pb-20 bg-[#001D20] overflow-auto seccion5-parte5" style={`background-image: url('${textura5_2.src}')`}>
     <Image src={horizontal} alt="" class="w-auto h-auto max-w-max imagen-ancha"/>
   </div>
 
@@ -123,8 +134,8 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
 
   <!-- SECCION VENTANILLAS INFORMATIVAS - Parte 7 -->
   <div class="bg-[#AA751F] w-screen h-screen flex items-center flex-col justify-center relative pt-4 seccion5-parte7 overflow-hidden">
-    <h1 class="text-[#F6F4F3] text-[50px] w-[90%] pt-8 lg:text-[54px] xl:text-[74px] 2xl:text-[84px] text-center mx-auto font-formula font-bold texto-zquierda-derecha">VENTANILLAS INFORMATIVAS SOBRE MIGRACIÓN</h1>
-    <Image src={fondoTijuana2} alt="" class="w-screen h-full object-cover imagen-aparece"/>
+    <h1 class="text-[#F6F4F3] text-[50px] w-[90%] lg:text-[54px] xl:text-[74px] 2xl:text-[84px] text-center mx-auto font-formula font-bold texto-zquierda-derecha">VENTANILLAS INFORMATIVAS SOBRE MIGRACIÓN</h1>
+    <Image src={fondoTijuana2} alt="" class="w-screen max-h-[75vh] object-cover imagen-aparece pb-8"/>
     <div class="cuadro1-ventanillas cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute right-[35%] lg:bottom-[16%] 2xl:bottom-[10%]">
       <div class="borde borde-sup-izq absolute"></div>
       <div class="borde borde-sup-der absolute"></div> 
@@ -160,7 +171,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
   </div>
 
   <!-- SECCION - Parte 10 -->
-  <div class="w-screen bg-[#F6F4F3] pt-[90px] pb-[90px] bg-no-repeat bg-cover seccion5-parte10" style={`background-image: url('${textura.src}')`}>
+  <div class="w-screen bg-[#F6F4F3] pt-[90px] pb-[90px] bg-no-repeat bg-cover seccion5-parte10" style={`background-image: url('${textura5_3.src}')`}>
     <h1 class="max-w-[1120px] text-5xl xl:text-[116px] mx-auto w-[90%] text-center text-[#026972] font-formula font-bold leading-[1.2] tracking-[2.32px] animacion-up">
       RETORNO EN EL CONTEXTO DE TRÁFICO ILÍCITO DE MIGRANTES
     </h1>
@@ -184,20 +195,24 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
          solicitantes de asilo”</b> (OIM, 2019).
       </div>
     </div>
+    <div class="w-screen absolute bottom-8 right-20 text-[#F6F4F3] text-[20px]">
+      <p class="text-right pl-12">© OIM 2023</p>
+    </div>
+
   </div>
 
   <!-- SECCIÓN - Parte 12 -->
-  <div class="w-screen bg-[#FFFFFF] pt-[79px] pb-[279px] bg-no-repeat bg-cover" style={`background-image: url('${textura.src}')`}>
+  <div class="w-screen bg-[#FFFFFF] pt-[79px] pb-[279px] bg-no-repeat bg-cover" style={`background-image: url('${textura5_3.src}')`}>
     <p class="max-w-[1120px] w-[90%] mx-auto text-[18px] xl:text-[28px] leading-[140%] font-bold pb-[79px] text-center">
       Existen tres categorías del retorno dependiendo de cómo se propicia:
     </p>
     <div class="cuadros-hover relative max-w-[1120px] w-[90%] mx-auto">
       <!-- Retorno voluntario -->
       <div class="max-w-[830px] mr-auto">
-        <div class="seccion-hover flex flex-row items-center justify-between pl-[50px] pr-[50px] pb-[0.5rem] pt-4 bg-[#C0E6EB] cursor-pointer relative" style={`background-image: url('${textura.src}')`}>
+        <div class="seccion-hover flex flex-row items-center justify-between pl-[50px] pr-[50px] pb-[0.5rem] pt-4 bg-[#C0E6EB] cursor-pointer relative" style={`background-image: url('${texturaAcordeon1.src}')`}>
           <h1 class="text-[28px] lg:text-[48px] text-[#026972] font-bold font-formula tracking-[0.96px] leading-[120%]">Retorno voluntario</h1>
           <Image src={icohover} alt="" class="" />
-          <div class="content-hover p-8 absolute left-0 top-[100%] bg-[#C0E6EB] opacity-0 transition-all duration-500 ease z-20" style={`background-image: url('${textura.src}')`}>
+          <div class="content-hover p-8 absolute left-0 top-[100%] bg-[#C0E6EB] opacity-0 transition-all duration-500 ease z-20" style={`background-image: url('${texturaAcordeon1.src}')`}>
             <p class="text-[28px] leading-[140%]">
               Es “el regreso independiente o asistido al país de origen, de tránsito o a un tercer país basado en la libre voluntad de la persona que regresa” (OIM, 2019).
             </p>
@@ -207,10 +222,10 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
 
       <!-- Retorno forzoso -->
       <div class="max-w-[830px] mx-auto">
-        <div class="seccion-hover flex flex-row items-center justify-between pl-[50px] pr-[50px] pb-[0.5rem] pt-4 bg-[#FFEABB] cursor-pointer relative" style={`background-image: url('${textura.src}')`}>
+        <div class="seccion-hover flex flex-row items-center justify-between pl-[50px] pr-[50px] pb-[0.5rem] pt-4 bg-[#FFEABB] cursor-pointer relative" style={`background-image: url('${texturaAcordeon2.src}')`}>
           <h1 class="text-[28px] lg:text-[48px] text-[#026972] font-bold font-formula tracking-[0.96px] leading-[120%]">Retorno forzoso</h1>
           <Image src={icohover} alt="" class="" />
-          <div class="content-hover p-8 absolute left-0 top-[100%] bg-[#FFEABB] opacity-0 transition-all duration-500 ease z-20" style={`background-image: url('${textura.src}')`}>
+          <div class="content-hover p-8 absolute left-0 top-[100%] bg-[#FFEABB] opacity-0 transition-all duration-500 ease z-20" style={`background-image: url('${texturaAcordeon2.src}')`}>
             <p class="text-[28px] leading-[140%]">
               Es el “acto de devolver a una persona, contra su voluntad, al país de origen o de tránsito o a un tercer país que acepte recibirla, que generalmente se realiza en virtud de un acto o decisión de carácter administrativo o judicial” (OIM, 2019).
             </p>
@@ -220,10 +235,10 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
 
       <!-- Retorno espontáneo -->
       <div class="max-w-[830px] ml-auto">
-        <div class="seccion-hover flex flex-row items-center justify-between pl-[50px] pr-[50px] pb-[0.5rem] pt-4 bg-[#D9D9D9] cursor-pointer relative" style={`background-image: url('${textura.src}')`}>
+        <div class="seccion-hover flex flex-row items-center justify-between pl-[50px] pr-[50px] pb-[0.5rem] pt-4 bg-[#D9D9D9] cursor-pointer relative" style={`background-image: url('${texturaAcordeon3.src}')`}>
           <h1 class="text-[28px] lg:text-[48px] text-[#026972] font-bold font-formula tracking-[0.96px] leading-[120%]">Retorno espontáneo</h1>
           <Image src={icohover} alt="" class="" />
-          <div class="content-hover p-8 absolute left-0 top-[100%] bg-[#D9D9D9] opacity-0 transition-all duration-500 ease z-20" style={`background-image: url('${textura.src}')`}>
+          <div class="content-hover p-8 absolute left-0 top-[100%] bg-[#D9D9D9] opacity-0 transition-all duration-500 ease z-20" style={`background-image: url('${texturaAcordeon3.src}')`}>
             <p class="text-[28px] leading-[140%]">
               Es el “regreso voluntario e independiente de un migrante o un grupo de migrantes a su país de origen, por lo general sin el apoyo de ningún Estado ni asistencia internacional o nacional alguna” (OIM,2019).
             </p>
