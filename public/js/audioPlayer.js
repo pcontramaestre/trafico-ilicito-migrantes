@@ -32,6 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
       durationEl.textContent = formatTime(duration);
     });
 
+    // Evento para cuando el audio termina de reproducirse  
+    audio.addEventListener('ended', () => {  
+      // Restablecer el progreso y el botón de reproducción  
+      progress.style.width = '0%';  
+      playPauseBtn.classList.remove('playing');  
+      currentTimeEl.textContent = '0:00';  
+      audio.currentTime = 0;  
+    });
+
+
     // Formatea el tiempo en minutos y segundos
     function formatTime(time) {
       const minutes = Math.floor(time / 60);

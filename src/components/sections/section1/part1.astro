@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import logoOim from "../section1/assets/logo-oim.svg";
 import logoCorett from "../section1/assets/logo-corett.svg";
-import fondoParte1 from "./assets/Fondo.png";
-import arbol from "./assets/arbol.png";
+import fondoParte1 from "./assets/Fondo.webp";
+import arbol from "./assets/arbol.webp";
 import rectanguloGris from "./assets/rectangle-gris.png";
 import mouse from "./assets/mouse.gif";
 import mujer from "./assets/mujer.png";
@@ -11,15 +11,17 @@ import adolescente from "./assets/adolescente.png";
 import hombre from "./assets/hombre.png";
 import luz from "./assets/luz1.png";
 ---
-
+<!-- 
+ style={`background-image: url('${textura.src}')`}
+-->
 <section id="seccion1-1">
 
-  <div class="w-screen h-screen parte1 flex flex-col justify-center">
+  <div class="w-screen h-screen parte1 flex flex-col justify-center background-gray" style={`background-image: url('${rectanguloGris.src}')`}>
     <div class="contenedor absolute inline-grid gap-12 grid-cols-2 grid-rows-1 pt-16 pl-24 z-10 top-0">
       <Image src={logoCorett} alt="Corett"  />
       <Image src={logoOim} alt="OIM" />
     </div>
-    <div class="titulo-seccion pl-24 z-10">
+    <div class="titulo-seccion pl-24 z-20">
       <div class="text-[62px] font-bold font-['Inika'] azul6 z-10">
         Voces y datos del
       </div>
