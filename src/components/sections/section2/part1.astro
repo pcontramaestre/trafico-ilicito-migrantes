@@ -23,6 +23,8 @@ import Slider from './Slider.astro';
 import Cuadro from "@components/Cuados.astro";
 import Popup from "@components/Popup.astro";
 import IcoInfo from "@components/IcoInfo.astro";
+import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
+
 ---
 <section id="seccion2-1">
   <!-- BANNER PRINCIPAL -->
@@ -65,7 +67,7 @@ import IcoInfo from "@components/IcoInfo.astro";
         <Image src={card1Img} alt="" class=" cursor-pointer"/>
         <div class="texto-estructura opacity-0 cursor-pointer">
           <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
-          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Jerarquías</div>
+          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-3xl font-light	pl-6 pr-6 pb-4">Jerarquías</div>
           <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">Poseen una organización transnacional compleja. Se utilizan usualmente para viajes bien organizados, a menudo desde Asia, África y Suramérica.
           </div>
         </div>
@@ -74,7 +76,7 @@ import IcoInfo from "@components/IcoInfo.astro";
         <Image src={card2Img} alt="" class=" cursor-pointer"/>
         <div class="texto-estructura opacity-0 cursor-pointer">
           <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
-          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Redes</div>
+          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-3xl font-light	pl-6 pr-6 pb-4">Redes</div>
           <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight">Personas participantes operan con autonomía y en colaboraciones similares a las “comerciales”. Poseen vínculos con organizaciones criminales (salvoconductos).
           </div>
         </div>
@@ -83,7 +85,7 @@ import IcoInfo from "@components/IcoInfo.astro";
         <Image src={card3Img} alt="" class=" cursor-pointer"/>
         <div class="texto-estructura opacity-0 cursor-pointer">
           <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
-          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Individuos</div>
+          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-3xl font-light	pl-6 pr-6 pb-4">Individuos</div>
           <div class="desc-estructura  text-[#1F1F1F] text-lg leading-tight"> Se encuentran frecuentemente en comunidades fronterizas. Actúan por subsistencia y brindan servicios como venta de comida y artículos, transporte, hospedaje y telecomunicaciones.</div>
         </div>
       </div>
@@ -91,7 +93,7 @@ import IcoInfo from "@components/IcoInfo.astro";
         <Image src={card4Img} alt="" class=" cursor-pointer"/>
         <div class="texto-estructura opacity-0 cursor-pointer">
           <Image src={cambiar} alt="" class="cursor-pointer absolute right-1 top-1"/>
-          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-2xl font-light	pl-6 pr-6 pb-4">Operaciones mixtax</div>
+          <div class="titulo-estrutura text-[#B85600] font-['Formula'] text-3xl font-light	pl-6 pr-6 pb-4">Operaciones mixtas</div>
           <div class="desc-estructura text-[#1F1F1F] text-lg leading-tight"> Este es el perfil predominante en la región. Consiste en una mezcla de jerarquías con redes entre países y que a la vez contratan individuos.</div>
         </div>
       </div>
@@ -205,10 +207,13 @@ import IcoInfo from "@components/IcoInfo.astro";
 
   </div>
   
-  <div class="bg-[url('/src/components/sections/section2/assets/textura-sliders.webp')] pt-16 pb-16 section-acordeon seccion2-parte6">
+  <div class="pt-16 pb-16 section-acordeon seccion2-parte6 bg-fixed" style={`background-image: url('${Textura2_3.src}')`}>
     <div class="max-w-[1120px] mr-auto ml-auto text-center text-[1.75rem] animacion-up">
       <p class="text-center animacion-up">
-        <h1 class="text-center naranja2 font-['Formula'] text-[3rem] uppercase max-w-[1100px] mr-auto ml-auto font-bold leading-[1.2] pb-8">LOS MODOS DE OPERAR DEL TRÁFICO ILÍCITO DE MIGRANTES (TIM) VARÍAN dependiendo dEL TIPO Y TAMAÑO DE LA OPERACIÓN, Y DEL LUGAR DONDE SE ESTÉ LLEVANDO A CABO.</h1>      
+        <h1 class="text-center naranja2 font-['Formula'] text-[3rem] uppercase max-w-[1100px] mr-auto ml-auto font-bold leading-[1.2] pb-8">
+          LOS MODOS DE OPERAR DEL TRÁFICO ILÍCITO DE MIGRANTES (TIM) 
+          VARÍAN dependiendo dEL TIPO Y TAMAÑO DE LA OPERACIÓN, Y DEL LUGAR DONDE SE ESTÉ LLEVANDO A CABO.
+        </h1>      
       </p>
       <p class="text-center pb-16 animacion-up">
         Estas actividades van desde cómo se establecen comunicaciones con las personas migrantes, sus costos y características, las formas de pago y los medios de transporte.

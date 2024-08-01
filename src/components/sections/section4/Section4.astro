@@ -16,7 +16,7 @@ import zapatos from "@components/sections/section4/assets/zapatos.webp"
 import textura from "@components/sections/section4/assets/textura.webp"
 import textura2 from "@components/sections/section4/assets/textura-part3.webp"
 
-import textura4_1 from "@components/sections/section4/assets/Textura4-1.webp"
+import textura4_1 from "@components/sections/section4/assets/Textura4-1@2x.webp"
 import textura4_2 from "@components/sections/section4/assets/Textura4-2.webp"
 import textura4_3 from "@components/sections/section4/assets/Textura4-3.webp"
 import textura4_4 from "@components/sections/section4/assets/Textura4-4.webp"
@@ -66,55 +66,56 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
 ---
 
 <section id="seccion4">
-  <!-- SECCION BANNER - PARTE 1 -->
-  <div class="relative w-screen  banner-seccion4 bg-[#C9BBA0]" style={`background-image: url('${textura.src}')`}>
-    <Image src={fondoBanner} alt="" class="w-screen h-auto"/>
-    <Image src={sol} alt="" class="h-auto absolute top-0 right-0 sol-right"/>
-    <Image src={fondoBanner2} alt="" class="w-screen h-auto absolute top-0 left-0"/>
-    <Image src={bola} alt="" class="h-auto absolute bottom-0 left-0 top-[28%] max-w-[190px] bola-left"/>
-    <Image src={maleta} alt="" class="h-auto absolute bottom-0 right-[24%] top-[35%] max-w-[300px]"/>
-    <Image src={mapa} alt="" class="h-auto absolute  left-[4%] bottom-[13%] mapa-rotate"/>
-    <Image src={zapatos} alt="" class="h-auto absolute  right-[2%] bottom-[8%] zapatos-rotate "/>
-    <div class="section-title absolute w-screen  top-[20%]">
-      <div class="titulo-seccion3 z-10 pb-36 pt-8  max-w-[1200px] mx-auto ">
-        <div class="text-[58px] font-bold font-['Inika'] azul6 z-10 mb-4 leading-[1.1] pb-8">
-          Riesgos vinculados al
-        </div>
-        <div class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none">
-          Tráfico Ilícito <br>de Migrantes
+  <div class="bg-cover bg-no-repeat bg-top" style={`background-image: url('${textura4_1.src}')`}>
+    <!-- SECCION BANNER - PARTE 1 -->
+    <div class="relative w-screen  banner-seccion4 bg-cover bg-bottom">
+      <Image src={fondoBanner} alt="" class="w-screen h-auto"/>
+      <Image src={sol} alt="" class="h-auto absolute top-0 right-0 sol-right"/>
+      <Image src={fondoBanner2} alt="" class="w-screen h-auto absolute top-0 left-0"/>
+      <Image src={bola} alt="" class="h-auto absolute bottom-0 left-0 top-[28%] max-w-[190px] bola-left"/>
+      <Image src={maleta} alt="" class="h-auto absolute bottom-0 right-[24%] top-[35%] max-w-[300px]"/>
+      <Image src={mapa} alt="" class="h-auto absolute  left-[4%] bottom-[13%] mapa-rotate"/>
+      <Image src={zapatos} alt="" class="h-auto absolute  right-[2%] bottom-[8%] zapatos-rotate "/>
+      <div class="section-title absolute w-screen  top-[20%]">
+        <div class="titulo-seccion3 z-10 pb-36 pt-8  max-w-[1200px] mx-auto ">
+          <div class="text-[58px] font-bold font-['Inika'] azul6 z-10 mb-4 leading-[1.1] pb-8">
+            Riesgos vinculados al
+          </div>
+          <div class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none">
+            Tráfico Ilícito <br>de Migrantes
+          </div>
         </div>
       </div>
-    </div>
-  </div> 
-  
-  <!-- SECCION SLIDER - PARTE 2 -->
-  <div class="relative w-screen  bg-[#C9BBA0] bg-fixed bg-cover pb-32" style={`background-image: url('${textura.src}')`} id="pinslider">
-    <div class="slider-contenedor">
-      <section class="slider-seccion flex items-center relative">
-        <div class="max-w-[970px] w-[90%] mx-auto text-center">
-          <h1 class="text-[40px] md:text-[68px] font-bold font-formula leading-[1.2] tracking-[1.26px] text-center text-[#E06900]">
-            CADA AÑO MILES DE PERSONAS MIGRANTES
-            MUEREN EN EL MUNDO A CAUSA DE ACTIVIDADES RELACIONADAS CON EL TRÁFICO ILÍCITO DE MIGRANTES (TIM)
-          </h1>
-          <p class="md:text-[36px] font-bold font-sans leading-[1.4] text-[#1F1F1F]">
-            En la última década (2014-2024), se han documentado 9.350 muertes y desapariciones en las Américas.
-          </p>
-        </div>
-      </section>
-      <section class="slider-seccion flex items-center relative">
-        <div class="max-w-[970px] w-[90%] mx-auto text-center">
-          <h1 class="text-[40px] md:text-[68px] font-bold font-formula leading-[1.2] tracking-[1.26px] text-center text-[#E06900]">
-            EL TRÁFICO ILÍCITO DE MIGRANTES (TIM) EXPONE 
-            A GRAVES RIESGOS A LAS PERSONAS Y A LAS COMUNIDADES
-          </h1>
-          <p class="md:text-[36px] font-bold font-sans leading-[1.4] text-[#1F1F1F]">
-            en mayor medida a aquellos grupos en situaciones de vulnerabilidad.
-          </p>
-        </div>
-      </section>
+    </div> 
+    
+    <!-- SECCION SLIDER - PARTE 2 -->
+    <div class="relative w-screen bg-cover pb-32 bg-top" id="pinslider">
+      <div class="slider-contenedor">
+        <section class="slider-seccion flex items-center relative">
+          <div class="max-w-[970px] w-[90%] mx-auto text-center">
+            <h1 class="text-[40px] md:text-[68px] font-bold font-formula leading-[1.2] tracking-[1.26px] text-center text-[#E06900]">
+              CADA AÑO MILES DE PERSONAS MIGRANTES
+              MUEREN EN EL MUNDO A CAUSA DE ACTIVIDADES RELACIONADAS CON EL TRÁFICO ILÍCITO DE MIGRANTES (TIM)
+            </h1>
+            <p class="md:text-[36px] font-bold font-sans leading-[1.4] text-[#1F1F1F]">
+              En la última década (2014-2024), se han documentado 9.350 muertes y desapariciones en las Américas.
+            </p>
+          </div>
+        </section>
+        <section class="slider-seccion flex items-center relative">
+          <div class="max-w-[970px] w-[90%] mx-auto text-center">
+            <h1 class="text-[40px] md:text-[68px] font-bold font-formula leading-[1.2] tracking-[1.26px] text-center text-[#E06900]">
+              EL TRÁFICO ILÍCITO DE MIGRANTES (TIM) EXPONE 
+              A GRAVES RIESGOS A LAS PERSONAS Y A LAS COMUNIDADES,
+            </h1>
+            <p class="md:text-[36px] font-bold font-sans leading-[1.4] text-[#1F1F1F]">
+              en mayor medida a aquellos grupos en situaciones de vulnerabilidad.
+            </p>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
-
   <!-- SECCION PRINCIPALES RIESGOS - PARTE 3 -->
   <div class="bg-[#D9D9D945] bg-fixed bg-cover bg-repeat pt-16" style={`background-image: url('${textura4_2.src}')`} id="principales-riesgos">
     <div class="max-w-[970px] w-[90%] mx-auto text-center pb-16 md:pb-[190px]">
@@ -350,7 +351,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
       de acuerdo con su perfil y, por ende, tienen<br>
       <b class="text-[#FFA85C] text-[40px]">NECESIDADES DE PROTECCIÓN DIFERENCIADAS.</b>
     </p>
-    <Image src={explore} alt="Explore las imágenes" title="Explore las imágenes" class="mx-auto mb-16 mt-32"/>
+    <Image src={explore} alt="Explore las imágenes" class="mx-auto mb-16 mt-32"/>
 
     <div class="explorar-imagenes max-w-[1118px] min-h-[512px] flex flex-row gap-1 overflow-hidden text-[#ffffff] pb-32 mx-auto">
       <div class="flex-auto cuadros-poblaciones overflow-hidden" id="cuadro-mujeres" data-id-popup="">
@@ -447,7 +448,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
     </div>
   </div>
   <!-- VOCES MIGRANTES - PARTE 7 -->
-  <div class="voces-migrantes relative md:pt-[18rem] md:pb-16 bg-[#10110fd6] bg-no-repeat bg-cover" style={`background-image: url('${fondoVocesMigrantes.src}')`}>
+  <div class="voces-migrantes relative md:pt-[18rem] md:pb-16 bg-[#10110fd6] bg-no-repeat bg-cover bg-fixed bg-bottom" style={`background-image: url('${fondoVocesMigrantes.src}')`}>
     <AudioPlayer
         src="/audios/Audio5_op2.mp3" 
         title="¿Cuál es la situación de seguridad en las comunidades fronterizas?" 
@@ -488,7 +489,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
                   <button class="mx-auto mt-4 mb-9" id="audionro1">
                     <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
                   </button>
-                  <audio id="audio1" src="/audios/Audio1_op2.mp3"></audio> 
+                  <audio id="audio1" src="/audios/Audio1.mp3"></audio> 
 
                   <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
                     “personas que nos dijeron que iban a ayudarnos pero que muchas veces querían extorsionarnos o secuestrarnos” 
@@ -516,7 +517,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
                   <button class="mx-auto mt-4 mb-9" id="audionro2">
                     <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
                   </button>
-                  <audio id="audio2" src="/audios/Audio2_op2.mp3"></audio> 
+                  <audio id="audio2" src="/audios/Audio2.mp3"></audio> 
                 </div>
               </div>
               <!-- TERCER PODCAST -->
@@ -529,7 +530,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
                   <button class="mx-auto mt-4 mb-9" id="audionro3">
                     <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
                   </button>
-                  <audio id="audio3" src="/audios/Audio3_op3.mp3"></audio> 
+                  <audio id="audio3" src="/audios/Audio3.mp3"></audio> 
                   <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
                     “personas que fallecen y quedan en la selva”
                   </p>
@@ -562,7 +563,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
                   <button class="mx-auto mt-4 mb-9" id="audionro4">
                     <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
                   </button>
-                  <audio id="audio4" src="/audios/Audio4_op2.mp3"></audio> 
+                  <audio id="audio4" src="/audios/Audio4.mp3"></audio> 
                 </div>
               </div>
               <!-- QUINTO PODCAST -->
@@ -575,7 +576,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
                   <button class="mx-auto mt-4 mb-9" id="audionro5">
                     <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
                   </button>
-                  <audio id="audio5" src="/audios/Audio5_op2.mp3"></audio> 
+                  <audio id="audio5" src="/audios/Audio5.mp3"></audio> 
                   <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
                     “selva, muchos ladrones”
                   </p>
@@ -604,7 +605,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
                   <button class="mx-auto mt-4 mb-9" id="audionro6">
                     <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
                   </button>
-                  <audio id="audio6" src="/audios/Audio6_op2.mp3"></audio> 
+                  <audio id="audio6" src="/audios/Audio6.mp3"></audio> 
                 </div>
               </div>
               <!-- SEPTIMO PODCAST -->
@@ -617,7 +618,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
                   <button class="mx-auto mt-4 mb-9" id="audionro7">
                     <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
                   </button>
-                  <audio id="audio7" src="/audios/Audio1_op2.mp3"></audio> 
+                  <audio id="audio7" src="/audios/Audio7.mp3"></audio> 
                   <p class="text-[#D9D9D9] text-center font-serif xl:text-[20px] 2xl:text-[28px] font-bold leading-[1.2] animacion1">
                     “abuso sexual, secuestro, extorsión, robo, explotación sexual”
                   </p>
@@ -646,7 +647,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
                   <button class="mx-auto mt-4 mb-9" id="audionro8">
                     <img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />
                   </button>
-                  <audio id="audio8" src="/audios/Audio3_op3.mp3"></audio> 
+                  <audio id="audio8" src="/audios/Audio8.mp3"></audio> 
                 </div>
               </div>
             </div>
@@ -665,7 +666,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
     </div>
     <div class="text-center w-screen absolute left-0 bottom-10">
       <a href="https://missingmigrants.iom.int/es" target="_blank">
-        <Image src={enlaceOim} alt="enlace oim" title="Enlace oim" class="mx-auto"/>
+        <Image src={enlaceOim} alt="enlace oim" class="mx-auto"/>
       </a>  
     </div>
   </div>  

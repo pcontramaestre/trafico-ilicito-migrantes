@@ -80,7 +80,8 @@
 #mapaDenuncias #salvador-sec5:hover, 
 #mapaDenuncias #costarica-seccion5:hover,
 #mapaDenuncias #panama-sec5:hover, 
-#mapaDenuncias #nicaragua-sec5:hover {
+#mapaDenuncias #nicaragua-sec5:hover,
+#mapaDenuncias #honduras-sec5:hover {
   fill: #F6AE2D;
   cursor: pointer;
 }

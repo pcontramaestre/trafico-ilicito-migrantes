@@ -1157,7 +1157,7 @@
          stroke-miterlimit="10"
          stroke-linecap="round"
          stroke-linejoin="round"
-         id="path206" />
+         id="honduras-sec5" />
       <path
          fill-rule="evenodd"
          clip-rule="evenodd"
@@ -1268,7 +1268,8 @@
    const salvadorElement = document.getElementById('salvador-sec5');  
    const costaricaElement = document.getElementById('costarica-seccion5');  
    const panamaElement = document.getElementById('panama-sec5');  
-   const nicaraguaElement = document.getElementById('nicaragua-sec5');  
+   const nicaraguaElement = document.getElementById('nicaragua-sec5');
+   const hondurasElement = document.getElementById('honduras-sec5');
 
    // Seleccionar las imágenes correspondientes  
    const mexicoImage = document.querySelector('.mexico');  
@@ -1278,7 +1279,10 @@
    const salvadorImage = document.querySelector('.salvador');  
    const costaricaImage = document.querySelector('.costarica');  
    const panamaImage = document.querySelector('.panama');  
-   const nicaraguaImage = document.querySelector('.nicaragua');  
+   const nicaraguaImage = document.querySelector('.nicaragua');
+   const hondurasImage = document.querySelector('.honduras');
+
+
 
    // Agregar eventos de mouseover y mouseout a los elementos que representan a los países  
    mexicoElement.addEventListener('mouseover', () => {  
@@ -1336,4 +1340,12 @@
    nicaraguaElement.addEventListener('mouseout', () => {  
    nicaraguaImage.classList.add('hidden');  
    });
+
+   hondurasElement.addEventListener('mouseover', () => {  
+   hondurasImage.classList.remove('hidden');  
+   });  
+   hondurasElement.addEventListener('mouseout', () => {  
+   hondurasImage.classList.add('hidden');  
+   });  
+
 </script>
