@@ -710,16 +710,7 @@ if (!isMobile()) {
 
 
 
-    // Función para detectar si estamos en la sección 2  
-    function isElementInViewport(el) {  
-      const rect = el.getBoundingClientRect();  
-      //console.log(rect);
-      return (  
-          rect.top <= 0
-          //&&  
-          //rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)  
-      );  
-  }  
+     
 
 
 });
