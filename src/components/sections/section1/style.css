@@ -137,10 +137,9 @@
 
 /* PARTE 3 DE LA SECCION 1 */
 .seccion-pasos {
-  background: url(/src/components/sections/section1/assets/Textura1-2.webp) #D9D9D9 no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url(/texturas/Textura1.webp);
   text-align: left;
+  background-attachment: fixed;
   /* mix-blend-mode: hard-light; */
 }
 

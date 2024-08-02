@@ -452,157 +452,210 @@ if (!isMobile()) {
   
 
 document.addEventListener("DOMContentLoaded", () => {  
-  // AUDIO 1
-    const reproducirBtn1 = document.getElementById("audionro1");  
-    const audioElement1 = document.getElementById("audio1");  
+      // // AUDIO 1
+      //   const reproducirBtn1 = document.getElementById("audionro1");  
+      //   const audioElement1 = document.getElementById("audio1");  
 
-    let isPlaying = false;  
+      //   let isPlaying = false;  
 
-    reproducirBtn1.addEventListener("click", () => {  
-        if (!isPlaying) {  
-            audioElement1.play();  
-            reproducirBtn1.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
-            isPlaying = true;  
-        } else {  
-            audioElement1.pause();  
-            audioElement1.currentTime = 0;  
-            reproducirBtn1.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
-            isPlaying = false;  
-        }  
-    }); 
+      //   reproducirBtn1.addEventListener("click", () => {  
+      //       if (!isPlaying) {  
+      //           audioElement1.play();  
+      //           reproducirBtn1.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
+      //           isPlaying = true;  
+      //       } else {  
+      //           audioElement1.pause();  
+      //           audioElement1.currentTime = 0;  
+      //           reproducirBtn1.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+      //           isPlaying = false;  
+      //       }  
+      //   }); 
 
-    // audio 2
-    const reproducirBtn2 = document.getElementById("audionro2");  
-    const audioElement2 = document.getElementById("audio2");  
+      //   // audio 2
+      //   const reproducirBtn2 = document.getElementById("audionro2");  
+      //   const audioElement2 = document.getElementById("audio2");  
 
-    let isPlaying2 = false;  
+      //   let isPlaying2 = false;  
 
-    reproducirBtn2.addEventListener("click", () => {  
-        if (!isPlaying2) {  
-            audioElement2.play();  
-            reproducirBtn2.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
-            isPlaying2 = true;  
-        } else {  
-            audioElement2.pause();  
-            audioElement2.currentTime = 0;  
-            reproducirBtn2.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
-            isPlaying2= false;  
-        }  
-    }); 
+      //   reproducirBtn2.addEventListener("click", () => {  
+      //       if (!isPlaying2) {  
+      //           audioElement2.play();  
+      //           reproducirBtn2.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
+      //           isPlaying2 = true;  
+      //       } else {  
+      //           audioElement2.pause();  
+      //           audioElement2.currentTime = 0;  
+      //           reproducirBtn2.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+      //           isPlaying2= false;  
+      //       }  
+      //   }); 
 
 
-    // audio 3
-    const reproducirBtn3 = document.getElementById("audionro3");  
-    const audioElement3 = document.getElementById("audio3");  
+      //   // audio 3
+      //   const reproducirBtn3 = document.getElementById("audionro3");  
+      //   const audioElement3 = document.getElementById("audio3");  
 
-    let isPlaying3 = false;  
+      //   let isPlaying3 = false;  
 
-    reproducirBtn3.addEventListener("click", () => {  
-        if (!isPlaying3) {  
-            audioElement3.play();  
-            reproducirBtn3.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
-            isPlaying3 = true;  
-        } else {  
-            audioElement3.pause();  
-            audioElement3.currentTime = 0;  
-            reproducirBtn3.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
-            isPlaying3= false;  
-        }  
-    });       
+      //   reproducirBtn3.addEventListener("click", () => {  
+      //       if (!isPlaying3) {  
+      //           audioElement3.play();  
+      //           reproducirBtn3.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
+      //           isPlaying3 = true;  
+      //       } else {  
+      //           audioElement3.pause();  
+      //           audioElement3.currentTime = 0;  
+      //           reproducirBtn3.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+      //           isPlaying3= false;  
+      //       }  
+      //   });       
 
-    // audio 4
-    const reproducirBtn4 = document.getElementById("audionro4");  
-    const audioElement4 = document.getElementById("audio4");  
+      //   // audio 4
+      //   const reproducirBtn4 = document.getElementById("audionro4");  
+      //   const audioElement4 = document.getElementById("audio4");  
 
-    let isPlaying4 = false;  
+      //   let isPlaying4 = false;  
 
-    reproducirBtn4.addEventListener("click", () => {  
-        if (!isPlaying4) {  
-            audioElement4.play();  
-            reproducirBtn4.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
-            isPlaying4 = true;  
-        } else {  
-            audioElement4.pause();  
-            audioElement4.currentTime = 0;  
-            reproducirBtn4.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
-            isPlaying4= false;  
-        }  
-    });  
-    
-    // audio 5
-    const reproducirBtn5 = document.getElementById("audionro5");  
-    const audioElement5 = document.getElementById("audio5");  
+      //   reproducirBtn4.addEventListener("click", () => {  
+      //       if (!isPlaying4) {  
+      //           audioElement4.play();  
+      //           reproducirBtn4.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
+      //           isPlaying4 = true;  
+      //       } else {  
+      //           audioElement4.pause();  
+      //           audioElement4.currentTime = 0;  
+      //           reproducirBtn4.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+      //           isPlaying4= false;  
+      //       }  
+      //   });  
+        
+      //   // audio 5
+      //   const reproducirBtn5 = document.getElementById("audionro5");  
+      //   const audioElement5 = document.getElementById("audio5");  
 
-    let isPlaying5 = false;  
+      //   let isPlaying5 = false;  
 
-    reproducirBtn5.addEventListener("click", () => {  
-        if (!isPlaying5) {  
-            audioElement5.play();  
-            reproducirBtn5.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
-            isPlaying5 = true;  
-        } else {  
-            audioElement5.pause();  
-            audioElement5.currentTime = 0;  
-            reproducirBtn5.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
-            isPlaying5= false;  
-        }  
-    });  
-    
-    // audio 6
-    const reproducirBtn6 = document.getElementById("audionro6");  
-    const audioElement6 = document.getElementById("audio6");  
+      //   reproducirBtn5.addEventListener("click", () => {  
+      //       if (!isPlaying5) {  
+      //           audioElement5.play();  
+      //           reproducirBtn5.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
+      //           isPlaying5 = true;  
+      //       } else {  
+      //           audioElement5.pause();  
+      //           audioElement5.currentTime = 0;  
+      //           reproducirBtn5.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+      //           isPlaying5= false;  
+      //       }  
+      //   });  
+        
+      //   // audio 6
+      //   const reproducirBtn6 = document.getElementById("audionro6");  
+      //   const audioElement6 = document.getElementById("audio6");  
 
-    let isPlaying6 = false;  
+      //   let isPlaying6 = false;  
 
-    reproducirBtn6.addEventListener("click", () => {  
-        if (!isPlaying6) {  
-            audioElement6.play();  
-            reproducirBtn6.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
-            isPlaying6 = true;  
-        } else {  
-            audioElement6.pause();  
-            audioElement6.currentTime = 0;  
-            reproducirBtn6.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
-            isPlaying6= false;  
-        }  
-    });  
-    
-    // audio 7
-    const reproducirBtn7 = document.getElementById("audionro7");  
-    const audioElement7 = document.getElementById("audio7");  
+      //   reproducirBtn6.addEventListener("click", () => {  
+      //       if (!isPlaying6) {  
+      //           audioElement6.play();  
+      //           reproducirBtn6.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
+      //           isPlaying6 = true;  
+      //       } else {  
+      //           audioElement6.pause();  
+      //           audioElement6.currentTime = 0;  
+      //           reproducirBtn6.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+      //           isPlaying6= false;  
+      //       }  
+      //   });  
+        
+      //   // audio 7
+      //   const reproducirBtn7 = document.getElementById("audionro7");  
+      //   const audioElement7 = document.getElementById("audio7");  
 
-    let isPlaying7 = false;  
+      //   let isPlaying7 = false;  
 
-    reproducirBtn7.addEventListener("click", () => {  
-        if (!isPlaying7) {  
-            audioElement7.play();  
-            reproducirBtn7.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
-            isPlaying7 = true;  
-        } else {  
-            audioElement7.pause();  
-            audioElement7.currentTime = 0;  
-            reproducirBtn7.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
-            isPlaying7= false;  
-        }  
-    });  
-    
-    // audio 8
-    const reproducirBtn8 = document.getElementById("audionro8");  
-    const audioElement8 = document.getElementById("audio8");  
+      //   reproducirBtn7.addEventListener("click", () => {  
+      //       if (!isPlaying7) {  
+      //           audioElement7.play();  
+      //           reproducirBtn7.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
+      //           isPlaying7 = true;  
+      //       } else {  
+      //           audioElement7.pause();  
+      //           audioElement7.currentTime = 0;  
+      //           reproducirBtn7.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+      //           isPlaying7= false;  
+      //       }  
+      //   });  
+        
+      //   // audio 8
+      //   const reproducirBtn8 = document.getElementById("audionro8");  
+      //   const audioElement8 = document.getElementById("audio8");  
 
-    let isPlaying8 = false;  
+      //   let isPlaying8 = false;  
 
-    reproducirBtn8.addEventListener("click", () => {  
-        if (!isPlaying8) {  
-            audioElement8.play();  
-            reproducirBtn8.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
-            isPlaying8 = true;  
-        } else {  
-            audioElement8.pause();  
-            audioElement8.currentTime = 0;  
-            reproducirBtn8.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
-            isPlaying8= false;  
-        }  
-    });  
+      //   reproducirBtn8.addEventListener("click", () => {  
+      //       if (!isPlaying8) {  
+      //           audioElement8.play();  
+      //           reproducirBtn8.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
+      //           isPlaying8 = true;  
+      //       } else {  
+      //           audioElement8.pause();  
+      //           audioElement8.currentTime = 0;  
+      //           reproducirBtn8.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+      //           isPlaying8= false;  
+      //       }  
+      //   });  
   
+  
+       
+        const audios = [  
+            { btnId: "audionro1", audioId: "audio1" },  
+            { btnId: "audionro2", audioId: "audio2" },  
+            { btnId: "audionro3", audioId: "audio3" },  
+            { btnId: "audionro4", audioId: "audio4" },
+            { btnId: "audionro5", audioId: "audio5" },
+            { btnId: "audionro6", audioId: "audio6" },
+            { btnId: "audionro7", audioId: "audio7" },
+            { btnId: "audionro8", audioId: "audio8" }
+
+        ];  
+    
+        let currentAudio = null;  // Guarda el audio que está actualmente en reproducción  
+    
+        audios.forEach(({ btnId, audioId }) => {  
+          console.log(audios);
+            const reproducirBtn = document.getElementById(btnId);  
+            const audioElement = document.getElementById(audioId);  
+            let isPlaying = false;  
+    
+            reproducirBtn.addEventListener("click", () => {  
+                // Si hay un audio actualmente reproduciéndose, deténlo  
+                if (currentAudio && currentAudio !== audioElement) {  
+                    currentAudio.pause();  
+                    currentAudio.currentTime = 0;  
+    
+                    // Identificar el botón correspondiente y cambiar su estado  
+                    const currentBtnId = audios.find(audio => audio.audioId === currentAudio.id).btnId;  
+                    const currentBtn = document.getElementById(currentBtnId);  
+                    currentBtn.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+                }  
+    
+                // Si el audio actual no está reproduciendo, ábrelo  
+                if (!isPlaying) {  
+                    audioElement.play();  
+                    reproducirBtn.innerHTML = '<img src="/icons/stopSolo.svg" class="max-w-[56px]" alt="Detener" />';  
+                    isPlaying = true;  
+                    currentAudio = audioElement; // Actualiza el audio actual a este  
+                } else {  
+                    // Si ya está reproduciendo, púasalo  
+                    audioElement.pause();  
+                    audioElement.currentTime = 0;  
+                    reproducirBtn.innerHTML = '<img src="/icons/playSolo.svg" class="max-w-[56px]" alt="Reproducir" />';  
+                    isPlaying = false;  
+                    currentAudio = null; // No hay audio reproduciéndose ahora  
+                }  
+            });  
+        });  
+    
+
+
 });  

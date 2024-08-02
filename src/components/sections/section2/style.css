@@ -57,9 +57,7 @@
 }
 
 .parte-clara {
-  background: url(/src/components/sections/section2/assets/textura-sliders.webp);
-  background-position: center;
-  background-size: contain;
+  background: url(/texturas/Textura2.webp);
 }
 .parte-oscura {
   background: url(/src/components/sections/section2/assets/textura-sliders.webp);
@@ -67,8 +65,10 @@
   background-size: contain;
 }
 #slideContainer {
-  background: url(/src/components/sections/section2/assets/textura2-2.webp);
-  background-size: contain;
+  /* background: url(/src/components/sections/section2/assets/textura2-2.webp); */
+  background: url(/texturas/Textura1.webp);
+  /* background-size: contain; */
+  background-attachment: fixed;
 }
 .overlay {
   position: absolute; /* posición absoluta */

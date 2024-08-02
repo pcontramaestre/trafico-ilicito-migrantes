@@ -13,6 +13,7 @@ import sombrilla from "@components/sections/section5/assets/sombrilla.webp"
 import textura from "@components/sections/section4/assets/textura-part3.webp"
 import textura5_2 from "@components/sections/section5/assets/Textura5-2a.webp"
 import textura5_3 from "@components/sections/section5/assets/Textura5-3.webp"
+import textura2 from "@public/texturas/Textura2.webp"
 
 import texturaAcordeon1 from "@components/sections/section5/assets/Textura5-acordeon1.webp"
 import texturaAcordeon2 from "@components/sections/section5/assets/Textura5-acordeon2.webp"
@@ -29,7 +30,8 @@ import fondoTijuana3 from "@components/sections/section5/assets/fondoTijuana3N.w
 import horizontal from "@components/sections/section5/assets/horizontal.svg"
 //explore.svg
 //mapa.svg
-import explore from "@components/sections/section5/assets/explore2.svg"
+import explore from "@components/sections/section5/assets/explore.svg"
+import explore2 from "@components/sections/section5/assets/explore2.svg"
 import mapa from "@components/sections/section5/assets/mapa.svg"
 import mapa2 from "@components/sections/section5/assets/mapa2.svg"
 import icohover from "@components/sections/section5/assets/icohover.svg"
@@ -150,6 +152,9 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
         Las ventanillas son centros de <b>información, asesoría directa y referenciación clara y confiable</b> sobre migración regular, servicios, protección y prevención de migración irregular, promovidas desde la OIM. Son coordinadas por diversos actores claves vinculados a la gestión de la migración tales como gobierno central, gobiernos locales, instituciones u organizaciones locales.
       </div>
     </div>
+    <div class="absolute text-[20px] hidden md:block bottom-[10vh] right-[20vw] text-[#F6F4F3]">
+      © OIM 2023
+    </div>
   </div>
 
   <!-- SECCION MAPA VENTANILLAS INFORMATIVAS - Parte 8 -->
@@ -157,7 +162,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
     <h1 class="font-serif text-[40px] lg:text-[48px] font-bold tracking-[1.56px] text-[#AA751F] text-center pb-8">
       Ventanillas informativas en los países de la CORETT
     </h1>
-    <Image src={explore} alt="" class="mx-auto mt-12 mb-12" />
+    <Image src={explore2} alt="" class="mx-auto mt-12 mb-12" />
     <div class="ventanillas-informativas relative">
       <MapaVallas />
     </div>
@@ -176,7 +181,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
   </div>
 
   <!-- SECCION - Parte 10 -->
-  <div class="w-screen bg-[#F6F4F3] pt-[90px] pb-[90px] bg-no-repeat bg-cover seccion5-parte10" style={`background-image: url('${textura5_3.src}')`}>
+  <div class="w-screen bg-[#F6F4F3] pt-[90px] pb-[90px] seccion5-parte10" style={`background-image: url('${textura2.src}')`}>
     <h1 class="max-w-[1120px] text-5xl xl:text-[116px] mx-auto w-[90%] text-center text-[#026972] font-formula font-bold leading-[1.2] tracking-[2.32px] animacion-up">
       RETORNO EN EL CONTEXTO DE TRÁFICO ILÍCITO DE MIGRANTES
     </h1>
@@ -207,7 +212,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
   </div>
 
   <!-- SECCIÓN - Parte 12 -->
-  <div class="w-screen bg-[#FFFFFF] pt-[79px] pb-[279px] bg-no-repeat bg-cover" style={`background-image: url('${textura5_3.src}')`}>
+  <div class="w-screen bg-[#FFFFFF] pt-[79px] pb-[279px]" style={`background-image: url('${textura2.src}')`}>
     <p class="max-w-[1120px] w-[90%] mx-auto text-[18px] xl:text-[28px] leading-[140%] font-bold pb-[79px] text-center">
       Existen tres categorías del retorno dependiendo de cómo se propicia:
     </p>

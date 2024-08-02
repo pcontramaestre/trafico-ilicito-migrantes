@@ -136,14 +136,15 @@ if (!isMobile()) {
   new ScrollMagic.Scene({
     triggerElement: "#seccion7 #seccionprevencion",
     triggerHook: 0,
-    duration: "100%",
+    duration: "150%",
     offset: 200,
     tweenChanges: true,
+    offset: -1,
   })
   .setTween(
     TweenMax.staggerFromTo(
       ["#seccion7 .titulo-prevencion"],
-      2,
+      1,
       {
         opacity: 0.1,
         y: "100%",

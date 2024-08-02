@@ -13,13 +13,14 @@ import mujer from "./assets/mujer.png";
 import adolescente from "./assets/adolescente.png";
 import hombre from "./assets/hombre.png";
 import luz from "./assets/luz1.png";
+import textura7 from "@public/texturas/Textura7.webp"
 ---
 <!-- 
  style={`background-image: url('${textura.src}')`}
 -->
 <section id="seccion1-1">
 
-  <div class="w-screen h-screen parte1 flex flex-col justify-center background-gray" style={`background-image: url('${textura1_1.src}')`}>
+  <div class="w-screen h-screen parte1 flex flex-col justify-center background-gray" style={`background-image: url('${textura7.src}')`}>
     <div class="contenedor absolute inline-grid gap-12 grid-cols-2 grid-rows-1 pt-16 pl-24 z-10 top-0">
       <Image src={logos} alt="Corett y OIM"  />
       <!-- <Image src={logoOim} alt="OIM" /> -->
@@ -58,14 +59,14 @@ import luz from "./assets/luz1.png";
       loading="lazy"
     />
   </div>
-  <div class="w-screen h-auto relative z-20 lg:-z-10 parte2">
+  <div class="w-screen h-auto relative z-20 lg:-z-10 parte2" style={`background-image: url('${textura7.src}')`}>
     <div class="w-[90%] lg:w-[811px] text-center absolute font-sans text-base lg:text-4xl font-bold z-50 pl-4 lg:pl-24 flotante-texto">
       <span class="blanco text-[16px] lg:text-[36px]">El Tráfico Ilícito de Migrantes (TIM) se entiende como la </span>
       <span class="uppercase azulclaro font-extrabold text-[16px] lg:text-[36px]">facilitación de la entrada irregular de una persona en un Estado</span>
       <span class="blanco text-[16px] lg:text-[36px]"> del cual dicha persona no es nacional ni residente permanente con el fin de obtener, directa o indirectamente, un </span>
       <span class="azulclaro font-semibold text-[16px] lg:text-[36px]">beneficio financiero u otro beneficio de orden material</span>
       <span class="blanco text-[20px] lg:text-[36px] font-light">(OIM, 2019).</span></div>
-    <Image src={textura1_1} alt="Fondo" class="w-screen h-auto background-gray" />
+      <Image src={textura1_1} alt="Fondo" class="w-screen h-auto background-gray opacity-0" />
   </div>
 </section>
 

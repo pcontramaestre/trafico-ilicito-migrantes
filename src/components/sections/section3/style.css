@@ -1,7 +1,8 @@
 .parte-clara {
-  background: url(/src/components/sections/section2/assets/textura-sliders.webp);
-  background-position: center;
-  background-size: contain;
+  /* background: url(/src/components/sections/section2/assets/textura-sliders.webp); */
+  background: url(/texturas/Textura2.webp);
+  /* background-position: center;
+  background-size: contain; */
 }
 
  #pathMexico:hover, 
