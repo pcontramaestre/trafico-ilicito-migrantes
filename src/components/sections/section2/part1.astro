@@ -30,22 +30,22 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
   <!-- BANNER PRINCIPAL -->
   <div class="w-screen h-screen parte1 flex flex-col justify-end banner-principal relative">
     <div class="degradado-banner absolute w-screen h-screen"></div>
-    <div class="titulo-seccion z-20 w-screen text-left pb-36 pl-[6rem]">
-      <div class="text-[62px] font-bold font-serif azul6 z-10 mb-4">
+    <div class="titulo-seccion z-20 w-screen text-left pb-36 pl-8 md:pl-[6rem]">
+      <div class="text-[25px] lg:text-[62px] font-bold font-serif azul6 z-10 mb-4">
         Modos de operación de las redes de
       </div>
-      <div class="z-10 text-[100px] azul6 uppercase font-formula font-bold leading-none">
+      <div class="z-10 text-[45px] lg:text-[100px] azul6 uppercase font-formula font-bold leading-none">
         Tráfico Ilícito de Migrantes
       </div>
     </div>
-    <Image src={mano1} alt="" class=" absolute left-[15%] top-0 z-10 manobanner1 max-w-[500px] h-auto 2xl:max-w-[621px]" />
-    <Image src={mano2} alt="" class=" absolute right-0 top-1/4 z-10 manobanner2 max-w-[550px] h-auto 2xl:max-w-[678px]"/>
+    <Image src={mano1} alt="" class=" absolute left-[15%] top-0 z-10 manobanner1 max-w-[250px] md:max-w-[500px] h-auto 2xl:max-w-[621px]" />
+    <Image src={mano2} alt="" class=" absolute right-0 top-1/4 z-10 manobanner2 max-w-[250px] md:max-w-[550px] h-auto 2xl:max-w-[678px]"/>
     <Image src={redgif} alt="" class=" absolute top-0 left-0 w-[100%] z-[1]"/>
   </div>
 
   <!-- ESTRUCTURAS DE OPERACION -->
   <div class="fondo-marron bg-[#333] relative min-h-screen pt-32 pb-32 estructuras-operacion">
-    <p class="blanco text-4xl max-w-[1020px] ml-auto mr-auto text-center bg-[#333] z-10 relative animacion-up">
+    <p class="blanco text-2xl lg:text-4xl max-w-[90%] lg:max-w-[1020px] ml-auto mr-auto text-center bg-[#333] z-10 relative animacion-up">
       <b class="naranja4 font-black">LAS ESTRUCTURAS DE OPERACIÓN DE TRÁFICO ILÍCITO DE MIGRANTES (TIM) 
       VARÍAN DEPENDIENDO DE FACTORES</b> como la geografía del terreno, la cantidad de 
       flujos migratorios, la capacidad económica y la
@@ -54,7 +54,10 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
       y la capacidad organizativa de las redes de TIM.
     </p>
 
-    <p class="naranja3 uppercase font-formula tracking-[0.04em] leading-[1.2] text-[4.5rem] text-center max-w-[1000px] font-bold pt-48 pb-16 ml-auto mr-auto bg-[#333] z-10 relative animacion-up">
+    <p class="naranja3 uppercase font-formula tracking-[0.04em] 
+    leading-[1.2] text-[2.5rem] lg:text-[4.5rem] text-center max-w-[90%] lg:max-w-[1000px] 
+    font-bold pt-16 lg:pt-48 pb-16 ml-auto mr-auto bg-[#333] z-10 
+    relative animacion-up">
       Estructuras de operación del TRÁFICO ILÍCITO DE MIGRANTES en la región
     </p>
 
@@ -62,7 +65,7 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
       <Image src={interaccion} alt=""/> <span>Pase el cursor sobre cada tarjeta:</span>
     </div>
     <!-- CARDS -->
-    <div class="cards-estructuras grid grid-cols-4 gap-4 max-w-[1000px]  ml-auto mr-auto bg-[#333] z-10 relative pb-9 animacion-up">
+    <div class="cards-estructuras grid grid-cols-1 lg:grid-cols-4 gap-4 max-w-[90%] lg:max-w-[1000px]  ml-auto mr-auto bg-[#333] z-10 relative pb-9 animacion-up">
       <div class="card-image">
         <Image src={card1Img} alt="" class=" cursor-pointer"/>
         <div class="texto-estructura opacity-0 cursor-pointer">
@@ -112,10 +115,12 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
     <!-- PARTE CLARA -->
     <div class="parte-clara relative pt-[16rem] pb-36">
       <div class="overlay z-0"></div>
-      <p class=" animacion-up naranja3  uppercase font-['Formula'] tracking-wider leading-[1.2] text-[4.5rem] text-center max-w-[900px] font-bold ml-auto mr-auto z-10 relative">
+      <p class=" animacion-up naranja3  uppercase 
+      font-formula tracking-wider leading-[1.2] 
+      text-[2.5rem] lg:text-[4.5rem] text-center max-w-[90%] lg:max-w-[900px] font-bold ml-auto mr-auto z-10 relative">
         Costos asociados al Tráfico Ilícito de Migrantes (tim)
       </p>
-      <p class="animacion-up relative z-10 max-w-[970px] mr-auto ml-auto text-4xl font-bold pt-10 text-center">
+      <p class="animacion-up relative z-10 max-w-[90%] lg:max-w-[970px] mr-auto ml-auto text-xl lg:text-4xl font-bold pt-10 text-center">
         La OIM ha identificado diferentes tipos de paquetes ofertados por las redes de TIM.
          Sus precios <b class="text-[#B85600] font-black">varían según diversos factores</b> como: país de donde inicia el viaje,
           tipo de trasporte, nacionalidad de las personas migrantes, entre otros.
@@ -123,39 +128,39 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
     </div>
 
     <!-- PARTE OSCURA -->
-    <div class="parte-oscura relative seccion-slider">
+    <div class="parte-oscura relative seccion-slider hidden md:block">
       <Slider />
     </div>
 
     <!-- PARTE CLARA -->
-    <div class="parte-clara relative pt-[4rem] pb-[4rem] texto-migrantes-extra">
+    <div class="parte-clara relative pt-4 pb-4 lg:pt-[4rem] lg:pb-[4rem] texto-migrantes-extra">
       <div class="overlay z-0"></div>
-      <div class="doble-coloumna grid grid-cols-2 max-w-[1120px] ml-auto mr-auto z-10 relative font-light">
+      <div class="doble-coloumna grid grid-cols-1 md:grid-cols-2 max-w-[90%] lg:max-w-[1120px] ml-auto mr-auto z-10 relative font-light">
         <div class=" animacion-up col-izquierda p-8 border-r-[3px] border-b-[3px] border-[#45AFC0] border-dashed pr-[3.25rem] pb-[4rem]">
-          <p class="text-[28px] leading-[140%]">
+          <p class="text-[20px] lg:text-[28px] leading-[140%]">
             Las <span class="naranja font-bold">mujeres</span> suelen pagar más que los hombres por el uso del TIM
           </p>
-          <p class="font-['Formula'] text-[96px] font-bold tracking-[1.92px] naranja">
-            (19% <span class="text-[80px] tracking-[1.6px]">más</span>),
+          <p class="font-['Formula'] text-[28px] lg:text-[96px] font-bold tracking-[1.92px] naranja">
+            (19% <span class="text-[28px] lg:text-[80px] tracking-[1.6px]">más</span>),
           </p>
-          <p class="text-[28px] leading-[140%] -mt-[24px]">
+          <p class="text-[20px] lg:text-[28px] leading-[140%] mt-0 lg:-mt-[24px]">
             debido a que tienden a viajar con niñas, niños y adolescentes. Además, 
             a lo largo de su trayecto tienen mayor riesgo de ser víctimas de violencia de género.
           </p>
         </div>
-        <div class="animacion-up col-derecha p-8 border-b-[3px] border-[#45AFC0] border-dashed pl-[6.5rem]">
-          <p class="text-[28px] leading-[140%]">Con respecto a</p>
-          <p class="text-[48px] naranja font-['Formula'] tracking-[0.96px] font-bold leading-[1.2] pt-2 max-w-[350px]">niñas, niños y adolescentes (NNA),</p>
-          <p class="text-[28px] leading-[140%]">
+        <div class="animacion-up col-derecha p-8 border-b-[3px] border-[#45AFC0] border-dashed pl-6 lg:pl-[6.5rem]">
+          <p class="text-[20px] lg:text-[28px] leading-[140%]">Con respecto a</p>
+          <p class="text-[28px] lg:text-[48px] naranja font-formula tracking-[0.96px] font-bold leading-[1.2] pt-2 max-w-[350px]">niñas, niños y adolescentes (NNA),</p>
+          <p class="text-[20px] lg:text-[28px] leading-[140%]">
             se reporta que en ciertos cruces pagan
             tarifas menores o se les permite el viaje gratuito.
           </p>
         </div>
       </div>
-      <div class="texto-migrantes max-w-[1120px] text-center font-light text-[28px] relative z-10 mr-auto ml-auto pt-[3rem]">
+      <div class="texto-migrantes max-w-[90%] lg:max-w-[1120px] text-center font-light text-[20px] lg:text-[28px] relative z-10 mr-auto ml-auto pt-[3rem]">
         <p class="animacion-up font-light  leading-[1.2]">
-          A las personas <b class="naranja font-['Formula'] text-[36px] font-bold tracking-[0.72px]">migrantes extrarregionales</b> provenientes de la República Bolivariana de
-          Venezuela, y a <b class="naranja font-['Formula'] text-[36px] font-bold tracking-[0.72px]">migrantes extracontinentales</b> de África y Asia, se les cobra tarifas más 
+          A las personas <b class="naranja font-formula text-[22px] lg:text-[36px] font-bold tracking-[0.72px]">migrantes extrarregionales</b> provenientes de la República Bolivariana de
+          Venezuela, y a <b class="naranja font-formula text-[22px] lg:text-[36px] font-bold tracking-[0.72px]">migrantes extracontinentales</b> de África y Asia, se les cobra tarifas más 
           elevadas y en dólares de los Estados Unidos de América (OIM, 2022).
         </p>
       </div>
@@ -168,9 +173,11 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
     <Cuadro titulo="Pruebas de texto" texto="Esto es un texto <b>texto</b>" creador="OIM 2019"/> 
     <Cuadro texto="Esto es un texto <b>texto</b>" />  -->
     <div class="bg-[url('/src/components/sections/section2/assets/KFS_Tijuana.webp')] min-h-[600px] w-screen bg-cover grid items-center relative">
-      <div class="grid grid-cols-12 items-center max-w-[1120px] ml-auto mr-auto gap-16">
+      <div class="grid grid-cols-12 items-center max-w-[90%] lg:max-w-[1120px] ml-auto mr-auto gap-16">
         <div class=" col-span-7 animacion-left">
-          <h1 class="font-['Formula'] text-[4.5rem] font-bold tracking-[1.56px] uppercase leading-[1.3] text-[#F6F4F3] color-title-cuadro">Cobros del crimen organizado a las redes de TIM para transitar por territorios controlados</h1>
+          <h1 class="font-formula text-[2.5rem] lg:text-[4.5rem] font-bold tracking-[1.56px] uppercase leading-[1.3] text-[#F6F4F3] color-title-cuadro">
+            Cobros del crimen organizado a las redes de TIM para transitar por territorios controlados
+          </h1>
         </div>
         <div class="col-span-5">
           <Cuadro 
@@ -187,13 +194,13 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
   </div>
 
 
-  <div class=" bg-[#333] text-[1.75rem] font-light pt-[13rem] pb-[4.75rem] min-h-[560px] relative seccion2-parte5">
+  <div class=" bg-[#333] text-[1rem] lg:text-[1.75rem] font-light pt-[13rem] pb-[4.75rem] min-h-[560px] relative seccion2-parte5">
     <AudioPlayer
         src="/audios/Audio3_op3.mp3" 
         title="Las redes de tráfico marcan a las personas migrantes para identificarlas." 
         subtitle="Extracto de entrevista a una persona funcionaria de la sociedad civil." 
       />
-      <div class="textos max-w-[1120px] mr-auto ml-auto blanco animacion-up">
+      <div class="textos max-w-[90%] lg:max-w-[1120px] mr-auto ml-auto blanco animacion-up">
         <p class="pb-12">
           La OIM identificó que ciertas redes de Tráfico Ilícito de Migrantes operan en las mismas zonas que las redes de
           crimen organizado, por lo que <b class="naranja4 font-bold">comparten territorios o rutas.</b>
@@ -208,9 +215,9 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
   </div>
   
   <div class="pt-16 pb-16 section-acordeon seccion2-parte6 bg-fixed" style={`background-image: url('${Textura2_3.src}')`}>
-    <div class="max-w-[1120px] mr-auto ml-auto text-center text-[1.75rem] animacion-up">
+    <div class="max-w-[80%] lg:max-w-[1120px] mr-auto ml-auto text-center text-[1rem] lg:text-[1.75rem] animacion-up">
       <p class="text-center animacion-up">
-        <h1 class="text-center naranja2 font-['Formula'] text-[3rem] uppercase max-w-[1100px] mr-auto ml-auto font-bold leading-[1.2] pb-8">
+        <h1 class="text-center naranja2 font-formula text-2xl lg:text-[3rem] uppercase max-w-[1100px] mr-auto ml-auto font-bold leading-[1.2] pb-8">
           LOS MODOS DE OPERAR DEL TRÁFICO ILÍCITO DE MIGRANTES (TIM) 
           VARÍAN dependiendo dEL TIPO Y TAMAÑO DE LA OPERACIÓN, Y DEL LUGAR DONDE SE ESTÉ LLEVANDO A CABO.
         </h1>      
@@ -224,7 +231,7 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
     <Accordeon 
       title="PROMOCIÓN DEL TIM" 
       details=`
-        <p class=" text-[1.75rem] leading-[140%] font-bold text-center pb-8 mb-8">
+        <p class="text-[1rem] lg:text-[1.75rem] leading-[140%] font-bold text-center pb-8 mb-8">
           <b class="text-[#1870A0]">La difusión del Tráfico Ilícito de Migrantes (TIM)</b> 
           se realiza a través de las siguientes
           modalidades:
@@ -242,29 +249,29 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
           y mediante las tecnologías de información y comunicación, incluyendo redes sociales.
         </p>
 
-        <div class="flex flex-col max-w-[950px] mr-auto ml-auto text-[20px]">
+        <div class="flex flex-col max-w-[90%] lg:max-w-[950px] mr-auto ml-auto text-[1rem] lg:text-[20px]">
           <div class="flex flex-row items-center gap-8 pb-6 relative">
-            <img src="/sections/section2/assets/tic1.webp" alt="imagen" >
+            <img src="/sections/section2/assets/tic1.webp" alt="imagen" class="hidden md:block">
             <p class="pr-[6rem]">
               En la era de la información, la tecnología ha dado condiciones de virtualidad, inmediatez y comunicación que han sido aprovechadas por las organizaciones o las redes de crimen
               organizado adaptando sus operaciones a estas facilidades.
             </p>
-            <img src="/sections/section2/assets/lineas-derecha.webp" alt="imagen" class="absolute -right-8 top-20" >
+            <img src="/sections/section2/assets/lineas-derecha.webp" alt="imagen" class="absolute -right-8 top-20 hidden md:block" >
           </div>
 
           <div class="flex flex-row items-center gap-8 pb-6 relative">
-            <img src="/sections/section2/assets/lineas-izquierda.webp" alt="imagen" class="absolute -left-[3.5rem] top-16" >
+            <img src="/sections/section2/assets/lineas-izquierda.webp" alt="imagen" class="absolute -left-[3.5rem] top-16 hidden md:block" >
             <p class="pl-[3rem]">
               <b class="font-bold naranja3">ACTUALMENTE, ES A TRAVÉS DE LAS REDES SOCIALES POR DONDE SE DAN A CONOCER
               LA MAYORÍA DE LOS SERVICIOS DE TIM.</b> Esto se debe a la facilidad para contactar a la
               “clientela”, sin requerir la presencia física de las personas traficantes y permiten un mayor
               alcance (OIM, 2023).
             </p>
-            <img src="/sections/section2/assets/tic2.webp" alt="imagen">
+            <img src="/sections/section2/assets/tic2.webp" alt="imagen" class="hidden md:block">
           </div>
 
           <div class="flex flex-row items-center gap-8">
-            <img src="/sections/section2/assets/tic3.webp" alt="imagen" >
+            <img src="/sections/section2/assets/tic3.webp" alt="imagen" class="hidden md:block">
             <p>
               Facebook y TikTok son las redes sociales más utilizadas para la promoción de servicios de TIM.
             </p>
@@ -283,12 +290,14 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
   </div>
 
 
-  <div class=" bg-[#333] text-[1.75rem] font-light pt-[4rem] pb-[4rem] min-h-[560px] relative flex flex-row items-center seccion2-parte7">
+  <div class=" bg-[#333] text-[1.2rem] lg:text-[1.75rem] font-light pt-[4rem] pb-[4rem] min-h-[560px] relative flex flex-row items-center seccion2-parte7">
  
-      <div class="textos max-w-[1120px] mr-auto ml-auto blanco animacion-left">
+      <div class="textos max-w-[90%] lg:max-w-[1120px] mr-auto ml-auto blanco animacion-left">
         <hr class="text-[#FFC999] pb-12">
         <p>
-          <h1 class="text-[#FFC999] text-[4.5rem] font-bold font-['Formula'] tracking-[1.52px] leading-[1.2] ">VULNERABILIDADES ESTRUCTURALES EN LAS ZONAS FRONTERIZAS Y DE TRÁNSITO</h1>
+          <h1 class="text-[#FFC999] text-[2.5rem] lg:text-[4.5rem] font-bold font-['Formula'] tracking-[1.52px] leading-[1.2] ">
+            VULNERABILIDADES ESTRUCTURALES EN LAS ZONAS FRONTERIZAS Y DE TRÁNSITO
+          </h1>
         </p>
         <p>
           Los escenarios donde operan en mayor cantidad las redes de Tráfico Ilícito de Migrantes son zonas caracterizadas
@@ -300,10 +309,12 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
   </div>
 
   <!-- SECTIONS POPUPS -->
-  <div class="w-screen h-screen bg-[#333] relative grid grid-cols-2 seccion2-parte8">
+  <div class="w-screen lg:h-screen bg-[#333] relative grid grid-cols-1 lg:grid-cols-2 seccion2-parte8">
     <div class="img-izquierda bg-[#0000006b] bg-[url('/src/components/sections/section2/assets/img-izquierda.webp')] bg-cover flex flex-row items-end gap-8 pb-12  hover:bg-blend-color">
       <div class="max-w-[700px] ml-auto pl-8 cursor-pointer" id="interaccion-izquierda">
-        <h1 class="blanco font-['Inika'] text-[3rem] pr-[5rem] font-bold leading-[1.2] pb-8 animacion-left">El rol de las mujeres en el Tráfico Ilícito de Migrantes</h1>
+        <h1 class="blanco font-['Inika'] text-[2rem] lg:text-[3rem] pr-[5rem] font-bold leading-[1.2] pb-2 lg:pb-8 animacion-left pt-8 lg:pt-0">
+          El rol de las mujeres en el Tráfico Ilícito de Migrantes
+        </h1>
         <Image src={interaccion} alt="Interacción" class="pb-8 mr-auto ml-auto cursor-pointer" />
       </div>
       <div class="popup fixed" id="popup-izquierda">
@@ -312,7 +323,7 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
             <path d="M9.15865 51.5786C6.29334 48.8112 4.00787 45.5009 2.4356 41.8408C0.863334 38.1807 0.0357472 34.2441 0.0011327 30.2607C-0.0334818 26.2773 0.725569 22.3269 2.234 18.64C3.74242 14.9531 5.97002 11.6036 8.7868 8.7868C11.6036 5.97002 14.9531 3.74242 18.64 2.234C22.3269 0.725569 26.2773 -0.0334818 30.2607 0.0011327C34.2441 0.0357472 38.1807 0.863334 41.8408 2.4356C45.5009 4.00787 48.8112 6.29334 51.5786 9.15865C57.0434 14.8167 60.0672 22.3948 59.9989 30.2607C59.9305 38.1266 56.7754 45.651 51.2132 51.2132C45.651 56.7754 38.1266 59.9305 30.2607 59.9989C22.3948 60.0672 14.8167 57.0434 9.15865 51.5786ZM34.5686 30.3686L43.0586 21.8786L38.8286 17.6486L30.3686 26.1386L21.8786 17.6486L17.6486 21.8786L26.1386 30.3686L17.6486 38.8586L21.8786 43.0886L30.3686 34.5986L38.8586 43.0886L43.0886 38.8586L34.5986 30.3686H34.5686Z" fill="#F6F4F3"/>
           </svg>
         </span>
-        <div class="bg-[url('/src/components/sections/section2/assets/img-izquierda.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
+        <div class="bg-[url('/src/components/sections/section2/assets/img-izquierda.webp')] bg-cover grid  lg:grid-cols-12 w-screen h-screen">
           <div class="col-span-7 flex items-center max-h-[100vh] bg-[#0000007d]">
             <Image src={imgIzquierda} alt="" class=" object-contain mr-auto ml-auto max-h-full" />
           </div>
@@ -335,7 +346,9 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
     </div>
     <div class="transition-all ease-in-out delay-150 img-derecha bg-[#0000006b] bg-[url('/src/components/sections/section2/assets/img-derecha.webp')] bg-cover flex flex-row items-end gap-8 pb-12 hover:bg-blend-color">
       <div class="max-w-[700px] mr-auto pr-8 cursor-pointer" id="interaccion-derecha">
-        <h1 class="blanco font-['Inika'] text-[3rem] pl-[5rem] font-bold leading-[1.2] pb-8 animacion-right" >Las niñas, niños y adolescentes en el Tráfico Ilícito de Migrantes</h1>
+        <h1 class="blanco font-['Inika'] text-[2rem] lg:text-[3rem] pl-6 lg:pl-[5rem] font-bold leading-[1.2] pb-8 animacion-right pt-8 lg:pt-0" >
+          Las niñas, niños y adolescentes en el Tráfico Ilícito de Migrantes
+        </h1>
        <Image src={interaccion} alt="" class="pb-8 mr-auto ml-auto cursor-pointer"  />
       </div>
       
@@ -343,7 +356,7 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
         contenido=
         `
           <div class="bg-[url('/src/components/sections/section2/assets/img-izquierda.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
-            <div class="col-span-9 bg-[#B85600] blanco p-16 pt-16 pb-16 pr-[6rem] flex flex-col justify-center gap-8">
+            <div class="col-span-12 lg:col-span-9 bg-[#B85600] blanco pl-4 lg:p-16 pt-4 lg:pt-16 pb-4 lg:pb-16 pr-8 lg:pr-[6rem] flex flex-col justify-center gap-8">
               <p>
                 <h1 class="blanco font-['Inika'] text-[2rem] 2xl:text-[3rem] font-bold color-title-cuadro leading-[1.2]">
                   Las niñas, niños y adolescentes en el Tráfico Ilícito de Migrantes
@@ -368,7 +381,7 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
               </div>
             </div>
 
-            <div class="col-span-3 flex items-center max-h-[100vh] bg-[#0000007d]">
+            <div class="col-span-3 md:flex items-center max-h-[100vh] bg-[#0000007d] hidden">
               <Image src="/sections/section2/assets/img-derecha.webp" alt="" class=" object-cover mr-auto ml-auto max-h-full h-screen" />
             </div>
           </div>
@@ -383,19 +396,19 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
 
   <!-- SECTIONS PRINCIPALES RUTAS -->
    <div class="bg-[#F6F4F3] min-h-screen pt-20 pb-20 seccion2-parte9">
-    <div class="max-w-[1100px] mr-auto ml-auto text-center text-[1.75rem]">
+    <div class="max-w-[90%] lg:max-w-[1100px] mr-auto ml-auto text-center text-[1rem] lg:text-[1.75rem]">
       <p>
-        <h1 class=" naranja2 font-['Inika'] font-bold leading-normal text-[3rem] pb-20 animacion-left">
+        <h1 class=" naranja2 font-['Inika'] font-bold leading-normal text-[1.5rem] lg:text-[3rem] pb-8 lg:pb-20 animacion-left">
           Principales rutas del Tráfico Ilícito de Migrantes (TIM) identificadas en América Central, México y la República Dominicana
         </h1>
       </p>
-      <p class="pb-20 animacion-right">
+      <p class="pb-8 lg:pb-20 animacion-right">
         Las principales rutas de TIM en la región se hacen por vía aérea, marítima y terrestre 
         <b class="font-bold naranja3">e incluyen cruces fronterizos oficiales, y no oficiales</b> (UNODC, 2018).
       </p>
     </div>
     <div class="bg-[url('/src/components/sections/section2/assets/KFS_Tijuana2.webp')] min-h-[800px] w-screen bg-cover grid items-center cuadro-amarillo relative">
-      <div class="max-w-[1120px] mr-auto ml-auto w-full">
+      <div class="max-w-[90%] lg:max-w-[1120px] mr-auto ml-auto w-full ">
         <Cuadro 
             titulo='<b class="text-[#B85600] ">¿Qué es un hub en el Tráfico Ilícito de Migrantes"?</b>' 
             texto=`Un <b>“hub”</b> en el Tráfico Ilícito de Migrantes (TIM) es un lugar donde coinciden las personas que ofrecen el servicio de
@@ -409,7 +422,7 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
 
     </div>
 
-    <div class="max-w-[1120px] mr-auto ml-auto text-center text-[2rem] font-bold leading-[140$] pt-20 animacion-up">
+    <div class="max-w-[90%] lg:max-w-[1120px] mr-auto ml-auto text-center text-[1rem] lg:text-[2rem] font-bold leading-[140%] pt-20 animacion-up">
       <p>Algunas rutas inician en Sudamérica, otras en Centroamérica a las que se suman personas
         migrantes provenientes desde Asia, África y Europa que tienen como destino la región de Norteamérica.</p>
     </div>
@@ -433,14 +446,14 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
   
     <!-- Seccion Lista Eleccion de rutas -->
     <div class="bg-[#F6F4F3] pt-12 pb-20 seccion2-parte10">
-      <div class="max-w-[1200px] mr-auto ml-auto">
+      <div class="max-w-[90%] lg:max-w-[1200px] mr-auto ml-auto">
         <hr class="max-w-[1210px] text-[#E06900] border-t-[3px]">
-          <h1 class="naranja3 font-['Formula'] font-bold tracking-[0.88px] leading-[140%] text-[2.7rem] pt-[2rem] pb-[1.5rem] text-center animacion-right">
+          <h1 class="naranja3 font-['Formula'] font-bold tracking-[0.88px] leading-[140%] text-[1.5rem] lg:text-[2.7rem] pt-[2rem] pb-[1.5rem] text-center animacion-right">
             La elección de las rutas
             migratorias depende de los siguientes factores:
           </h1>
 
-        <ul class="text-[1.75rem] leading-[140%] max-w-[1000px] mr-auto ml-auto">
+        <ul class="text-[1rem] lg:text-[1.75rem] leading-[140%] max-w-[1000px] mr-auto ml-auto">
           <li class="flex gap-[0.5rem] items-center animacion-left">
             <Image src={vectorLi} alt="" />
             El país desde donde se inicia el tránsito migratorio
@@ -502,6 +515,8 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
     cursor: pointer;
     font-size: 20px;
   }
+
+  
 </style>
 
 <script>

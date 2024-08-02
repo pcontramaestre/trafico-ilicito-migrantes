@@ -22,12 +22,12 @@ import luz from "./assets/luz1.png";
       <Image src={logos} alt="Corett y OIM"  />
       <!-- <Image src={logoOim} alt="OIM" /> -->
     </div>
-    <div class="titulo-seccion pl-24 z-20">
-      <div class="text-[62px] font-bold font-['Inika'] azul6 z-10">
+    <div class="titulo-seccion pl-12 lg:pl-24 z-20">
+      <div class="text-[40px] lg:text-[62px] font-bold font-['Inika'] azul6 z-10">
         Voces y datos del
       </div>
       <div
-        class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none flex flex-col mt-6"
+        class="z-10 text-[50px] lg:text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none flex flex-col mt-6"
       >
         <span>Tráfico Ilícito</span><span>de Migrantes</span>
       </div>
@@ -56,13 +56,13 @@ import luz from "./assets/luz1.png";
       loading="lazy"
     />
   </div>
-  <div class="w-screen h-auto relative -z-10 parte2">
-    <div class="w-[811px] text-center absolute font-sans text-4xl font-bold z-50 pl-24 flotante-texto">
-      <span class="blanco text-[36px]">El Tráfico Ilícito de Migrantes (TIM) se entiende como la </span>
-      <span class="uppercase azulclaro font-extrabold">facilitación de la entrada irregular de una persona en un Estado</span>
-      <span class="blanco text-[36px]"> del cual dicha persona no es nacional ni residente permanente con el fin de obtener, directa o indirectamente, un </span>
-      <span class="azulclaro font-semibold">beneficio financiero u otro beneficio de orden material</span>
-      <span class="blanco text-[36px] font-light">(OIM, 2019).</span></div>
+  <div class="w-screen h-auto relative z-20 lg:-z-10 parte2">
+    <div class="w-[90%] lg:w-[811px] text-center absolute font-sans text-base lg:text-4xl font-bold z-50 pl-4 lg:pl-24 flotante-texto">
+      <span class="blanco text-[16px] lg:text-[36px]">El Tráfico Ilícito de Migrantes (TIM) se entiende como la </span>
+      <span class="uppercase azulclaro font-extrabold text-[16px] lg:text-[36px]">facilitación de la entrada irregular de una persona en un Estado</span>
+      <span class="blanco text-[16px] lg:text-[36px]"> del cual dicha persona no es nacional ni residente permanente con el fin de obtener, directa o indirectamente, un </span>
+      <span class="azulclaro font-semibold text-[16px] lg:text-[36px]">beneficio financiero u otro beneficio de orden material</span>
+      <span class="blanco text-[20px] lg:text-[36px] font-light">(OIM, 2019).</span></div>
     <Image src={rectanguloGris} alt="Fondo" class="w-screen h-auto background-gray" />
   </div>
 </section>
@@ -71,89 +71,95 @@ import luz from "./assets/luz1.png";
   
   // Inicializar ScrollMagic cuando el documento esté listo
   document.addEventListener("DOMContentLoaded", () => {
-    // Crear un controlador de ScrollMagic
-    const controller = new ScrollMagic.Controller({
-      globalSceneOptions: {
-        triggerHook: "onLeave",
-        duration: "200%", // Duración para evitar errores visuales
-      },
-    });
+    function isScreenWidthGreaterThan800() {  
+      return window.innerWidth > 800;  
+    }  
 
-    const imgLuz = document.querySelectorAll(".img-luz");
-    const controllerSeccion1A = new ScrollMagic.Controller();
+    if (isScreenWidthGreaterThan800()) { 
 
-    // Pinear el div con la clase "parte1"
-    new ScrollMagic.Scene({
-      triggerElement: ".parte1",
-      triggerHook: "onLeave",
-      duration: "200",
-      tweenChanges: true,
-    })
-      .setTween(
-        TweenMax.staggerFromTo(
-          [".img-mujer", ".img-adolescente", ".img-hombre"],
-          1,
-          {
-            brightness: 70,
-            x: "-20%",
-            opacity: 0,
+        // Crear un controlador de ScrollMagic
+        const controller = new ScrollMagic.Controller({
+          globalSceneOptions: {
+            triggerHook: "onLeave",
+            duration: "200%", // Duración para evitar errores visuales
           },
-          {
-            brightness: 100,
-            x: "3%",
-            opacity: 1,
-          },
-        ).concat(TweenMax.staggerFromTo(
-        [".img-luz"],
-        1, {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-        }
+        });
 
-        ))
-      )
-      .setPin(".parte1")
-      .addTo(controller);
+        const imgLuz = document.querySelectorAll(".img-luz");
+        const controllerSeccion1A = new ScrollMagic.Controller();
 
+        // Pinear el div con la clase "parte1"
+        new ScrollMagic.Scene({
+          triggerElement: ".parte1",
+          triggerHook: "onLeave",
+          duration: "200",
+          tweenChanges: true,
+        })
+          .setTween(
+            TweenMax.staggerFromTo(
+              [".img-mujer", ".img-adolescente", ".img-hombre"],
+              1,
+              {
+                brightness: 70,
+                x: "-20%",
+                opacity: 0,
+              },
+              {
+                brightness: 100,
+                x: "3%",
+                opacity: 1,
+              },
+            ).concat(TweenMax.staggerFromTo(
+            [".img-luz"],
+            1, {
+              opacity: 0,
+            },
+            {
+              opacity: 1,
+            }
 
-    new ScrollMagic.Scene({
-      triggerElement: ".parte1",
-      triggerHook: "onLeave",
-      duration: "120%",
-      tweenChanges: true,
-    })
-      .setTween(
-        TweenMax.staggerFromTo(
-          [".titulo-seccion"],
-          1,
-          {
-            x: "-100%",
-            opacity: 0,
-          },
-          {
-            x: "0%",
-            opacity: 1,
-          },
-        )
-      )
-      .addTo(controllerSeccion1A);
-
-    
-
-    // EFECTO PARA TEXTO FLOTANTE DE LA PARTE 2
-    new ScrollMagic.Scene({
-							triggerElement: ".parte2",
-							triggerHook: 0.7, // show, when scrolled 10% into view
-							duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
-							offset: -300, // move trigger to center of element
-              triggerHook: "onLeave",
-						})
-						.setClassToggle(".flotante-texto", "visible") // add class to reveal
-						.addTo(controllerSeccion1A);
+            ))
+          )
+          .setPin(".parte1")
+          .addTo(controller);
 
 
+        new ScrollMagic.Scene({
+          triggerElement: ".parte1",
+          triggerHook: "onLeave",
+          duration: "120%",
+          tweenChanges: true,
+        })
+          .setTween(
+            TweenMax.staggerFromTo(
+              [".titulo-seccion"],
+              1,
+              {
+                x: "-100%",
+                opacity: 0,
+              },
+              {
+                x: "0%",
+                opacity: 1,
+              },
+            )
+          )
+          .addTo(controllerSeccion1A);
+
+        
+
+        // EFECTO PARA TEXTO FLOTANTE DE LA PARTE 2
+        new ScrollMagic.Scene({
+                  triggerElement: ".parte2",
+                  triggerHook: 0.7, // show, when scrolled 10% into view
+                  duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
+                  offset: -300, // move trigger to center of element
+                  triggerHook: "onLeave",
+                })
+                .setClassToggle(".flotante-texto", "visible") // add class to reveal
+                .addTo(controllerSeccion1A);
+
+    }
   
   });
 </script>

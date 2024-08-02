@@ -31,6 +31,9 @@
   top: 21%;
   opacity: 0;
 }
+
+
+
 .background-gray {
   filter: drop-shadow(4px 4px 6px black);
   background: #00000047;
@@ -70,7 +73,7 @@
 
 @media (max-width:1340px) {
   .texto-animado {
-    font-size: 70px !important;
+    font-size: 60px;
   }
 }
 
@@ -172,4 +175,72 @@
   flex-direction: column;
   justify-content: center;
   background-color: rgb(0 0 0 / 85%);
+}
+
+
+@media (max-width:1024px) {
+  body {
+    width: 100vw;
+  }
+  .img-mujer {
+    position: absolute;
+    z-index: 10;
+    right: 32%;
+    max-width: 260px;
+    top: 8%;
+    /* filter: brightness(70%); */
+  }
+  .img-adolescente {
+    position: absolute;
+    z-index: 10;
+    right: 0%;
+    max-width: 375px;
+    top: 21%;
+    /* filter: brightness(70%); */
+  }
+  .img-hombre {
+    position: absolute;
+    z-index: 10;
+    right: 2%;
+    max-width: 209px;
+    top: 48%;
+    /* filter: brightness(70%); */
+  }
+  .img-luz {
+    position: absolute;
+    z-index: 10;
+    right: 0%;
+    max-width: 199px;
+    top: 21%;
+    opacity: 0;
+  }
+
+  .flotante-texto {
+    bottom: 23%;
+    opacity:1;
+    left: 0rem;
+    transform: scale(1);
+    transition: all 1s ease-in-out;
+  }
+  .texto-animado {
+    font-size: 30px;
+  }
+
+  .cuadro.cuadro1 {
+    width: 350px !important;
+    height: 350px !important;
+  }
+  
+  .cuadro.cuadro2 {
+    width: 350px;
+    height: 350px;
+  }
+  .invisible-zoom {
+    opacity: 1 !important;
+    transition: all 1s ease;
+    transform: scale(1);
+  }
+  .invisible-zoom {
+    opacity: 1 !important;
+  }
 }
