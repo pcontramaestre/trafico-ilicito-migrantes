@@ -20,15 +20,16 @@ import pasos from "@components/assets/pasos.gif"
 <section id="seccion1-2">
   <div class="titulo-animado background-azul h-auto text-center overflow-hidden ">
     <!-- Seccion de texto animado -->
-    <div class="texto-animado flex flex-col font-formula text-[80px] uppercase leading-none azul-3 p-24 font-bold tracking-[1.6px] shadow-text">
+    <div class="texto-animado text-[#25A7EF] flex flex-col font-formula text-[30px] md:text-[60px] 2xl:text-[80px] uppercase leading-none azul-3 p-24 font-bold tracking-[1.6px] shadow-text">
       <span>El Tráfico Ilícito de Migrantes (TIM) es un</span>
-      <spand>elito contra los estados que pone en riesgo </spand>
+      <spand>Delito contra los estados que pone en riesgo </spand>
       <span>a las personas migrantes en tránsito</spand>
     </div>
 
     <!-- Seccion con dos cuadros informativos -->
     <div class="con-cuadros relative">
-      <div class="cuadro1 cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute left-[10%] top-[10%]">
+
+      <div class="cuadro1 cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute left-[10%] top-[10%] xl:top-[5%] xl:left-[5%] 2xl:top-[10%] 2xl:left-[10%]">
         <div class="borde borde-sup-izq absolute"></div>
         <div class="borde borde-sup-der absolute"></div>
         <div class="borde borde-inf-izq absolute"></div>
@@ -42,7 +43,7 @@ import pasos from "@components/assets/pasos.gif"
         <div class="creador">(OIM, 2019)</div>
       </div>
       
-      <div class="cuadro2 cuadro flex flex-col text-[22px] font-sans justify-center p-12 gap-4 absolute right-[10%] bottom-[5%]">
+      <div class="cuadro2 cuadro flex flex-col text-[22px] font-sans justify-center p-12 gap-4 absolute right-[10%] bottom-[5%] xl:bottom-[15%] 2xl:bottom-[5%]">
         <div class="borde borde-sup-izq absolute"></div>
         <div class="borde borde-sup-der absolute"></div>
         <div class="borde borde-inf-izq absolute"></div>
@@ -56,6 +57,7 @@ import pasos from "@components/assets/pasos.gif"
         </div>
         <div class="creador">(OIM, 2019)</div>
       </div>
+
     </div>
     <div class="animate-grafico"></div>
     <!-- Seccion con grafico -->
@@ -64,7 +66,7 @@ import pasos from "@components/assets/pasos.gif"
         <Image src={grafico} alt="grafico" class="mt-11"/>
         <Image src={pasos} alt="grafico" class=" absolute top-0 left-0 z-10" />
       </div>
-      <div class="derecha texto max-w-[30%] blanco p-8 text-left text-[28px] font-light text-[#F6F4F3]">
+      <div class="derecha texto max-w-[30%] lg:max-w-[40%] 2xl:max-w-[40%] blanco p-8 text-left text-[28px] font-light text-[#F6F4F3]">
         <p>
           Según el 
           <span class=" italic">Boletín de datos sobre migración en tránsito por las Américas</span>

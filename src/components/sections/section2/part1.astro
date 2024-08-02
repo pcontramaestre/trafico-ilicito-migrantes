@@ -30,7 +30,7 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
   <!-- BANNER PRINCIPAL -->
   <div class="w-screen h-screen parte1 flex flex-col justify-end banner-principal relative">
     <div class="degradado-banner absolute w-screen h-screen"></div>
-    <div class="titulo-seccion z-10 w-screen text-left pb-36 pl-[6rem]">
+    <div class="titulo-seccion z-20 w-screen text-left pb-36 pl-[6rem]">
       <div class="text-[62px] font-bold font-serif azul6 z-10 mb-4">
         Modos de operación de las redes de
       </div>
@@ -38,8 +38,8 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
         Tráfico Ilícito de Migrantes
       </div>
     </div>
-    <Image src={mano1} alt="" class=" absolute left-[15%] top-0 z-10 manobanner1" />
-    <Image src={mano2} alt="" class=" absolute right-0 top-1/4 z-10 manobanner2"/>
+    <Image src={mano1} alt="" class=" absolute left-[15%] top-0 z-10 manobanner1 max-w-[500px] h-auto 2xl:max-w-[621px]" />
+    <Image src={mano2} alt="" class=" absolute right-0 top-1/4 z-10 manobanner2 max-w-[550px] h-auto 2xl:max-w-[678px]"/>
     <Image src={redgif} alt="" class=" absolute top-0 left-0 w-[100%] z-[1]"/>
   </div>
 
@@ -306,7 +306,7 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
         <h1 class="blanco font-['Inika'] text-[3rem] pr-[5rem] font-bold leading-[1.2] pb-8 animacion-left">El rol de las mujeres en el Tráfico Ilícito de Migrantes</h1>
         <Image src={interaccion} alt="Interacción" class="pb-8 mr-auto ml-auto cursor-pointer" />
       </div>
-      <div class="popup" id="popup-izquierda">
+      <div class="popup fixed" id="popup-izquierda">
         <span class="close-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
             <path d="M9.15865 51.5786C6.29334 48.8112 4.00787 45.5009 2.4356 41.8408C0.863334 38.1807 0.0357472 34.2441 0.0011327 30.2607C-0.0334818 26.2773 0.725569 22.3269 2.234 18.64C3.74242 14.9531 5.97002 11.6036 8.7868 8.7868C11.6036 5.97002 14.9531 3.74242 18.64 2.234C22.3269 0.725569 26.2773 -0.0334818 30.2607 0.0011327C34.2441 0.0357472 38.1807 0.863334 41.8408 2.4356C45.5009 4.00787 48.8112 6.29334 51.5786 9.15865C57.0434 14.8167 60.0672 22.3948 59.9989 30.2607C59.9305 38.1266 56.7754 45.651 51.2132 51.2132C45.651 56.7754 38.1266 59.9305 30.2607 59.9989C22.3948 60.0672 14.8167 57.0434 9.15865 51.5786ZM34.5686 30.3686L43.0586 21.8786L38.8286 17.6486L30.3686 26.1386L21.8786 17.6486L17.6486 21.8786L26.1386 30.3686L17.6486 38.8586L21.8786 43.0886L30.3686 34.5986L38.8586 43.0886L43.0886 38.8586L34.5986 30.3686H34.5686Z" fill="#F6F4F3"/>
@@ -318,15 +318,15 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
           </div>
           <div class="col-span-5 bg-[#B85600] blanco p-16 pt-16 pb-16 pr-[6rem] flex flex-col justify-center gap-8">
             <p>
-              <h1 class="blanco font-['Inika'] text-[3rem] font-bold color-title-cuadro leading-[1.2]">
+              <h1 class="blanco font-['Inika'] text-[2rem] 2xl:text-[3rem] font-bold color-title-cuadro leading-[1.2]">
                 El rol de las mujeres en el Tráfico Ilícito de Migrantes
               </h1>
             </p>
-            <p class="font-bold text-[1.5rem] leading-[140%]">
+            <p class="font-bold text-[1rem] 2xl:text-[1.5rem] leading-[140%]">
               La mayoría de las mujeres se desempeñan en roles de guías, enganchadoras, monitoras,
               coordinadoras o proveedoras de servicios (OIM y UNODC, 2024).
             </p>
-            <p class="text-[1.5rem] leading-[140%] text-[#FFD976] font-medium">
+            <p class="text-[1rem] 2xl:text-[1.5rem] leading-[140%] text-[#FFD976] font-medium">
               Muchas de estas mujeres se encuentran en <b class="font-extrabold">SITUACIÓN DE VULNERABILIDAD</b> socioeconómica, lo cual potencia su vinculación en actividades del Tráfico Ilícito de Migrantes.
             </p>
           </div>
@@ -345,14 +345,14 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
           <div class="bg-[url('/src/components/sections/section2/assets/img-izquierda.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
             <div class="col-span-9 bg-[#B85600] blanco p-16 pt-16 pb-16 pr-[6rem] flex flex-col justify-center gap-8">
               <p>
-                <h1 class="blanco font-['Inika'] text-[3rem] font-bold color-title-cuadro leading-[1.2]">
+                <h1 class="blanco font-['Inika'] text-[2rem] 2xl:text-[3rem] font-bold color-title-cuadro leading-[1.2]">
                   Las niñas, niños y adolescentes en el Tráfico Ilícito de Migrantes
                 </h1>
               </p>
-              <p class="font-bold text-[1.5rem] leading-[140%]">
+              <p class="font-bold text-[1rem] 2xl:text-[1.5rem] leading-[140%]">
                 Las personas menores de edad son cada vez más suceptibles a ser reclutadas por las redes de Tráfico Ilícito de Migrantes, para apoyar en sus operaciones en actividades como ser guías, funcionar de enganche, monitoreo y para facilitar el transporte (OIM y UNODC, 2024).
               </p>
-              <p class="text-[1.5rem] leading-[140%] text-[#FFD976] font-bold">
+              <p class="text-[1rem] 2xl:text-[1.5rem] leading-[140%] text-[#FFD976] font-bold">
                 CADA VEZ MÁS SE PUEDE IDENTIFICAR EL INVOLUCRAMIENTO DE NIÑAS, NIÑOS Y ADOLESCENTES ESPECIALMENTE EN COMUNIDADES CON ESCASAS OPORTUNIDADES DE ESTUDIO O TRABAJO.
               </p>
               

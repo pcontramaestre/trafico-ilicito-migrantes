@@ -97,7 +97,7 @@
     new ScrollMagic.Scene({
       triggerElement: "#pinslider",
       triggerHook: 0,
-      duration: "50%"
+      duration: "100%"
     })
       .setPin("#pinslider")
       .setTween(wipeAnimation)

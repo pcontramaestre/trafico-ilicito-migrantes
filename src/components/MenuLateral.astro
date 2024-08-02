@@ -35,7 +35,7 @@ import link from "@components/assets/link.svg"
 
 ---
 
-<div class="menu-lateral fixed z-[9998] right-2 top-[30%] flex flex-col gap-4">
+<div class="menu-lateral fixed z-[9998] right-2 top-[25%] flex flex-col gap-4">
   <div class="menu" title="Menú" data-tooltip-placement="left">
     <Image src={menu} alt="Menú" class="cursor-pointer" id="imenu"/>
   </div>
@@ -154,7 +154,7 @@ import link from "@components/assets/link.svg"
   contenido= `
     <div 
   class="w-screen h-screen bg-cover flex items-center flex-col justify-center gap-4 relative" style="background-image: url('${fondoAyuda.src}">
-  <Image src=${logos.src} alt="Logo" class=" absolute top-[3vh] left-[4vw]"/>
+  <Image src=${logos.src} alt="Logo" class=" absolute top-[3vh] left-[4vw] hidden lg:max-w-[240px] lg:block"/>
   <h1 class="text-center text-[#80CFFF] font-formula text-[30px] md:text-[70px] font-bold tracking-[1.56px] uppercase leading-[1.1]">
     ¿CÓMO NAVEGAR ESTE SITIO?
   </h1>

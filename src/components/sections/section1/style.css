@@ -2,7 +2,7 @@
 .img-mujer {
   position: absolute;
   z-index: 10;
-  right: 37%;
+  right: 32%;
   max-width: 460px;
   top: 10%;
   /* filter: brightness(70%); */
@@ -10,7 +10,7 @@
 .img-adolescente {
   position: absolute;
   z-index: 10;
-  right: 7%;
+  right: 3%;
   max-width: 575px;
   top: 21%;
   /* filter: brightness(70%); */
@@ -18,7 +18,7 @@
 .img-hombre {
   position: absolute;
   z-index: 10;
-  right: 0%;
+  right: 2%;
   max-width: 409px;
   top: 48%;
   /* filter: brightness(70%); */
@@ -64,7 +64,7 @@
   background: var(--Azul, #014979);
 }
 .texto-animado {
-  color: #1870A0;
+  color: #25A7EF;
   letter-spacing: 1.6px;
 }
 
@@ -76,6 +76,8 @@
 
 .con-cuadros {
   background: url(/src/components/sections/section1/assets/KFS_Tijuana002.webp) #d3d3d300 0px -100.659px / 100% 118.533% no-repeat;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
 }
 

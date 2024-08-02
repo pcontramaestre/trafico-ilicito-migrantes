@@ -161,18 +161,18 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
   triggerElement: "#seccion5 .seccion5-parte5",
   triggerHook: 0,
-  duration: "200%",
+  duration: "450%",
   tweenChanges: true,
 })
 .setTween(
   TweenMax.staggerFromTo(
     ["#seccion5 .seccion5-parte5 .imagen-ancha"],
-    2,
+    1,
     {
       x:"0%",
     },
     {
-      x:"-70%",
+      x:"-80%",
     },
   )
 )

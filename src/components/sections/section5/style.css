@@ -12,8 +12,15 @@
 .cuadro.cuadro1-ventanillas {
   width: 463px;
   height: 499px;
-}
 
+  
+}
+@media screen and (max-width: 1350px) {
+  .cuadro.cuadro1-ventanillas {
+    width: 430px;
+    height: 430px;
+  }
+}
 .cuadro.cuadro1-retorno {
   width: 583px; 
   height: 453px;
