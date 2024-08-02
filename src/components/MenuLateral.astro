@@ -47,10 +47,10 @@ import link from "@components/assets/link.svg"
   <div class="ayuda"  title="Ayuda" data-tooltip-placement="left">
     <Image src={ayuda} alt="Ayuda" class="cursor-pointer" id="iayuda"/>
   </div>
-  <button id="reproducir" class="audio pt-[10rem]">
+  <button id="reproducirInicio" class="audio pt-[10rem]">
     <Image src={audioPlay} alt="Ayuda" class="cursor-pointer max-w-[56px]" id="reproducir"/>
   </button>
-  <audio id="audio" src="/audios/Audio1_op2.mp3"></audio>  
+  <audio id="audioInicio" src="/audios/Audio1_op2.mp3"></audio>  
 </div>
 
 
@@ -235,22 +235,74 @@ import link from "@components/assets/link.svg"
 
 <script>  
   document.addEventListener("DOMContentLoaded", () => {  
-      const reproducirBtn = document.getElementById("reproducir");  
-      const audioElement = document.getElementById("audio");  
+      const reproducirBtn = document.getElementById("reproducirInicio");  
+      var audioElementInicio = document.getElementById("audioInicio"); 
 
-      let isPlaying = false;  
+      let isPlayingInicio = false;  
 
       reproducirBtn.addEventListener("click", () => {  
-          if (!isPlaying) {  
-              audioElement.play();  
+          if (!isPlayingInicio) {  
+              audioElementInicio.play();  
               reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[56px]" alt="Detener" />';  
-              isPlaying = true;  
+              isPlayingInicio = true;  
           } else {  
-              audioElement.pause();  
-              audioElement.currentTime = 0;  
+              audioElementInicio.pause();  
+              audioElementInicio.currentTime = 0;  
               reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[56px]" alt="Reproducir" />';  
-              isPlaying = false;  
+              isPlayingInicio = false;  
           }  
       });  
+
+      audioElementInicio.addEventListener('ended', () => {  
+        // Restablecer el progreso y el botón de reproducción  
+        reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[56px]" alt="Reproducir" />';
+        isPlayingInicio = false;
+        audioElementInicio.currentTime = 0;  
+    });
+
+    const seccion2 = document.getElementById('seccion2-1');  
+
+       // Función para detectar si estamos en la sección 2  
+      function isElementInViewport(el) {  
+        const rect = el.getBoundingClientRect();  
+        //console.log(rect);
+        return (  
+            rect.top <= 0
+            //&&  
+            //rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)  
+        );  
+      } 
+
+      if (!isElementInViewport(seccion2)) {  
+        console.log("Seccion 1");
+        audioElementInicio = document.getElementById("audioInicio");
+        if (!isPlayingInicio) {
+          setTimeout(() => {  
+            reproducirBtn.click(); // Simula el clic en el botón  
+          }, 3000);
+          // audioElementInicio.muted = true;
+          // audioElementInicio.play();  
+          // reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[56px]" alt="Detener" />';  
+          // isPlayingInicio = true; 
+        }
+      }
+
+        // Evento de scroll  
+      window.addEventListener('scroll', function() {  
+          
+          // console.log(seccion2);
+          
+          if (isElementInViewport(seccion2)) {  
+            reproducirBtn.classList.add('hidden');
+            if (isPlayingInicio) {
+              audioElementInicio.pause();  
+              audioElementInicio.currentTime = 0;  
+              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[56px]" alt="Reproducir" />';
+              isPlayingInicio = false;
+            }
+          } else {  
+            reproducirBtn.classList.remove('hidden');
+          }  
+      }); 
   });  
 </script>
