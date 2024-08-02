@@ -111,7 +111,7 @@
 @media screen and (max-width:1024px){
   #pinslider {
     width: 100%;
-    height: auto; /* Use 100vh for full viewport height */
+    height: auto !important; /* Use 100vh for full viewport height */
     overflow: hidden;
     -webkit-perspective: 1000;
     perspective: 1000;
@@ -122,9 +122,9 @@
     height: auto;
   }
   .slider-seccion {
-    height: auto;
+    height: auto !important;
     width: 100%; /* relative to parent -> 50% of 200% = 100% of window width */
-    float: unset;
+    float: unset !important;
     margin-top: 4rem;
   }
 

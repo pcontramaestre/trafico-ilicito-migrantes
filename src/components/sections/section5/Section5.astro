@@ -41,24 +41,24 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
 <section id="seccion5">
   <!-- Seccion Banner - Parte 1 -->
   <div class="relative w-screen h-screen banner-seccion5 bg-[#FFEABB] bg-cover"  style={`background-image: url('${textura5.src}')`}>
-    <Image src={fondoBanner1} alt="" class="w-screen h-auto absolute top-0 left-0 fondoBanner1"/>
-    <Image src={fondoBanner2} alt="" class="w-screen h-auto absolute top-0 left-0 opacity-0 fondoBanner2" />
-    <Image src={lluvia1} alt="" class="w-screen h-auto absolute top-0 left-0 lluvia1" />
-    <Image src={lluvia2} alt="" class="w-screen h-auto absolute top-0 left-0 opacity-0 lluvia2" />
+    <Image src={fondoBanner1} alt="" class="w-screen h-auto absolute top-0 left-0 fondoBanner1 hidden lg:block"/>
+    <Image src={fondoBanner2} alt="" class="w-screen h-auto absolute top-0 left-0 opacity-100 lg:opacity-0 fondoBanner2" />
+    <Image src={lluvia1} alt="" class="w-screen h-auto absolute top-0 left-0 lluvia1 hidden lg:block" />
+    <Image src={lluvia2} alt="" class="w-screen h-auto absolute top-0 left-0  opacity-100 lg:opacity-0 lluvia2" />
     <Image src={sombrilla} alt="" class="w-[70vw] absolute top-0 left-0 sombrilla" />
-    <div class="section5-title absolute w-screen  top-[35%] right-[4%]">
-      <div class="titulo-seccion3 z-10 pb-36 pt-8  max-w-[600px] ml-auto ">
-        <div class="text-[58px] font-bold font-['Inika'] azul6 z-10 mb-4 leading-[1.1] pb-8">
+    <div class="section5-title absolute w-screen  top-[45%] lg:top-[35%] right-[4%]">
+      <div class="titulo-seccion3 z-10 pb-36 pt-8 max-w-[90%] lg:max-w-[600px] ml-auto ">
+        <div class="text-[25px] lg:text-[58px] font-bold font-['Inika'] text-[#026972] md:text-[#D6EDFF] z-10 mb-4 leading-[1.1] pb-2 lg:pb-8">
           Protección y atención <br>a personas objeto de
         </div>
-        <div class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none">
+        <div class="z-10  text-[45px] lg:text-[100px] text-[#026972] md:text-[#D6EDFF] uppercase font-['Formula'] font-bold leading-none">
           Tráfico Ilícito <br>de Migrantes
         </div>
       </div>
     </div>
   </div>
   <!-- Seccion Banner/Texto - Parte 2 -->
-  <div class="w-screen bg-[#FFEABB] bg-cover md:pt-[8rem] xl:pt-[16rem] 2xl:pt-[30rem] pb-16 banner-text-seccion5" style={`background-image: url('${textura5.src}')`}>
+  <div class="w-screen bg-[#FFEABB] bg-cover pt-[4rem] md:pt-[8rem] xl:pt-[16rem] 2xl:pt-[30rem] pb-16 banner-text-seccion5" style={`background-image: url('${textura5.src}')`}>
     <p class="max-w-[948px] w-[90%] mx-auto lg:text-[36px] text-center font-bold leading-[160%] animacion-up">
       Los Países Miembros de la Coalición Regional contra la Trata de Personas y el Tráfico Ilícito de Migrantes (CORETT), articulan acciones orientadas a
     </p>
@@ -71,11 +71,11 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
   </div>
   <!-- Seccion Cuadro de texto imagen izquierda - Parte 3 -->
   <div class="w-screen h-screen bg-[#026972] flex items-center seccion5-parte3">
-    <div class="max-w-[1200px] w-[90%] mx-auto grid grid-cols-12 relative">
-      <div class="col-span-9 relative">
-        <Image src={fondoTijuana} alt="" class="w-full h-auto imagen-izquierda"/>
+    <div class="max-w-[1200px] w-[90%] mx-auto grid lg:grid-cols-12 relative">
+      <div class="lg:col-span-9 relative">
+        <Image src={fondoTijuana} alt="" class="w-full h-auto imagen-izquierda hidden md:block"/>
         <div>
-          <div class="cuadro1 cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute -right-[20%] bottom-[5%]">
+          <div class="cuadro1 cuadro flex flex-col text-[15px] lg:text-[22px] font-sans gap-4 justify-center p-12 lg:absolute -right-[20%] bottom-[5%]">
             <div class="borde borde-sup-izq absolute"></div>
             <div class="borde borde-sup-der absolute"></div>
             <div class="borde borde-inf-izq absolute"></div>
@@ -91,7 +91,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
     </div>
   </div>
   <!-- SECCION TEXTO ACCIONES DE ASISTENCIA Y PROTECCION - Parte 4 -->
-  <div class="md:pt-10 lg:pt-20 md:pb-10 lg:pb-20 bg-[#ffffff] seccion5-parte4" >
+  <div class="pt-10 md:pt-10 lg:pt-20 pb-10 md:pb-10 lg:pb-20 bg-[#ffffff] seccion5-parte4" >
     <h1 class="text-[#2B6B79] font-formula font-bold max-w-[900px] w-[90%] mx-auto text-center text-5xl lg:text-7xl tracking-[1.56px] pb-9 lg:pb-[3rem]">
       ACCIONES DE ASISTENCIA Y PROTECCIÓN A LAS PERSONAS OBJETO DE TRÁFICO ILÍCITO DE MIGRANTES
     </h1>
@@ -102,13 +102,13 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
   </div>
 
   <!-- SECCION ASISTENCIA Y IDENTIFICACION - Parte 5 -->
-  <div class="md:pt-10 lg:pt-20 md:pb-10 lg:pb-20 bg-[#001D20] overflow-hidden seccion5-parte5" style={`background-image: url('${textura5_2.src}')`}>
+  <div class="md:pt-10 lg:pt-20 md:pb-10 lg:pb-20 bg-[#001D20] lg:overflow-hidden seccion5-parte5 hidden md:block" style={`background-image: url('${textura5_2.src}')`}>
     <Image src={horizontal} alt="" class="w-auto h-auto max-w-max imagen-ancha"/>
   </div>
 
   <!-- SECCION DENUNCAS - Parte 6 -->
-  <div class="md:pt-10 lg:pt-40 md:pb-10 lg:pb-10 bg-[#D6F6FA]" id="denuncias">
-    <h1 class="text-izquierda-derecha text-[#19CAE7] font-formula text-[80px] lg:text-[110px] font-bold max-w-[1200px] w-[90%] mx-auto text-center tracking-[2.32px] pb-9 lg:pb-[6rem] leading-[1.2]">
+  <div class="pt-10 lg:pt-40 pb-10 lg:pb-10 bg-[#D6F6FA]" id="denuncias">
+    <h1 class="text-izquierda-derecha text-[#19CAE7] font-formula text-[40px] lg:text-[110px] font-bold max-w-[1200px] w-[90%] mx-auto text-center tracking-[2.32px] pb-9 lg:pb-[6rem] leading-[1.2]">
       ¿QUIÉN PUEDE APOYAR EN CASOS DE TRÁFICO ILÍCITO DE MIGRANTES?
     </h1>
     <h1 class="font-formula text-[40px] lg:text-[78px] font-bold tracking-[1.56px] text-[#AA751F] text-center pb-8 animacion-up" id="denuncia">
@@ -134,9 +134,14 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
 
   <!-- SECCION VENTANILLAS INFORMATIVAS - Parte 7 -->
   <div class="bg-[#AA751F] w-screen h-screen flex items-center flex-col justify-center relative pt-4 seccion5-parte7 overflow-hidden">
-    <h1 class="text-[#F6F4F3] text-[50px] w-[90%] lg:text-[54px] xl:text-[74px] 2xl:text-[84px] text-center mx-auto font-formula font-bold texto-zquierda-derecha">VENTANILLAS INFORMATIVAS SOBRE MIGRACIÓN</h1>
-    <Image src={fondoTijuana2} alt="" class="w-screen max-h-[75vh] object-cover imagen-aparece pb-8"/>
-    <div class="cuadro1-ventanillas cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute right-[35%] lg:bottom-[20%] 2xl:bottom-[18%]">
+    <h1 class="text-[#F6F4F3] text-[35px] w-[90%] lg:text-[54px] xl:text-[74px] 2xl:text-[84px] text-center mx-auto font-formula font-bold texto-zquierda-derecha">
+      VENTANILLAS INFORMATIVAS SOBRE MIGRACIÓN
+    </h1>
+    <div class="texto max-w-[90%] mx-auto pt-8 text-[1.3rem] md:hidden">
+      Las ventanillas son centros de <b>información, asesoría directa y referenciación clara y confiable</b> sobre migración regular, servicios, protección y prevención de migración irregular, promovidas desde la OIM. Son coordinadas por diversos actores claves vinculados a la gestión de la migración tales como gobierno central, gobiernos locales, instituciones u organizaciones locales.
+    </div>
+    <Image src={fondoTijuana2} alt="" class="w-screen max-h-[75vh] object-cover imagen-aparece pb-8 hidden md:block"/>
+    <div class="cuadro1-ventanillas cuadro md:flex flex-col text-[22px] font-sans gap-4 justify-center p-12 hidden absolute right-[35%] lg:bottom-[20%] 2xl:bottom-[18%]">
       <div class="borde borde-sup-izq absolute"></div>
       <div class="borde borde-sup-der absolute"></div> 
       <div class="borde borde-inf-izq absolute"></div>
@@ -148,7 +153,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
   </div>
 
   <!-- SECCION MAPA VENTANILLAS INFORMATIVAS - Parte 8 -->
-  <div class="md:pt-10 lg:pt-24 md:pb-10 lg:pb-10 bg-[#D6F6FA]">
+  <div class="md:pt-10 lg:pt-24 md:pb-10 lg:pb-10 bg-[#D6F6FA] hidden md:block">
     <h1 class="font-serif text-[40px] lg:text-[48px] font-bold tracking-[1.56px] text-[#AA751F] text-center pb-8">
       Ventanillas informativas en los países de la CORETT
     </h1>
@@ -180,7 +185,7 @@ import enlaceOim from "@components/sections/section5/assets/CTA.svg";
   <!-- SECCION - Parte 11 -->
   <div class="w-screen bg-[#026972] pt-[90px] pb-[90px] relative h-screen seccion5-parte11">
     <Image src={fondoTijuana3} alt="" class="imagen-aparecer w-fit min-w-[100vw] object-cover absolute right-0 top-1/2 bottom-1/2 transform -translate-y-1/2"/>
-    <div class="cuadro1-retorno cuadro flex flex-col text-[22px] font-sans gap-4 justify-center p-12 absolute left-[20vw] top-1/2 transform -translate-y-1/2">
+    <div class="cuadro1-retorno cuadro flex flex-col text-base lg:text-[22px] font-sans gap-4 justify-center p-12 absolute left-[2vw] lg:left-[20vw] top-1/2 transform -translate-y-1/2">
       <div class="borde borde-sup-izq absolute"></div>
       <div class="borde borde-sup-der absolute"></div> 
       <div class="borde borde-inf-izq absolute"></div>

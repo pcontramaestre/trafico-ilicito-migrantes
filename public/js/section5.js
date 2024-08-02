@@ -1,8 +1,11 @@
 function isScreenWidthGreaterThan800() {  
   return window.innerWidth > 800;  
 }  
+function isMobile() {  
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);  
+}  
 
-if (isScreenWidthGreaterThan800()) { 
+if (!isMobile()) { 
 
   const controllerSection5A = new ScrollMagic.Controller();
   const controllerSection5B = new ScrollMagic.Controller();

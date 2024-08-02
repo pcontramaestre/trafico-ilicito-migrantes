@@ -10,7 +10,7 @@ function isScreenWidthGreaterThan800() {
   return window.innerWidth > 800;  
 }  
 
-if (isScreenWidthGreaterThan800()) { 
+if (!isMobile()) { 
       // Crear un controlador de ScrollMagic
       const controller = new ScrollMagic.Controller({
         globalSceneOptions: {

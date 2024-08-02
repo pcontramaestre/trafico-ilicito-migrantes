@@ -203,7 +203,12 @@ import transporte3 from '@components/sections/section2/assets/carro-avion.webp';
       return window.innerWidth > 800;  
     }  
 
-    if (isScreenWidthGreaterThan800()) { 
+    function isMobile() {  
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);  
+    }  
+
+
+    if (!isMobile()) { 
 
         // init
         var controllerSlider = new ScrollMagic.Controller();

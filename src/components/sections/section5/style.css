@@ -99,3 +99,11 @@
   max-height: 100vh;
   height: auto;
 }
+
+
+@media screen and (max-width: 1024px) {
+  .cuadro.cuadro1-retorno {
+    width: 95%; 
+    height: 453px;
+  }
+}

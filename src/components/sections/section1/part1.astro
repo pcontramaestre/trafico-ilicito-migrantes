@@ -75,7 +75,14 @@ import luz from "./assets/luz1.png";
       return window.innerWidth > 800;  
     }  
 
-    if (isScreenWidthGreaterThan800()) { 
+    function isMobile() {  
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);  
+    }  
+
+
+    if (!isMobile()) { 
+     
+  
 
         // Crear un controlador de ScrollMagic
         const controller = new ScrollMagic.Controller({
