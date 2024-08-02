@@ -9,6 +9,7 @@ interface Props {
 const { title, details, bandera } = Astro.props as Props;
 ---
 
+
 <div class="accordion accordeon-banderas group relative rounded-md border border-purple-900 max-w-[1120px] ml-auto mr-auto">
   <button
     class="accordion__button flex w-full flex-1 items-center justify-between gap-5 text-left font-medium transition"
@@ -17,9 +18,9 @@ const { title, details, bandera } = Astro.props as Props;
     aria-expanded="false"
     aria-controls={`${title} accordion menu content`}
   >
-    <img src={bandera} alt="Bandera" title="Bandera" class="bandera"/>
+    <img src={bandera} alt="Bandera" class="bandera max-w-[80px] lg:max-w-full"/>
 
-    <div class="pais font-formula text-[40px] font-bold tracking-[1.56px] xl:text-[78px]">{title}</div>
+    <div class="pais font-formula text-[20px] lg:text-[40px] font-bold tracking-[1.56px] xl:text-[78px]">{title}</div>
 
     <!-- if using astro and the astro-icon package -->
     <!-- <svg
@@ -90,6 +91,19 @@ const { title, details, bandera } = Astro.props as Props;
     border-radius: 50%;
     padding-top: 4px;
   } */
+
+   @media screen and (max-width: 1024px) { 
+    .accordion.accordeon-banderas {
+        padding: 5px 5px !important;
+        align-items: center;
+        gap: 24px;
+        width: 90%;
+        border: 1px solid #09436A;
+        background: #0D5F8B;
+        margin-bottom: 1.6rem;
+        transition: all 0.3s ease-in-out;
+      }
+   }
 </style>
 
 <!-- EL JAVASCRIPT SE CARGA DE LOS OTROS ACORDEONES, SINO DA UN ERROR -->

@@ -37,10 +37,10 @@ import play from "@components/sections/section7/assets/play.svg"
   <div class="relative w-screen h-screen banner-seccion7 bg-cover bg-repeat bg-bottom"  style={`background-image: url('${textura7_1.src}')`}>
     <div class="section6-title absolute w-screen top-[35%] left-[10vw] z-50">
       <div class="titulo-seccion7 z-10 pb-36 pt-8  max-w-[600px] mr-auto ">
-        <div class="text-[58px] font-bold font-['Inika'] azul6 z-10 mb-4 leading-[1.1] pb-2">
+        <div class="text-[22px] lg:text-[58px] font-bold font-['Inika'] text-[#2B6B79] lg:text-[#D6EDFF] z-10 mb-4 leading-[1.1] pb-2">
           Prevención del
         </div>
-        <div class="z-10 text-[100px] azul6 uppercase font-['Formula'] font-bold leading-none">
+        <div class="z-10 text-[45px] lg:text-[100px] text-[#2B6B79] lg:text-[#D6EDFF] uppercase font-['Formula'] font-bold leading-none">
           Tráfico Ilícito <br>de Migrantes
         </div>
       </div>
@@ -64,13 +64,13 @@ import play from "@components/sections/section7/assets/play.svg"
   </div>
   <!-- SECCION PREVENCION - Parte 3 -->
   <div class="w-screen min-h-screen bg-[#026972] pb-12" id="seccionprevencion">
-    <Image src={cursorTitulos} alt="Pase el cursos sobre los titulos" class="mx-auto pt-[73px] pb-[70px]" /> 
-    <h1 class="text-center text-[#45afc0] text-[50px] xl:text-[200px] font-bold font-formula uppercase tracking-[5.60px] titulo-prevencion relative z-0">
+    <Image src={cursorTitulos} alt="Pase el cursos sobre los titulos" class="mx-auto pt-[73px] pb-[4rem] lg:pb-[70px]" /> 
+    <h1 class="text-center text-[#45afc0] text-[50px] xl:text-[200px] font-bold font-formula uppercase tracking-[5.60px] titulo-prevencion relative z-0 mb-[4rem] md:mb-[unset]">
       PREVENCIÓN
     </h1>
-    <div class="tabs-prevencion relative z-10 max-w-[1200px] mx-auto pb-8">
+    <div class="tabs-prevencion relative z-10 max-w-[90%] lg:max-w-[1200px] mx-auto pb-8">
       <div class="tabs-detalle">
-        <div class="tabs grid grid-cols-4 max-w-[80%] mx-auto">
+        <div class="tabs grid grid-cols-4 max-w-[90%] lg:max-w-[80%] mx-auto">
           <div class="tab tab1 active col-span-1 -m-8 z-20 cursor-pointer hover:z-50">
             <Image src={tabCapacitacion} alt="" class="hover:-translate-y-5 hover:scale-110 z-50" />
           </div>
@@ -84,15 +84,15 @@ import play from "@components/sections/section7/assets/play.svg"
             <Image src={tabSensibilizacion} alt="" class="hover:-translate-y-5 hover:scale-110 z-50" />
           </div>
         </div>
-        <div class="tab-content bg-[#ffffff] -mt-8 relative z-[100]">
+        <div class="tab-content bg-[#ffffff] lg:-mt-8 relative z-[100]">
           <div class="tab-item active" data-tab="tab1">
               <div class="flex flex-row">
                 <div>
                   <Image src={icoCapacitacion} alt="" class="" />
                 </div>
                 <div class="flex flex-col justify-center p-4">
-                  <h1 class="text-[#E76464] font-formula text-[48px] font-light tracking-[0.96px] pb-4">CAPACITACIÓN</h1>
-                  <p class="max-w-[800px] text-[26px] leading-[140%]">
+                  <h1 class="text-[#E76464] font-formula text-[20px] lg:text-[48px] font-light tracking-[0.96px] pb-4">CAPACITACIÓN</h1>
+                  <p class="max-w-[800px] text-base lg:text-[26px] leading-[140%]">
                     Fortalecer las capacidades de la población sobre la normativa nacional e internacional en Tráfico Ilícito de Migrantes, para implementar procesos de <b>prevención mediante la gestión de conocimientos.</b>
                   </p>
                 </div>
@@ -104,8 +104,8 @@ import play from "@components/sections/section7/assets/play.svg"
                 <Image src={icoDifusion} alt="" class="" />
               </div>
               <div class="flex flex-col justify-center p-4">
-                <h1 class="text-[#AA751F] font-formula text-[48px] font-light tracking-[0.96px] pb-4">DIFUSIÓN</h1>
-                <p class="max-w-[800px] text-[26px] leading-[140%]">
+                <h1 class="text-[#AA751F] font-formula text-[20px] lg:text-[48px] font-light tracking-[0.96px] pb-4">DIFUSIÓN</h1>
+                <p class="max-w-[800px] text-base lg:text-[26px] leading-[140%]">
                   Proporcionar <b>información confiable y oportuna</b> sobre la incidencia 
                   del Tráfico Ilícito de Migrantes, y, contar con <b>estadísticas estratégicas 
                   y operativas</b> nacionales y regionales, como una de las principales 
@@ -113,15 +113,15 @@ import play from "@components/sections/section7/assets/play.svg"
                 </p>
               </div>
             </div>
-          </div>
+          </div> 
           <div class="tab-item" data-tab="tab3">
             <div class="flex flex-row">
               <div>
                 <Image src={icoDeteccion} alt="" class="" />
               </div>
               <div class="flex flex-col justify-center p-4">
-                <h1 class="text-[#AA751F] font-formula text-[48px] font-light tracking-[0.96px] pb-4 uppercase">Detección/derivación</h1>
-                <p class="max-w-[800px] text-[26px] leading-[140%]">
+                <h1 class="text-[#AA751F] font-formula text-[20px] lg:text-[48px] font-light tracking-[0.96px] pb-4 uppercase">Detección/derivación</h1>
+                <p class="max-w-[800px] text-base lg:text-[26px] leading-[140%]">
                   Referencia o derivación a entidades competentes para la <b>identificación y atención inmediata</b> de las personas objeto del Tráfico Ilícito de Migrantes.
                 </p>
               </div>
@@ -133,8 +133,8 @@ import play from "@components/sections/section7/assets/play.svg"
                 <Image src={icoSencibilizacion} alt="" class="" />
               </div>
               <div class="flex flex-col justify-center p-4">
-                <h1 class="text-[#E06900] font-formula text-[48px] font-light tracking-[0.96px] pb-4 uppercase">SENSIBILIZACIÓN</h1>
-                <p class="max-w-[800px] text-[26px] leading-[140%]">
+                <h1 class="text-[#E06900] font-formula text-[20px] lg:text-[48px] font-light tracking-[0.96px] pb-4 uppercase">SENSIBILIZACIÓN</h1>
+                <p class="max-w-[800px] text-base lg:text-[26px] leading-[140%]">
                   Generar mayor <b>interés y conciencia</b> sobre el Tráfico Ilícito de Migrantes y sobre la necesidad de generar normativa nacional, así como contar con recursos financieros y humanos para la prevención y combate del delito.
                 </p>
               </div>
