@@ -3,6 +3,13 @@
     min-height: 100vh;
 }
 
+@media screen and (max-width: 1024px) {
+  .banner-principal {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 .degradado-banner {
   background: linear-gradient(90deg, #0000008f 10%, transparent 90.5%);
 }
