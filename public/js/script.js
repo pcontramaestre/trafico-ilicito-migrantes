@@ -251,20 +251,21 @@ if (!isMobile()) {
                 x: "0%",
               },
             )
-          ).concat(
-            TweenMax.staggerFromTo(
-              [".banner-principal .titulo-seccion"],
-              0.1,
-              {
-                opacity: 0.1,
-                y: "35%",
-              },
-              {
-                opacity: 1,
-                y: "0%",
-              },
-            )
           )
+          // .concat(
+          //   TweenMax.staggerFromTo(
+          //     [".banner-principal .titulo-seccion"],
+          //     0.1,
+          //     {
+          //       opacity: 0.1,
+          //       y: "35%",
+          //     },
+          //     {
+          //       opacity: 1,
+          //       y: "0%",
+          //     },
+          //   )
+          // )
         )
         .setPin("#seccion2-1 .banner-principal")
         .addTo(controller);
