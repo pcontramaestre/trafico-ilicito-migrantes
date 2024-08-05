@@ -277,10 +277,12 @@ import link from "@components/assets/link.svg"
       if (!isElementInViewport(seccion2)) {  
         
         if (!isPlayingInicio) {
+          console.log("Autoplay ejecutando al inicio")
           reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[35px] md:max-w-[56px]" alt="Detener" />';  
           isPlayingInicio = true; 
         }
       } else {
+        console.log("Seccion 2 en adelante")
         audioElementInicio.pause();  
         audioElementInicio.currentTime = 0;  
         reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[56px]" alt="Reproducir" />';
