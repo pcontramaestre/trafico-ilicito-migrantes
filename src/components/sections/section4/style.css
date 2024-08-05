@@ -95,8 +95,9 @@
 }
 
 #info-voces .info-content {
-  max-width: 900px;
+  max-width: 1000px;
   top: -50%;
+  width: 100%;
 }
 
 #info-voces .info-content .content {
@@ -141,5 +142,54 @@
   }
   #seccion4 .accordion__button{
     font-size: 20px;
+  }
+  .div-principales-riesgos .background-lineas{
+    background-image: none !important;
+    padding-top: 3rem;
+  }
+  .div-principales-riesgos .background-lineas > span {
+    display:none;
+  }
+  .div-principales-riesgos .background-lineas > h1 >span {
+    display:none;
+  }
+
+  .div-principales-riesgos .background-lineas .info-content{
+    width: 95%;
+  }
+  .div-principales-riesgos .background-lineas .info-content .content {
+    font-size: 14px;
+  }
+  .seccion-otros-riesgos {
+    margin-top: -13rem;
+  }
+  .explorar-imagenes .cuadros-poblaciones:hover {
+    width: 90%;
+  }
+
+  .explorar-imagenes .imagen-cuadro h1 {
+    font-size: 20px;
+  }
+  .popup-imagenes-5 .popup-container .cerrar-popup {
+    right: 7%;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  .popup-imagenes-5 .popup-container .cerrar-popup svg {
+    width: 30px;
+    height: 30px;
+  }
+  .popup-imagenes-5 .popup {
+    width:100vw;
+    height: 100vh; 
+  }
+
+  .podcast-voces .info-podcast.swiper-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .podcast-voces .info-podcast.swiper-wrapper .cuadro-podcast.swiper-slide {
+    width: 100% !important;
   }
 }

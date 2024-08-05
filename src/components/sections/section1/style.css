@@ -35,7 +35,7 @@
 
 
 .background-gray {
-  filter: drop-shadow(4px 4px 6px black);
+  /* filter: drop-shadow(4px 4px 6px black); */
   background: #00000047;
 }
 .flotante-texto {

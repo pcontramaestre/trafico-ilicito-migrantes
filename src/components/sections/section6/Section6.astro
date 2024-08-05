@@ -34,6 +34,7 @@ import bullet from "@components/sections/section6/assets/bullet.svg"
 import iconoNormativa from "@components/sections/section6/assets/icono-normativa.svg"
 import iconoEnlaces from "@components/sections/section6/assets/icono-enlaces.svg"
 import paseCursor from "@components/sections/section6/assets/pase-cursor.svg"
+import Toque from "@components/sections/section6/assets/toque.svg"
 import popupCP from "@components/sections/section6/assets/popupCP.png"
 import popupGHS from "@components/sections/section6/assets/popupGHS.png"
 import popupMX from "@components/sections/section6/assets/popupMX.png"
@@ -66,7 +67,7 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
 
 <section id="seccion6">
   <!-- Seccion Banner - Parte 1 -->
-  <div class="relative w-screen h-screen banner-seccion6 bg-[#D9D9D9] bg-cover"  style={`background-image: url('${textura6_1.src}')`}>
+  <div class="relative w-screen h-[40vh] md:h-screen banner-seccion6 bg-[#D9D9D9] bg-cover"  style={`background-image: url('${textura6_1.src}')`}>
     <div class="section6-title absolute w-screen top-[10%] lg:top-[35%] left-[5vw] lg:left-[10vw] z-50">
       <div class="titulo-seccion3 z-10 pb-36 lg:pt-8  max-w-[600px] mr-auto ">
         <div class="text-[22px] lg:text-[58px] font-bold font-['Inika'] azul6 z-10 mb-4 leading-[1.1] pb-2">
@@ -79,11 +80,11 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
       </div>
     </div>
     <Image src={fondoBanner1} alt="" class="w-screen h-auto absolute top-0 left-0 fondoBanner1"/>
-    <Image src={mano1} alt="" class=" right-[15vw] absolute bottom-[20vh] mano1 lg:opacity-0" />
-    <Image src={mano2} alt="" class=" right-[25vw] absolute bottom-[40vh] mano2 lg:opacity-0" />
-    <Image src={mano3} alt="" class=" right-[35vw] absolute bottom-[16vh] mano3 lg:opacity-0" />
-    <Image src={mano4} alt="" class=" right-[45vw] absolute bottom-[60vh] mano4 lg:opacity-0" />
-    <Image src={mano5} alt="" class=" right-[55vw] absolute bottom-[20vh] mano5 lg:opacity-0" />
+    <Image src={mano1} alt="" class="right-0  md:right-[15vw] absolute md:bottom-[20vh] mano1 lg:opacity-0" />
+    <Image src={mano2} alt="" class=" right-[25vw] absolute bottom-[40vh] mano2 lg:opacity-0 hidden md:block" />
+    <Image src={mano3} alt="" class=" right-[35vw] absolute bottom-[16vh] mano3 lg:opacity-0 hidden md:block" />
+    <Image src={mano4} alt="" class=" right-[45vw] absolute bottom-[60vh] mano4 lg:opacity-0 hidden md:block" />
+    <Image src={mano5} alt="" class=" right-[55vw] absolute bottom-[20vh] mano5 lg:opacity-0 hidden md:block" />
   </div>
 
   <!-- Seccion Banner/Texto - Parte 2 -->
@@ -93,7 +94,7 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
       <b class="text-[#25A7EF] font-bold">cooperación regional y el intercambio de experiencias para fortalecer las políticas de lucha contra el Tráfico Ilícito de Migrantes (TIM)</b>, 
       haciendo especial énfasis en la protección de los derechos de las personas objeto de este delito.
     </p>
-    <p class="font-formula lg:text-[92px] font-bold tracking-[1.84px] text-center max-w-[1120px] mx-auto text-[#1870A0] leading-[1.2] pt-[70px] animacion-up">
+    <p class="font-formula text-[22px] lg:text-[92px] font-bold tracking-[1.84px] text-center max-w-[90%] md:max-w-[1120px] mx-auto text-[#1870A0] leading-[1.2] pt-8 md:pt-[70px] animacion-up">
       LA LUCHA CONTRA EL TIM CONTINUARÁ SIENDO UNA PRIORIDAD PARA TODOS LOS ACTORES INVOLUCRADOS.
     </p>
     <p class="max-w-[948px] w-[90%] mx-auto lg:text-[28px] text-center leading-[160%] font-light pb-12 animacion-up">
@@ -460,10 +461,13 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
       Acciones multinacionales, binacionales y nacionales de identificación, combate y enjuiciamiento del Tráfico Ilícito de Migrantes
     </p>
     <div class="text-center max-w-[1160px] mx-auto pb-[76px]">
-      <Image src={paseCursor} alt="" class="mx-auto" />
+      <Image src={paseCursor} alt="" class="mx-auto hidden md:block" />
+      <div class="flex flex-row gap-4 justify-center items-center md:hidden">
+        <Image src={Toque} alt="" class="md:hidden" /> <span class="md:hidden text-[14px] font-bold">Toque cada boton</span> 
+      </div>
     </div>
 
-    <div class="grid grid-cols-3 gap-5 max-w-[90%] lg:max-w-[1160px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-5 max-w-[90%] lg:max-w-[1160px] mx-auto">
       <div class="col-span-1 popupGHS relative">
         <Image src={popupGHS} alt="" class="cursor-pointer w-full h-auto" />
         <Image src={PopGuatema} alt="" class="popmostrar absolute -top-12 left-0 hidden transition-all opacity-0 " />
@@ -487,33 +491,33 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
     <div class="animacion-up max-w-[1116px] mx-auto text-center text-[#f6f4f3] text-[28px] font-bold leading-[39.20px] pb-[106px]">
       Existe un interés creciente de los gobiernos de la región en fortalecer sus capacidades para combatir las redes de TIM a través de la incorporación de las Tecnologías de la Información y la Comunicación (TICs).
     </div>
-    <Image src={paseCursor2} alt="" class="mx-auto animacion-up hidden md:block" />
+    <Image src={paseCursor2} alt="" class="mx-auto animacion-up max-w-[90%]" />
   </div>
 
   <!-- SECCION - Parte 6 -->
-  <div class=" bg-cover bg-no-repeat w-screen h-screen relative text-[#ffffff] hidden md:block" style={`background-image: url('${fondoTIC.src}')`}>
-    <div class="h-[98px] px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-16 left-[20vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupCostaRica">
+  <div class="tics-uso-identificar bg-cover bg-no-repeat w-screen h-screen relative text-[#ffffff]" style={`background-image: url('${fondoTIC.src}')`}>
+    <div class="h-[98px] px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 md:inline-flex md:absolute top-16 left-[20vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupCostaRica">
       <div class="text-center text-white text-5xl font-light font-formula tracking-wide">COSTA RICA</div>
     </div>
-    <div class="h-[98px] px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[30vh] left-[10vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupHonduras">
+    <div class="h-[98px] px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 md:inline-flex md:absolute top-[30vh] left-[10vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupHonduras">
       <div class="text-center text-white text-5xl font-light font-formula tracking-wide">HONDURAS</div>
     </div>
-    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[40vh] left-[40vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupDominicana">
-      <div class="text-center text-white text-5xl font-light font-formula tracking-wide">REPÚBLICA <br>
+    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 md:inline-flex md:absolute top-[40vh] left-[40vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupDominicana">
+      <div class="text-center text-white text-5xl font-light font-formula tracking-wide">REPÚBLICA <br class="hidden md:block">
         DOMINICANA
       </div>
     </div>
-    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[70vh] left-[40vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupSalvador">
+    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 md:inline-flex md:absolute top-[70vh] left-[40vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupSalvador">
       <div class="text-center text-white text-5xl font-light font-formula tracking-wide">
         EL SALVADOR
       </div>
     </div>
-    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[60vh] left-[80vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupPanama">
+    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 md:inline-flex md:absolute top-[60vh] left-[80vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupPanama">
       <div class="text-center text-white text-5xl font-light font-formula tracking-wide">
         PANAMÁ
       </div>
     </div>
-    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 inline-flex absolute top-[20vh] left-[80vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupMexico">
+    <div class="px-4 pt-6 pb-4 bg-[#25a7ef] justify-center items-center gap-2.5 md:inline-flex md:absolute top-[20vh] left-[80vw] cursor-pointer hover:bg-[#013151] transition-all" id="popupMexico">
       <div class="text-center text-white text-5xl font-light font-formula tracking-wide">
         MÉXICO
       </div>
@@ -552,7 +556,7 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
   </div>
 
   <!-- SECCCION FOOTER - Parte 7 -->
-  <div class="footer bg-[#D6EDFF] w-screen min-h-screen pt-[2rem] relative" style={`background-image: url('${textura4.src}')`}>
+  <div class="footer bg-[#D6EDFF] w-screen md:min-h-screen pt-[2rem] relative" style={`background-image: url('${textura4.src}')`}>
     <AudioPlayer
         src="/audios/Audio6_op2.mp3" 
         title="Beneficios de las TICs para combatir el TIM" 
@@ -628,7 +632,7 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
       </div>
     </div>
 
-    <div class="text-center w-screen cta pt-[10rem] lg:pt-[220px] lg:pb-[175px]">
+    <div class="text-center w-screen cta pt-[10rem] lg:pt-[220px] lg:pb-[175px] pb-12 md:pb-0">
       <a href="https://rosanjose.iom.int/es" target="_blank">
         <Image src={enlaceOim} alt="enlace oim" class="mx-auto"/>
       </a>  

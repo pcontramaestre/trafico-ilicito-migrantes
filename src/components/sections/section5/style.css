@@ -17,8 +17,8 @@
 }
 @media screen and (max-width: 1350px) {
   .cuadro.cuadro1-ventanillas {
-    width: 430px;
-    height: 430px;
+    width: 460px;
+    height: 460px;
   }
 }
 .cuadro.cuadro1-retorno {
@@ -105,5 +105,10 @@
   .cuadro.cuadro1-retorno {
     width: 95%; 
     height: 453px;
+  }
+  .seccion-hover .content-hover {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s ease;
   }
 }

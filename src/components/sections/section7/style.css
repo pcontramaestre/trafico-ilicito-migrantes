@@ -44,3 +44,26 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .banner-seccion7  .fondoBanner1 {
+    height: 73vh;
+    object-fit: cover;
+  }
+  .section6-title {
+    top: 1rem;
+    left: 1rem;
+  }
+  .hombreaparecer {
+    max-width: 80vw;
+    top: 50vw;
+    right: 0;
+  }
+  .solaparecer {
+    left: auto;
+    right: -2rem;
+  }
+  .mapamoverse {
+    display:none;
+  }
+}

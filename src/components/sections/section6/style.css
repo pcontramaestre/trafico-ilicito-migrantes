@@ -115,3 +115,64 @@
 #seccion6 .footer .audio-player {
   top: -3rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .accordeon-banderas .contenidos-paises > .col-span-12 > img {
+    max-width: 60px;
+  }
+  .accordeon-banderas .contenidos-paises > .col-span-12 {
+    gap: 1rem !important;
+    grid-column: span 9 / span 12 !important;
+  }
+  .accordeon-banderas .contenidos-paises > .col-span-12 .title-normativ {
+    font-size: 18px;
+  }
+  .accordeon-banderas .contenidos-paises > .col-span-12 .text-normativa a {
+    font-size: 16px;
+  }
+  .accordeon-banderas .contenidos-paises > .col-span-12 .text-normativa p { 
+    font-size: 16px;
+  }
+  .popupGHS:hover > img.popmostrar  {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    z-index: 100;
+  }
+  .popupCP:hover > img.popmostrar  {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    z-index: 100;
+  }
+  .popupMX:hover > img.popmostrar  {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    z-index: 100;
+  }
+
+  .tics-uso-identificar .popup {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tics-uso-identificar .popup .popup-container {
+    width: 90%;
+  }
+  .tics-uso-identificar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tics-uso-identificar > div {
+    margin-bottom: 1rem;
+    height: auto;
+  }
+  .tics-uso-identificar > div > div {
+    font-size: 1.2rem;
+  }
+}

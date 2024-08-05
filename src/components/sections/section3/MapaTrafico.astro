@@ -6,6 +6,11 @@ import Popup from "@components/Popup.astro";
 import popupMexico from "@components/sections/section3/assets/popup-mexico.webp";
 import popupCostaRica from "@components/sections/section3/assets/popup-costarica.webp";
 import popupDominicana from "@components/sections/section3/assets/popup-dominicana.webp";
+
+import popupCostaRicaRes from "@components/sections/section3/assets/popupCostaRicaRes.webp";
+import popupMexicoRes from "@components/sections/section3/assets/popupMexicoRes.webp";
+import popupDominicanaRes from "@components/sections/section3/assets/popupDominicanaRes.webp";
+
 ---
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
@@ -1375,17 +1380,20 @@ import popupDominicana from "@components/sections/section3/assets/popup-dominica
 </svg>
 
 
-<Popup idInteraccion="pathMexico" idPopup="popup-pathMexico" cerrarAzul
+<Popup idInteraccion="pathMexico" idPopup="popup-pathMexico" cerrarAzul cerrarVerde
 contenido= `
-  <Image src=${popupMexico.src} alt="" class="" />
+  <Image src=${popupMexico.src} alt="" class="hidden md:block" />
+  <Image src=${popupMexicoRes.src} alt="" class="block md:hidden" />
 `/>
 
-<Popup idInteraccion="pathCostarica" idPopup="popup-pathCostarica" cerrarAzul
+<Popup idInteraccion="pathCostarica" idPopup="popup-pathCostarica" cerrarAzul cerrarVerde
 contenido= `
-  <Image src=${popupCostaRica.src} alt="" class="" />
+  <Image src=${popupCostaRica.src} alt="" class="hidden md:block" />
+  <Image src=${popupCostaRicaRes.src} alt="" class="block md:hidden" />
 `/>
 
-<Popup idInteraccion="pathDominicana" idPopup="popup-pathDominicana" cerrarAzul
+<Popup idInteraccion="pathDominicana" idPopup="popup-pathDominicana" cerrarAzul cerrarVerde
 contenido= `
-  <Image src=${popupDominicana.src} alt="" class="" />
+  <Image src=${popupDominicana.src} alt="" class="hidden md:block" />
+  <Image src=${popupDominicanaRes.src} alt="" class="block md:hidden max-h-screen  object-cover" />
 `/>

@@ -20,6 +20,7 @@ import MapaRutas from '../section2/assets/Mapa-rutas.webp';
 import AudioPlayer from '@components/AudioPlayer.astro';
 import Accordeon from '@components/Accordion.astro';
 import Slider from './Slider.astro';
+import CostosResponsive from "./CostosResponsive.astro";
 import Cuadro from "@components/Cuados.astro";
 import Popup from "@components/Popup.astro";
 import IcoInfo from "@components/IcoInfo.astro";
@@ -62,8 +63,11 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
       Estructuras de operación del TRÁFICO ILÍCITO DE MIGRANTES en la región
     </p>
 
-    <div class="mensaje-interaccion flex text-center gap-4 flex-row items-center justify-center pb-16 blanco italic text-[1.2rem] animacion-up">
+    <div class="mensaje-interaccion  text-center gap-4 flex-row items-center justify-center pb-16 blanco italic text-[1.2rem] animacion-up hidden md:flex">
       <Image src={interaccion} alt=""/> <span>Pase el cursor sobre cada tarjeta:</span>
+    </div>
+    <div class="mensaje-interaccion flex text-center gap-4 flex-row items-center justify-center pb-16 blanco italic text-[1.2rem] animacion-up md:hidden">
+      <Image src={interaccion} alt=""/> <span>Toque cada tarjeta:</span>
     </div>
     <!-- CARDS -->
     <div class="cards-estructuras grid grid-cols-1 lg:grid-cols-4 gap-4 max-w-[90%] lg:max-w-[1000px]  ml-auto mr-auto bg-[#333] z-10 relative pb-9 animacion-up">
@@ -132,6 +136,10 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
     <div class="parte-oscura relative seccion-slider hidden md:block">
       <Slider />
     </div>
+    <div class="parte-oscura relative seccion-slider md:hidden">
+      <CostosResponsive />
+    </div>
+    
 
     <!-- PARTE CLARA -->
     <div class="parte-clara relative pt-4 pb-4 lg:pt-[4rem] lg:pb-[4rem] texto-migrantes-extra">
@@ -176,9 +184,16 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
     <div class="bg-[url('/src/components/sections/section2/assets/KFS_Tijuana.webp')] min-h-[600px] w-screen bg-cover grid items-center relative">
       <div class="grid lg:grid-cols-12 items-center max-w-[90%] lg:max-w-[1120px] ml-auto mr-auto gap-16">
         <div class="lg:col-span-7 animacion-left">
-          <h1 class="font-formula text-[2.5rem] lg:text-[4.5rem] font-bold tracking-[1.56px] uppercase leading-[1.3] text-[#F6F4F3] color-title-cuadro">
+          <h1 class="font-formula text-[2rem] lg:text-[4.5rem] font-bold tracking-[1.56px] uppercase leading-[1.3] text-[#F6F4F3] color-title-cuadro">
             Cobros del crimen organizado a las redes de TIM para transitar por territorios controlados
           </h1>
+          <div class="md:hidden bg-blanco p-4 mt-8">
+            <b>"Derecho de piso"
+            "Jale"
+            "Derecho de tránsito"</b>
+            <br>
+            Estos conceptos hacen referencia a los cobros que grupos criminales hacen a las personas migrantes para poder transitar por territorios controlados por el crimen organizado.
+          </div>
         </div>
         <div class="col-span-5 hidden lg:block">
           <Cuadro 

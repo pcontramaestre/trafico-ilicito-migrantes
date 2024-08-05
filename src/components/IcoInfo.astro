@@ -47,6 +47,8 @@ const { contenido,idInfo,estilos,idIcon,estilosIco } = Astro.props as Props;
   //Al hacer hover sobre "idInfo .icon-info" se miuestra .info-content
   document.addEventListener('DOMContentLoaded', () => {
     const infoContent = document.querySelector('#'+idInfo+' '+'.info-content');
+    const infoContenido = document.querySelector('#'+idInfo+' '+'.info-content .content');
+    const infoContenidoA = document.querySelector('#'+idInfo+' '+'.info-content .content a');
     const iconInfo = document.getElementById(idIcon);
     iconInfo.addEventListener('click', () => {
       infoContent.style.visibility = 'visible';
@@ -61,10 +63,15 @@ const { contenido,idInfo,estilos,idIcon,estilosIco } = Astro.props as Props;
     });
     
 
-    infoContent.addEventListener('mouseout', () => {
+    infoContenido.addEventListener('mouseout', () => {
       infoContent.style.visibility = 'hidden';
       infoContent.style.opacity = '0';
       iconInfo.classList.remove('show');
+      infoContenidoA.addEventListener('mouseover', () => {
+        infoContent.style.visibility = 'visible';
+        infoContent.style.opacity = '1';
+        iconInfo.classList.add('show');
+      })
     });
   });
 

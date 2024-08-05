@@ -184,4 +184,29 @@
   .cuadro-amarillo .cuadro {
     font-size: 1rem !important;
   }
+  #popup-derecha .cerrar-popup {
+    right: 11%;
+  }
+  #popup-derecha .cerrar-popup svg {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  #popup-derecha #inforcontenidoPopup{
+    max-width: 100%;
+    width: 100%;
+  }
+  #popup-derecha #inforcontenidoPopup .content {
+    font-size: 13px;
+    padding: 0.7rem;
+  }
+
+  #seccion2MapaRutas .info-content {
+    max-width: 90%;
+    width: 100%;
+  }
+  #seccion2MapaRutas #info-mapa .content {
+    font-size: 13px;
+    padding: 0.7rem;
+  }
+
 }
