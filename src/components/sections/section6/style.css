@@ -139,6 +139,14 @@
   top: -3rem;
 }
 
+.tippy-box {
+  width: 100%;
+  max-width: 600px !important;
+  background-color: #fce8bb;
+  color: black;
+  padding: 1rem;
+}
+
 @media screen and (max-width: 1024px) {
   .accordeon-banderas .contenidos-paises > .col-span-12 > img {
     max-width: 60px;
@@ -197,5 +205,13 @@
   }
   .tics-uso-identificar > div > div {
     font-size: 1.2rem;
+  }
+
+  .tippy-box {
+    width: 100%;
+    max-width: 300px !important;
+    background-color: #fce8bb;
+    color: black;
+    padding: 1rem;
   }
 }

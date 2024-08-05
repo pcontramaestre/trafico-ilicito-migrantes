@@ -203,6 +203,59 @@ if (!isMobile()) {
   .addTo(controllerSECT6);
 
 
+  //NOTICIAS FOOTER
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .seccion-noticias",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -400
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .seccion-noticias .noticia1"],
+      1.5,
+      {
+        // opacity: 0.1,
+        x: "-150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .seccion-noticias",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -400
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .seccion-noticias .noticia2"],
+      1.5,
+      {
+        // opacity: 0.1,
+        x: "150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+
+
+
+
   const controllerSection6A = new ScrollMagic.Controller();
   const controllerSection6B = new ScrollMagic.Controller();
   const controllerSection6C = new ScrollMagic.Controller();
@@ -294,56 +347,56 @@ if (!isMobile()) {
     .addTo(controllerSection6B);
 
     //normativa-div animacion-left
-    new ScrollMagic.Scene({
-      triggerElement: "#seccion6 .normativa-div ",
-      triggerHook: 0,
-      duration: "50%",
-      tweenChanges: true,
-      offset: -400,
-    })
-    .setTween(
-      TweenMax.staggerFromTo(
-        ["#seccion6 .normativa-div .animacion-left"],
-        2,
-        {
-          //opacity: 0,
-          //scale: 0.5,
-          x: "-100%",
-        },
-        {
-          //opacity: 1,
-          //scale: 1,
-          x:"0%",
-        },
-      )
-    )
-    .addTo(controllerSection6B);
+    // new ScrollMagic.Scene({
+    //   triggerElement: "#seccion6 .normativa-div ",
+    //   triggerHook: 0,
+    //   duration: "50%",
+    //   tweenChanges: true,
+    //   offset: -400,
+    // })
+    // .setTween(
+    //   TweenMax.staggerFromTo(
+    //     ["#seccion6 .normativa-div .animacion-left"],
+    //     2,
+    //     {
+    //       //opacity: 0,
+    //       //scale: 0.5,
+    //       x: "-100%",
+    //     },
+    //     {
+    //       //opacity: 1,
+    //       //scale: 1,
+    //       x:"0%",
+    //     },
+    //   )
+    // )
+    // .addTo(controllerSection6B);
 
     //acciones-multinacionales
-    new ScrollMagic.Scene({
-      triggerElement: "#seccion6 .acciones-multinacionales ",
-      triggerHook: 0,
-      duration: "50%",
-      tweenChanges: true,
-      offset: -600,
-    })
-    .setTween(
-      TweenMax.staggerFromTo(
-        ["#seccion6 .acciones-multinacionales"],
-        2,
-        {
-          //opacity: 0,
-          //scale: 0.5,
-          x: "-100%",
-        },
-        {
-          //opacity: 1,
-          //scale: 1,
-          x:"0%",
-        },
-      )
-    )
-    .addTo(controllerSection6B);
+    // new ScrollMagic.Scene({
+    //   triggerElement: "#seccion6 .acciones-multinacionales ",
+    //   triggerHook: 0,
+    //   duration: "50%",
+    //   tweenChanges: true,
+    //   offset: -600,
+    // })
+    // .setTween(
+    //   TweenMax.staggerFromTo(
+    //     ["#seccion6 .acciones-multinacionales"],
+    //     2,
+    //     {
+    //       //opacity: 0,
+    //       //scale: 0.5,
+    //       x: "-100%",
+    //     },
+    //     {
+    //       //opacity: 1,
+    //       //scale: 1,
+    //       x:"0%",
+    //     },
+    //   )
+    // )
+    // .addTo(controllerSection6B);
 
     //uso-tics animacion-up animacion-left
     new ScrollMagic.Scene({
