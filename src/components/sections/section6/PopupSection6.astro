@@ -1,0 +1,173 @@
+---
+import { Image } from "astro:assets";
+import './style.css'
+import Popup from "@components/Popup.astro";
+import popupELSALVADOR from "@components/sections/section6/assets/popupELSALVADOR.svg"
+import popupCOSTARICA from "@components/sections/section6/assets/popupCOSTARICA.svg"
+import popupHONDURAS from "@components/sections/section6/assets/popupHONDURAS.svg"
+import popupDOMINICANA from "@components/sections/section6/assets/popupDOMINICANA.svg"
+import popupMEXICO from "@components/sections/section6/assets/popupMEXICO.svg"
+import popupPANAMA from "@components/sections/section6/assets/popupPANAMA.svg"
+import bullet from "@components/sections/section6/assets/bullet.svg"
+---
+
+    <!-- POPUP EL SALVADOR -->
+    <Popup idInteraccion="popupSalvador" idPopup="popup-salvador" cerrarAzul
+    contenido= `
+          <div class="contenido-pais-popup bg-[#ffffff] rounded-lg md:p-8">
+            <div class="titulo-pais text-[#25a7ef] text-[40px] md:text-[78px] font-bold font-formula tracking-wider pb-[26px] uppercase">
+              El Salvador
+            </div>
+            <div class="bullets flex flex-col gap-4">
+              <!-- Bullet 1 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  Coordinación en tiempo real entre la Policía Nacional Civil y la Dirección General de Migración y Extranjería e intercambio de información para determinar puntos de atención urgente para abordar el tema del TIM.
+                </div>
+              </div>
+            </div>
+          </div>
+    `/>
+    <!-- POPUP COSTA RICA -->
+    <Popup idInteraccion="popupCostaRica" idPopup="popup-costa-rica" cerrarAzul
+    contenido= `
+          <div class="contenido-pais-popup bg-[#ffffff] rounded-lg md:p-8">
+            <div class="titulo-pais text-[#25a7ef] text-[40px] md:text-[78px] font-bold font-formula tracking-wider pb-[26px]">
+              COSTA RICA
+            </div>
+            <div class="bullets flex flex-col gap-4">
+              <!-- Bullet 1 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  Recopilación de datos sobre posibles personas objeto de TIM a través de herramientas de inteligencia policial.
+                </div>
+              </div>
+              <!-- Bullet 2 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  Fortalecimiento de cooperación internacional para la persecución penal de personas y redes dedicadas al TIM.
+                </div>
+              </div>
+            </div>
+          </div>
+    `/>
+    <!-- POPUP HONDURAS -->
+    <Popup idInteraccion="popupHonduras" idPopup="popup-honduras" cerrarAzul
+    contenido= `
+          <div class="contenido-pais-popup bg-[#ffffff] rounded-lg md:p-8">
+            <div class="titulo-pais text-[#25a7ef] text-[40px] md:text-[78px] font-bold font-formula tracking-wider pb-[26px]">
+              HONDURAS
+            </div>
+            <div class="bullets flex flex-col gap-4">
+              <!-- Bullet 1 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  Implementación de campañas informativas a través de redes sociales sobre los peligros de migrar por vías irregulares y las posibilidades existentes para personas hondureñas que desean emigrar hacia otros países.
+                </div>
+              </div>
+              <!-- Bullet 2 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  Las instituciones de seguridad nacional tienen sistemas de denuncias que se pueden realizar a través de portales digitales de forma anónima.
+                </div>
+              </div>
+            </div>
+          </div>
+    `/>
+    <!-- POPUP DOMINICANA -->
+    <Popup idInteraccion="popupDominicana" idPopup="popup-dominicana" cerrarAzul
+    contenido= `
+          <div class="contenido-pais-popup bg-[#ffffff] rounded-lg md:p-8">
+            <div class="titulo-pais text-[#25a7ef] text-[40px] md:text-[78px] font-bold font-formula tracking-wider pb-[26px] uppercase leading-[1.2]">
+              REPÚBLICA <br> DOMINICANA
+            </div>
+            <div class="bullets flex flex-col gap-4">
+              <!-- Bullet 1 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  Se está avanzando en la implementación de las TICs para combatir el TIM.
+                </div>
+              </div>
+            </div>
+          </div>
+    `/>
+    <!-- POPUP PANAMA -->
+    <Popup idInteraccion="popupPanama" idPopup="popup-panama" cerrarAzul
+    contenido= `
+          <div class="contenido-pais-popup bg-[#ffffff] rounded-lg md:p-8">
+            <div class="titulo-pais text-[#25a7ef] text-[40px] md:text-[78px] font-bold font-formula tracking-wider pb-[26px]">
+              PANAMÁ
+            </div>
+            <div class="bullets flex flex-col gap-4">
+              <!-- Bullet 1 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  El Servicio Nacional de Migración, junto con la policía encargada de la supervisión del Aeropuerto Nacional de Tocumen, 
+                  implementa la utilización de códigos 
+                  <span class="text-[#1870A0] italic font-medium" title="Tipo de código de barras que se puede escanear con la cámara de un teléfono inteligente. Se puede utilizar para compartir rápidamente información como acceso a páginas web, contactos o servicios.">Quick Response (QR)</span> 
+                  para el ingreso de personas extranjeras en puntos fronterizos oficiales.
+                </div>
+              </div>
+              <!-- Bullet 2 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  Intercambio de información en tiempo real entre las autoridades migratorias, sobre el monitoreo de fronteras entre los puntos fronterizos oficiales.
+                </div>
+              </div>
+              <!-- Bullet 3 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  Capacitación a personal del Servicio Nacional de Migración sobre la identificación de posibles casos de TIM.
+                </div>
+              </div>
+            </div>
+          </div>
+    `/>
+    <!-- POPUP MÉXICO -->
+    <Popup idInteraccion="popupMexico" idPopup="popup-mexico" cerrarAzul
+    contenido= `
+          <div class="contenido-pais-popup bg-[#ffffff] rounded-lg md:p-8">
+            <div class="titulo-pais text-[#25a7ef] text-[40px] md:text-[78px] font-bold font-formula tracking-wider pb-[26px] uppercase">
+              MÉXICO
+            </div>
+            <div class="bullets flex flex-col gap-4">
+              <!-- Bullet 1 -->
+              <div class="flex flex-row gap-4 items-start flex-nowrap">
+                <div class="min-w-[30px] pt-2">
+                  <Image src=${bullet.src} alt="" class="" />
+                </div>
+                <div class="text-[#1f1f1f] text-[16px] md:text-[28px]">
+                  Existencia del área de Innovación tecnológica de la División Científica de la Guardia Nacional, la cual busca poner en la marcha la utilización de herramientas tecnológicas para la lucha contra el TIM.
+                </div>
+              </div>
+            </div>
+          </div>
+    `/>
+

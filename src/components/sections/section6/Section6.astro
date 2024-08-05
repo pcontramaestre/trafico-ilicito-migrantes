@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import './style.css'
 import Accordeon from '@components/AccordionBandera.astro';
 import Popup from "@components/Popup.astro";
+import PopupSection6 from "@components/sections/section6/PopupSection6.astro";
 import AudioPlayer from "@components/AudioPlayer.astro";
 
 import textura from "@components/sections/section4/assets/textura-part3.webp"
@@ -523,36 +524,8 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
       </div>
     </div>
 
-    <!-- POPUP EL SALVADOR -->
-    <Popup idInteraccion="popupSalvador" idPopup="popup-salvador" cerrarAzul
-    contenido= `
-      <Image src=${popupELSALVADOR.src} alt="" class="" />
-    `/>
-    <!-- POPUP COSTA RICA -->
-    <Popup idInteraccion="popupCostaRica" idPopup="popup-costa-rica" cerrarAzul
-    contenido= `
-      <Image src=${popupCOSTARICA.src} alt="" class="" />
-    `/>
-    <!-- POPUP HONDURAS -->
-    <Popup idInteraccion="popupHonduras" idPopup="popup-honduras" cerrarAzul
-    contenido= `
-      <Image src=${popupHONDURAS.src} alt="" class="" />
-    `/>
-    <!-- POPUP DOMINICANA -->
-    <Popup idInteraccion="popupDominicana" idPopup="popup-dominicana" cerrarAzul
-    contenido= `
-      <Image src=${popupDOMINICANA.src} alt="" class="" />
-    `/>
-    <!-- POPUP PANAMA -->
-    <Popup idInteraccion="popupPanama" idPopup="popup-panama" cerrarAzul
-    contenido= `
-      <Image src=${popupPANAMA.src} alt="" class="" />
-    `/>
-    <!-- POPUP MÉXICO -->
-    <Popup idInteraccion="popupMexico" idPopup="popup-mexico" cerrarAzul
-    contenido= `
-      <Image src=${popupMEXICO.src} alt="" class="" />
-    `/>
+    <PopupSection6 />
+
   </div>
 
   <!-- SECCCION FOOTER - Parte 7 -->
