@@ -62,13 +62,16 @@ import textoNoticia1 from "@components/sections/section6/assets/textoNoticia1.we
 import cursorConsultarNoticia from "@components/sections/section6/assets/cursorConsultarNoticia.svg"
 
 import enlaceOim from "@components/sections/section6/assets/CTA.svg"
+
+import BannerResponsive from "@components/sections/section6/assets/BannerSeccion6R.webp"
+
 ---
 
 
 
 <section id="seccion6">
   <!-- Seccion Banner - Parte 1 -->
-  <div class="relative w-screen h-[40vh] md:h-screen banner-seccion6 bg-[#D9D9D9] bg-cover"  style={`background-image: url('${textura6_1.src}')`}>
+  <div class="relative w-screen h-[40vh] md:h-screen banner-seccion6 bg-[#D9D9D9] bg-cover hidden md:block"  style={`background-image: url('${textura6_1.src}')`}>
     <div class="section6-title absolute w-screen top-[10%] lg:top-[35%] left-[5vw] lg:left-[10vw] z-50">
       <div class="titulo-seccion3 z-10 pb-36 lg:pt-8  max-w-[600px] mr-auto ">
         <div class="text-[22px] lg:text-[58px] font-bold font-['Inika'] azul6 z-10 mb-4 leading-[1.1] pb-2">
@@ -86,6 +89,9 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
     <Image src={mano3} alt="" class=" right-[35vw] absolute bottom-[16vh] mano3 lg:opacity-0 hidden md:block" />
     <Image src={mano4} alt="" class=" right-[45vw] absolute bottom-[60vh] mano4 lg:opacity-0 hidden md:block" />
     <Image src={mano5} alt="" class=" right-[55vw] absolute bottom-[20vh] mano5 lg:opacity-0 hidden md:block" />
+  </div>
+  <div class="block md:hidden bg-[#D9D9D9] bg-cover" style={`background-image: url('${textura6_1.src}')`}>
+    <Image src={BannerResponsive} alt="" class="w-screen h-auto block md:hidden" />
   </div>
 
   <!-- Seccion Banner/Texto - Parte 2 -->

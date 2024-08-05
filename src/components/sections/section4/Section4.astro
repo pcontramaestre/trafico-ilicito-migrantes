@@ -58,7 +58,7 @@ import footer1 from "@components/sections/section4/assets/footer1.webp";
 import footer2 from "@components/sections/section4/assets/footer2.webp";
 import enlaceOim from "@components/sections/section4/assets/CTA.svg";
 
-
+import BannerResponsive from "@components/sections/section4/assets/BannerSeccion4R.webp"
 
 
 
@@ -68,7 +68,7 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
 <section id="seccion4">
   <div class="bg-top" style={`background-image: url('${textura4_1.src}')`}>
     <!-- SECCION BANNER - PARTE 1 -->
-    <div class="relative w-screen banner-seccion4 bg-cover bg-bottom">
+    <div class="relative w-screen banner-seccion4 bg-cover bg-bottom hidden md:block">
       <Image src={fondoBanner} alt="" class="w-screen lg:h-auto"/>
       <Image src={sol} alt="" class="h-auto absolute top-0 right-0 sol-right"/>
       <Image src={fondoBanner2} alt="" class="w-screen h-auto absolute top-0 left-0"/>
@@ -86,7 +86,10 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
           </div>
         </div>
       </div>
-    </div> 
+    </div>
+    <div>
+      <Image src={BannerResponsive} alt = "" class="w-screen h-auto md:hidden" />
+    </div>
     
     <!-- SECCION SLIDER - PARTE 2 -->
     <div class="relative w-screen bg-cover pb-32 bg-top" id="pinslider">
