@@ -8,6 +8,86 @@ function isMobile() {
 
 
 if (!isMobile()) { 
+  const controllerSECT4 = new ScrollMagic.Controller();
+  //animacion acordeones
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion4 .acordeon-riesgos",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -500
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion4 .acordeon-riesgos1"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-100%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT4);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion4 .acordeon-riesgos",
+    triggerHook: 0,
+    duration: "25%",
+    offset: -400
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion4 .acordeon-riesgos2"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-100%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT4);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion4 .acordeon-riesgos",
+    triggerHook: 0,
+    duration: "20%",
+    offset: -300
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion4 .acordeon-riesgos3"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-100%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT4);
+
+
+
+
+
+
+
 
     // ANIMACION BANNER
     const controllerD = new ScrollMagic.Controller();

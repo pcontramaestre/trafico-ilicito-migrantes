@@ -7,6 +7,81 @@ function isMobile() {
 
 if (!isMobile()) { 
 
+  const controllerSECT5 = new ScrollMagic.Controller();
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion5 .seccion-categorias-retorno",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -400
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion5 .categoria1-retorno"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT5);
+  
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion5 .seccion-categorias-retorno",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -300
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion5 .categoria2-retorno"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT5);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion5 .seccion-categorias-retorno",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -200
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion5 .categoria3-retorno"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT5);
+
+
+
   const controllerSection5A = new ScrollMagic.Controller();
   const controllerSection5B = new ScrollMagic.Controller();
   const controllerSection5C = new ScrollMagic.Controller();

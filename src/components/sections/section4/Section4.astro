@@ -256,81 +256,85 @@ import enlaceOim from "@components/sections/section4/assets/CTA.svg";
       </h1>
     </div>
     <div class="acordeon-riesgos-contenedor">
-      <Accordeon 
-      title="Medios de transporte" 
-      details=`
-        <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
-          <p class="md:text-[20px] leading-[140%]">
-            <b class=" uppercase ">EL Tráfico Ilícito de Migrantes (TIM) TIENE COMO FIN ÚLTIMO LA GENERACIÓN DE CAPITAL</b>, 
-            por lo cual suele abaratar costos en los medios de transporte, trasladando a las personas migrantes en 
-            <b class="text-[#25A7EF]">CONDICIONES RIESGOSAS</b>
-            como por ejemplo transporte en mal estado, que viaja a altas velocidades, con sobreocupación y con pocas o nulas medidas de seguridad.
-          </p>
-          <adiv class="relative overflow-hidden">
-            <img src="/sections/section4/assets/fondo-carretera2.webp" alt=""  class="w-full h-auto z-0 hidden md:block"/>
-            <img src="/sections/section4/assets/acordeon1-fondo.webp" alt=""  class="w-full h-auto z-0  md:hidden"/>
-            <img src="/sections/section4/assets/acordeon1-texto.svg" alt=""  class="w-full h-auto z-10 absolute top-0 left-0 hidden md:block"/>
-            <img src="/sections/section4/assets/carro.webp" alt=""  class="w-full h-auto absolute top-0 z-20 max-w-[1000px] -right-full carro-mover"/>
-            <div class=" absolute bottom-[3.6rem] left-[3.5rem] text-[18px] text-[#F6F4F3] z-30 max-w-[380px] hidden md:block">
-              De acuerdo con los datos del <br>
-              <a href="https://missingmigrants.iom.int/es" target="_blank">
-                <b class="text-[#FFA85C] font-bold underline">Proyecto Migrantes Desaparecidos</b>
-              </a>,
-              <br> 
-              <b class="text-[#80CFFF] font-formula font-bold text-[30px] tracking-[0.6px]">de la totalidad de fallecimientos de personas migrantes en tránsito.</b><br>
-              al menos 16% se relaciona con accidentes de tránsito.<br>
-              (OIM, 2023a)
+        <div class="acordeon-riesgos1">
+          <Accordeon 
+          title="Medios de transporte" 
+          details=`
+            <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
+              <p class="md:text-[20px] leading-[140%]">
+                <b class=" uppercase ">EL Tráfico Ilícito de Migrantes (TIM) TIENE COMO FIN ÚLTIMO LA GENERACIÓN DE CAPITAL</b>, 
+                por lo cual suele abaratar costos en los medios de transporte, trasladando a las personas migrantes en 
+                <b class="text-[#25A7EF]">CONDICIONES RIESGOSAS</b>
+                como por ejemplo transporte en mal estado, que viaja a altas velocidades, con sobreocupación y con pocas o nulas medidas de seguridad.
+              </p>
+              <adiv class="relative overflow-hidden">
+                <img src="/sections/section4/assets/fondo-carretera2.webp" alt=""  class="w-full h-auto z-0 hidden md:block"/>
+                <img src="/sections/section4/assets/acordeon1-fondo.webp" alt=""  class="w-full h-auto z-0  md:hidden"/>
+                <img src="/sections/section4/assets/acordeon1-texto.svg" alt=""  class="w-full h-auto z-10 absolute top-0 left-0 hidden md:block"/>
+                <img src="/sections/section4/assets/carro.webp" alt=""  class="w-full h-auto absolute top-0 z-20 max-w-[1000px] -right-full carro-mover"/>
+                <div class=" absolute bottom-[3.6rem] left-[3.5rem] text-[18px] text-[#F6F4F3] z-30 max-w-[380px] hidden md:block">
+                  De acuerdo con los datos del <br>
+                  <a href="https://missingmigrants.iom.int/es" target="_blank">
+                    <b class="text-[#FFA85C] font-bold underline">Proyecto Migrantes Desaparecidos</b>
+                  </a>,
+                  <br> 
+                  <b class="text-[#80CFFF] font-formula font-bold text-[30px] tracking-[0.6px]">de la totalidad de fallecimientos de personas migrantes en tránsito.</b><br>
+                  al menos 16% se relaciona con accidentes de tránsito.<br>
+                  (OIM, 2023a)
+                </div>
+              </adiv>
             </div>
-          </adiv>
-        </div>
-        <style>
-         .carro-mover {  
-            animation: slideOut 10s forwards ease-in-out; 
-            /* que la animacion se repita */
-            animation-iteration-count: 1;
-          }  
+            <style>
+            .carro-mover {  
+                animation: slideOut 10s forwards ease-in-out; 
+                /* que la animacion se repita */
+                animation-iteration-count: 1;
+              }  
 
-          @keyframes slideOut {  
-            0% {  
-              transform: translateX(0);  
-            }  
-            100% {  
-              transform: translateX(-130%);  
-            }  
-          } 
-        </style>
-      `
-    />
-
-    <Accordeon 
-      title="Clima y geografía" 
-      details=`
-        <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
-          <div class="relative">
-            <img src="/sections/section4/assets/selva-lluviosa.gif" alt=""  class="w-full h-auto z-0"/>
-          </div>
-          <p class="md:text-[20px] leading-[140%] pt-4 pb-4">
-            Dependiendo de la estación del año y de la zona geográfica, 
-            <b class="text-[#1870A0]">las personas migrantes en tránsito se exponen a temperaturas extremas, fuertes lluvias, vientos, inundaciones en ríos, entre otros,</b> dificultando así el acceso a recursos básicos como agua potable, alimentos y servicios.
-          </p>
-        </div>
-      `
-    />
-
-    <Accordeon 
-      title="Tecnologías de la Información y la Comunicación (TICs)" 
-      details=`
-        <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
-          <p class="md:text-[20px] leading-[140%] pt-4 pb-4">
-            El uso de las Tecnologías de la Información y la Comunicación (TICs), incluyendo las redes sociales, en el contexto del Tráfico Ilícito de Migrantes, incrementa la exposición de las personas migrantes a diversos riesgos, tales como:
-          </p>
-          <div class="relative">
-            <img src="/sections/section4/assets/tics-acordeonN.webp" alt=""  class="w-full h-auto z-0 mb-8"/>
-            <img src="/sections/section4/assets/tics.gif" alt=""  class="absolute z-10 gif-tics "/>
-          </div>
-        </div>
-      `
-    />   
+              @keyframes slideOut {  
+                0% {  
+                  transform: translateX(0);  
+                }  
+                100% {  
+                  transform: translateX(-130%);  
+                }  
+              } 
+            </style>
+          `
+        />
+      </div>
+      <div class="acordeon-riesgos2">
+          <Accordeon 
+            title="Clima y geografía" 
+            details=`
+              <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
+                <div class="relative">
+                  <img src="/sections/section4/assets/selva-lluviosa.gif" alt=""  class="w-full h-auto z-0"/>
+                </div>
+                <p class="md:text-[20px] leading-[140%] pt-4 pb-4">
+                  Dependiendo de la estación del año y de la zona geográfica, 
+                  <b class="text-[#1870A0]">las personas migrantes en tránsito se exponen a temperaturas extremas, fuertes lluvias, vientos, inundaciones en ríos, entre otros,</b> dificultando así el acceso a recursos básicos como agua potable, alimentos y servicios.
+                </p>
+              </div>
+            `
+          />
+      </div>
+      <div class="acordeon-riesgos3">
+          <Accordeon 
+            title="Tecnologías de la Información y la Comunicación (TICs)" 
+            details=`
+              <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
+                <p class="md:text-[20px] leading-[140%] pt-4 pb-4">
+                  El uso de las Tecnologías de la Información y la Comunicación (TICs), incluyendo las redes sociales, en el contexto del Tráfico Ilícito de Migrantes, incrementa la exposición de las personas migrantes a diversos riesgos, tales como:
+                </p>
+                <div class="relative">
+                  <img src="/sections/section4/assets/tics-acordeonN.webp" alt=""  class="w-full h-auto z-0 mb-8"/>
+                  <img src="/sections/section4/assets/tics.gif" alt=""  class="absolute z-10 gif-tics "/>
+                </div>
+              </div>
+            `
+          />   
+      </div>
     </div>
      
     <div class="pt-32 pb-32">

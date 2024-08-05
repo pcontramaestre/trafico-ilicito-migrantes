@@ -9,6 +9,200 @@ function isMobile() {
 
 if (!isMobile()) { 
 
+  const controllerSECT6 = new ScrollMagic.Controller();
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .acordeon-pais1",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -700
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .acordeon-pais1"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .acordeon-pais2",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -700
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .acordeon-pais2"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .acordeon-pais3",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -700
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .acordeon-pais3"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .acordeon-pais4",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -700
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .acordeon-pais4"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .acordeon-pais5",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -700
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .acordeon-pais5"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .acordeon-pais6",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -700
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .acordeon-pais6"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .acordeon-pais7",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -700
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .acordeon-pais7"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "-150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#seccion6 .acordeon-pais8",
+    triggerHook: 0,
+    duration: "30%",
+    offset: -700
+  })
+  .setTween(
+    TweenMax.staggerFromTo(
+      ["#seccion6 .acordeon-pais8"],
+      1,
+      {
+        // opacity: 0.1,
+        x: "150%",
+        scale: 0.9,
+      },
+      {
+        //opacity: 1,
+        x: "0%",
+        scale: 1,
+      },
+    )
+  )
+  .addTo(controllerSECT6);
+
+
   const controllerSection6A = new ScrollMagic.Controller();
   const controllerSection6B = new ScrollMagic.Controller();
   const controllerSection6C = new ScrollMagic.Controller();

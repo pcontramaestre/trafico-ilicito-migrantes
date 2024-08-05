@@ -129,335 +129,360 @@ import enlaceOim from "@components/sections/section6/assets/CTA.svg"
     <h1 class="animacion-left max-w-[90%] lg:max-w-[1120px] mx-auto text-center text-[#014979] font-formula text-[30px] lg:text-[40px] xl:text-[78px] tracking-[1.56px] font-bold leading-[1.2] pb-[50px] xl:pb-[100px]">
       NORMATIVA RELATIVA AL TRÁFICO ILÍCITO DE MIGRANTES EN LA REGIÓN DE CENTROAMÉRICA, MÉXICO Y LA REPÚBLICA DOMINICANA
     </h1>
-    <!-- BELICE -->
-    <Accordeon 
-      title="BELICE"
-      details= `
-          <div class="contenidos-paises grid grid-cols-12 gap-10 mx-w-[90%] lg:max-w-[800px] mx-auto">
-            <div class="col-span-12 flex lg:flex-row items-center gap-12 normativa">
-              <Image src=${iconoNormativa.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <a href="https://www.nationalassembly.gov.bz/wp-content/uploads/2023/04/Act-No.-11-of-2023-Immigration-Amendment-Act-2023.pdf" 
-                    target="_blank" 
-                    class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
-                    Inmigration Act
-                  </a>
-                  <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+    <div class="acordeon-pais1">
+        <!-- BELICE -->
+        <Accordeon 
+          title="BELICE"
+          details= `
+              <div class="contenidos-paises grid grid-cols-12 gap-10 mx-w-[90%] lg:max-w-[800px] mx-auto">
+                <div class="col-span-12 flex lg:flex-row items-center gap-12 normativa">
+                  <Image src=${iconoNormativa.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <a href="https://www.nationalassembly.gov.bz/wp-content/uploads/2023/04/Act-No.-11-of-2023-Immigration-Amendment-Act-2023.pdf" 
+                        target="_blank" 
+                        class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
+                        Inmigration Act
+                      </a>
+                      <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoInstitucion.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Ministry of National Defence and Border <br/>Security
-                  </p>
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoInstitucion.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Ministry of National Defence and Border <br/>Security
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-      `
-      bandera = {banderaBelice.src}
-    />
-    <!-- COSTA RICA -->
-    <Accordeon 
-      title="costa rica"
-      details= `
-          <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoNormativa.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <a href="http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=74132&nValor3=0&strTipM=TC" 
-                    target="_blank" 
-                    class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
-                    Ley contra la Trata de Personas y Creación de la Coalición Nacional contra el Tráfico Ilícito de Migrantes y la Trata de Personas (CONATT).
-                  </a>
-                  <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
-                </div>
-              </div>
-            </div>
+          `
+          bandera = {banderaBelice.src}
+        />
+    </div>
 
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoInstitucion.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Fiscalía Adjunta contra la Trata de Personas y
-                    el Tráfico Ilícito de Migrantes
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-      `
-      bandera = {banderaCostaRica.src}
-    />
-    <!-- EL SALVADOR -->
-    <Accordeon 
-      title="el salvador"
-      details= `
-          <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoNormativa.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <a href="https://www.cnj.gob.sv/index.php/publicaciones-cnj/49-codigo-penal-de-el-salvador-comentado" 
-                    target="_blank" 
-                    class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
-                    Código Penal
-                  </a>
-                  <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
-                </div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <a href="https://www.asamblea.gob.sv/sites/default/files/documents/decretos/93682F40-A2CF-46DB-A0F0-24B4CE9E617D.pdf" 
-                    target="_blank" 
-                    class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
-                    Ley Especial contra la Trata de Personas
-                  </a>
-                  <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoInstitucion.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Unidad Especializada de Trata y Tráfico Ilegal de Personas de la Fiscalía General de la República
-                  </p>
+    <div class="acordeon-pais2">
+        <!-- COSTA RICA -->
+        <Accordeon 
+          title="costa rica"
+          details= `
+              <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoNormativa.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <a href="http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=74132&nValor3=0&strTipM=TC" 
+                        target="_blank" 
+                        class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
+                        Ley contra la Trata de Personas y Creación de la Coalición Nacional contra el Tráfico Ilícito de Migrantes y la Trata de Personas (CONATT).
+                      </a>
+                      <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>        
-      `
-      bandera = {banderaElSalvador.src}
-    />
-    <!-- GUATEMALA -->
-    <Accordeon 
-      title="guatemala"
-      details= `
-          <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoNormativa.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <a href="https://igm.gob.gt/wp-content/uploads/2021/11/1_Codigo-de-Migracion-Decreto-44-2016-del-Congreso-de-la-Republica.pdf" 
-                    target="_blank" 
-                    class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
-                    Ley de Migración
-                  </a>
-                  <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoInstitucion.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Fiscalía contra el Tráfico Ilícito de Migrantes
-                  </p>
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoInstitucion.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Fiscalía Adjunta contra la Trata de Personas y
+                        el Tráfico Ilícito de Migrantes
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-      `
-      bandera = {banderaGuatemala.src}
-    />
-    <!-- HONDURAS -->
-    <Accordeon 
-      title="honduras"
-      details= `
-          <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoNormativa.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <a href="https://www.tsc.gob.hn/biblioteca/index.php/codigos/830-codigo-penal-2019" 
-                    target="_blank" 
-                    class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
-                    Código Penal
-                  </a>
-                  <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
-                </div>
-              </div>
-            </div>
+          `
+          bandera = {banderaCostaRica.src}
+        />
+    </div>
 
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoInstitucion.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Ministerio Público, Unidad contra la Trata, Explotación Sexual Comercial y Tráfico de Personas
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-      `
-      bandera = {banderaHonduras.src}
-    />
-    <!-- MEXICO -->
-    <Accordeon 
-      title="mexico"
-      details= `
-          <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoNormativa.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <a href="https://www.diputados.gob.mx/LeyesBiblio/ref/lmigra.htm" 
-                    target="_blank" 
-                    class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
-                    Ley de Migración
-                  </a>
-                  <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoInstitucion.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Unidad de Investigación de Delitos para Personas Migrantes de la Fiscalía General de la República
-                  </p>
+    <div class="acordeon-pais3">
+        <!-- EL SALVADOR -->
+        <Accordeon 
+          title="el salvador"
+          details= `
+              <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoNormativa.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <a href="https://www.cnj.gob.sv/index.php/publicaciones-cnj/49-codigo-penal-de-el-salvador-comentado" 
+                        target="_blank" 
+                        class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
+                        Código Penal
+                      </a>
+                      <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+                    </div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <a href="https://www.asamblea.gob.sv/sites/default/files/documents/decretos/93682F40-A2CF-46DB-A0F0-24B4CE9E617D.pdf" 
+                        target="_blank" 
+                        class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
+                        Ley Especial contra la Trata de Personas
+                      </a>
+                      <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-      `
-      bandera = {banderaMexico.src}
-    />
-    <!-- PANAMA -->
-    <Accordeon 
-      title="panama"
-      details= `
-          <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoNormativa.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <a href="https://sherloc.unodc.org/cld/uploads/res/document/ley-sobre-el-trafico-ilicito-de-migrantes-y-actividades-conexas_html/Ley_Sobre_el_Trafico_Ilicito_de_Migrantes_y_Actividades_Conexas.PDF" 
-                    target="_blank" 
-                    class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
-                    Ley sobre el Tráfico Ilícito de Migrantes y Actividades Conexas (Ley N°36)
-                  </a>
-                  <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoInstitucion.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Unidad para Asuntos del Tráfico Ilícito de Migrantes, unidad técnica administrativa del Servicio Nacional de Migración
-                  </p>
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoInstitucion.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Unidad Especializada de Trata y Tráfico Ilegal de Personas de la Fiscalía General de la República
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-      `
-      bandera = {banderaPanama.src}
-    />
-    <!-- REPUBLICADOMINICANA -->
-    <Accordeon 
-      title="republica dominicana"
-      details= `
-          <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoNormativa.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <a href="https://migracion.gob.do/transparencia/wp-content/uploads/2019/10/Ley-344-98.pdf" 
-                    target="_blank" 
-                    class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
-                    Ley 344-98
-                  </a>
-                  <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
-                </div>
-              </div>
-            </div>
+              </div>        
+          `
+          bandera = {banderaElSalvador.src}
+        />
+    </div>
 
-            <div class="col-span-12 flex flex-row items-center gap-12 normativa">
-              <Image src=${iconoInstitucion.src} alt="" class=""/> 
-              <div>
-                <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Procuraduría Especializada contra el Tráfico Ilícito de Migrantes y Trata de Personas (PETT)
-                  </p>
+    <div class="acordeon-pais4">
+        <!-- GUATEMALA -->
+        <Accordeon 
+          title="guatemala"
+          details= `
+              <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoNormativa.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <a href="https://igm.gob.gt/wp-content/uploads/2021/11/1_Codigo-de-Migracion-Decreto-44-2016-del-Congreso-de-la-Republica.pdf" 
+                        target="_blank" 
+                        class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
+                        Ley de Migración
+                      </a>
+                      <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+                    </div>
+                  </div>
                 </div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Departamento de Trata y Tráfico de Personas de la Dirección de Asuntos Migratorios del Viceministerio de Asuntos Consulares y Migratorios del Ministerio de Relaciones Exteriores (MIREX)
-                  </p>
-                </div>
-                <div class="text-normativa flex flex-row items-start gap-4 relative">
-                  <Image src=${bullet.src} alt="" class="mt-[6px]"/>
-                  <p
-                    class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
-                    Departamento de Control Migratorio e Investigación de Trata y Tráfico de Personas de la Policía Nacional
-                  </p>
+
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoInstitucion.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Fiscalía contra el Tráfico Ilícito de Migrantes
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-      `
-      bandera = {banderaRepublicaDominicana.src}
-    />
+          `
+          bandera = {banderaGuatemala.src}
+        />
+    </div>
 
+
+    <div class="acordeon-pais5">    
+        <!-- HONDURAS -->
+        <Accordeon 
+          title="honduras"
+          details= `
+              <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoNormativa.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <a href="https://www.tsc.gob.hn/biblioteca/index.php/codigos/830-codigo-penal-2019" 
+                        target="_blank" 
+                        class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
+                        Código Penal
+                      </a>
+                      <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoInstitucion.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Ministerio Público, Unidad contra la Trata, Explotación Sexual Comercial y Tráfico de Personas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          `
+          bandera = {banderaHonduras.src}
+        />
+    </div>
+
+    <div class="acordeon-pais6">   
+        <!-- MEXICO -->
+        <Accordeon 
+          title="mexico"
+          details= `
+              <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoNormativa.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <a href="https://www.diputados.gob.mx/LeyesBiblio/ref/lmigra.htm" 
+                        target="_blank" 
+                        class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
+                        Ley de Migración
+                      </a>
+                      <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoInstitucion.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Unidad de Investigación de Delitos para Personas Migrantes de la Fiscalía General de la República
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          `
+          bandera = {banderaMexico.src}
+        />
+    </div>
+  
+    <div class="acordeon-pais7">
+        <!-- PANAMA -->
+        <Accordeon 
+          title="panama"
+          details= `
+              <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoNormativa.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <a href="https://sherloc.unodc.org/cld/uploads/res/document/ley-sobre-el-trafico-ilicito-de-migrantes-y-actividades-conexas_html/Ley_Sobre_el_Trafico_Ilicito_de_Migrantes_y_Actividades_Conexas.PDF" 
+                        target="_blank" 
+                        class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
+                        Ley sobre el Tráfico Ilícito de Migrantes y Actividades Conexas (Ley N°36)
+                      </a>
+                      <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoInstitucion.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Unidad para Asuntos del Tráfico Ilícito de Migrantes, unidad técnica administrativa del Servicio Nacional de Migración
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          `
+          bandera = {banderaPanama.src}
+        />
+    </div>
+
+    <div class="acordeon-pais8">    
+        <!-- REPUBLICADOMINICANA -->
+        <Accordeon 
+          title="republica dominicana"
+          details= `
+              <div class="contenidos-paises grid grid-cols-12 gap-10 max-w-[800px] mx-auto">
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoNormativa.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Normativa</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <a href="https://migracion.gob.do/transparencia/wp-content/uploads/2019/10/Ley-344-98.pdf" 
+                        target="_blank" 
+                        class="text-[#1f1f1f] text-[28px] font-normal underline leading-[39.20px]">
+                        Ley 344-98
+                      </a>
+                      <Image src=${iconoEnlaces.src} alt="" class=" absolute top-0 -right-12"/>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-12 flex flex-row items-center gap-12 normativa">
+                  <Image src=${iconoInstitucion.src} alt="" class=""/> 
+                  <div>
+                    <div class="title-normativ text-[#013151] text-[28px] font-bold leading-[39.20px]">Institución</div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Procuraduría Especializada contra el Tráfico Ilícito de Migrantes y Trata de Personas (PETT)
+                      </p>
+                    </div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Departamento de Trata y Tráfico de Personas de la Dirección de Asuntos Migratorios del Viceministerio de Asuntos Consulares y Migratorios del Ministerio de Relaciones Exteriores (MIREX)
+                      </p>
+                    </div>
+                    <div class="text-normativa flex flex-row items-start gap-4 relative">
+                      <Image src=${bullet.src} alt="" class="mt-[6px]"/>
+                      <p
+                        class="text-[#1f1f1f] text-[28px] font-normal leading-[39.20px]">
+                        Departamento de Control Migratorio e Investigación de Trata y Tráfico de Personas de la Policía Nacional
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          `
+          bandera = {banderaRepublicaDominicana.src}
+        />
+    </div>
     <p class="acciones-multinacionales text-[#014979] text-[30px] lg:text-[64px] font-bold font-formula uppercase tracking-wider max-w-[90%] lg:max-w-[1160px] mx-auto text-center pt-20 leading-[1.2] pb-[56px]">
       Acciones multinacionales, binacionales y nacionales de identificación, combate y enjuiciamiento del Tráfico Ilícito de Migrantes
     </p>
