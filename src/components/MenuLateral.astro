@@ -50,7 +50,7 @@ import link from "@components/assets/link.svg"
   <button id="reproducirInicio" class="audio pt-[3rem] md:pt-[10rem]">
     <Image src={audioPlay} alt="Ayuda" class="cursor-pointer max-w-[35px] md:max-w-[56px]" id="reproducir"/>
   </button>
-  <audio id="audioInicio" autoplay src="/audios/Audio1_op2.mp3"></audio>  
+  <audio id="audioInicio" src="/audios/Audio1_op2.mp3"></audio>  
 </div>
 
 
@@ -240,6 +240,7 @@ import link from "@components/assets/link.svg"
       var audioElementInicio = document.getElementById("audioInicio"); 
 
       let isPlayingInicio = false;  
+      let isPlayAutomatic = false;
 
       reproducirBtn.addEventListener("click", () => {  
           if (!isPlayingInicio) {  
@@ -269,18 +270,19 @@ import link from "@components/assets/link.svg"
         
         return (  
             rect.top <= 0
-            //&&  
-            //rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)  
         );  
       } 
       audioElementInicio = document.getElementById("audioInicio");
       if (!isElementInViewport(seccion2)) {  
-        
         if (!isPlayingInicio) {
-          console.log("Autoplay ejecutando al inicio")
-          audioElementInicio.play();
-          reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[35px] md:max-w-[56px]" alt="Detener" />';  
-          isPlayingInicio = true; 
+          window.addEventListener('scroll', function() {
+            if (!isPlayAutomatic) {
+              audioElementInicio.play();
+              reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[35px] md:max-w-[56px]" alt="Detener" />';  
+              isPlayingInicio = true; 
+              isPlayAutomatic = true;
+            }
+          })
         }
       } else {
         console.log("Seccion 2 en adelante")
