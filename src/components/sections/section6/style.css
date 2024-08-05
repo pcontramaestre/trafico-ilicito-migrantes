@@ -96,6 +96,29 @@
 
 }
 
+/* #popup-honduras.show .fondo-popup,
+#popup-salvador.show .fondo-popup,
+#popup-costa-rica.show .fondo-popup,
+#popup-dominicana.show .fondo-popup
+#popup-mexico.show .fondo-popup
+#popup-panama.show .fondo-popup {
+  background: #000000b5;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+#popup-honduras.show .popup-container,
+#popup-salvador.show .popup-container,
+#popup-costa-rica.show .popup-container,
+#popup-dominicana.show .popup-container
+#popup-mexico.show .popup-container
+#popup-panama.show .popup-container {
+  z-index: 1;
+} */
+
+
+
 .detalle-noticia{
   transition: all 0.5s ease-in-out;
   display: none;
