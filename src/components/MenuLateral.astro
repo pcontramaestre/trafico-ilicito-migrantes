@@ -282,7 +282,9 @@ import link from "@components/assets/link.svg"
         if (!isPlayingInicio) {
           window.addEventListener('scroll', function() {
             if (!isPlayAutomatic) {
-              audioElementInicio2.play();
+              audioElementInicio2.play().catch(error => {  
+                  console.error("Error al intentar reproducir el audio:", error);  
+              });  ;
               reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[35px] md:max-w-[56px]" alt="Detener" />';  
               isPlayingInicio = true; 
               isPlayAutomatic = true;

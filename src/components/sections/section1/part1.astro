@@ -13,7 +13,7 @@ import mujer from "./assets/mujer.png";
 import adolescente from "./assets/adolescente.png";
 import hombre from "./assets/hombre.png";
 import luz from "./assets/luz1.png";
-import textura7 from "@public/texturas/Textura7.webp"
+import textura7 from "@public/texturas/Textura8.webp"
 import PrincipalBannerMovol from "@components/sections/section1/assets/home.webp"
 ---
 <!-- 
@@ -40,13 +40,13 @@ import PrincipalBannerMovol from "@components/sections/section1/assets/home.webp
       <Image src={mujer} alt="Mujer" class="img-mujer opacity-0" />
       <Image src={adolescente} alt="Adolescente" class="img-adolescente opacity-0" />
       <Image src={hombre} alt="hombre" class="img-hombre opacity-0" />
-      <Image src={luz} alt="luz" class="img-luz"/>
+      <Image src={luz} alt="luz" class="img-luz mostrando"/>
     </div>
 
     <Image
       src={fondoParte1}
       alt="Fondo"
-      class="w-screen h-auto absolute top-0 left-0"
+      class="w-screen h-auto absolute top-0 left-0 fondoBanner1 mostrando"
     />
     <Image
       src={arbol}
@@ -61,9 +61,9 @@ import PrincipalBannerMovol from "@components/sections/section1/assets/home.webp
     />
   </div>
   <div class="w-screen h-auto relative z-20 lg:-z-10 parte2 -mt-4 md:mt-0" style={`background-image: url('${textura7.src}')`}>
-    <div class="w-[90%] lg:w-[811px] text-center absolute font-sans text-base lg:text-4xl font-bold z-50 pl-4 lg:pl-24 flotante-texto">
-      <span class="blanco text-[16px] lg:text-[36px]">El Tráfico Ilícito de Migrantes (TIM) se entiende como la </span>
-      <span class="uppercase azulclaro font-extrabold text-[16px] lg:text-[36px]">facilitación de la entrada irregular de una persona en un Estado</span>
+    <div class="w-[90%] lg:w-[1200px] text-center absolute font-sans text-base lg:text-4xl font-bold z-50 flotante-texto">
+      <span class="blanco text-[16px] lg:text-[36px] pb-4 leading-[80px]">El Tráfico Ilícito de Migrantes (TIM) se entiende como la </span><br>
+      <span class="uppercase azulclaro font-bold tracking-[1.44px] max-w-[1200px] mx-auto leading-[1.2] font-formula text-[22px] lg:text-[72px]">facilitación de la entrada irregular de una persona en un Estado</span><br>
       <span class="blanco text-[16px] lg:text-[36px]"> del cual dicha persona no es nacional ni residente permanente con el fin de obtener, directa o indirectamente, un </span>
       <span class="azulclaro font-semibold text-[16px] lg:text-[36px]">beneficio financiero u otro beneficio de orden material</span>
       <span class="blanco text-[20px] lg:text-[36px] font-light">(OIM, 2019).</span></div>
@@ -96,6 +96,8 @@ import PrincipalBannerMovol from "@components/sections/section1/assets/home.webp
           },
         });
 
+        const controllerSECT1 = new ScrollMagic.Controller();
+
         const imgLuz = document.querySelectorAll(".img-luz");
         const controllerSeccion1A = new ScrollMagic.Controller();
 
@@ -103,59 +105,92 @@ import PrincipalBannerMovol from "@components/sections/section1/assets/home.webp
         new ScrollMagic.Scene({
           triggerElement: ".parte1",
           triggerHook: "onLeave",
-          duration: "200",
+          duration: "150%",
+          tweenChanges: true,
+        })
+          // .setTween(
+          //   TweenMax.staggerFromTo(
+          //   [".img-luz"],
+          //   1, {
+          //     opacity: 0,
+          //   },
+          //   {
+          //     opacity: 1,
+          //   }
+
+          //   ))
+          .setPin(".parte1")
+          .addTo(controllerSECT1);
+
+
+        new ScrollMagic.Scene({
+          triggerElement: ".parte1",
+          triggerHook: "onLeave",
+          duration: "90%",
           tweenChanges: true,
         })
           .setTween(
             TweenMax.staggerFromTo(
-              [".img-mujer", ".img-adolescente", ".img-hombre"],
-              1,
+              [".img-mujer",".img-adolescente",".img-hombre"],
+              2,
               {
-                brightness: 70,
-                x: "-20%",
+                x: "-80%",
                 opacity: 0,
               },
               {
-                brightness: 100,
                 x: "3%",
                 opacity: 1,
               },
-            ).concat(TweenMax.staggerFromTo(
-            [".img-luz"],
-            1, {
-              opacity: 0,
-            },
-            {
-              opacity: 1,
-            }
-
-            ))
+              0.7
+            )
           )
-          .setPin(".parte1")
-          .addTo(controller);
+          .setClassToggle(".mostrando", "nomostrar")
+          .addTo(controllerSECT1);
+          //
+        //  new ScrollMagic.Scene({
+        //   triggerElement: ".parte1",
+        //   triggerHook: 0,
+        //   duration: "160%",
+        //   tweenChanges: true,
+        // })
+        //   .setTween(
+        //     TweenMax.staggerFromTo(
+        //       [".img-adolescente"],
+        //       1,
+        //       {
+        //         x: "-140%",
+        //         opacity: 0,
+        //       },
+        //       {
+        //         x: "3%",
+        //         opacity: 1,
+        //       },
+        //     )
+        //   )
+        //   .addTo(controllerSECT1);
 
 
         // new ScrollMagic.Scene({
         //   triggerElement: ".parte1",
         //   triggerHook: "onLeave",
-        //   duration: "120%",
+        //   duration: "250%",
         //   tweenChanges: true,
         // })
         //   .setTween(
         //     TweenMax.staggerFromTo(
-        //       [".titulo-seccion"],
-        //       1,
+        //       [".img-hombre"],
+        //       3,
         //       {
-        //         x: "-100%",
+        //         x: "-260%",
         //         opacity: 0,
         //       },
         //       {
-        //         x: "0%",
+        //         x: "3%",
         //         opacity: 1,
         //       },
         //     )
         //   )
-        //   .addTo(controllerSeccion1A);
+        //   .addTo(controllerSECT1);
 
         
 

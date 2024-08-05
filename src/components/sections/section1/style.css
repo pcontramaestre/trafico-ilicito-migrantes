@@ -30,6 +30,21 @@
   max-width: 459px;
   top: 21%;
   opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.img-luz.mostrando.nomostrar {
+  opacity: 0;
+}
+.img-luz.mostrando {
+  opacity: 1;
+}
+
+.fondoBanner1.mostrando.nomostrar {
+  transition: all 1s ease-in-out;
+  filter: brightness(80%);
+}
+.fondoBanner1.mostrando {
+  filter: brightness(130%);
 }
 
 
@@ -39,15 +54,18 @@
   background: #00000047;
 }
 .flotante-texto {
-  bottom: 25%;
-  left: 10rem;
+  /* bottom: 25%; */
+  top: 43%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
   transition: all 1s ease-in-out;
 }
 .flotante-texto.visible {
   opacity: 1;
-  transform: none;
+  /* transform: none; */
 }
 
 .visible-zoom {
@@ -65,6 +83,7 @@
 /* SECCION 1 - PARTE 2 Y 3 */
 #seccion1-2 {
   background: var(--Azul, #014979);
+  margin-top: -30vh;
 }
 .texto-animado {
   color: #25A7EF;
@@ -215,11 +234,15 @@
   }
 
   .flotante-texto {
-    bottom: 23%;
+    /* bottom: 23%; */
+    top: 36%;
     opacity:1;
-    left: 0rem;
-    transform: scale(1);
+    /* left: 0rem; */
     transition: all 1s ease-in-out;
+  }
+
+  #seccion1-2 {
+    margin-top: unset;
   }
   .texto-animado {
     font-size: 30px;
@@ -243,3 +266,15 @@
     opacity: 1 !important;
   }
 }
+
+@media screen and (max-width:1540px) and (min-width:1024px){
+  .flotante-texto {
+    /* bottom: 23%; */
+    z-index: 100;
+    top: 50%;
+    opacity:1;
+    /* left: 0rem; */
+    transition: all 1s ease-in-out;
+  }
+}
+
