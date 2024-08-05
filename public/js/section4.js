@@ -702,7 +702,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let currentAudio = null;  // Guarda el audio que está actualmente en reproducción  
     
         audios.forEach(({ btnId, audioId }) => {  
-          console.log(audios);
             const reproducirBtn = document.getElementById(btnId);  
             const audioElement = document.getElementById(audioId);  
             let isPlaying = false;  

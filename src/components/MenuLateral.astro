@@ -50,7 +50,7 @@ import link from "@components/assets/link.svg"
   <button id="reproducirInicio" class="audio pt-[3rem] md:pt-[10rem]">
     <Image src={audioPlay} alt="Ayuda" class="cursor-pointer max-w-[35px] md:max-w-[56px]" id="reproducir"/>
   </button>
-  <audio id="audioInicio" src="/audios/Audio1_op2.mp3"></audio>  
+  <audio id="audioInicio" autoplay muted src="/audios/Audio1_op2.mp3"></audio>  
 </div>
 
 
@@ -266,26 +266,32 @@ import link from "@components/assets/link.svg"
        // Función para detectar si estamos en la sección 2  
       function isElementInViewport(el) {  
         const rect = el.getBoundingClientRect();  
-        //console.log(rect);
+        
         return (  
             rect.top <= 0
             //&&  
             //rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)  
         );  
       } 
-
+      audioElementInicio = document.getElementById("audioInicio");
       if (!isElementInViewport(seccion2)) {  
-        console.log("Seccion 1");
-        audioElementInicio = document.getElementById("audioInicio");
+        
         if (!isPlayingInicio) {
-          setTimeout(() => {  
-            reproducirBtn.click(); // Simula el clic en el botón  
-          }, 3000);
-          // audioElementInicio.muted = true;
-          // audioElementInicio.play();  
-          // reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[56px]" alt="Detener" />';  
-          // isPlayingInicio = true; 
+          // setTimeout(() => {  
+          //   reproducirBtn.click(); // Simula el clic en el botón  
+          // }, 3000);
+          audioElementInicio.muted = false;
+          audioElementInicio.currentTime = 0;
+          reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[56px]" alt="Detener" />';  
+          isPlayingInicio = true; 
         }
+      } else {
+        console.log("Pruebas")
+        audioElementInicio.pause();  
+        audioElementInicio.currentTime = 0;  
+        reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[56px]" alt="Reproducir" />';
+        isPlayingInicio = false;
+        audioElementInicio.removeAttribute("autoplay");  
       }
 
         // Evento de scroll  
