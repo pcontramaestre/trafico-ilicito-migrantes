@@ -50,7 +50,7 @@ import link from "@components/assets/link.svg"
   <button id="reproducirInicio" class="audio pt-[3rem] md:pt-[10rem]">
     <Image src={audioPlay} alt="Ayuda" class="cursor-pointer max-w-[35px] md:max-w-[56px]" id="reproducir"/>
   </button>
-  <audio id="audioInicio" autoplay muted="false" src="/audios/Audio1_op2.mp3"></audio>  
+  <audio id="audioInicio" autoplay src="/audios/Audio1_op2.mp3"></audio>  
 </div>
 
 
@@ -277,18 +277,10 @@ import link from "@components/assets/link.svg"
       if (!isElementInViewport(seccion2)) {  
         
         if (!isPlayingInicio) {
-          // setTimeout(() => {  
-          //   reproducirBtn.click(); // Simula el clic en el botón  
-          // }, 3000);
-          audioElementInicio.removeAttribute("muted");
-          audioElementInicio.play();
-          audioElementInicio.currentTime = 0;
-          audioElementInicio.muted = false;
           reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[35px] md:max-w-[56px]" alt="Detener" />';  
           isPlayingInicio = true; 
         }
       } else {
-        console.log("Pruebas")
         audioElementInicio.pause();  
         audioElementInicio.currentTime = 0;  
         reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[56px]" alt="Reproducir" />';
