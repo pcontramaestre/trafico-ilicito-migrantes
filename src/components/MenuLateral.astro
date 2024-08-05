@@ -278,6 +278,7 @@ import link from "@components/assets/link.svg"
         
         if (!isPlayingInicio) {
           console.log("Autoplay ejecutando al inicio")
+          audioElementInicio.play();
           reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[35px] md:max-w-[56px]" alt="Detener" />';  
           isPlayingInicio = true; 
         }
