@@ -35,20 +35,20 @@ import link from "@components/assets/link.svg"
 
 ---
 
-<div class="menu-lateral fixed z-[9998] right-2 top-[25%]  flex-col gap-4 hidden md:flex">
+<div class="menu-lateral fixed z-[9998] right-0 md:right-2 top-[5%] md:top-[25%]  flex-col gap-4 flex overflow-y-auto md:overflow-hidden">
   <div class="menu" title="Menú" data-tooltip-placement="left">
-    <Image src={menu} alt="Menú" class="cursor-pointer" id="imenu"/>
+    <Image src={menu} alt="Menú" class="cursor-pointer max-w-[35px] md:max-w-[56px]" id="imenu"/>
   </div>
   <div class="home" title="Inicio" data-tooltip-placement="left">
     <a href="/#seccion1-1">
-      <Image src={home} alt="Inicio" class="cursor-pointer" id="ihome"/>
+      <Image src={home} alt="Inicio" class="cursor-pointer max-w-[35px] md:max-w-[56px]" id="ihome"/>
     </a>
   </div>
-  <div class="ayuda"  title="Ayuda" data-tooltip-placement="left">
+  <div class="ayuda hidden md:block"  title="Ayuda" data-tooltip-placement="left">
     <Image src={ayuda} alt="Ayuda" class="cursor-pointer" id="iayuda"/>
   </div>
-  <button id="reproducirInicio" class="audio pt-[10rem]">
-    <Image src={audioPlay} alt="Ayuda" class="cursor-pointer max-w-[56px]" id="reproducir"/>
+  <button id="reproducirInicio" class="audio pt-[3rem] md:pt-[10rem]">
+    <Image src={audioPlay} alt="Ayuda" class="cursor-pointer max-w-[35px] md:max-w-[56px]" id="reproducir"/>
   </button>
   <audio id="audioInicio" src="/audios/Audio1_op2.mp3"></audio>  
 </div>
@@ -58,91 +58,90 @@ import link from "@components/assets/link.svg"
 <Popup idInteraccion="imenu" idPopup="popup-lateral"
     contenido= `
       
-      <div 
-  class="w-screen h-screen bg-cover flex items-center flex-col justify-center gap-4" style="background-image: url('${fondoMenu.src}">
+      <div class="w-screen h-screen bg-cover flex items-center flex-col justify-center gap-4" style="background-image: url('${fondoMenu.src}">
 
-  <div class="grid lg:grid-cols-3 grid-cols-1 gap-4 items-center justify-center">
-    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
-      <a href="/#seccion1-1" class="cursor-pointer link_menu">
-        <Image src=${menu1.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
-        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
-          VOCES <br>
-          Y DATOS
-        </h1>
-      </a>
-    </div>
+        <div class="grid lg:grid-cols-3 gap-4 items-center justify-center">
+          <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[10vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+            <a href="/#seccion1-1" class="cursor-pointer link_menu">
+              <Image src=${menu1.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+              <h1 class="text-[#fff] font-formula text-[18px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+                VOCES <br>
+                Y DATOS
+              </h1>
+            </a>
+          </div>
 
-    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
-      <a href="/#seccion2-1" class="cursor-pointer link_menu">
-        <Image src=${menu2.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0  hover:transition-all"/>
-        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
-          modos de operación <br>
-          de las redes
-        </h1>
-      </a>
-    </div>
+          <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[10vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+            <a href="/#seccion2-1" class="cursor-pointer link_menu">
+              <Image src=${menu2.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0  hover:transition-all"/>
+              <h1 class="text-[#fff] font-formula text-[18px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+                modos de operación <br>
+                de las redes
+              </h1>
+            </a>
+          </div>
 
-    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
-      <a href="/#seccion3" class="cursor-pointer link_menu">
-        <Image src=${menu3.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
-        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
-          datos disponibles <br>sobre personas <br>objeto
-        </h1>
-      </a>
-    </div>
-  </div>
+          <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[10vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+            <a href="/#seccion3" class="cursor-pointer link_menu">
+              <Image src=${menu3.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+              <h1 class="text-[#fff] font-formula text-[18px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+                datos disponibles <br>sobre personas <br>objeto
+              </h1>
+            </a>
+          </div>
+        </div>
 
-  <!-- SEGUNDA LINEA MENU -->
-  <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 items-center justify-center">
-    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
-      <a href="/#seccion4" class="cursor-pointer link_menu">
-        <Image src=${menu4.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
-        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
-          riesgos <br>
-          vinculados
-        </h1>
-      </a>
-    </div>
+        <!-- SEGUNDA LINEA MENU -->
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 items-center justify-center">
+          <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[10vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+            <a href="/#seccion4" class="cursor-pointer link_menu">
+              <Image src=${menu4.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+              <h1 class="text-[#fff] font-formula text-[18px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+                riesgos <br>
+                vinculados
+              </h1>
+            </a>
+          </div>
 
-    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
-      <a href="/#seccion5" class="cursor-pointer link_menu">
-        <Image src=${menu5.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0  hover:transition-all"/>
-        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
-          PROTECCIÓN Y ATENCIÓN <br>A PERSONAS OBJETO
-        </h1>
-      </a>
-    </div>
-  </div>
+          <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[10vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+            <a href="/#seccion5" class="cursor-pointer link_menu">
+              <Image src=${menu5.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0  hover:transition-all"/>
+              <h1 class="text-[#fff] font-formula text-[18px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+                PROTECCIÓN Y ATENCIÓN <br>A PERSONAS OBJETO
+              </h1>
+            </a>
+          </div>
+        </div>
 
-  <div class="grid lg:grid-cols-3 grid-cols-1 gap-4 items-center justify-center">
-    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
-      <a href="/#seccion6" class="cursor-pointer link_menu">
-        <Image src=${menu6.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
-        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
-          ADMINISTRAción <br>de la justicia
-        </h1>
-      </a>
-    </div>
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-4 items-center justify-center">
+          <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[10vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+            <a href="/#seccion6" class="cursor-pointer link_menu">
+              <Image src=${menu6.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+              <h1 class="text-[#fff] font-formula text-[18px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+                ADMINISTRAción <br>de la justicia
+              </h1>
+            </a>
+          </div>
 
-    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
-      <a href="/#seccion7" class="cursor-pointer link_menu">
-        <Image src=${menu7.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0  hover:transition-all"/>
-        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
-          prevención
-        </h1>
-      </a>
-    </div>
+          <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[10vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+            <a href="/#seccion7" class="cursor-pointer link_menu">
+              <Image src=${menu7.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0  hover:transition-all"/>
+              <h1 class="text-[#fff] font-formula text-[18px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+                prevención
+              </h1>
+            </a>
+          </div>
 
-    <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[20vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
-      <a href="/#seccion8" class="cursor-pointer link_menu">
-        <Image src=${menu8.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
-        <h1 class="text-[#fff] font-formula text-[25px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
-          créditos y fuentes
-        </h1>
-      </a>
-    </div>
-  </div>
-</div>
+          <div class="col-span-1 item_menu relative overflow-hidden w-[70vw] h-[10vh] md:w-[70vw] md:h-[40vh] lg:w-[350px] lg:h-[200px] flex items-center justify-center flex-col">
+            <a href="/#seccion8" class="cursor-pointer link_menu">
+              <Image src=${menu8.src} alt="" class="cursor-pointer absolute w-full object-cover h-auto top-0 left-0 hover:transition-all"/>
+              <h1 class="text-[#fff] font-formula text-[18px] lg:text-[40px] font-bold tracking-[0.8px] uppercase text-center relative z-10 leading-[1.1]">
+                créditos y fuentes
+              </h1>
+            </a>
+          </div>
+        </div>
+      </div>
     
     `/>
 
@@ -231,6 +230,8 @@ import link from "@components/assets/link.svg"
   .link_menu:hover h1 {
     text-shadow: 1px 1px 1px black;
   }
+
+ 
   </style>
 
 <script>  
@@ -243,12 +244,12 @@ import link from "@components/assets/link.svg"
       reproducirBtn.addEventListener("click", () => {  
           if (!isPlayingInicio) {  
               audioElementInicio.play();  
-              reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[56px]" alt="Detener" />';  
+              reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[35px] md:max-w-[56px]" alt="Detener" />';  
               isPlayingInicio = true;  
           } else {  
               audioElementInicio.pause();  
               audioElementInicio.currentTime = 0;  
-              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[56px]" alt="Reproducir" />';  
+              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[56px]" alt="Reproducir" />';  
               isPlayingInicio = false;  
           }  
       });  
@@ -297,7 +298,7 @@ import link from "@components/assets/link.svg"
             if (isPlayingInicio) {
               audioElementInicio.pause();  
               audioElementInicio.currentTime = 0;  
-              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[56px]" alt="Reproducir" />';
+              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[56px]" alt="Reproducir" />';
               isPlayingInicio = false;
             }
           } else {  
