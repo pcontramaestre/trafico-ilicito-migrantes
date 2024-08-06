@@ -17,8 +17,11 @@
 }
 @media screen and (max-width: 1350px) {
   .cuadro.cuadro1-ventanillas {
-    width: 460px;
-    height: 460px;
+    width: 424px;
+    height: 395px;
+  }
+  .cuadro.cuadro1-ventanillas .texto  {
+    font-size: 1.2rem;
   }
 }
 .cuadro.cuadro1-retorno {

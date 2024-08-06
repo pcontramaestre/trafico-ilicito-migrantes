@@ -103,6 +103,10 @@
   padding-top: 3px;
 }
 
+.seccion2-acordeon2-modos .accordion__content {
+  padding: 0 !important;
+}
+
 .section-acordeon .accordion__button {
   background: #333;
   font-family: 'Formula';

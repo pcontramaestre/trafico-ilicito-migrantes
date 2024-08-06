@@ -14,8 +14,18 @@
 
 .acordeon-riesgos .accordion.group {
   margin-bottom: 2rem;
-  border: 1px solid #F6F4F3;
+  border: 0px solid #F6F4F3;
 }
+
+.acordeon-riesgos1 .accordion__content {
+  padding: 0px !important;
+}
+
+.acordeon-riesgos1 .accordion__content .contenido-acordeon {
+  width: 100% !important;
+  max-width: max-content;
+}
+
 
 .acordeon-riesgos .accordion__content{
   background: #F6F4F3;
@@ -143,6 +153,8 @@
   #seccion4 .accordion__button{
     font-size: 20px;
   }
+
+
   .div-principales-riesgos .background-lineas{
     background-image: none !important;
     padding-top: 3rem;

@@ -264,13 +264,13 @@ import BannerResponsive from "@components/sections/section4/assets/BannerSeccion
           title="Medios de transporte" 
           details=`
             <div class="contenido-acordeon max-w-[1072px] mx-auto bg-[#F6F4F3] relative">
-              <p class="md:text-[20px] leading-[140%]">
+              <p class="md:text-[20px] leading-[140% px-4">
                 <b class=" uppercase ">EL Tráfico Ilícito de Migrantes (TIM) TIENE COMO FIN ÚLTIMO LA GENERACIÓN DE CAPITAL</b>, 
                 por lo cual suele abaratar costos en los medios de transporte, trasladando a las personas migrantes en 
                 <b class="text-[#25A7EF]">CONDICIONES RIESGOSAS</b>
                 como por ejemplo transporte en mal estado, que viaja a altas velocidades, con sobreocupación y con pocas o nulas medidas de seguridad.
               </p>
-              <adiv class="relative overflow-hidden">
+              <div class="relative overflow-hidden">
                 <img src="/sections/section4/assets/fondo-carretera2.webp" alt=""  class="w-full h-auto z-0 hidden md:block"/>
                 <img src="/sections/section4/assets/acordeon1-fondo.webp" alt=""  class="w-full h-auto z-0  md:hidden"/>
                 <img src="/sections/section4/assets/acordeon1-texto.svg" alt=""  class="w-full h-auto z-10 absolute top-0 left-0 hidden md:block"/>
@@ -285,7 +285,7 @@ import BannerResponsive from "@components/sections/section4/assets/BannerSeccion
                   al menos 16% se relaciona con accidentes de tránsito.<br>
                   (OIM, 2023a)
                 </div>
-              </adiv>
+              </div>
             </div>
             <style>
             .carro-mover {  
@@ -467,7 +467,7 @@ import BannerResponsive from "@components/sections/section4/assets/BannerSeccion
       <h1 class="text-[#D6EDFF] md:text-[78px] font-formula tracking-[1.156px] font-bold leading-none">VOCES DE MIGRANTES</h1>
       <p class="md:text-[34px] font-serif font-bold text-[#D6EDFF]">Riesgos y peligros de las personas objeto de Tráfico Ilícito de Migrantes</p>
     </div>
-    <div class="pinVoces">
+    
       <IcoInfo 
           idInfo="info-voces" estilos="text-center pt-10 pb-28 cursor-pointer " idIcon="icon-voces" estilosIco="flex items-center justify-center"
           contenido=
@@ -484,6 +484,8 @@ import BannerResponsive from "@components/sections/section4/assets/BannerSeccion
               un proceso de anonimización, siguiendo los Principios de Protección de Datos de la OIM.
             `
         />
+      <div class="pinVoces">
+        <div class="hidden xl:block h-[4rem]"></div>
         <div class="overflow-hidden" style={`background-image: url('${podcastLineas.src}')`} id="podcast-voces" >
           <div class="podcast-voces relative w-screen overflow-hidden" >
             <div class="info-podcast swiper-wrapper">

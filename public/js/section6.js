@@ -326,12 +326,12 @@ if (!isMobile()) {
       triggerHook: 0,
       duration: "50%",
       tweenChanges: true,
-      offset: -400,
+      offset: -450,
     })
     .setTween(
       TweenMax.staggerFromTo(
         ["#seccion6 .procuracion-justicia .aparecer"],
-        2,
+        0.5,
         {
           opacity: 0,
           scale: 0.5,
