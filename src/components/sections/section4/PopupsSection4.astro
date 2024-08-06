@@ -14,7 +14,7 @@ import PopupMujeresResponsive from "@components/sections/section4/assets/popupMu
     <Popup idInteraccion="cuadro-mujeres" idPopup="popup-mujeres"
     contenido= `
       <div class="bg-[url('/src/components/sections/section4/assets/fondo-popup-mujeres.webp')] bg-cover grid grid-cols-12 w-screen h-screen">
-        <div class="col-span-12  flex-col justify-center hidden md:flex">
+        <div class="col-span-12  flex-col justify-center hidden md:flex max-h-screen">
           <div class="px-12">
             <h1 class="title-popup pb-9 pt-9">Mujeres</h1>
             <p class="md:text-[28px] leading-[140%] text-[#F6F4F3] pb-6">
@@ -24,12 +24,28 @@ import PopupMujeresResponsive from "@components/sections/section4/assets/popupMu
             </p>
           </div>
           <div>
-            <Image src="/src/components/sections/section4/assets/fondo-popup-mujeres1.webp" alt="" alt="Mujeres" class="w-full h-auto"/>
+            <Image src="/src/components/sections/section4/assets/fondo-popup-mujeres1.webp" alt="" alt="Mujeres" class="w-full h-auto max-h-[30vh] object-contain mb-4"/>
+          </div>
+          <div class="franja-naranja py-12 w-screen bg-[#B85600]">
+            <div class="grid grid-cols-12 max-w-[1024px] mx-auto ">
+              <div class="col-span-2">
+                <Image src="/src/components/sections/section4/assets/comillas.svg" alt="" class="mx-auto"/>
+              </div>
+              <div class="col-span-10">
+                <p class="text-[#FFF] text-[18px]">
+                  <b class=" italic text-[20px] leading-[140%] text-[#FFC999]">
+                    “Las personas menores de cinco años son separadas de sus familias y sedadas para viajar en camiones y en cajas de fruta”. 
+                  </b>
+                  Respuesta a una encuesta realizada para un estudio de la OIM.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-span-12 md:hidden">
           <Image src="/src/components/sections/section4/assets/popupMujeresResponsive.webp" alt="" class="w-full h-[95vh] object-contain"/>
         </div>
+        
       </div>
     `/>
 
@@ -47,7 +63,7 @@ import PopupMujeresResponsive from "@components/sections/section4/assets/popupMu
                 <b class="font-formula text-[32px] font-bold tracking-[0.64px] text-[#80CFFF]">reclutamiento forzoso, trata de personas, abusos sexuales</b>, entre otros.
               </p>
             </div>
-            <Image src="/src/components/sections/section4/assets/fondo-popup-ninos1.webp" alt="" class="md:max-w-[900px] 2xl:max-w-[1200px] mx-auto h-auto pb-8"/>
+            <Image src="/src/components/sections/section4/assets/fondo-popup-ninos1.webp" alt="" class="md:max-w-[900px] 2xl:max-w-[1200px] mx-auto h-auto pb-8 max-h-[40vh] object-contain"/>
             <div class="franja-naranja py-12 w-screen bg-[#B85600]">
               <div class="grid grid-cols-12 max-w-[1024px] mx-auto ">
                 <div class="col-span-2">
@@ -84,7 +100,7 @@ import PopupMujeresResponsive from "@components/sections/section4/assets/popupMu
               </div>
               <div class="col-span-12 flex flex-col justify-center px-12">
                 <a href="https://rosanjose.iom.int/es/tablero-interactivo-personas-migrantes-en-transito-por-las-americas" target="_blank">
-                  <Image src="/src/components/sections/section4/assets/texto-discapacidad.svg" alt="" title="" class="w-full h-auto"/>
+                  <Image src="/src/components/sections/section4/assets/texto-discapacidad.svg" alt="" class="w-full h-auto"/>
                 </a>
               </div>
             </div>
@@ -106,7 +122,7 @@ import PopupMujeresResponsive from "@components/sections/section4/assets/popupMu
                 </div>
               </div>
               <div class="col-span-12 flex flex-col justify-center px-12">
-                <Image src="/src/components/sections/section4/assets/texto-lgitb.svg" alt="" title="" class="w-full h-auto"/>
+                <Image src="/src/components/sections/section4/assets/texto-lgitb.svg" alt="" class="w-full h-auto"/>
               </div>
             </div>
             <div class="col-span-12 md:hidden">
