@@ -112,3 +112,9 @@
     transition: opacity 0.6s ease;
   }
 }
+
+@media screen and (max-height: 800px){
+  .cuadro.cuadro1-ventanillas {
+    bottom: 11%;
+  }
+}

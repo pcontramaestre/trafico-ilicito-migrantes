@@ -23,6 +23,9 @@
   top: 48%;
   /* filter: brightness(70%); */
 }
+
+
+
 .img-luz {
   position: absolute;
   z-index: 10;
@@ -35,7 +38,7 @@
 .img-luz.mostrando.nomostrar {
   opacity: 0;
 }
-.img-luz.mostrando {
+.img-luz.mostrando:not(.nomostrar) {
   opacity: 1;
 }
 
@@ -88,6 +91,16 @@
 .texto-animado {
   color: #25A7EF;
   letter-spacing: 1.6px;
+}
+
+@media (max-width:1367px){
+  .img-hombre {
+    max-width: 290px;;
+    /* filter: brightness(70%); */
+  }
+  .flotante-texto {
+    max-width: 1000px;
+  }
 }
 
 @media (max-width:1340px) {

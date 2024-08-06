@@ -28,25 +28,25 @@ import info from "@public/images/info.gif"
 import play from "@public/icons/playSolo.svg"
 import link from "@components/assets/link.svg"
 
-import Audio from "@public/audios/Audio1_op2.mp3";
+import Audio from "/audios/Audio1_op2.mp3";
 
 
 ---
 
 <div class="menu-lateral fixed z-[9998] right-0 md:right-2 top-[5%] md:top-[25%]  flex-col gap-4 flex overflow-y-auto md:overflow-hidden">
   <div class="menu"  data-tooltip-placement="left">
-    <Image src={menu} alt="Menú" class="cursor-pointer max-w-[35px] md:max-w-[56px]" id="imenu"/>
+    <Image src={menu} alt="Menú" class="cursor-pointer max-w-[35px] md:max-w-[45px]" id="imenu"/>
   </div>
   <div class="home"  data-tooltip-placement="left">
     <a href="/#seccion1-1">
-      <Image src={home} alt="Inicio" class="cursor-pointer max-w-[35px] md:max-w-[56px]" id="ihome"/>
+      <Image src={home} alt="Inicio" class="cursor-pointer max-w-[35px] md:max-w-[45px]" id="ihome"/>
     </a>
   </div>
   <div class="ayuda hidden md:block"  data-tooltip-placement="left">
-    <Image src={ayuda} alt="Ayuda" class="cursor-pointer" id="iayuda"/>
+    <Image src={ayuda} alt="Ayuda" class="cursor-pointer  max-w-[35px] md:max-w-[45px]" id="iayuda"/>
   </div>
   <button id="reproducirInicio" class="audio pt-[3rem] md:pt-[10rem]">
-    <Image src={audioPlay} alt="Ayuda" class="cursor-pointer max-w-[35px] md:max-w-[56px]" id="reproducir"/>
+    <Image src={audioPlay} alt="Ayuda" class="cursor-pointer max-w-[35px] md:max-w-[45px]" id="reproducir"/>
   </button>
 
   <audio autoplay id="audioInicio">
@@ -246,19 +246,19 @@ import Audio from "@public/audios/Audio1_op2.mp3";
       reproducirBtn.addEventListener("click", () => {  
           if (!isPlayingInicio) {  
               audioElementInicio.play();  
-              reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[35px] md:max-w-[56px]" alt="Detener" />';  
+              reproducirBtn.innerHTML = '<img src="/icons/audio-stop.svg" class="max-w-[35px] md:max-w-[45px]" alt="Detener" />';  
               isPlayingInicio = true;  
           } else {  
               audioElementInicio.pause(); 
               audioElementInicio.currentTime = 0;  
-              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[56px]" alt="Reproducir" />';  
+              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[45px]" alt="Reproducir" />';  
               isPlayingInicio = false;  
           }  
       });  
 
       audioElementInicio.addEventListener('ended', () => {  
         // Restablecer el progreso y el botón de reproducción  
-        reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[56px]" alt="Reproducir" />';
+        reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[45px]" alt="Reproducir" />';
         isPlayingInicio = false;
         audioElementInicio.currentTime = 0; 
     });
@@ -294,7 +294,7 @@ import Audio from "@public/audios/Audio1_op2.mp3";
         console.log("Seccion 2 en adelante")
         audioElementInicio.pause();  
         audioElementInicio.currentTime = 0;  
-        reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[56px]" alt="Reproducir" />';
+        reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[45px]" alt="Reproducir" />';
         isPlayingInicio = false;
       }
 
@@ -305,7 +305,7 @@ import Audio from "@public/audios/Audio1_op2.mp3";
             if (isPlayingInicio) {
               audioElementInicio.pause();  
               audioElementInicio.currentTime = 0;  
-              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[56px]" alt="Reproducir" />';
+              reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[45px]" alt="Reproducir" />';
               isPlayingInicio = false;
             }
           } else {  
