@@ -656,7 +656,7 @@ if (!isMobile()) {
             2,
             {
               opacity: 0.1,
-              y: "45%",
+              y: "45%", 
               scale: 0.5,
               
             },

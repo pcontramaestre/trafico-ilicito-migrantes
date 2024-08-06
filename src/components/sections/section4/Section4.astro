@@ -58,9 +58,9 @@ import footer1 from "@components/sections/section4/assets/footer1.webp";
 import footer2 from "@components/sections/section4/assets/footer2.webp";
 import enlaceOim from "@components/sections/section4/assets/CTA.svg";
 
-import BannerResponsive from "@components/sections/section4/assets/BannerSeccion4R.webp"
+import BannerResponsive from "@components/sections/section4/assets/BannerSeccion4R.webp";
 
-
+import VideoFooter from "@components/sections/section4/assets/fotoanimada.webm";
 
 
 ---
@@ -663,13 +663,14 @@ import BannerResponsive from "@components/sections/section4/assets/BannerSeccion
         
   </div>
   <!-- FOTTER SECCION 4 - PARTE 8 -->
-  <div class="w-screen h-screen relative">  
-    <div class="w-screen h-screen footer1 absolute transition-opacity duration-1000 ease-in-out">  
+  <div class="w-screen h-screen relative">
+    <video src={VideoFooter} class="w-screen h-screen object-cover object-top " autoplay muted loop></video>
+    <!-- <div class="w-screen h-screen footer1 absolute transition-opacity duration-1000 ease-in-out">  
       <Image src={footer1} alt="" class="w-screen h-screen object-cover" />  
     </div>  
     <div class="w-screen h-screen footer2 absolute transition-opacity duration-1000 ease-in-out opacity-0">  
       <Image src={footer2} alt="" class="w-screen h-screen object-cover" />  
-    </div>
+    </div> -->
     <!-- <div class="text-center w-screen absolute left-0 bottom-10">
       <a href="https://missingmigrants.iom.int/es" target="_blank">
         <Image src={enlaceOim} alt="enlace oim" class="mx-auto object-cover"/>
