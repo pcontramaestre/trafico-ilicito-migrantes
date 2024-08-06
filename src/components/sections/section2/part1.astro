@@ -569,49 +569,49 @@ import Textura2_3 from "@components/sections/section2/assets/Textura2-3.webp"
 
 <script>
   //Script para abrir el popup, al hacer cli sobre #interaccion-izquierda muestra .popup-derecha popup
-  const interaccionIzquierda = document.getElementById('interaccion-izquierda');
-  const popup = document.getElementById('popup-izquierda');
-  const closeButton = document.querySelector('.close-button');
+  // const interaccionIzquierda = document.getElementById('interaccion-izquierda');
+  // const popup = document.getElementById('popup-izquierda');
+  // const closeButton = document.querySelector('.close-button');
 
-  // Mostrar el popup al hacer clic en interaccionIzquierda
-  interaccionIzquierda.addEventListener('click', () => {
-    //popup.style.display = 'flex';
-    popup.classList.add('show');
-  });
+  // // Mostrar el popup al hacer clic en interaccionIzquierda
+  // interaccionIzquierda.addEventListener('click', () => {
+  //   //popup.style.display = 'flex';
+  //   popup.classList.add('show');
+  // });
 
-  // Cerrar el popup al hacer clic en el botón de cerrar
-  closeButton.addEventListener('click', () => {
-    // popup.style.display = 'none';
-    popup.classList.remove('show');
-  });
+  // // Cerrar el popup al hacer clic en el botón de cerrar
+  // closeButton.addEventListener('click', () => {
+  //   // popup.style.display = 'none';
+  //   popup.classList.remove('show');
+  // });
 
 
 
-  let idInfo = 'idInfoPopup';
-  let idIcon = 'idIconPopup';
-  //Al hacer hover sobre "idInfo .icon-info" se miuestra .info-content
-  document.addEventListener('DOMContentLoaded', () => {
-    const infoContent = document.getElementById('inforcontenidoPopup');
-    const iconInfo = document.getElementById(idIcon);
-    iconInfo.addEventListener('click', () => {
-      infoContent.style.visibility = 'visible';
-      infoContent.style.opacity = '1';
-      iconInfo.classList.add('show');
-    });
-    // add event on hover to iconInfo
-    iconInfo.addEventListener('mouseover', () => {
-      infoContent.style.visibility = 'visible';
-      infoContent.style.opacity = '1';
-      iconInfo.classList.add('show');
-    });
+  // let idInfo = 'idInfoPopup';
+  // let idIcon = 'idIconPopup';
+  // //Al hacer hover sobre "idInfo .icon-info" se miuestra .info-content
+  // document.addEventListener('DOMContentLoaded', () => {
+  //   const infoContent = document.getElementById('inforcontenidoPopup');
+  //   const iconInfo = document.getElementById(idIcon);
+  //   iconInfo.addEventListener('click', () => {
+  //     infoContent.style.visibility = 'visible';
+  //     infoContent.style.opacity = '1';
+  //     iconInfo.classList.add('show');
+  //   });
+  //   // add event on hover to iconInfo
+  //   iconInfo.addEventListener('mouseover', () => {
+  //     infoContent.style.visibility = 'visible';
+  //     infoContent.style.opacity = '1';
+  //     iconInfo.classList.add('show');
+  //   });
     
 
-    infoContent.addEventListener('mouseout', () => {
-      infoContent.style.visibility = 'hidden';
-      infoContent.style.opacity = '0';
-      iconInfo.classList.remove('show');
-    });
-  });
+  //   infoContent.addEventListener('mouseout', () => {
+  //     infoContent.style.visibility = 'hidden';
+  //     infoContent.style.opacity = '0';
+  //     iconInfo.classList.remove('show');
+  //   });
+  // });
 
 
 
