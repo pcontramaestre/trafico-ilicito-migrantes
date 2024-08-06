@@ -118,12 +118,15 @@ if (!isMobile()) {
       ["#seccion7 .animacion-up"],
       2,
       {
-        opacity: 0.8,
-        y: "200%",
+        opacity: 0.1,
+        y: "45%", 
+        scale: 0.5,
+        
       },
       {
         opacity: 1,
         y: "0%",
+        scale: 1,
       },
     )
   )
