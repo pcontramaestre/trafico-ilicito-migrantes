@@ -67,11 +67,14 @@ const { contenido,idInfo,estilos,idIcon,estilosIco } = Astro.props as Props;
       infoContent.style.visibility = 'hidden';
       infoContent.style.opacity = '0';
       iconInfo.classList.remove('show');
-      infoContenidoA.addEventListener('mouseover', () => {
-        infoContent.style.visibility = 'visible';
-        infoContent.style.opacity = '1';
-        iconInfo.classList.add('show');
-      })
+      // Si infoContenidoA no es nulo o vacio
+      if (infoContenidoA !== null) {
+        infoContenidoA.addEventListener('mouseover', () => {
+          infoContent.style.visibility = 'visible';
+          infoContent.style.opacity = '1';
+          iconInfo.classList.add('show');
+        })
+      }
     });
   });
 
