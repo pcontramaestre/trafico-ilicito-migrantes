@@ -57,9 +57,13 @@ import PrincipalBannerMovol from "@components/sections/section1/assets/HomeRespo
     <Image
       src={mouse}
       alt="Fondo"
-      class="z-10 absolute left-0 right-0 bottom-4 w-[52px] h-auto m-auto"
+      class="z-10 absolute left-0 right-0 bottom-4 w-[52px] h-auto m-auto opacity-0"
       loading="lazy"
+      id="identificador-mouse"
     />
+    <div class="pulser pulser-inicio z-10 absolute left-0 right-0 md:bottom-32 2xl:bottom-20" id="pulser-clic" data-mostrar="true">
+      <span class="text-center azul6 text-[0.9rem] block mt-[3.6rem]">Clic</span>
+    </div>
   </div>
   <div class="w-screen h-auto relative z-20 lg:-z-10 parte2 -mt-2 md:mt-0" style={`background-image: url('${textura7.src}')`}>
     <div class="w-[90%] lg:w-[1120px] text-center absolute font-sans text-base lg:text-4xl font-bold z-50 flotante-texto">
@@ -146,9 +150,39 @@ import PrincipalBannerMovol from "@components/sections/section1/assets/HomeRespo
               0.7
             )
           )
-          // .on("enter", function () {
-					// 		console.log("Entrada de audio");
-					// })
+          .on("enter", function () {
+					  let pulserclic = document.getElementById('pulser-clic');
+            let identificadormouse = document.getElementById('identificador-mouse');
+            let reproducirBtnHome = document.getElementById("reproducirInicio");
+
+            //get atribute pulserclic data-mostrar
+            let mostrar = pulserclic.getAttribute('data-mostrar');
+            
+            if (mostrar == "true") {
+              console.log("Mostrar: "+mostrar)
+              identificadormouse.classList.add('opacity-0');
+              pulserclic.classList.remove('opacity-0');
+              
+              pulserclic.addEventListener("click", () => {  
+                reproducirBtnHome.click();
+                pulserclic.classList.add('opacity-0');
+                pulserclic.classList.add('hidden');
+                identificadormouse.classList.remove('opacity-0');
+                //remove atribute
+                pulserclic.setAttribute('data-mostrar',"false");
+              })
+            }
+
+            
+
+					})
+          .on("leave", function () {
+					  let pulserclic = document.getElementById('pulser-clic');
+            let identificadormouse = document.getElementById('identificador-mouse');
+            pulserclic.classList.add('opacity-0');
+            identificadormouse.classList.remove('opacity-0');
+            pulserclic.setAttribute('data-mostrar',"false");
+					})
           // .on("leave", function () {
           //   console.log("Salida de audio")
 					// })
