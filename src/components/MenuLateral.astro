@@ -235,6 +235,13 @@ import Audio from "/audios/Audio1_op2.mp3";
   </style>
 
 <script>  
+  function isMobile() {  
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);  
+  }  
+
+  function isScreenWidthGreaterThan800() {  
+    return window.innerWidth > 800;  
+  } 
   document.addEventListener("DOMContentLoaded", () => {  
      const reproducirBtn = document.getElementById("reproducirInicio");  
       var audioElementInicio = document.getElementById("audioInicio"); 
@@ -284,6 +291,14 @@ import Audio from "/audios/Audio1_op2.mp3";
         pulserclic.setAttribute('data-mostrar',"false");
       }
 
+      if (isMobile()) {
+        const body = document.body;
+        body.classList.remove('no-scroll');
+        pulserclic.classList.add('opacity-0');
+        pulserclic.classList.add('hidden');
+        identificadormouse.classList.remove('opacity-0');
+        pulserclic.setAttribute('data-mostrar',"false");
+      }
 
       if (!isElementInViewport(seccion2)) {  
         if (!isPlayingInicio) {
