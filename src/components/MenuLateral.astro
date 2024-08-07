@@ -272,7 +272,19 @@ import Audio from "/audios/Audio1_op2.mp3";
       audioElementInicio = document.getElementById("audioInicio");
       
       const seccion2 = document.getElementById('seccion2-1');  
-      
+      const pulserclic = document.getElementById('pulser-clic');  
+      let identificadormouse = document.getElementById('identificador-mouse');
+
+      if( isElementInViewport(pulserclic) && !isElementInViewport(seccion2) ){
+        const body = document.body;
+        body.classList.remove('no-scroll');
+        pulserclic.classList.add('opacity-0');
+        pulserclic.classList.add('hidden');
+        identificadormouse.classList.remove('opacity-0');
+        pulserclic.setAttribute('data-mostrar',"false");
+      }
+
+
       if (!isElementInViewport(seccion2)) {  
         if (!isPlayingInicio) {
           // playSound(true);
@@ -291,6 +303,12 @@ import Audio from "/audios/Audio1_op2.mp3";
         }
       } else {
         console.log("Seccion 2 en adelante")
+        const body = document.body; 
+        body.classList.remove('no-scroll');
+        pulserclic.classList.add('hidden');
+        identificadormouse.classList.remove('opacity-0');
+        pulserclic.setAttribute('data-mostrar',"false");
+
         audioElementInicio.pause();  
         audioElementInicio.currentTime = 0;  
         reproducirBtn.innerHTML = '<img src="/icons/audio-play.svg" class="max-w-[35px] md:max-w-[45px]" alt="Reproducir" />';

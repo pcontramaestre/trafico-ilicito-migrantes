@@ -28,7 +28,7 @@ import { Tooltips } from 'astro-tooltips';
 		<script src="/js/audioPlayer.js" is:inline defer></script>
 		<Tooltips interactive={false} delay={[15, 150]} />
 	</head>
-	<body class="overflow-x-hidden">
+	<body class="overflow-x-hidden no-scroll">
 
 		<slot />
 		<script is:inline src="/js/script.js"></script>
@@ -59,7 +59,13 @@ import { Tooltips } from 'astro-tooltips';
 	body {
 		overflow-x: hidden;
 		max-width: 100vw;
+		pointer-events: all;
 	}
+	body.no-scroll {  
+    overflow: hidden;  
+		pointer-events: none;
+  }
+
 	#seccion1-1,
 	#seccion1-2,
 	#seccion1-3,
