@@ -55,7 +55,7 @@
   max-height: 50px;
 }
 
-#pathMexico {  
+#pathMexico,#pathMexico2 {  
   fill: #2B6B79;  
   animation: colorChange 6s infinite;  
 }  
