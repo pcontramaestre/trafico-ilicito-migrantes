@@ -212,7 +212,7 @@
   cursor: pointer;
   width: 35px;
   height: 35px;
-  background: #d9d9d9;
+  background: #a8abaa;
   border-radius: 50%;
   margin: 0 auto;
   transition: opacity 0.5s ease-in-out;
@@ -224,7 +224,7 @@
   height: 100%;
   top:0;
   left:0;
-  background: #d9d9d9;
+  background: #a8abaa;
   border-radius: 50%;
   z-index: 0;
   animation-name: pulse;
