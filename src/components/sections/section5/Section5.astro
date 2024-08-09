@@ -171,13 +171,14 @@ import MapaVentanillas from "@components/sections/section5/assets/mapa-ventanill
     <h1 class="font-serif text-[20px] lg:text-[48px] font-bold tracking-[1.56px] text-[#AA751F] text-center pb-4 md:pb-8 ">
       Ventanillas informativas en los países de la CORETT
     </h1>
-    <a href="https://programamesocaribe.iom.int/sites/default/files/imagenes/documents/brochure-plegable-ventanillas-version-web-mar2024.pdf" 
+    
+    <Image src={MapaVentanillas} alt="" class="w-screen h-auto mx-auto mt-4 mb-4 md:hidden"/>
+    <a href="/docs/mapaventanillasinformativas.pdf" 
     target="_blank"
     class=" underline md:hidden max-w-[80%] block mx-auto text-center"
     >
-      Haz clic aquí para ver las ventanillas informativas por país
+      Haga clic aquí para ver las ventanillas informativas por país
     </a>
-    <Image src={MapaVentanillas} alt="" class="w-screen h-auto mx-auto mt-4 mb-4 md:hidden"/>
     <Image src={explore2} alt="" class="mx-auto mt-12 mb-12 hidden md:block"/>
     <div class="ventanillas-informativas relative hidden md:block">
       <MapaVallas />
